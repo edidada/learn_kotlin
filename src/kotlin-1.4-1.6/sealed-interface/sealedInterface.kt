@@ -34,9 +34,13 @@ fun main() {
     // 穷尽 when 还能当表达式用，不需要 else
     // 实测坑：subject 写成 `when (val n = Expr.Num(7))` 时，K1 老的行为会把 subject 类型收窄成
     // 表达式的具体类型 Expr.Num，于是其余分支报 Incompatible types、并说 when 不穷尽；
-    // 同一份代码 -Plv=1.6/1.9 编译不过，默认 LV(2.1) 通过：
+    // 同一份代码 -Plv=1.6/1.9 编译不过，默认 LV(2.1) 通过且**没有任何告警**：
     //   'when' expression must be exhaustive, add necessary 'else' branch
     //   Incompatible types: Expr.Neg and Expr.Num
+    //   Incompatible types: Expr.Add and Expr.Num
+    //   Incompatible types: Expr.Skip and Expr.Num
+    // 想让同一份代码在两个前端都编得过，只需把 subject 的类型显式标成父接口：
+    //   when (val n: Expr = Expr.Num(7))   -> -Plv=1.9 与默认 LV 都通过（本机对照实测）
     val label: String = when (val n = Expr.Num(7)) {
         is Expr.Num -> "num ${n.value}"
         is Expr.Neg -> "neg"

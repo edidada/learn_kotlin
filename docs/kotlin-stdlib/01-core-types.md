@@ -1,6 +1,6 @@
 # `kotlin` 包：内置类型、作用域函数、转换与标准函数
 
-包规模实测（2.2.10）：**1629 条声明 / 339 个去重 API / 433 条带 `@SinceKotlin`**。按种类分：`fun` 156、`val` 52、`var` 8、`class` 95、`interface` 6、`object` 4、`typealias` 18。
+包规模实测（2.2.10）：**1629 条声明 / 339 个去重 API / 433 条带 `@SinceKotlin`**。按去重 API 口径（`docs/_data/dedup_api.tsv` 中 `pkg=kotlin`）的种类分布：`fun` 156、`val` 52、`var` 8、`class` 95、`interface` 6、`object` 4、`typealias` 18；若按未去重的原始声明口径（`slices/kotlin.tsv`）则是 `fun` 1265、`val` 194、`class` 123、`var` 15、`interface` 9、`object` 5、`typealias` 18（合计 1629，差值即重载与平台特化展开）。
 
 这一包是"没有 import 也在你手边"的那一层。下面每条都直接摘自 `out2/slices/kotlin.tsv` 的真实签名（`sig` 列），版本取自 `@SinceKotlin`；**版本列写 `1.0*` 表示源码里没有版本戳**，即随首版存在（Kotlin 1.0 的 API 不打戳）。
 

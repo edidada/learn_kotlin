@@ -1,0 +1,6 @@
+since	kind	name	receiver	arity	sig	loc
+-	fun	exitProcess	-	0	public inline fun exitProcess(status: Int): Nothing {	jvmMain/kotlin/system/Process.kt:18
+-	fun	measureTimeMillis	-	0	public inline fun measureTimeMillis(block: () -> Unit): Long {	jvmMain/kotlin/system/Timing.kt:25
+-	val	start	-	0	val start = System.currentTimeMillis()	jvmMain/kotlin/system/Timing.kt:29
+-	fun	measureNanoTime	-	0	public inline fun measureNanoTime(block: () -> Unit): Long {	jvmMain/kotlin/system/Timing.kt:41
+-	val	start	-	0	val start = System.nanoTime()	jvmMain/kotlin/system/Timing.kt:45

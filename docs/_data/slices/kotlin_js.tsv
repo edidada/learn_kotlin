@@ -1,0 +1,11 @@
+since	kind	name	receiver	arity	sig	loc
+-	class	JsName	-	0	public expect annotation class JsName(val name: String)	commonMain/kotlin/JsAnnotationsH.kt:16
+1.9	class	ExperimentalJsFileName	-	0	public annotation class ExperimentalJsFileName	commonMain/kotlin/JsAnnotationsH.kt:31
+1.9	class	JsFileName	-	0	public expect annotation class JsFileName(val name: String)	commonMain/kotlin/JsAnnotationsH.kt:43
+1.4	class	ExperimentalJsExport	-	0	public annotation class ExperimentalJsExport	commonMain/kotlin/JsAnnotationsH.kt:58
+2.0	class	ExperimentalJsStatic	-	0	public annotation class ExperimentalJsStatic	commonMain/kotlin/JsAnnotationsH.kt:73
+1.4	class	JsExport	-	0	public expect annotation class JsExport() {	commonMain/kotlin/JsAnnotationsH.kt:109
+1.8	class	Ignore	-	0	public annotation class Ignore()	commonMain/kotlin/JsAnnotationsH.kt:119
+1.9	class	ExperimentalJsReflectionCreateInstance	-	0	public annotation class ExperimentalJsReflectionCreateInstance	commonMain/kotlin/JsAnnotationsH.kt:148
+2.0	class	ExperimentalJsCollectionsApi	-	0	public annotation class ExperimentalJsCollectionsApi	commonMain/kotlin/JsAnnotationsH.kt:163
+2.0	class	JsStatic	-	0	public expect annotation class JsStatic()	commonMain/kotlin/JsAnnotationsH.kt:175

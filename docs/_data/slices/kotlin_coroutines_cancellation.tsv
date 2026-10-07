@@ -1,0 +1,7 @@
+since	kind	name	receiver	arity	sig	loc
+1.4	class	CancellationException	-	0	public expect open class CancellationException : IllegalStateException {	commonMain/kotlin/coroutines/cancellation/CancellationExceptionH.kt:13
+1.4	fun	CancellationException	-	1	public expect fun CancellationException(message: String?, cause: Throwable?): CancellationException	commonMain/kotlin/coroutines/cancellation/CancellationExceptionH.kt:22
+1.4	fun	CancellationException	-	0	public expect fun CancellationException(cause: Throwable?): CancellationException	commonMain/kotlin/coroutines/cancellation/CancellationExceptionH.kt:28
+1.4	typealias	CancellationException	-	0	public actual typealias CancellationException = java.util.concurrent.CancellationException	jvmMain/kotlin/coroutines/cancellation/CancellationException.kt:11
+1.4	fun	CancellationException	-	1	public actual inline fun CancellationException(message: String?, cause: Throwable?): CancellationException {	jvmMain/kotlin/coroutines/cancellation/CancellationException.kt:15
+1.4	fun	CancellationException	-	0	public actual inline fun CancellationException(cause: Throwable?): CancellationException {	jvmMain/kotlin/coroutines/cancellation/CancellationException.kt:20

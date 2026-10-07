@@ -1,0 +1,418 @@
+since	kind	name	receiver	arity	sig	loc
+2.1	interface	Clock	-	0	public interface Clock {	commonMain/kotlin/time/Clock.kt:20
+-	fun	now	-	0	public fun now(): Instant	commonMain/kotlin/time/Clock.kt:38
+-	object	System	-	0	public object System : Clock {	commonMain/kotlin/time/Clock.kt:59
+-	fun	systemClockNow	-	0	internal expect fun systemClockNow(): Instant	commonMain/kotlin/time/Clock.kt:68
+2.2	fun	asClock	TimeSource	0	public fun TimeSource.asClock(origin: Instant): Clock = object : Clock {	commonMain/kotlin/time/Clocks.kt:21
+-	val	TimeMark	-	0	private val startMark: TimeMark = markNow()	commonMain/kotlin/time/Clocks.kt:22
+1.6	class	Duration	-	0	public value class Duration internal constructor(private val rawValue: Long) : Comparable<Duration> {	commonMain/kotlin/time/Duration.kt:34
+-	val	get	-	0	private val value: Long get() = rawValue shr 1	commonMain/kotlin/time/Duration.kt:36
+-	val	get	-	0	private inline val unitDiscriminator: Int get() = rawValue.toInt() and 1	commonMain/kotlin/time/Duration.kt:37
+-	fun	isInNanos	-	0	private fun isInNanos() = unitDiscriminator == 0	commonMain/kotlin/time/Duration.kt:38
+-	fun	isInMillis	-	0	private fun isInMillis() = unitDiscriminator == 1	commonMain/kotlin/time/Duration.kt:39
+-	val	get	-	0	private val storageUnit get() = if (isInNanos()) DurationUnit.NANOSECONDS else DurationUnit.MILLISECONDS	commonMain/kotlin/time/Duration.kt:40
+-	val	Duration	-	0	public val ZERO: Duration = Duration(0L)	commonMain/kotlin/time/Duration.kt:55
+-	val	Duration	-	0	public val INFINITE: Duration = durationOfMillis(MAX_MILLIS)	commonMain/kotlin/time/Duration.kt:58
+-	val	Duration	-	0	internal val NEG_INFINITE: Duration = durationOfMillis(-MAX_MILLIS)	commonMain/kotlin/time/Duration.kt:59
+-	fun	convert	-	2	public fun convert(value: Double, sourceUnit: DurationUnit, targetUnit: DurationUnit): Double =	commonMain/kotlin/time/Duration.kt:63
+-	val	get	-	0	public inline val Int.nanoseconds: Duration get() = toDuration(DurationUnit.NANOSECONDS)	commonMain/kotlin/time/Duration.kt:70
+-	val	get	-	0	public inline val Long.nanoseconds: Duration get() = toDuration(DurationUnit.NANOSECONDS)	commonMain/kotlin/time/Duration.kt:74
+-	val	get	-	0	public inline val Double.nanoseconds: Duration get() = toDuration(DurationUnit.NANOSECONDS)	commonMain/kotlin/time/Duration.kt:84
+-	val	get	-	0	public inline val Int.microseconds: Duration get() = toDuration(DurationUnit.MICROSECONDS)	commonMain/kotlin/time/Duration.kt:89
+-	val	get	-	0	public inline val Long.microseconds: Duration get() = toDuration(DurationUnit.MICROSECONDS)	commonMain/kotlin/time/Duration.kt:93
+-	val	get	-	0	public inline val Double.microseconds: Duration get() = toDuration(DurationUnit.MICROSECONDS)	commonMain/kotlin/time/Duration.kt:103
+-	val	get	-	0	public inline val Int.milliseconds: Duration get() = toDuration(DurationUnit.MILLISECONDS)	commonMain/kotlin/time/Duration.kt:108
+-	val	get	-	0	public inline val Long.milliseconds: Duration get() = toDuration(DurationUnit.MILLISECONDS)	commonMain/kotlin/time/Duration.kt:112
+-	val	get	-	0	public inline val Double.milliseconds: Duration get() = toDuration(DurationUnit.MILLISECONDS)	commonMain/kotlin/time/Duration.kt:122
+-	val	get	-	0	public inline val Int.seconds: Duration get() = toDuration(DurationUnit.SECONDS)	commonMain/kotlin/time/Duration.kt:127
+-	val	get	-	0	public inline val Long.seconds: Duration get() = toDuration(DurationUnit.SECONDS)	commonMain/kotlin/time/Duration.kt:131
+-	val	get	-	0	public inline val Double.seconds: Duration get() = toDuration(DurationUnit.SECONDS)	commonMain/kotlin/time/Duration.kt:141
+-	val	get	-	0	public inline val Int.minutes: Duration get() = toDuration(DurationUnit.MINUTES)	commonMain/kotlin/time/Duration.kt:146
+-	val	get	-	0	public inline val Long.minutes: Duration get() = toDuration(DurationUnit.MINUTES)	commonMain/kotlin/time/Duration.kt:150
+-	val	get	-	0	public inline val Double.minutes: Duration get() = toDuration(DurationUnit.MINUTES)	commonMain/kotlin/time/Duration.kt:160
+-	val	get	-	0	public inline val Int.hours: Duration get() = toDuration(DurationUnit.HOURS)	commonMain/kotlin/time/Duration.kt:165
+-	val	get	-	0	public inline val Long.hours: Duration get() = toDuration(DurationUnit.HOURS)	commonMain/kotlin/time/Duration.kt:169
+-	val	get	-	0	public inline val Double.hours: Duration get() = toDuration(DurationUnit.HOURS)	commonMain/kotlin/time/Duration.kt:179
+-	val	get	-	0	public inline val Int.days: Duration get() = toDuration(DurationUnit.DAYS)	commonMain/kotlin/time/Duration.kt:184
+-	val	get	-	0	public inline val Long.days: Duration get() = toDuration(DurationUnit.DAYS)	commonMain/kotlin/time/Duration.kt:188
+-	val	get	-	0	public inline val Double.days: Duration get() = toDuration(DurationUnit.DAYS)	commonMain/kotlin/time/Duration.kt:198
+-	fun	parse	-	0	public fun parse(value: String): Duration = try {	commonMain/kotlin/time/Duration.kt:213
+-	fun	parseIsoString	-	0	public fun parseIsoString(value: String): Duration = try {	commonMain/kotlin/time/Duration.kt:234
+-	fun	parseOrNull	-	0	public fun parseOrNull(value: String): Duration? = try {	commonMain/kotlin/time/Duration.kt:251
+-	fun	parseIsoStringOrNull	-	0	public fun parseIsoStringOrNull(value: String): Duration? = try {	commonMain/kotlin/time/Duration.kt:264
+-	fun	unaryMinus	-	1	public operator fun unaryMinus(): Duration = durationOf(-value, unitDiscriminator)	commonMain/kotlin/time/Duration.kt:274
+-	fun	plus	-	0	public operator fun plus(other: Duration): Duration {	commonMain/kotlin/time/Duration.kt:282
+-	val	result	-	0	val result = this.value + other.value	commonMain/kotlin/time/Duration.kt:295
+-	fun	addValuesMixedRanges	-	1	private fun addValuesMixedRanges(thisMillis: Long, otherNanos: Long): Duration {	commonMain/kotlin/time/Duration.kt:310
+-	val	otherMillis	-	0	val otherMillis = nanosToMillis(otherNanos)	commonMain/kotlin/time/Duration.kt:311
+-	val	resultMillis	-	0	val resultMillis = thisMillis + otherMillis	commonMain/kotlin/time/Duration.kt:312
+-	val	otherNanoRemainder	-	0	val otherNanoRemainder = otherNanos - millisToNanos(otherMillis)	commonMain/kotlin/time/Duration.kt:314
+-	fun	minus	-	0	public operator fun minus(other: Duration): Duration = this + (-other)	commonMain/kotlin/time/Duration.kt:327
+-	fun	times	-	0	public operator fun times(scale: Int): Duration {	commonMain/kotlin/time/Duration.kt:335
+-	val	value	-	0	val value = value	commonMain/kotlin/time/Duration.kt:345
+-	val	result	-	0	val result = value * scale	commonMain/kotlin/time/Duration.kt:346
+-	val	millis	-	0	val millis = nanosToMillis(value)	commonMain/kotlin/time/Duration.kt:355
+-	val	remNanos	-	0	val remNanos = value - millisToNanos(millis)	commonMain/kotlin/time/Duration.kt:356
+-	val	resultMillis	-	0	val resultMillis = millis * scale	commonMain/kotlin/time/Duration.kt:357
+-	val	totalMillis	-	0	val totalMillis = resultMillis + nanosToMillis(remNanos * scale)	commonMain/kotlin/time/Duration.kt:358
+-	fun	times	-	0	public operator fun times(scale: Double): Duration {	commonMain/kotlin/time/Duration.kt:383
+-	val	intScale	-	0	val intScale = scale.roundToInt()	commonMain/kotlin/time/Duration.kt:384
+-	val	unit	-	0	val unit = storageUnit	commonMain/kotlin/time/Duration.kt:389
+-	val	result	-	0	val result = toDouble(unit) * scale	commonMain/kotlin/time/Duration.kt:390
+-	fun	div	-	0	public operator fun div(scale: Int): Duration {	commonMain/kotlin/time/Duration.kt:400
+-	val	result	-	0	val result = value / scale	commonMain/kotlin/time/Duration.kt:414
+-	val	rem	-	0	val rem = millisToNanos(value - (result * scale)) / scale	commonMain/kotlin/time/Duration.kt:417
+-	fun	div	-	0	public operator fun div(scale: Double): Duration {	commonMain/kotlin/time/Duration.kt:430
+-	val	intScale	-	0	val intScale = scale.roundToInt()	commonMain/kotlin/time/Duration.kt:431
+-	val	unit	-	0	val unit = storageUnit	commonMain/kotlin/time/Duration.kt:436
+-	val	result	-	0	val result = toDouble(unit) / scale	commonMain/kotlin/time/Duration.kt:437
+-	fun	div	-	0	public operator fun div(other: Duration): Double {	commonMain/kotlin/time/Duration.kt:442
+-	val	coarserUnit	-	1	val coarserUnit = maxOf(this.storageUnit, other.storageUnit)	commonMain/kotlin/time/Duration.kt:443
+-	fun	truncateTo	-	0	internal fun truncateTo(unit: DurationUnit): Duration {	commonMain/kotlin/time/Duration.kt:450
+-	val	storageUnit	-	0	val storageUnit = storageUnit	commonMain/kotlin/time/Duration.kt:451
+-	val	scale	-	2	val scale = convertDurationUnit(1, unit, storageUnit)	commonMain/kotlin/time/Duration.kt:453
+-	val	result	-	0	val result = value - value % scale	commonMain/kotlin/time/Duration.kt:454
+-	fun	isNegative	-	0	public fun isNegative(): Boolean = rawValue < 0	commonMain/kotlin/time/Duration.kt:459
+-	fun	isPositive	-	0	public fun isPositive(): Boolean = rawValue > 0	commonMain/kotlin/time/Duration.kt:462
+-	fun	isInfinite	-	0	public fun isInfinite(): Boolean = rawValue == INFINITE.rawValue || rawValue == NEG_INFINITE.rawValue	commonMain/kotlin/time/Duration.kt:465
+-	fun	isFinite	-	0	public fun isFinite(): Boolean = !isInfinite()	commonMain/kotlin/time/Duration.kt:468
+-	val	get	-	0	public val absoluteValue: Duration get() = if (isNegative()) -this else this	commonMain/kotlin/time/Duration.kt:471
+-	val	compareBits	-	0	val compareBits = this.rawValue xor other.rawValue	commonMain/kotlin/time/Duration.kt:474
+-	val	r	-	0	val r = this.unitDiscriminator - other.unitDiscriminator	commonMain/kotlin/time/Duration.kt:478
+-	fun	toComponents	-	4	public inline fun <T> toComponents(action: (days: Long, hours: Int, minutes: Int, seconds: Int, nanoseconds: Int) -> T): T {	commonMain/kotlin/time/Duration.kt:498
+-	fun	toComponents	-	3	public inline fun <T> toComponents(action: (hours: Long, minutes: Int, seconds: Int, nanoseconds: Int) -> T): T {	commonMain/kotlin/time/Duration.kt:515
+-	fun	toComponents	-	2	public inline fun <T> toComponents(action: (minutes: Long, seconds: Int, nanoseconds: Int) -> T): T {	commonMain/kotlin/time/Duration.kt:531
+-	fun	toComponents	-	1	public inline fun <T> toComponents(action: (seconds: Long, nanoseconds: Int) -> T): T {	commonMain/kotlin/time/Duration.kt:546
+-	val	Int	-	0	internal val hoursComponent: Int	commonMain/kotlin/time/Duration.kt:552
+-	val	Int	-	0	internal val minutesComponent: Int	commonMain/kotlin/time/Duration.kt:556
+-	val	Int	-	0	internal val secondsComponent: Int	commonMain/kotlin/time/Duration.kt:560
+-	val	Int	-	0	internal val nanosecondsComponent: Int	commonMain/kotlin/time/Duration.kt:564
+-	fun	toDouble	-	0	public fun toDouble(unit: DurationUnit): Double {	commonMain/kotlin/time/Duration.kt:581
+-	fun	toLong	-	0	public fun toLong(unit: DurationUnit): Long {	commonMain/kotlin/time/Duration.kt:601
+-	fun	toInt	-	0	public fun toInt(unit: DurationUnit): Int =	commonMain/kotlin/time/Duration.kt:618
+-	val	Long	-	0	public val inWholeDays: Long	commonMain/kotlin/time/Duration.kt:627
+-	val	Long	-	0	public val inWholeHours: Long	commonMain/kotlin/time/Duration.kt:635
+-	val	Long	-	0	public val inWholeMinutes: Long	commonMain/kotlin/time/Duration.kt:643
+-	val	Long	-	0	public val inWholeSeconds: Long	commonMain/kotlin/time/Duration.kt:651
+-	val	Long	-	0	public val inWholeMilliseconds: Long	commonMain/kotlin/time/Duration.kt:659
+-	val	Long	-	0	public val inWholeMicroseconds: Long	commonMain/kotlin/time/Duration.kt:673
+-	val	Long	-	0	public val inWholeNanoseconds: Long	commonMain/kotlin/time/Duration.kt:685
+-	val	value	-	0	val value = value	commonMain/kotlin/time/Duration.kt:687
+-	val	isNegative	-	0	val isNegative = isNegative()	commonMain/kotlin/time/Duration.kt:724
+-	val	hasDays	-	0	val hasDays = days != 0L	commonMain/kotlin/time/Duration.kt:728
+-	val	hasHours	-	0	val hasHours = hours != 0	commonMain/kotlin/time/Duration.kt:729
+-	val	hasMinutes	-	0	val hasMinutes = minutes != 0	commonMain/kotlin/time/Duration.kt:730
+-	val	hasSeconds	-	0	val hasSeconds = seconds != 0 || nanoseconds != 0	commonMain/kotlin/time/Duration.kt:731
+-	var	components	-	0	var components = 0	commonMain/kotlin/time/Duration.kt:732
+-	fun	appendFractional	StringBuilder	4	private fun StringBuilder.appendFractional(whole: Int, fractional: Int, fractionalSize: Int, unit: String, isoZeroes: Boolean) {	commonMain/kotlin/time/Duration.kt:764
+-	val	fracString	-	1	val fracString = fractional.toString().padStart(fractionalSize, '0')	commonMain/kotlin/time/Duration.kt:768
+-	val	nonZeroDigits	-	0	val nonZeroDigits = fracString.indexOfLast { it != '0' } + 1	commonMain/kotlin/time/Duration.kt:769
+-	fun	toString	-	1	public fun toString(unit: DurationUnit, decimals: Int = 0): String {	commonMain/kotlin/time/Duration.kt:794
+-	val	number	-	0	val number = toDouble(unit)	commonMain/kotlin/time/Duration.kt:796
+-	fun	toIsoString	-	0	public fun toIsoString(): String = buildString {	commonMain/kotlin/time/Duration.kt:815
+-	var	hours	-	0	var hours = hours	commonMain/kotlin/time/Duration.kt:820
+-	val	hasHours	-	0	val hasHours = hours != 0L	commonMain/kotlin/time/Duration.kt:825
+-	val	hasSeconds	-	0	val hasSeconds = seconds != 0 || nanoseconds != 0	commonMain/kotlin/time/Duration.kt:826
+-	val	hasMinutes	-	0	val hasMinutes = minutes != 0 || (hasSeconds && hasHours)	commonMain/kotlin/time/Duration.kt:827
+1.6	fun	toDuration	Int	0	public fun Int.toDuration(unit: DurationUnit): Duration {	commonMain/kotlin/time/Duration.kt:847
+1.6	fun	toDuration	Long	0	public fun Long.toDuration(unit: DurationUnit): Duration {	commonMain/kotlin/time/Duration.kt:856
+-	val	maxNsInUnit	-	2	val maxNsInUnit = convertDurationUnitOverflow(MAX_NANOS, DurationUnit.NANOSECONDS, unit)	commonMain/kotlin/time/Duration.kt:857
+-	val	millis	-	2	val millis = convertDurationUnit(this, unit, DurationUnit.MILLISECONDS)	commonMain/kotlin/time/Duration.kt:861
+1.6	fun	toDuration	Double	0	public fun Double.toDuration(unit: DurationUnit): Duration {	commonMain/kotlin/time/Duration.kt:874
+-	val	valueInNs	-	2	val valueInNs = convertDurationUnit(this, unit, DurationUnit.NANOSECONDS)	commonMain/kotlin/time/Duration.kt:875
+-	val	nanos	-	0	val nanos = valueInNs.roundToLong()	commonMain/kotlin/time/Duration.kt:877
+-	val	millis	-	2	val millis = convertDurationUnit(this, unit, DurationUnit.MILLISECONDS).roundToLong()	commonMain/kotlin/time/Duration.kt:881
+1.6	fun	times	Int	0	public inline operator fun Int.times(duration: Duration): Duration = duration * this	commonMain/kotlin/time/Duration.kt:890
+1.6	fun	times	Double	0	public inline operator fun Double.times(duration: Duration): Duration = duration * this	commonMain/kotlin/time/Duration.kt:901
+-	fun	parseDuration	-	1	private fun parseDuration(value: String, strictIso: Boolean): Duration {	commonMain/kotlin/time/Duration.kt:905
+-	var	length	-	0	var length = value.length	commonMain/kotlin/time/Duration.kt:906
+-	var	index	-	0	var index = 0	commonMain/kotlin/time/Duration.kt:908
+-	var	result	-	0	var result = Duration.ZERO	commonMain/kotlin/time/Duration.kt:909
+-	val	infinityString	-	0	val infinityString = "Infinity"	commonMain/kotlin/time/Duration.kt:910
+-	val	hasSign	-	0	val hasSign = index > 0	commonMain/kotlin/time/Duration.kt:914
+-	val	isNegative	-	0	val isNegative = hasSign && value.startsWith('-')	commonMain/kotlin/time/Duration.kt:915
+-	val	nonDigitSymbols	-	0	val nonDigitSymbols = "+-."	commonMain/kotlin/time/Duration.kt:921
+-	var	isTimeComponent	-	0	var isTimeComponent = false	commonMain/kotlin/time/Duration.kt:922
+-	var	DurationUnit	-	0	var prevUnit: DurationUnit? = null	commonMain/kotlin/time/Duration.kt:923
+-	val	component	-	0	val component = value.substringWhile(index) { it in '0'..'9' || it in nonDigitSymbols }	commonMain/kotlin/time/Duration.kt:930
+-	val	unitChar	-	0	val unitChar = value.getOrElse(index) { throw IllegalArgumentException("Missing unit for value $component") }	commonMain/kotlin/time/Duration.kt:933
+-	val	unit	-	1	val unit = durationUnitByIsoChar(unitChar, isTimeComponent)	commonMain/kotlin/time/Duration.kt:935
+-	val	dotIndex	-	0	val dotIndex = component.indexOf('.')	commonMain/kotlin/time/Duration.kt:938
+-	val	whole	-	1	val whole = component.substring(0, dotIndex)	commonMain/kotlin/time/Duration.kt:940
+-	var	DurationUnit	-	0	var prevUnit: DurationUnit? = null	commonMain/kotlin/time/Duration.kt:955
+-	var	afterFirst	-	0	var afterFirst = false	commonMain/kotlin/time/Duration.kt:956
+-	var	allowSpaces	-	0	var allowSpaces = !hasSign	commonMain/kotlin/time/Duration.kt:957
+-	val	component	-	0	val component = value.substringWhile(index) { it in '0'..'9' || it == '.' }	commonMain/kotlin/time/Duration.kt:967
+-	val	unitName	-	0	val unitName = value.substringWhile(index) { it in 'a'..'z' }	commonMain/kotlin/time/Duration.kt:970
+-	val	unit	-	0	val unit = durationUnitByShortName(unitName)	commonMain/kotlin/time/Duration.kt:972
+-	val	dotIndex	-	0	val dotIndex = component.indexOf('.')	commonMain/kotlin/time/Duration.kt:975
+-	val	whole	-	1	val whole = component.substring(0, dotIndex)	commonMain/kotlin/time/Duration.kt:977
+-	fun	parseOverLongIsoComponent	-	0	private fun parseOverLongIsoComponent(value: String): Long {	commonMain/kotlin/time/Duration.kt:991
+-	val	length	-	0	val length = value.length	commonMain/kotlin/time/Duration.kt:992
+-	var	startIndex	-	0	var startIndex = 0	commonMain/kotlin/time/Duration.kt:993
+-	var	firstNonZero	-	0	var firstNonZero = startIndex	commonMain/kotlin/time/Duration.kt:996
+-	fun	substringWhile	String	1	private inline fun String.substringWhile(startIndex: Int, predicate: (Char) -> Boolean): String =	commonMain/kotlin/time/Duration.kt:1014
+-	fun	skipWhile	String	1	private inline fun String.skipWhile(startIndex: Int, predicate: (Char) -> Boolean): Int {	commonMain/kotlin/time/Duration.kt:1017
+-	var	i	-	0	var i = startIndex	commonMain/kotlin/time/Duration.kt:1018
+-	val	NANOS_IN_MILLIS	-	0	internal const val NANOS_IN_MILLIS = 1_000_000	commonMain/kotlin/time/Duration.kt:1031
+-	val	MAX_NANOS	-	0	internal const val MAX_NANOS = Long.MAX_VALUE / 2 / NANOS_IN_MILLIS * NANOS_IN_MILLIS - 1	commonMain/kotlin/time/Duration.kt:1033
+-	val	MAX_MILLIS	-	0	internal const val MAX_MILLIS = Long.MAX_VALUE / 2	commonMain/kotlin/time/Duration.kt:1035
+-	val	MAX_NANOS_IN_MILLIS	-	0	private const val MAX_NANOS_IN_MILLIS = MAX_NANOS / NANOS_IN_MILLIS	commonMain/kotlin/time/Duration.kt:1037
+-	fun	nanosToMillis	-	0	private fun nanosToMillis(nanos: Long): Long = nanos / NANOS_IN_MILLIS	commonMain/kotlin/time/Duration.kt:1039
+-	fun	millisToNanos	-	0	private fun millisToNanos(millis: Long): Long = millis * NANOS_IN_MILLIS	commonMain/kotlin/time/Duration.kt:1040
+-	fun	durationOfNanos	-	0	private fun durationOfNanos(normalNanos: Long) = Duration(normalNanos shl 1)	commonMain/kotlin/time/Duration.kt:1042
+-	fun	durationOfMillis	-	0	private fun durationOfMillis(normalMillis: Long) = Duration((normalMillis shl 1) + 1)	commonMain/kotlin/time/Duration.kt:1043
+-	fun	durationOf	-	1	private fun durationOf(normalValue: Long, unitDiscriminator: Int) = Duration((normalValue shl 1) + unitDiscriminator)	commonMain/kotlin/time/Duration.kt:1044
+-	fun	durationOfNanosNormalized	-	0	private fun durationOfNanosNormalized(nanos: Long) =	commonMain/kotlin/time/Duration.kt:1045
+-	fun	durationOfMillisNormalized	-	0	private fun durationOfMillisNormalized(millis: Long) =	commonMain/kotlin/time/Duration.kt:1052
+-	val	Boolean	-	0	internal expect val durationAssertionsEnabled: Boolean	commonMain/kotlin/time/Duration.kt:1059
+-	fun	formatToExactDecimals	-	1	internal expect fun formatToExactDecimals(value: Double, decimals: Int): String	commonMain/kotlin/time/Duration.kt:1061
+-	class	DurationUnit	-	0	public expect enum class DurationUnit {	commonMain/kotlin/time/DurationUnit.kt:18
+1.3	fun	convertDurationUnit	-	2	internal expect fun convertDurationUnit(value: Double, sourceUnit: DurationUnit, targetUnit: DurationUnit): Double	commonMain/kotlin/time/DurationUnit.kt:51
+1.5	fun	convertDurationUnitOverflow	-	2	internal expect fun convertDurationUnitOverflow(value: Long, sourceUnit: DurationUnit, targetUnit: DurationUnit): Long	commonMain/kotlin/time/DurationUnit.kt:55
+1.5	fun	convertDurationUnit	-	2	internal expect fun convertDurationUnit(value: Long, sourceUnit: DurationUnit, targetUnit: DurationUnit): Long	commonMain/kotlin/time/DurationUnit.kt:59
+1.3	fun	shortName	DurationUnit	0	internal fun DurationUnit.shortName(): String = when (this) {	commonMain/kotlin/time/DurationUnit.kt:64
+1.5	fun	durationUnitByShortName	-	0	internal fun durationUnitByShortName(shortName: String): DurationUnit = when (shortName) {	commonMain/kotlin/time/DurationUnit.kt:76
+1.5	fun	durationUnitByIsoChar	-	1	internal fun durationUnitByIsoChar(isoChar: Char, isTimeComponent: Boolean): DurationUnit =	commonMain/kotlin/time/DurationUnit.kt:88
+1.3	class	ExperimentalTime	-	0	public annotation class ExperimentalTime	commonMain/kotlin/time/ExperimentalTime.kt:38
+2.1	class	Instant	-	0	public class Instant internal constructor(	commonMain/kotlin/time/Instant.kt:107
+-	val	Long	-	1	public val epochSeconds: Long,	commonMain/kotlin/time/Instant.kt:120
+-	val	Int	-	0	public val nanosecondsOfSecond: Int	commonMain/kotlin/time/Instant.kt:130
+-	fun	toEpochMilliseconds	-	0	public fun toEpochMilliseconds(): Long {	commonMain/kotlin/time/Instant.kt:148
+-	val	millis	-	1	val millis = safeMultiplyOrElse(epochSeconds, MILLIS_PER_SECOND.toLong()) {	commonMain/kotlin/time/Instant.kt:150
+-	val	millis	-	1	val millis = safeMultiplyOrElse(epochSeconds + 1, MILLIS_PER_SECOND.toLong()) {	commonMain/kotlin/time/Instant.kt:161
+-	fun	plus	-	1	public operator fun plus(duration: Duration): Instant = duration.toComponents { secondsToAdd, nanosecondsToAdd ->	commonMain/kotlin/time/Instant.kt:184
+-	val	Long	-	1	val newEpochSeconds: Long = safeAddOrElse(epochSeconds, secondsToAdd) {	commonMain/kotlin/time/Instant.kt:188
+-	val	nanoAdjustment	-	0	val nanoAdjustment = nanosecondsOfSecond + nanosecondsToAdd	commonMain/kotlin/time/Instant.kt:192
+-	fun	minus	-	0	public operator fun minus(duration: Duration): Instant = plus(-duration)	commonMain/kotlin/time/Instant.kt:210
+-	fun	minus	-	0	public operator fun minus(other: Instant): Duration =	commonMain/kotlin/time/Instant.kt:228
+-	val	s	-	0	val s = epochSeconds.compareTo(other.epochSeconds)	commonMain/kotlin/time/Instant.kt:242
+-	fun	writeReplace	-	0	private fun writeReplace(): Any = serializedInstant(this)	commonMain/kotlin/time/Instant.kt:269
+-	fun	readObject	-	0	private fun readObject(input: ReadObjectParameterType): Unit = throwReadObjectNotSupported()	commonMain/kotlin/time/Instant.kt:271
+-	fun	now	-	0	public fun now(): Instant = throw NotImplementedError()	commonMain/kotlin/time/Instant.kt:275
+-	fun	fromEpochMilliseconds	-	0	public fun fromEpochMilliseconds(epochMilliseconds: Long): Instant {	commonMain/kotlin/time/Instant.kt:287
+-	val	epochSeconds	-	0	val epochSeconds = epochMilliseconds.floorDiv(MILLIS_PER_SECOND.toLong())	commonMain/kotlin/time/Instant.kt:288
+-	val	nanosecondsOfSecond	-	0	val nanosecondsOfSecond = (epochMilliseconds.mod(MILLIS_PER_SECOND.toLong()) * NANOS_PER_MILLI).toInt()	commonMain/kotlin/time/Instant.kt:289
+-	fun	fromEpochSeconds	-	1	public fun fromEpochSeconds(epochSeconds: Long, nanosecondAdjustment: Long = 0): Instant {	commonMain/kotlin/time/Instant.kt:311
+-	val	seconds	-	1	val seconds = safeAddOrElse(epochSeconds, nanosecondAdjustment.floorDiv(NANOS_PER_SECOND.toLong())) {	commonMain/kotlin/time/Instant.kt:312
+-	val	nanoseconds	-	0	val nanoseconds = nanosecondAdjustment.mod(NANOS_PER_SECOND.toLong()).toInt()	commonMain/kotlin/time/Instant.kt:319
+-	fun	fromEpochSeconds	-	1	public fun fromEpochSeconds(epochSeconds: Long, nanosecondAdjustment: Int): Instant =	commonMain/kotlin/time/Instant.kt:339
+-	fun	parse	-	0	public fun parse(input: CharSequence): Instant = parseIso(input).toInstant()	commonMain/kotlin/time/Instant.kt:370
+2.2	fun	parseOrNull	-	0	public fun parseOrNull(input: CharSequence): Instant? = parseIso(input).toInstantOrNull()	commonMain/kotlin/time/Instant.kt:401
+-	val	Instant	-	0	public val DISTANT_PAST: Instant	commonMain/kotlin/time/Instant.kt:410
+-	val	Instant	-	0	public val DISTANT_FUTURE: Instant	commonMain/kotlin/time/Instant.kt:420
+-	val	MIN	-	1	internal val MIN = Instant(MIN_SECOND, 0)	commonMain/kotlin/time/Instant.kt:423
+-	val	MAX	-	1	internal val MAX = Instant(MAX_SECOND, 999_999_999)	commonMain/kotlin/time/Instant.kt:424
+2.1	val	Boolean	-	0	public inline val Instant.isDistantPast: Boolean	commonMain/kotlin/time/Instant.kt:436
+2.1	val	Boolean	-	0	public inline val Instant.isDistantFuture: Boolean	commonMain/kotlin/time/Instant.kt:447
+-	fun	serializedInstant	-	0	internal expect fun serializedInstant(instant: Instant): Any	commonMain/kotlin/time/Instant.kt:453
+-	val	DISTANT_PAST_SECONDS	-	0	private const val DISTANT_PAST_SECONDS = -3217862419201	commonMain/kotlin/time/Instant.kt:455
+-	val	DISTANT_FUTURE_SECONDS	-	0	private const val DISTANT_FUTURE_SECONDS = 3093527980800	commonMain/kotlin/time/Instant.kt:456
+-	val	MIN_SECOND	-	0	private const val MIN_SECOND = -31557014167219200L	commonMain/kotlin/time/Instant.kt:461
+-	val	MAX_SECOND	-	0	private const val MAX_SECOND = 31556889864403199L	commonMain/kotlin/time/Instant.kt:466
+-	class	UnboundLocalDateTime	-	0	private class UnboundLocalDateTime(	commonMain/kotlin/time/Instant.kt:469
+-	val	Int	-	1	val year: Int,	commonMain/kotlin/time/Instant.kt:470
+-	val	Int	-	1	val month: Int,	commonMain/kotlin/time/Instant.kt:471
+-	val	Int	-	1	val day: Int,	commonMain/kotlin/time/Instant.kt:472
+-	val	Int	-	1	val hour: Int,	commonMain/kotlin/time/Instant.kt:473
+-	val	Int	-	1	val minute: Int,	commonMain/kotlin/time/Instant.kt:474
+-	val	Int	-	1	val second: Int,	commonMain/kotlin/time/Instant.kt:475
+-	val	Int	-	1	val nanosecond: Int,	commonMain/kotlin/time/Instant.kt:476
+-	fun	toInstant	-	2	inline fun <T> toInstant(offsetSeconds: Int, buildInstant: (epochSeconds: Long, nanosecondOfSecond: Int) -> T): T {	commonMain/kotlin/time/Instant.kt:478
+-	val	epochSeconds	-	0	val epochSeconds = run {	commonMain/kotlin/time/Instant.kt:479
+-	val	Long	-	0	val epochDays: Long = run {	commonMain/kotlin/time/Instant.kt:481
+-	val	y	-	0	val y = year.toLong()	commonMain/kotlin/time/Instant.kt:482
+-	var	total	-	0	var total = 365 * y	commonMain/kotlin/time/Instant.kt:483
+-	val	daySeconds	-	0	val daySeconds = hour * SECONDS_PER_HOUR + minute * SECONDS_PER_MINUTE + second	commonMain/kotlin/time/Instant.kt:503
+-	fun	fromInstant	-	0	fun fromInstant(instant: Instant): UnboundLocalDateTime {	commonMain/kotlin/time/Instant.kt:512
+-	val	Long	-	0	val localSecond: Long = instant.epochSeconds	commonMain/kotlin/time/Instant.kt:513
+-	val	epochDays	-	0	val epochDays = localSecond.floorDiv(SECONDS_PER_DAY.toLong())	commonMain/kotlin/time/Instant.kt:514
+-	val	secsOfDay	-	0	val secsOfDay = localSecond.mod(SECONDS_PER_DAY.toLong()).toInt()	commonMain/kotlin/time/Instant.kt:515
+-	val	Int	-	0	val year: Int	commonMain/kotlin/time/Instant.kt:516
+-	val	Int	-	0	val month: Int	commonMain/kotlin/time/Instant.kt:517
+-	val	Int	-	0	val day: Int	commonMain/kotlin/time/Instant.kt:518
+-	var	zeroDay	-	0	var zeroDay = epochDays + DAYS_0000_TO_1970	commonMain/kotlin/time/Instant.kt:521
+-	var	adjust	-	0	var adjust = 0L	commonMain/kotlin/time/Instant.kt:525
+-	val	adjustCycles	-	0	val adjustCycles = (zeroDay + 1) / DAYS_PER_CYCLE - 1	commonMain/kotlin/time/Instant.kt:527
+-	var	yearEst	-	0	var yearEst = ((400 * zeroDay + 591) / DAYS_PER_CYCLE)	commonMain/kotlin/time/Instant.kt:531
+-	var	doyEst	-	0	var doyEst = zeroDay - (365 * yearEst + yearEst / 4 - yearEst / 100 + yearEst / 400)	commonMain/kotlin/time/Instant.kt:532
+-	val	marchDoy0	-	0	val marchDoy0 = doyEst.toInt()	commonMain/kotlin/time/Instant.kt:539
+-	val	marchMonth0	-	0	val marchMonth0 = (marchDoy0 * 5 + 2) / 153	commonMain/kotlin/time/Instant.kt:542
+-	val	hours	-	0	val hours = (secsOfDay / SECONDS_PER_HOUR)	commonMain/kotlin/time/Instant.kt:547
+-	val	secondWithoutHours	-	0	val secondWithoutHours = secsOfDay - hours * SECONDS_PER_HOUR	commonMain/kotlin/time/Instant.kt:548
+-	val	minutes	-	0	val minutes = (secondWithoutHours / SECONDS_PER_MINUTE)	commonMain/kotlin/time/Instant.kt:549
+-	val	second	-	0	val second = secondWithoutHours - minutes * SECONDS_PER_MINUTE	commonMain/kotlin/time/Instant.kt:550
+-	fun	parseIso	-	0	private fun parseIso(isoString: CharSequence): InstantParseResult {	commonMain/kotlin/time/Instant.kt:557
+-	fun	parseFailure	-	0	fun parseFailure(error: String): InstantParseResult.Failure = InstantParseResult.Failure(	commonMain/kotlin/time/Instant.kt:558
+-	fun	expect	-	2	fun expect(what: String, where: Int, predicate: (Char) -> Boolean): InstantParseResult.Failure? {	commonMain/kotlin/time/Instant.kt:562
+-	val	c	-	0	val c = isoString[where]	commonMain/kotlin/time/Instant.kt:563
+-	val	s	-	0	val s = isoString	commonMain/kotlin/time/Instant.kt:570
+-	var	i	-	0	var i = 0	commonMain/kotlin/time/Instant.kt:571
+-	val	yearSign	-	0	val yearSign = when (val c = s[i]) {	commonMain/kotlin/time/Instant.kt:573
+-	val	yearStart	-	0	val yearStart = i	commonMain/kotlin/time/Instant.kt:577
+-	var	absYear	-	0	var absYear = 0	commonMain/kotlin/time/Instant.kt:578
+-	val	yearStrLength	-	0	val yearStrLength = i - yearStart	commonMain/kotlin/time/Instant.kt:583
+-	val	year	-	0	val year = when {	commonMain/kotlin/time/Instant.kt:584
+-	fun	twoDigitNumber	-	0	fun twoDigitNumber(index: Int) = (s[index] - '0') * 10 + (s[index + 1] - '0')	commonMain/kotlin/time/Instant.kt:617
+-	val	month	-	0	val month = twoDigitNumber(i + 1)	commonMain/kotlin/time/Instant.kt:618
+-	val	day	-	0	val day = twoDigitNumber(i + 4)	commonMain/kotlin/time/Instant.kt:619
+-	val	hour	-	0	val hour = twoDigitNumber(i + 7)	commonMain/kotlin/time/Instant.kt:620
+-	val	minute	-	0	val minute = twoDigitNumber(i + 10)	commonMain/kotlin/time/Instant.kt:621
+-	val	second	-	0	val second = twoDigitNumber(i + 13)	commonMain/kotlin/time/Instant.kt:622
+-	val	nanosecond	-	0	val nanosecond = if (s[i + 15] == '.') {	commonMain/kotlin/time/Instant.kt:623
+-	val	fractionStart	-	0	val fractionStart = i + 16	commonMain/kotlin/time/Instant.kt:624
+-	var	fraction	-	0	var fraction = 0	commonMain/kotlin/time/Instant.kt:626
+-	val	fractionStrLength	-	0	val fractionStrLength = i - fractionStart	commonMain/kotlin/time/Instant.kt:631
+-	val	offsetSeconds	-	0	val offsetSeconds = when (val sign = s[i]) {	commonMain/kotlin/time/Instant.kt:644
+-	val	offsetStrLength	-	0	val offsetStrLength = s.length - i	commonMain/kotlin/time/Instant.kt:651
+-	val	offsetHour	-	0	val offsetHour = twoDigitNumber(i + 1)	commonMain/kotlin/time/Instant.kt:668
+-	val	offsetMinute	-	0	val offsetMinute = if (offsetStrLength > 3) { twoDigitNumber(i + 4) } else { 0 }	commonMain/kotlin/time/Instant.kt:669
+-	val	offsetSecond	-	0	val offsetSecond = if (offsetStrLength > 6) { twoDigitNumber(i + 7) } else { 0 }	commonMain/kotlin/time/Instant.kt:670
+-	interface	InstantParseResult	-	0	private sealed interface InstantParseResult {	commonMain/kotlin/time/Instant.kt:693
+-	fun	toInstant	-	0	fun toInstant(): Instant	commonMain/kotlin/time/Instant.kt:694
+-	fun	toInstantOrNull	-	0	fun toInstantOrNull(): Instant?	commonMain/kotlin/time/Instant.kt:695
+-	class	Success	-	1	class Success(val epochSeconds: Long, val nanosecondsOfSecond: Int) : InstantParseResult {	commonMain/kotlin/time/Instant.kt:697
+-	class	Failure	-	1	class Failure(val error: String, val input: CharSequence) : InstantParseResult {	commonMain/kotlin/time/Instant.kt:712
+-	fun	formatIso	-	0	private fun formatIso(instant: Instant): String = buildString {	commonMain/kotlin/time/Instant.kt:722
+-	val	ldt	-	0	val ldt = UnboundLocalDateTime.fromInstant(instant)	commonMain/kotlin/time/Instant.kt:723
+-	fun	appendTwoDigits	Appendable	0	fun Appendable.appendTwoDigits(number: Int) {	commonMain/kotlin/time/Instant.kt:724
+-	val	number	-	0	val number = ldt.year	commonMain/kotlin/time/Instant.kt:729
+-	val	innerBuilder	-	0	val innerBuilder = StringBuilder()	commonMain/kotlin/time/Instant.kt:732
+-	var	zerosToStrip	-	0	var zerosToStrip = 0	commonMain/kotlin/time/Instant.kt:758
+-	val	numberToOutput	-	0	val numberToOutput = ldt.nanosecond / POWERS_OF_TEN[zerosToStrip]	commonMain/kotlin/time/Instant.kt:763
+-	val	DAYS_PER_CYCLE	-	0	private const val DAYS_PER_CYCLE = 146097	commonMain/kotlin/time/Instant.kt:772
+-	val	DAYS_0000_TO_1970	-	0	private const val DAYS_0000_TO_1970 = DAYS_PER_CYCLE * 5 - (30 * 365 + 7)	commonMain/kotlin/time/Instant.kt:779
+-	fun	safeAddOrElse	-	2	private inline fun safeAddOrElse(a: Long, b: Long, action: () -> Nothing): Long {	commonMain/kotlin/time/Instant.kt:785
+-	val	sum	-	0	val sum = a + b	commonMain/kotlin/time/Instant.kt:786
+-	fun	safeMultiplyOrElse	-	2	private inline fun safeMultiplyOrElse(a: Long, b: Long, action: () -> Nothing): Long {	commonMain/kotlin/time/Instant.kt:802
+-	val	total	-	0	val total = a * b	commonMain/kotlin/time/Instant.kt:812
+-	val	SECONDS_PER_HOUR	-	0	private const val SECONDS_PER_HOUR = 60 * 60	commonMain/kotlin/time/Instant.kt:819
+-	val	SECONDS_PER_MINUTE	-	0	private const val SECONDS_PER_MINUTE = 60	commonMain/kotlin/time/Instant.kt:821
+-	val	HOURS_PER_DAY	-	0	private const val HOURS_PER_DAY = 24	commonMain/kotlin/time/Instant.kt:823
+-	val	Int	-	0	private const val SECONDS_PER_DAY: Int = SECONDS_PER_HOUR * HOURS_PER_DAY	commonMain/kotlin/time/Instant.kt:825
+-	val	NANOS_PER_SECOND	-	0	internal const val NANOS_PER_SECOND = 1_000_000_000	commonMain/kotlin/time/Instant.kt:827
+-	val	NANOS_PER_MILLI	-	0	private const val NANOS_PER_MILLI = 1_000_000	commonMain/kotlin/time/Instant.kt:828
+-	val	MILLIS_PER_SECOND	-	0	private const val MILLIS_PER_SECOND = 1_000	commonMain/kotlin/time/Instant.kt:829
+-	fun	isLeapYear	-	0	internal fun isLeapYear(year: Int): Boolean {	commonMain/kotlin/time/Instant.kt:831
+-	fun	monthLength	Int	0	private fun Int.monthLength(isLeapYear: Boolean): Int =	commonMain/kotlin/time/Instant.kt:835
+-	val	POWERS_OF_TEN	-	0	private val POWERS_OF_TEN = intArrayOf(	commonMain/kotlin/time/Instant.kt:842
+-	val	asciiDigitPositionsInIsoStringAfterYear	-	9	private val asciiDigitPositionsInIsoStringAfterYear = intArrayOf(1, 2, 4, 5, 7, 8, 10, 11, 13, 14)	commonMain/kotlin/time/Instant.kt:855
+-	val	colonsInIsoOffsetString	-	1	private val colonsInIsoOffsetString = intArrayOf(3, 6)	commonMain/kotlin/time/Instant.kt:856
+-	val	asciiDigitsInIsoOffsetString	-	5	private val asciiDigitsInIsoOffsetString = intArrayOf(1, 2, 4, 5, 7, 8)	commonMain/kotlin/time/Instant.kt:857
+-	fun	truncateForErrorMessage	CharSequence	0	private fun CharSequence.truncateForErrorMessage(maxLength: Int): String {	commonMain/kotlin/time/Instant.kt:859
+-	class	InstantFormatException	-	0	private class InstantFormatException(message: String) : IllegalArgumentException(message)	commonMain/kotlin/time/Instant.kt:863
+-	fun	saturatingAdd	-	2	internal fun saturatingAdd(value: Long, unit: DurationUnit, duration: Duration): Long {	commonMain/kotlin/time/longSaturatedMath.kt:12
+-	val	durationInUnit	-	0	val durationInUnit = duration.toLong(unit)	commonMain/kotlin/time/longSaturatedMath.kt:13
+-	val	result	-	0	val result = value + durationInUnit	commonMain/kotlin/time/longSaturatedMath.kt:21
+-	fun	checkInfiniteSumDefined	-	2	private fun checkInfiniteSumDefined(value: Long, duration: Duration, durationInUnit: Long): Long {	commonMain/kotlin/time/longSaturatedMath.kt:28
+-	fun	saturatingAddInHalves	-	2	private fun saturatingAddInHalves(value: Long, unit: DurationUnit, duration: Duration): Long {	commonMain/kotlin/time/longSaturatedMath.kt:33
+-	val	half	-	0	val half = duration / 2	commonMain/kotlin/time/longSaturatedMath.kt:34
+-	val	halfInUnit	-	0	val halfInUnit = half.toLong(unit)	commonMain/kotlin/time/longSaturatedMath.kt:35
+-	fun	infinityOfSign	-	0	private fun infinityOfSign(value: Long): Duration = if (value < 0) Duration.NEG_INFINITE else Duration.INFINITE	commonMain/kotlin/time/longSaturatedMath.kt:43
+-	fun	saturatingDiff	-	2	internal fun saturatingDiff(valueNs: Long, origin: Long, unit: DurationUnit): Duration {	commonMain/kotlin/time/longSaturatedMath.kt:45
+-	fun	saturatingOriginsDiff	-	2	internal fun saturatingOriginsDiff(origin1: Long, origin2: Long, unit: DurationUnit): Duration {	commonMain/kotlin/time/longSaturatedMath.kt:52
+-	fun	saturatingFiniteDiff	-	2	private fun saturatingFiniteDiff(value1: Long, value2: Long, unit: DurationUnit): Duration {	commonMain/kotlin/time/longSaturatedMath.kt:63
+-	val	result	-	0	val result = value1 - value2	commonMain/kotlin/time/longSaturatedMath.kt:64
+-	val	unitsInMilli	-	2	val unitsInMilli = convertDurationUnit(1, DurationUnit.MILLISECONDS, unit)	commonMain/kotlin/time/longSaturatedMath.kt:67
+-	val	resultMs	-	0	val resultMs = value1 / unitsInMilli - value2 / unitsInMilli	commonMain/kotlin/time/longSaturatedMath.kt:68
+-	val	resultUnit	-	0	val resultUnit = value1 % unitsInMilli - value2 % unitsInMilli	commonMain/kotlin/time/longSaturatedMath.kt:69
+-	fun	isSaturated	Long	0	internal inline fun Long.isSaturated(): Boolean =	commonMain/kotlin/time/longSaturatedMath.kt:79
+1.9	fun	measureTime	-	0	public inline fun measureTime(block: () -> Unit): Duration {	commonMain/kotlin/time/measureTime.kt:20
+1.9	fun	measureTime	TimeSource	0	public inline fun TimeSource.measureTime(block: () -> Unit): Duration {	commonMain/kotlin/time/measureTime.kt:37
+-	val	mark	-	0	val mark = markNow()	commonMain/kotlin/time/measureTime.kt:42
+1.9	fun	measureTime	TimeSource.Monotonic	0	public inline fun TimeSource.Monotonic.measureTime(block: () -> Unit): Duration {	commonMain/kotlin/time/measureTime.kt:58
+-	val	mark	-	0	val mark = markNow()	commonMain/kotlin/time/measureTime.kt:63
+1.9	class	TimedValue	-	1	public data class TimedValue<T>(val value: T, val duration: Duration)	commonMain/kotlin/time/measureTime.kt:77
+1.9	fun	measureTimedValue	-	0	public inline fun <T> measureTimedValue(block: () -> T): TimedValue<T> {	commonMain/kotlin/time/measureTime.kt:90
+1.9	fun	measureTimedValue	TimeSource	0	public inline fun <T> TimeSource.measureTimedValue(block: () -> T): TimedValue<T> {	commonMain/kotlin/time/measureTime.kt:108
+-	val	mark	-	0	val mark = markNow()	commonMain/kotlin/time/measureTime.kt:113
+-	val	result	-	0	val result = block()	commonMain/kotlin/time/measureTime.kt:114
+1.9	fun	measureTimedValue	TimeSource.Monotonic	0	public inline fun <T> TimeSource.Monotonic.measureTimedValue(block: () -> T): TimedValue<T> {	commonMain/kotlin/time/measureTime.kt:130
+-	val	mark	-	0	val mark = markNow()	commonMain/kotlin/time/measureTime.kt:135
+-	val	result	-	0	val result = block()	commonMain/kotlin/time/measureTime.kt:136
+1.9	interface	TimeSource	-	0	public interface TimeSource {	commonMain/kotlin/time/TimeSource.kt:20
+-	fun	markNow	-	0	public fun markNow(): TimeMark	commonMain/kotlin/time/TimeSource.kt:27
+1.9	interface	WithComparableMarks	-	0	public interface WithComparableMarks : TimeSource {	commonMain/kotlin/time/TimeSource.kt:34
+-	object	Monotonic	-	0	public object Monotonic : TimeSource.WithComparableMarks {	commonMain/kotlin/time/TimeSource.kt:47
+1.9	class	ValueTimeMark	-	0	public value class ValueTimeMark internal constructor(internal val reading: ValueTimeMarkReading) : ComparableTimeMark {	commonMain/kotlin/time/TimeSource.kt:66
+-	fun	minus	-	1	public operator fun minus(other: ValueTimeMark): Duration = MonotonicTimeSource.differenceBetween(this, other)	commonMain/kotlin/time/TimeSource.kt:90
+-	fun	compareTo	-	0	public operator fun compareTo(other: ValueTimeMark): Int =	commonMain/kotlin/time/TimeSource.kt:99
+-	class	ValueTimeMarkReading	-	0	internal expect class ValueTimeMarkReading	commonMain/kotlin/time/TimeSource.kt:110
+1.9	interface	TimeMark	-	0	public interface TimeMark {	commonMain/kotlin/time/TimeSource.kt:119
+-	fun	elapsedNow	-	0	public abstract fun elapsedNow(): Duration	commonMain/kotlin/time/TimeSource.kt:129
+-	fun	plus	-	1	public operator fun plus(duration: Duration): TimeMark = AdjustedTimeMark(this, duration)	commonMain/kotlin/time/TimeSource.kt:142
+-	fun	minus	-	0	public open operator fun minus(duration: Duration): TimeMark = plus(-duration)	commonMain/kotlin/time/TimeSource.kt:155
+-	fun	hasPassedNow	-	0	public fun hasPassedNow(): Boolean = !elapsedNow().isNegative()	commonMain/kotlin/time/TimeSource.kt:164
+-	fun	hasNotPassedNow	-	0	public fun hasNotPassedNow(): Boolean = elapsedNow().isNegative()	commonMain/kotlin/time/TimeSource.kt:172
+1.9	interface	ComparableTimeMark	-	1	public interface ComparableTimeMark : TimeMark, Comparable<ComparableTimeMark> {	commonMain/kotlin/time/TimeSource.kt:180
+-	fun	minus	-	0	public operator fun minus(other: ComparableTimeMark): Duration	commonMain/kotlin/time/TimeSource.kt:199
+-	class	AdjustedTimeMark	-	1	private class AdjustedTimeMark(val mark: TimeMark, val adjustment: Duration) : TimeMark {	commonMain/kotlin/time/TimeSource.kt:224
+1.3	object	MonotonicTimeSource	-	0	internal expect object MonotonicTimeSource : TimeSource.WithComparableMarks {	commonMain/kotlin/time/TimeSources.kt:11
+-	fun	elapsedFrom	-	0	fun elapsedFrom(timeMark: TimeSource.Monotonic.ValueTimeMark): Duration	commonMain/kotlin/time/TimeSources.kt:13
+-	fun	differenceBetween	-	1	fun differenceBetween(one: TimeSource.Monotonic.ValueTimeMark, another: TimeSource.Monotonic.ValueTimeMark): Duration	commonMain/kotlin/time/TimeSources.kt:14
+-	fun	adjustReading	-	1	fun adjustReading(timeMark: TimeSource.Monotonic.ValueTimeMark, duration: Duration): TimeSource.Monotonic.ValueTimeMark	commonMain/kotlin/time/TimeSources.kt:15
+1.9	class	AbstractLongTimeSource	-	0	public abstract class AbstractLongTimeSource(protected val unit: DurationUnit) : TimeSource.WithComparableMarks {	commonMain/kotlin/time/TimeSources.kt:28
+-	fun	read	-	0	protected abstract fun read(): Long	commonMain/kotlin/time/TimeSources.kt:38
+-	val	lazy	-	0	private val zero by lazy { read() }	commonMain/kotlin/time/TimeSources.kt:40
+-	fun	adjustedRead	-	0	private fun adjustedRead(): Long = read() - zero	commonMain/kotlin/time/TimeSources.kt:41
+-	class	LongTimeMark	-	2	private class LongTimeMark(private val startedAt: Long, private val timeSource: AbstractLongTimeSource, private val offset: Duration) : ComparableTimeMark {	commonMain/kotlin/time/TimeSources.kt:43
+-	val	unit	-	0	val unit = timeSource.unit	commonMain/kotlin/time/TimeSources.kt:48
+-	val	newValue	-	2	val newValue = saturatingAdd(startedAt, unit, duration)	commonMain/kotlin/time/TimeSources.kt:50
+-	val	durationInUnit	-	0	val durationInUnit = duration.truncateTo(unit)	commonMain/kotlin/time/TimeSources.kt:53
+-	val	rest	-	0	val rest = (duration - durationInUnit) + offset	commonMain/kotlin/time/TimeSources.kt:54
+-	var	sum	-	2	var sum = saturatingAdd(startedAt, unit, durationInUnit)	commonMain/kotlin/time/TimeSources.kt:55
+-	val	restInUnit	-	0	val restInUnit = rest.truncateTo(unit)	commonMain/kotlin/time/TimeSources.kt:56
+-	var	restUnderUnit	-	0	var restUnderUnit = rest - restInUnit	commonMain/kotlin/time/TimeSources.kt:58
+-	val	restUnderUnitNs	-	0	val restUnderUnitNs = restUnderUnit.inWholeNanoseconds	commonMain/kotlin/time/TimeSources.kt:59
+-	val	correction	-	0	val correction = restUnderUnitNs.sign.toDuration(unit)	commonMain/kotlin/time/TimeSources.kt:62
+-	val	newValue	-	0	val newValue = sum	commonMain/kotlin/time/TimeSources.kt:66
+-	val	newOffset	-	0	val newOffset = if (newValue.isSaturated()) Duration.ZERO else restUnderUnit	commonMain/kotlin/time/TimeSources.kt:67
+-	val	startedAtDiff	-	2	val startedAtDiff = saturatingOriginsDiff(this.startedAt, other.startedAt, timeSource.unit)	commonMain/kotlin/time/TimeSources.kt:75
+1.3	class	AbstractDoubleTimeSource	-	0	public abstract class AbstractDoubleTimeSource(protected val unit: DurationUnit) : TimeSource.WithComparableMarks {	commonMain/kotlin/time/TimeSources.kt:101
+-	fun	read	-	0	protected abstract fun read(): Double	commonMain/kotlin/time/TimeSources.kt:106
+-	class	DoubleTimeMark	-	0	private class DoubleTimeMark(	commonMain/kotlin/time/TimeSources.kt:109
+-	val	Double	-	1	private val startedAt: Double,	commonMain/kotlin/time/TimeSources.kt:110
+-	val	AbstractDoubleTimeSource	-	1	private val timeSource: AbstractDoubleTimeSource,	commonMain/kotlin/time/TimeSources.kt:112
+-	val	Duration	-	0	private val offset: Duration	commonMain/kotlin/time/TimeSources.kt:113
+-	val	offsetDiff	-	0	val offsetDiff = this.offset - other.offset	commonMain/kotlin/time/TimeSources.kt:123
+-	val	startedAtDiff	-	0	val startedAtDiff = (this.startedAt - other.startedAt).toDuration(timeSource.unit)	commonMain/kotlin/time/TimeSources.kt:124
+1.9	class	TestTimeSource	-	0	public class TestTimeSource : AbstractLongTimeSource(unit = DurationUnit.NANOSECONDS) {	commonMain/kotlin/time/TimeSources.kt:164
+-	var	Long	-	0	private var reading: Long = 0L	commonMain/kotlin/time/TimeSources.kt:165
+-	fun	plusAssign	-	0	public operator fun plusAssign(duration: Duration) {	commonMain/kotlin/time/TimeSources.kt:182
+-	val	longDelta	-	0	val longDelta = duration.toLong(unit)	commonMain/kotlin/time/TimeSources.kt:183
+-	val	newReading	-	0	val newReading = reading + longDelta	commonMain/kotlin/time/TimeSources.kt:186
+-	val	half	-	0	val half = duration / 2	commonMain/kotlin/time/TimeSources.kt:190
+-	val	readingBefore	-	0	val readingBefore = reading	commonMain/kotlin/time/TimeSources.kt:192
+-	fun	overflow	-	0	private fun overflow(duration: Duration) {	commonMain/kotlin/time/TimeSources.kt:206
+1.6	fun	toKotlinDuration	java.time.Duration	0	public inline fun java.time.Duration.toKotlinDuration(): Duration =	jvmMain/jdk8/kotlin/time/DurationConversions.kt:21
+1.6	fun	toJavaDuration	Duration	0	public inline fun Duration.toJavaDuration(): java.time.Duration =	jvmMain/jdk8/kotlin/time/DurationConversions.kt:32
+2.1	fun	toJavaInstant	Instant	0	public fun Instant.toJavaInstant(): java.time.Instant =	jvmMain/jdk8/kotlin/time/InstantConversions.kt:19
+2.1	fun	toKotlinInstant	java.time.Instant	0	public fun java.time.Instant.toKotlinInstant(): Instant =	jvmMain/jdk8/kotlin/time/InstantConversions.kt:29
+-	val	Boolean	-	0	internal actual val durationAssertionsEnabled: Boolean = Duration::class.java.desiredAssertionStatus()	jvmMain/kotlin/time/DurationJvm.kt:12
+-	val	precisionFormats	-	0	private val precisionFormats = Array(4) { ThreadLocal<DecimalFormat>() }	jvmMain/kotlin/time/DurationJvm.kt:14
+-	fun	createFormatForDecimals	-	0	private fun createFormatForDecimals(decimals: Int) = DecimalFormat("0").apply {	jvmMain/kotlin/time/DurationJvm.kt:16
+-	fun	formatToExactDecimals	-	1	internal actual fun formatToExactDecimals(value: Double, decimals: Int): String {	jvmMain/kotlin/time/DurationJvm.kt:21
+-	val	format	-	0	val format = if (decimals < precisionFormats.size) {	jvmMain/kotlin/time/DurationJvm.kt:22
+1.6	class	DurationUnit	-	0	public actual enum class DurationUnit(internal val timeUnit: TimeUnit) {	jvmMain/kotlin/time/DurationUnitJvm.kt:14
+1.8	fun	toTimeUnit	DurationUnit	0	public fun DurationUnit.toTimeUnit(): TimeUnit = timeUnit	jvmMain/kotlin/time/DurationUnitJvm.kt:50
+1.8	fun	toDurationUnit	TimeUnit	0	public fun TimeUnit.toDurationUnit(): DurationUnit = when (this) {	jvmMain/kotlin/time/DurationUnitJvm.kt:57
+1.3	fun	convertDurationUnit	-	2	internal actual fun convertDurationUnit(value: Double, sourceUnit: DurationUnit, targetUnit: DurationUnit): Double {	jvmMain/kotlin/time/DurationUnitJvm.kt:68
+-	val	sourceInTargets	-	1	val sourceInTargets = targetUnit.timeUnit.convert(1, sourceUnit.timeUnit)	jvmMain/kotlin/time/DurationUnitJvm.kt:69
+-	val	otherInThis	-	1	val otherInThis = sourceUnit.timeUnit.convert(1, targetUnit.timeUnit)	jvmMain/kotlin/time/DurationUnitJvm.kt:73
+1.5	fun	convertDurationUnitOverflow	-	2	internal actual fun convertDurationUnitOverflow(value: Long, sourceUnit: DurationUnit, targetUnit: DurationUnit): Long {	jvmMain/kotlin/time/DurationUnitJvm.kt:78
+1.5	fun	convertDurationUnit	-	2	internal actual fun convertDurationUnit(value: Long, sourceUnit: DurationUnit, targetUnit: DurationUnit): Long {	jvmMain/kotlin/time/DurationUnitJvm.kt:83
+-	val	Clock	-	0	private val systemClock: Clock = IMPLEMENTATIONS.getSystemClock()	jvmMain/kotlin/time/InstantJvm.kt:12
+-	fun	systemClockNow	-	0	internal actual fun systemClockNow(): Instant = systemClock.now()	jvmMain/kotlin/time/InstantJvm.kt:15
+-	class	InstantSerialized	-	0	private class InstantSerialized(	jvmMain/kotlin/time/InstantJvm.kt:18
+-	var	Long	-	1	var epochSeconds: Long,	jvmMain/kotlin/time/InstantJvm.kt:19
+-	var	Int	-	0	var nanosecondsOfSecond: Int	jvmMain/kotlin/time/InstantJvm.kt:20
+-	fun	readResolve	-	0	private fun readResolve(): Any =	jvmMain/kotlin/time/InstantJvm.kt:35
+-	val	Long	-	0	private const val serialVersionUID: Long = 0L	jvmMain/kotlin/time/InstantJvm.kt:39
+-	fun	serializedInstant	-	0	internal actual fun serializedInstant(instant: Instant): Any =	jvmMain/kotlin/time/InstantJvm.kt:44
+1.3	object	MonotonicTimeSource	-	0	internal actual object MonotonicTimeSource : TimeSource.WithComparableMarks {	jvmMain/kotlin/time/MonoTimeSource.kt:11
+-	val	Long	-	0	private val zero: Long = System.nanoTime()	jvmMain/kotlin/time/MonoTimeSource.kt:12
+-	fun	read	-	0	private fun read(): Long = System.nanoTime() - zero	jvmMain/kotlin/time/MonoTimeSource.kt:13
+-	fun	elapsedFrom	-	0	actual fun elapsedFrom(timeMark: ValueTimeMark): Duration =	jvmMain/kotlin/time/MonoTimeSource.kt:17
+-	fun	differenceBetween	-	1	actual fun differenceBetween(one: ValueTimeMark, another: ValueTimeMark): Duration =	jvmMain/kotlin/time/MonoTimeSource.kt:20
+-	fun	adjustReading	-	1	actual fun adjustReading(timeMark: ValueTimeMark, duration: Duration): ValueTimeMark =	jvmMain/kotlin/time/MonoTimeSource.kt:23
+-	typealias	ValueTimeMarkReading	-	0	internal actual typealias ValueTimeMarkReading = Long	jvmMain/kotlin/time/MonoTimeSource.kt:28

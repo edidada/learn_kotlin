@@ -1,0 +1,7 @@
+since	kind	name	receiver	arity	sig	loc
+-	class	AnnotationTarget	-	0	public enum class AnnotationTarget {	commonMain/kotlin/annotation/Annotations.kt:15
+-	class	AnnotationRetention	-	0	public enum class AnnotationRetention {	commonMain/kotlin/annotation/Annotations.kt:54
+-	class	Target	-	0	public annotation class Target(vararg val allowedTargets: AnnotationTarget)	commonMain/kotlin/annotation/Annotations.kt:73
+-	class	Retention	-	0	public annotation class Retention(val value: AnnotationRetention = AnnotationRetention.RUNTIME)	commonMain/kotlin/annotation/Annotations.kt:81
+-	class	Repeatable	-	0	public annotation class Repeatable	commonMain/kotlin/annotation/Annotations.kt:87
+-	class	MustBeDocumented	-	0	public annotation class MustBeDocumented	commonMain/kotlin/annotation/Annotations.kt:94

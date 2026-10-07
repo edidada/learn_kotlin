@@ -1,0 +1,189 @@
+since	kind	name	receiver	arity	sig	loc
+-	class	ArrayIterator	-	0	private class ArrayIterator<T>(val array: Array<T>) : Iterator<T> {	jvmMain/kotlin/jvm/internal/ArrayIterator.kt:8
+-	var	index	-	0	private var index = 0	jvmMain/kotlin/jvm/internal/ArrayIterator.kt:9
+-	fun	iterator	-	0	public fun <T> iterator(array: Array<T>): Iterator<T> = ArrayIterator(array)	jvmMain/kotlin/jvm/internal/ArrayIterator.kt:14
+-	class	ArrayByteIterator	-	0	private class ArrayByteIterator(private val array: ByteArray) : ByteIterator() {	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:11
+-	var	index	-	0	private var index = 0	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:12
+-	class	ArrayCharIterator	-	0	private class ArrayCharIterator(private val array: CharArray) : CharIterator() {	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:17
+-	var	index	-	0	private var index = 0	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:18
+-	class	ArrayShortIterator	-	0	private class ArrayShortIterator(private val array: ShortArray) : ShortIterator() {	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:23
+-	var	index	-	0	private var index = 0	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:24
+-	class	ArrayIntIterator	-	0	private class ArrayIntIterator(private val array: IntArray) : IntIterator() {	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:29
+-	var	index	-	0	private var index = 0	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:30
+-	class	ArrayLongIterator	-	0	private class ArrayLongIterator(private val array: LongArray) : LongIterator() {	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:35
+-	var	index	-	0	private var index = 0	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:36
+-	class	ArrayFloatIterator	-	0	private class ArrayFloatIterator(private val array: FloatArray) : FloatIterator() {	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:41
+-	var	index	-	0	private var index = 0	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:42
+-	class	ArrayDoubleIterator	-	0	private class ArrayDoubleIterator(private val array: DoubleArray) : DoubleIterator() {	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:47
+-	var	index	-	0	private var index = 0	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:48
+-	class	ArrayBooleanIterator	-	0	private class ArrayBooleanIterator(private val array: BooleanArray) : BooleanIterator() {	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:53
+-	var	index	-	0	private var index = 0	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:54
+-	fun	iterator	-	0	public fun iterator(array: ByteArray): ByteIterator = ArrayByteIterator(array)	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:59
+-	fun	iterator	-	0	public fun iterator(array: CharArray): CharIterator = ArrayCharIterator(array)	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:60
+-	fun	iterator	-	0	public fun iterator(array: ShortArray): ShortIterator = ArrayShortIterator(array)	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:61
+-	fun	iterator	-	0	public fun iterator(array: IntArray): IntIterator = ArrayIntIterator(array)	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:62
+-	fun	iterator	-	0	public fun iterator(array: LongArray): LongIterator = ArrayLongIterator(array)	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:63
+-	fun	iterator	-	0	public fun iterator(array: FloatArray): FloatIterator = ArrayFloatIterator(array)	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:64
+-	fun	iterator	-	0	public fun iterator(array: DoubleArray): DoubleIterator = ArrayDoubleIterator(array)	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:65
+-	fun	iterator	-	0	public fun iterator(array: BooleanArray): BooleanIterator = ArrayBooleanIterator(array)	jvmMain/kotlin/jvm/internal/ArrayIterators.kt:66
+-	class	BoxingConstructorMarker	-	0	internal class BoxingConstructorMarker private constructor()	jvmMain/kotlin/jvm/internal/BoxingConstructorMarker.kt:10
+-	interface	ClassBasedDeclarationContainer	-	0	public interface ClassBasedDeclarationContainer : KDeclarationContainer {	jvmMain/kotlin/jvm/internal/ClassBasedDeclarationContainer.kt:10
+-	val	Class	-	0	public val jClass: Class<*>	jvmMain/kotlin/jvm/internal/ClassBasedDeclarationContainer.kt:11
+-	class	ClassReference	-	1	public class ClassReference(override val jClass: Class<*>) : KClass<Any>, ClassBasedDeclarationContainer {	jvmMain/kotlin/jvm/internal/ClassReference.kt:10
+1.5	fun	error	-	0	private fun error(): Nothing = throw KotlinReflectionNotSupportedError()	jvmMain/kotlin/jvm/internal/ClassReference.kt:88
+-	val	FUNCTION_CLASSES	-	0	private val FUNCTION_CLASSES =	jvmMain/kotlin/jvm/internal/ClassReference.kt:100
+-	fun	classFqNameOf	-	0	private fun classFqNameOf(type: String) = when (type) {	jvmMain/kotlin/jvm/internal/ClassReference.kt:110
+-	fun	simpleNameOf	-	0	private fun simpleNameOf(type: String) = when (type) {	jvmMain/kotlin/jvm/internal/ClassReference.kt:180
+-	fun	getClassSimpleName	-	0	public fun getClassSimpleName(jClass: Class<*>): String? = when {	jvmMain/kotlin/jvm/internal/ClassReference.kt:250
+-	val	name	-	0	val name = jClass.simpleName	jvmMain/kotlin/jvm/internal/ClassReference.kt:253
+-	val	componentType	-	0	val componentType = jClass.componentType	jvmMain/kotlin/jvm/internal/ClassReference.kt:259
+-	fun	getClassQualifiedName	-	0	public fun getClassQualifiedName(jClass: Class<*>): String? = when {	jvmMain/kotlin/jvm/internal/ClassReference.kt:268
+-	val	componentType	-	0	val componentType = jClass.componentType	jvmMain/kotlin/jvm/internal/ClassReference.kt:272
+-	fun	isInstance	-	1	public fun isInstance(value: Any?, jClass: Class<*>): Boolean {	jvmMain/kotlin/jvm/internal/ClassReference.kt:281
+-	val	objectType	-	0	val objectType = if (jClass.isPrimitive) jClass.kotlin.javaObjectType else jClass	jvmMain/kotlin/jvm/internal/ClassReference.kt:285
+-	val	EMPTY	-	0	private val EMPTY = emptyArray<Any?>()	jvmMain/kotlin/jvm/internal/CollectionToArray.kt:14
+-	val	MAX_SIZE	-	0	private const val MAX_SIZE = Int.MAX_VALUE - 2	jvmMain/kotlin/jvm/internal/CollectionToArray.kt:15
+-	fun	collectionToArray	-	0	public fun collectionToArray(collection: Collection<*>): Array<Any?> =	jvmMain/kotlin/jvm/internal/CollectionToArray.kt:21
+-	fun	collectionToArray	-	1	public fun collectionToArray(collection: Collection<*>, a: Array<Any?>?): Array<Any?> {	jvmMain/kotlin/jvm/internal/CollectionToArray.kt:34
+-	fun	toArrayImpl	-	0	private inline fun toArrayImpl(	jvmMain/kotlin/jvm/internal/CollectionToArray.kt:57
+-	val	size	-	0	val size = collection.size	jvmMain/kotlin/jvm/internal/CollectionToArray.kt:63
+-	val	iter	-	0	val iter = collection.iterator()	jvmMain/kotlin/jvm/internal/CollectionToArray.kt:65
+-	var	result	-	0	var result = alloc(size)	jvmMain/kotlin/jvm/internal/CollectionToArray.kt:67
+-	var	i	-	0	var i = 0	jvmMain/kotlin/jvm/internal/CollectionToArray.kt:68
+-	var	newSize	-	0	var newSize = (i * 3 + 1) ushr 1	jvmMain/kotlin/jvm/internal/CollectionToArray.kt:77
+-	interface	FunctionBase	-	0	public interface FunctionBase<out R> : Function<R> {	jvmMain/kotlin/jvm/internal/FunctionBase.kt:8
+-	val	Int	-	0	public val arity: Int	jvmMain/kotlin/jvm/internal/FunctionBase.kt:9
+1.4	interface	KTypeBase	-	0	public interface KTypeBase : KType {	jvmMain/kotlin/jvm/internal/KTypeBase.kt:12
+-	val	Type	-	0	public val javaType: Type?	jvmMain/kotlin/jvm/internal/KTypeBase.kt:13
+-	class	Lambda	-	1	public abstract class Lambda<out R>(override val arity: Int) : FunctionBase<R>, Serializable {	jvmMain/kotlin/jvm/internal/Lambda.kt:10
+-	fun	notSupportedError	-	0	private fun notSupportedError(): Nothing {	jvmMain/kotlin/jvm/internal/localVariableReferences.kt:12
+1.1	class	LocalVariableReference	-	0	public open class LocalVariableReference : PropertyReference0() {	jvmMain/kotlin/jvm/internal/localVariableReferences.kt:17
+1.1	class	MutableLocalVariableReference	-	0	public open class MutableLocalVariableReference : MutablePropertyReference0() {	jvmMain/kotlin/jvm/internal/localVariableReferences.kt:25
+1.1	class	PackageReference	-	0	public class PackageReference(	jvmMain/kotlin/jvm/internal/PackageReference.kt:11
+-	val	String	-	0	@Suppress("unused") private val moduleName: String	jvmMain/kotlin/jvm/internal/PackageReference.kt:13
+-	object	DoubleCompanionObject	-	0	internal object DoubleCompanionObject {	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:8
+1.4	val	Double	-	0	const val MIN_VALUE: Double = java.lang.Double.MIN_VALUE	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:10
+1.4	val	Double	-	0	const val MAX_VALUE: Double = java.lang.Double.MAX_VALUE	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:12
+1.4	val	Double	-	0	const val POSITIVE_INFINITY: Double = java.lang.Double.POSITIVE_INFINITY	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:14
+1.4	val	Double	-	0	const val NEGATIVE_INFINITY: Double = java.lang.Double.NEGATIVE_INFINITY	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:16
+1.4	val	Double	-	0	const val NaN: Double = java.lang.Double.NaN	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:18
+1.4	val	Int	-	0	const val SIZE_BYTES: Int = 8	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:20
+1.4	val	Int	-	0	const val SIZE_BITS: Int = SIZE_BYTES * 8	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:22
+-	fun	getMIN_VALUE	-	0	fun getMIN_VALUE(): Double = java.lang.Double.MIN_VALUE	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:25
+-	fun	getMAX_VALUE	-	0	fun getMAX_VALUE(): Double = java.lang.Double.MAX_VALUE	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:26
+-	fun	getPOSITIVE_INFINITY	-	0	fun getPOSITIVE_INFINITY(): Double = java.lang.Double.POSITIVE_INFINITY	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:27
+-	fun	getNEGATIVE_INFINITY	-	0	fun getNEGATIVE_INFINITY(): Double = java.lang.Double.NEGATIVE_INFINITY	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:28
+-	fun	getNaN	-	0	fun getNaN(): Double = java.lang.Double.NaN	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:29
+-	object	FloatCompanionObject	-	0	internal object FloatCompanionObject {	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:32
+1.4	val	Float	-	0	const val MIN_VALUE: Float = java.lang.Float.MIN_VALUE	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:34
+1.4	val	Float	-	0	const val MAX_VALUE: Float = java.lang.Float.MAX_VALUE	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:36
+1.4	val	Float	-	0	const val POSITIVE_INFINITY: Float = java.lang.Float.POSITIVE_INFINITY	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:38
+1.4	val	Float	-	0	const val NEGATIVE_INFINITY: Float = java.lang.Float.NEGATIVE_INFINITY	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:40
+1.4	val	Float	-	0	const val NaN: Float = java.lang.Float.NaN	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:42
+1.4	val	Int	-	0	const val SIZE_BYTES: Int = 4	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:44
+1.4	val	Int	-	0	const val SIZE_BITS: Int = SIZE_BYTES * 8	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:46
+-	fun	getMIN_VALUE	-	0	fun getMIN_VALUE(): Float = java.lang.Float.MIN_VALUE	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:49
+-	fun	getMAX_VALUE	-	0	fun getMAX_VALUE(): Float = java.lang.Float.MAX_VALUE	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:50
+-	fun	getPOSITIVE_INFINITY	-	0	fun getPOSITIVE_INFINITY(): Float = java.lang.Float.POSITIVE_INFINITY	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:51
+-	fun	getNEGATIVE_INFINITY	-	0	fun getNEGATIVE_INFINITY(): Float = java.lang.Float.NEGATIVE_INFINITY	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:52
+-	fun	getNaN	-	0	fun getNaN(): Float = java.lang.Float.NaN	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:53
+-	object	IntCompanionObject	-	0	internal object IntCompanionObject {	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:56
+-	val	Int	-	0	const val MIN_VALUE: Int = java.lang.Integer.MIN_VALUE	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:57
+-	val	Int	-	0	const val MAX_VALUE: Int = java.lang.Integer.MAX_VALUE	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:58
+1.3	val	Int	-	0	const val SIZE_BYTES: Int = 4	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:60
+1.3	val	Int	-	0	const val SIZE_BITS: Int = SIZE_BYTES * 8	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:62
+-	object	LongCompanionObject	-	0	internal object LongCompanionObject {	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:65
+-	val	Long	-	0	const val MIN_VALUE: Long = java.lang.Long.MIN_VALUE	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:66
+-	val	Long	-	0	const val MAX_VALUE: Long = java.lang.Long.MAX_VALUE	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:67
+1.3	val	Int	-	0	const val SIZE_BYTES: Int = 8	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:69
+1.3	val	Int	-	0	const val SIZE_BITS: Int = SIZE_BYTES * 8	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:71
+-	object	ShortCompanionObject	-	0	internal object ShortCompanionObject {	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:74
+-	val	Short	-	0	const val MIN_VALUE: Short = java.lang.Short.MIN_VALUE	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:75
+-	val	Short	-	0	const val MAX_VALUE: Short = java.lang.Short.MAX_VALUE	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:76
+1.3	val	Int	-	0	const val SIZE_BYTES: Int = 2	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:78
+1.3	val	Int	-	0	const val SIZE_BITS: Int = SIZE_BYTES * 8	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:80
+-	object	ByteCompanionObject	-	0	internal object ByteCompanionObject {	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:83
+-	val	Byte	-	0	const val MIN_VALUE: Byte = java.lang.Byte.MIN_VALUE	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:84
+-	val	Byte	-	0	const val MAX_VALUE: Byte = java.lang.Byte.MAX_VALUE	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:85
+1.3	val	Int	-	0	const val SIZE_BYTES: Int = 1	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:87
+1.3	val	Int	-	0	const val SIZE_BITS: Int = SIZE_BYTES * 8	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:89
+-	object	CharCompanionObject	-	0	internal object CharCompanionObject {	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:93
+1.3	val	Char	-	0	const val MIN_VALUE: Char = '\u0000'	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:95
+1.3	val	Char	-	0	const val MAX_VALUE: Char = '\uFFFF'	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:97
+-	val	Char	-	0	const val MIN_HIGH_SURROGATE: Char = '\uD800'	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:98
+-	val	Char	-	0	const val MAX_HIGH_SURROGATE: Char = '\uDBFF'	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:99
+-	val	Char	-	0	const val MIN_LOW_SURROGATE: Char = '\uDC00'	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:100
+-	val	Char	-	0	const val MAX_LOW_SURROGATE: Char = '\uDFFF'	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:101
+-	val	Char	-	0	const val MIN_SURROGATE: Char = MIN_HIGH_SURROGATE	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:102
+-	val	Char	-	0	const val MAX_SURROGATE: Char = MAX_LOW_SURROGATE	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:103
+1.3	val	Int	-	0	const val SIZE_BYTES: Int = 2	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:105
+1.3	val	Int	-	0	const val SIZE_BITS: Int = SIZE_BYTES * 8	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:107
+-	object	StringCompanionObject	-	0	internal object StringCompanionObject {}	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:110
+-	object	EnumCompanionObject	-	0	internal object EnumCompanionObject {}	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:111
+1.3	object	BooleanCompanionObject	-	0	internal object BooleanCompanionObject {}	jvmMain/kotlin/jvm/internal/PrimitiveCompanionObjects.kt:113
+-	class	PrimitiveSpreadBuilder	-	0	public abstract class PrimitiveSpreadBuilder<T : Any>(private val size: Int) {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:8
+-	fun	getSize	T	0	abstract protected fun T.getSize(): Int	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:9
+-	var	Int	-	0	protected var position: Int = 0	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:11
+-	val	Array	-	0	private val spreads: Array<T?> = arrayOfNulls<Any>(size) as Array<T?>	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:14
+-	fun	addSpread	-	0	public fun addSpread(spreadArgument: T) {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:16
+-	fun	size	-	0	protected fun size(): Int {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:20
+-	var	totalLength	-	0	var totalLength = 0	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:21
+-	fun	toArray	-	1	protected fun toArray(values: T, result: T): T {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:28
+-	var	dstIndex	-	0	var dstIndex = 0	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:29
+-	var	copyValuesFrom	-	0	var copyValuesFrom = 0	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:30
+-	val	spreadArgument	-	0	val spreadArgument = spreads[i]	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:32
+-	val	spreadSize	-	0	val spreadSize = spreadArgument.getSize()	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:38
+-	class	ByteSpreadBuilder	-	0	public class ByteSpreadBuilder(size: Int) : PrimitiveSpreadBuilder<ByteArray>(size) {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:52
+-	val	ByteArray	-	0	private val values: ByteArray = ByteArray(size)	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:53
+-	fun	add	-	0	public fun add(value: Byte) {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:56
+-	fun	toArray	-	1	public fun toArray(): ByteArray = toArray(values, ByteArray(size()))	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:60
+-	class	CharSpreadBuilder	-	0	public class CharSpreadBuilder(size: Int) : PrimitiveSpreadBuilder<CharArray>(size) {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:63
+-	val	CharArray	-	0	private val values: CharArray = CharArray(size)	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:64
+-	fun	add	-	0	public fun add(value: Char) {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:67
+-	fun	toArray	-	1	public fun toArray(): CharArray = toArray(values, CharArray(size()))	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:71
+-	class	DoubleSpreadBuilder	-	0	public class DoubleSpreadBuilder(size: Int) : PrimitiveSpreadBuilder<DoubleArray>(size) {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:74
+-	val	DoubleArray	-	0	private val values: DoubleArray = DoubleArray(size)	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:75
+-	fun	add	-	0	public fun add(value: Double) {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:78
+-	fun	toArray	-	1	public fun toArray(): DoubleArray = toArray(values, DoubleArray(size()))	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:82
+-	class	FloatSpreadBuilder	-	0	public class FloatSpreadBuilder(size: Int) : PrimitiveSpreadBuilder<FloatArray>(size) {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:85
+-	val	FloatArray	-	0	private val values: FloatArray = FloatArray(size)	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:86
+-	fun	add	-	0	public fun add(value: Float) {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:89
+-	fun	toArray	-	1	public fun toArray(): FloatArray = toArray(values, FloatArray(size()))	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:93
+-	class	IntSpreadBuilder	-	0	public class IntSpreadBuilder(size: Int) : PrimitiveSpreadBuilder<IntArray>(size) {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:96
+-	val	IntArray	-	0	private val values: IntArray = IntArray(size)	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:97
+-	fun	add	-	0	public fun add(value: Int) {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:100
+-	fun	toArray	-	1	public fun toArray(): IntArray = toArray(values, IntArray(size()))	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:104
+-	class	LongSpreadBuilder	-	0	public class LongSpreadBuilder(size: Int) : PrimitiveSpreadBuilder<LongArray>(size) {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:107
+-	val	LongArray	-	0	private val values: LongArray = LongArray(size)	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:108
+-	fun	add	-	0	public fun add(value: Long) {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:111
+-	fun	toArray	-	1	public fun toArray(): LongArray = toArray(values, LongArray(size()))	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:115
+-	class	ShortSpreadBuilder	-	0	public class ShortSpreadBuilder(size: Int) : PrimitiveSpreadBuilder<ShortArray>(size) {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:118
+-	val	ShortArray	-	0	private val values: ShortArray = ShortArray(size)	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:119
+-	fun	add	-	0	public fun add(value: Short) {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:122
+-	fun	toArray	-	1	public fun toArray(): ShortArray = toArray(values, ShortArray(size()))	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:126
+-	class	BooleanSpreadBuilder	-	0	public class BooleanSpreadBuilder(size: Int) : PrimitiveSpreadBuilder<BooleanArray>(size) {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:129
+-	val	BooleanArray	-	0	private val values: BooleanArray = BooleanArray(size)	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:130
+-	fun	add	-	0	public fun add(value: Boolean) {	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:133
+-	fun	toArray	-	1	public fun toArray(): BooleanArray = toArray(values, BooleanArray(size()))	jvmMain/kotlin/jvm/internal/PrimitiveSpreadBuilders.kt:137
+1.6	class	SerializedIr	-	0	public annotation class SerializedIr(	jvmMain/kotlin/jvm/internal/SerializedIr.kt:14
+-	val	Array	-	0	val bytes: Array<String> = []	jvmMain/kotlin/jvm/internal/SerializedIr.kt:16
+1.8	class	SourceDebugExtension	-	0	public annotation class SourceDebugExtension(val value: Array<String>)	jvmMain/kotlin/jvm/internal/SourceDebugExtension.kt:18
+1.4	class	TypeParameterReference	-	0	public class TypeParameterReference(	jvmMain/kotlin/jvm/internal/TypeParameterReference.kt:14
+-	val	Any	-	1	private val container: Any?,	jvmMain/kotlin/jvm/internal/TypeParameterReference.kt:15
+-	fun	setUpperBounds	-	0	public fun setUpperBounds(upperBounds: List<KType>) {	jvmMain/kotlin/jvm/internal/TypeParameterReference.kt:27
+-	fun	toString	-	0	public fun toString(typeParameter: KTypeParameter): String =	jvmMain/kotlin/jvm/internal/TypeParameterReference.kt:45
+1.6	class	TypeReference	-	0	public class TypeReference @SinceKotlin("1.6") constructor(	jvmMain/kotlin/jvm/internal/TypeReference.kt:11
+1.6	val	KType	-	1	@SinceKotlin("1.6") internal val platformTypeUpperBound: KType?,	jvmMain/kotlin/jvm/internal/TypeReference.kt:14
+1.6	val	Int	-	1	@SinceKotlin("1.6") internal val flags: Int,	jvmMain/kotlin/jvm/internal/TypeReference.kt:15
+-	fun	asString	-	0	private fun asString(convertPrimitiveToWrapper: Boolean): String {	jvmMain/kotlin/jvm/internal/TypeReference.kt:40
+-	val	javaClass	-	0	val javaClass = (classifier as? KClass<*>)?.java	jvmMain/kotlin/jvm/internal/TypeReference.kt:41
+-	val	klass	-	0	val klass = when {	jvmMain/kotlin/jvm/internal/TypeReference.kt:42
+-	val	args	-	0	val args =	jvmMain/kotlin/jvm/internal/TypeReference.kt:49
+-	val	nullable	-	0	val nullable = if (isMarkedNullable) "?" else ""	jvmMain/kotlin/jvm/internal/TypeReference.kt:52
+-	val	result	-	0	val result = klass + args + nullable	jvmMain/kotlin/jvm/internal/TypeReference.kt:54
+-	val	arrayClassName	-	0	private val Class<*>.arrayClassName	jvmMain/kotlin/jvm/internal/TypeReference.kt:72
+-	fun	asString	KTypeProjection	0	private fun KTypeProjection.asString(): String {	jvmMain/kotlin/jvm/internal/TypeReference.kt:87
+-	val	typeString	-	0	val typeString = (type as? TypeReference)?.asString(true) ?: type.toString()	jvmMain/kotlin/jvm/internal/TypeReference.kt:90
+-	val	IS_MARKED_NULLABLE	-	0	internal const val IS_MARKED_NULLABLE = 1 shl 0	jvmMain/kotlin/jvm/internal/TypeReference.kt:100
+-	val	IS_MUTABLE_COLLECTION_TYPE	-	0	internal const val IS_MUTABLE_COLLECTION_TYPE = 1 shl 1	jvmMain/kotlin/jvm/internal/TypeReference.kt:101
+-	val	IS_NOTHING_TYPE	-	0	internal const val IS_NOTHING_TYPE = 1 shl 2	jvmMain/kotlin/jvm/internal/TypeReference.kt:102

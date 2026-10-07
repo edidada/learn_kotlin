@@ -1,0 +1,15 @@
+since	kind	name	receiver	arity	sig	loc
+2.1	fun	compareAndExchange	java.util.concurrent.atomic.AtomicInteger	1	internal fun java.util.concurrent.atomic.AtomicInteger.compareAndExchange(expected: Int, newValue: Int): Int {	jvmMain/kotlin/concurrent/internal/AtomicIntrinsics.kt:21
+-	val	currentValue	-	0	val currentValue = get()	jvmMain/kotlin/concurrent/internal/AtomicIntrinsics.kt:23
+2.1	fun	compareAndExchange	java.util.concurrent.atomic.AtomicLong	1	internal fun java.util.concurrent.atomic.AtomicLong.compareAndExchange(expected: Long, newValue: Long): Long {	jvmMain/kotlin/concurrent/internal/AtomicIntrinsics.kt:36
+-	val	currentValue	-	0	val currentValue = get()	jvmMain/kotlin/concurrent/internal/AtomicIntrinsics.kt:38
+2.1	fun	compareAndExchange	java.util.concurrent.atomic.AtomicBoolean	1	internal fun java.util.concurrent.atomic.AtomicBoolean.compareAndExchange(expected: Boolean, newValue: Boolean): Boolean {	jvmMain/kotlin/concurrent/internal/AtomicIntrinsics.kt:51
+-	val	currentValue	-	0	val currentValue = get()	jvmMain/kotlin/concurrent/internal/AtomicIntrinsics.kt:53
+2.1	fun	compareAndExchange	-	1	internal fun <T> java.util.concurrent.atomic.AtomicReference<T>.compareAndExchange(expected: T, newValue: T): T {	jvmMain/kotlin/concurrent/internal/AtomicIntrinsics.kt:66
+-	val	currentValue	-	0	val currentValue = get()	jvmMain/kotlin/concurrent/internal/AtomicIntrinsics.kt:68
+2.1	fun	compareAndExchange	java.util.concurrent.atomic.AtomicIntegerArray	2	internal fun java.util.concurrent.atomic.AtomicIntegerArray.compareAndExchange(index: Int, expected: Int, newValue: Int): Int {	jvmMain/kotlin/concurrent/internal/AtomicIntrinsics.kt:81
+-	val	currentValue	-	0	val currentValue = get(index)	jvmMain/kotlin/concurrent/internal/AtomicIntrinsics.kt:83
+2.1	fun	compareAndExchange	java.util.concurrent.atomic.AtomicLongArray	2	internal fun java.util.concurrent.atomic.AtomicLongArray.compareAndExchange(index: Int, expected: Long, newValue: Long): Long {	jvmMain/kotlin/concurrent/internal/AtomicIntrinsics.kt:96
+-	val	currentValue	-	0	val currentValue = get(index)	jvmMain/kotlin/concurrent/internal/AtomicIntrinsics.kt:98
+2.1	fun	compareAndExchange	-	2	internal fun <T> java.util.concurrent.atomic.AtomicReferenceArray<T>.compareAndExchange(index: Int, expected: T, newValue: T): T {	jvmMain/kotlin/concurrent/internal/AtomicIntrinsics.kt:111
+-	val	currentValue	-	0	val currentValue = get(index)	jvmMain/kotlin/concurrent/internal/AtomicIntrinsics.kt:113

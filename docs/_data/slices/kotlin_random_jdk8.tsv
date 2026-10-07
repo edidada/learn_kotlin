@@ -1,0 +1,2 @@
+since	kind	name	receiver	arity	sig	loc
+-	class	PlatformThreadLocalRandom	-	0	internal class PlatformThreadLocalRandom : kotlin.random.AbstractPlatformRandom() {	jvmMain/jdk8/kotlin/random/jdk8/PlatformThreadLocalRandom.kt:11

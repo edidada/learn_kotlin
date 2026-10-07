@@ -1,0 +1,14 @@
+since	kind	name	receiver	arity	sig	loc
+1.1	fun	and	Byte	0	public inline infix fun Byte.and(other: Byte): Byte = (this.toInt() and other.toInt()).toByte()	commonMain/kotlin/experimental/bitwiseOperations.kt:11
+1.1	fun	or	Byte	0	public inline infix fun Byte.or(other: Byte): Byte = (this.toInt() or other.toInt()).toByte()	commonMain/kotlin/experimental/bitwiseOperations.kt:16
+1.1	fun	xor	Byte	0	public inline infix fun Byte.xor(other: Byte): Byte = (this.toInt() xor other.toInt()).toByte()	commonMain/kotlin/experimental/bitwiseOperations.kt:21
+1.1	fun	inv	Byte	0	public inline fun Byte.inv(): Byte = (this.toInt().inv()).toByte()	commonMain/kotlin/experimental/bitwiseOperations.kt:26
+1.1	fun	and	Short	0	public inline infix fun Short.and(other: Short): Short = (this.toInt() and other.toInt()).toShort()	commonMain/kotlin/experimental/bitwiseOperations.kt:32
+1.1	fun	or	Short	0	public inline infix fun Short.or(other: Short): Short = (this.toInt() or other.toInt()).toShort()	commonMain/kotlin/experimental/bitwiseOperations.kt:37
+1.1	fun	xor	Short	0	public inline infix fun Short.xor(other: Short): Short = (this.toInt() xor other.toInt()).toShort()	commonMain/kotlin/experimental/bitwiseOperations.kt:42
+1.1	fun	inv	Short	0	public inline fun Short.inv(): Short = (this.toInt().inv()).toShort()	commonMain/kotlin/experimental/bitwiseOperations.kt:47
+2.2	class	ExpectRefinement	-	0	public annotation class ExpectRefinement	commonMain/kotlin/experimental/ExpectRefinement.kt:59
+1.9	class	ExperimentalNativeApi	-	0	public annotation class ExperimentalNativeApi	commonMain/kotlin/experimental/ExperimentalNativeApi.kt:39
+1.8	class	ExperimentalObjCName	-	0	public annotation class ExperimentalObjCName	commonMain/kotlin/experimental/ExperimentalObjCName.kt:16
+1.8	class	ExperimentalObjCRefinement	-	0	public annotation class ExperimentalObjCRefinement	commonMain/kotlin/experimental/ExperimentalObjCRefinement.kt:16
+1.3	class	ExperimentalTypeInference	-	0	public annotation class ExperimentalTypeInference	commonMain/kotlin/experimental/inferenceMarker.kt:20

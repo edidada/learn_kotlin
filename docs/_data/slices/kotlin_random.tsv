@@ -1,0 +1,101 @@
+since	kind	name	receiver	arity	sig	loc
+1.3	class	Random	-	0	public abstract class Random {	commonMain/kotlin/random/Random.kt:22
+-	fun	nextBits	-	0	public abstract fun nextBits(bitCount: Int): Int	commonMain/kotlin/random/Random.kt:33
+-	fun	nextInt	-	0	public open fun nextInt(): Int = nextBits(32)	commonMain/kotlin/random/Random.kt:42
+-	fun	nextInt	-	1	public open fun nextInt(until: Int): Int = nextInt(0, until)	commonMain/kotlin/random/Random.kt:55
+-	fun	nextInt	-	1	public open fun nextInt(from: Int, until: Int): Int {	commonMain/kotlin/random/Random.kt:66
+-	val	n	-	0	val n = until - from	commonMain/kotlin/random/Random.kt:68
+-	val	rnd	-	0	val rnd = if (n and -n == n) {	commonMain/kotlin/random/Random.kt:70
+-	val	bitCount	-	0	val bitCount = fastLog2(n)	commonMain/kotlin/random/Random.kt:71
+-	var	Int	-	0	var v: Int	commonMain/kotlin/random/Random.kt:74
+-	val	bits	-	0	val bits = nextInt().ushr(1)	commonMain/kotlin/random/Random.kt:76
+-	val	rnd	-	0	val rnd = nextInt()	commonMain/kotlin/random/Random.kt:84
+-	fun	nextLong	-	0	public open fun nextLong(): Long = nextInt().toLong().shl(32) + nextInt()	commonMain/kotlin/random/Random.kt:97
+-	fun	nextLong	-	1	public open fun nextLong(until: Long): Long = nextLong(0, until)	commonMain/kotlin/random/Random.kt:110
+-	fun	nextLong	-	1	public open fun nextLong(from: Long, until: Long): Long {	commonMain/kotlin/random/Random.kt:121
+-	val	n	-	0	val n = until - from	commonMain/kotlin/random/Random.kt:123
+-	val	Long	-	0	val rnd: Long	commonMain/kotlin/random/Random.kt:125
+-	val	nLow	-	0	val nLow = n.toInt()	commonMain/kotlin/random/Random.kt:127
+-	val	nHigh	-	0	val nHigh = (n ushr 32).toInt()	commonMain/kotlin/random/Random.kt:128
+-	val	bitCount	-	0	val bitCount = fastLog2(nLow)	commonMain/kotlin/random/Random.kt:131
+-	val	bitCount	-	0	val bitCount = fastLog2(nHigh)	commonMain/kotlin/random/Random.kt:139
+-	var	Long	-	0	var v: Long	commonMain/kotlin/random/Random.kt:144
+-	val	bits	-	0	val bits = nextLong().ushr(1)	commonMain/kotlin/random/Random.kt:146
+-	val	rnd	-	0	val rnd = nextLong()	commonMain/kotlin/random/Random.kt:154
+-	fun	nextBoolean	-	0	public open fun nextBoolean(): Boolean = nextBits(1) != 0	commonMain/kotlin/random/Random.kt:165
+-	fun	nextDouble	-	1	public open fun nextDouble(): Double = doubleFromParts(nextBits(26), nextBits(27))	commonMain/kotlin/random/Random.kt:172
+-	fun	nextDouble	-	1	public open fun nextDouble(until: Double): Double = nextDouble(0.0, until)	commonMain/kotlin/random/Random.kt:183
+-	fun	nextDouble	-	1	public open fun nextDouble(from: Double, until: Double): Double {	commonMain/kotlin/random/Random.kt:196
+-	val	size	-	0	val size = until - from	commonMain/kotlin/random/Random.kt:198
+-	val	r	-	0	val r = if (size.isInfinite() && from.isFinite() && until.isFinite()) {	commonMain/kotlin/random/Random.kt:199
+-	val	r1	-	0	val r1 = nextDouble() * (until / 2 - from / 2)	commonMain/kotlin/random/Random.kt:200
+-	fun	nextFloat	-	0	public open fun nextFloat(): Float = nextBits(24) / (1 shl 24).toFloat()	commonMain/kotlin/random/Random.kt:213
+-	fun	nextBytes	-	2	public open fun nextBytes(array: ByteArray, fromIndex: Int = 0, toIndex: Int = array.size): ByteArray {	commonMain/kotlin/random/Random.kt:223
+-	val	steps	-	0	val steps = (toIndex - fromIndex) / 4	commonMain/kotlin/random/Random.kt:227
+-	var	position	-	0	var position = fromIndex	commonMain/kotlin/random/Random.kt:229
+-	val	v	-	0	val v = nextInt()	commonMain/kotlin/random/Random.kt:231
+-	val	remainder	-	0	val remainder = toIndex - position	commonMain/kotlin/random/Random.kt:239
+-	val	vr	-	0	val vr = nextBits(remainder * 8)	commonMain/kotlin/random/Random.kt:240
+-	fun	nextBytes	-	2	public open fun nextBytes(array: ByteArray): ByteArray = nextBytes(array, 0, array.size)	commonMain/kotlin/random/Random.kt:255
+-	fun	nextBytes	-	0	public open fun nextBytes(size: Int): ByteArray = nextBytes(ByteArray(size))	commonMain/kotlin/random/Random.kt:262
+-	object	Default	-	1	public companion object Default : Random(), Serializable {	commonMain/kotlin/random/Random.kt:272
+-	val	Random	-	0	private val defaultRandom: Random = defaultPlatformRandom()	commonMain/kotlin/random/Random.kt:273
+-	object	Serialized	-	0	private object Serialized : Serializable {	commonMain/kotlin/random/Random.kt:275
+-	val	serialVersionUID	-	0	private const val serialVersionUID = 0L	commonMain/kotlin/random/Random.kt:276
+-	fun	readResolve	-	0	private fun readResolve(): Any = Random	commonMain/kotlin/random/Random.kt:278
+-	fun	writeReplace	-	0	private fun writeReplace(): Any = Serialized	commonMain/kotlin/random/Random.kt:281
+-	fun	readObject	-	0	private fun readObject(input: ReadObjectParameterType): Unit = throwReadObjectNotSupported()	commonMain/kotlin/random/Random.kt:283
+1.3	fun	Random	-	1	public fun Random(seed: Int): Random = XorWowRandom(seed, seed.shr(31))	commonMain/kotlin/random/Random.kt:322
+1.3	fun	Random	-	1	public fun Random(seed: Long): Random = XorWowRandom(seed.toInt(), seed.shr(32).toInt())	commonMain/kotlin/random/Random.kt:337
+1.3	fun	nextInt	Random	0	public fun Random.nextInt(range: IntRange): Int = when {	commonMain/kotlin/random/Random.kt:349
+1.3	fun	nextLong	Random	0	public fun Random.nextLong(range: LongRange): Long = when {	commonMain/kotlin/random/Random.kt:365
+-	fun	defaultPlatformRandom	-	0	internal expect fun defaultPlatformRandom(): Random	commonMain/kotlin/random/Random.kt:373
+-	fun	doubleFromParts	-	1	internal expect fun doubleFromParts(hi26: Int, low27: Int): Double	commonMain/kotlin/random/Random.kt:374
+-	fun	fastLog2	-	0	internal fun fastLog2(value: Int): Int = 31 - value.countLeadingZeroBits()	commonMain/kotlin/random/Random.kt:376
+-	fun	takeUpperBits	Int	0	internal fun Int.takeUpperBits(bitCount: Int): Int =	commonMain/kotlin/random/Random.kt:379
+-	fun	checkRangeBounds	-	2	internal fun checkRangeBounds(from: Int, until: Int) = require(until > from) { boundsErrorMessage(from, until) }	commonMain/kotlin/random/Random.kt:382
+-	fun	checkRangeBounds	-	2	internal fun checkRangeBounds(from: Long, until: Long) = require(until > from) { boundsErrorMessage(from, until) }	commonMain/kotlin/random/Random.kt:383
+-	fun	checkRangeBounds	-	2	internal fun checkRangeBounds(from: Double, until: Double) = require(until > from) { boundsErrorMessage(from, until) }	commonMain/kotlin/random/Random.kt:384
+-	fun	boundsErrorMessage	-	2	internal fun boundsErrorMessage(from: Any, until: Any) = "Random range is empty: [$from, $until)."	commonMain/kotlin/random/Random.kt:386
+1.5	fun	nextUInt	Random	0	public fun Random.nextUInt(): UInt = nextInt().toUInt()	commonMain/kotlin/random/URandom.kt:15
+1.5	fun	nextUInt	Random	1	public fun Random.nextUInt(until: UInt): UInt = nextUInt(0u, until)	commonMain/kotlin/random/URandom.kt:25
+1.5	fun	nextUInt	Random	1	public fun Random.nextUInt(from: UInt, until: UInt): UInt {	commonMain/kotlin/random/URandom.kt:35
+-	val	signedFrom	-	0	val signedFrom = from.toInt() xor Int.MIN_VALUE	commonMain/kotlin/random/URandom.kt:38
+-	val	signedUntil	-	0	val signedUntil = until.toInt() xor Int.MIN_VALUE	commonMain/kotlin/random/URandom.kt:39
+-	val	signedResult	-	1	val signedResult = nextInt(signedFrom, signedUntil) xor Int.MIN_VALUE	commonMain/kotlin/random/URandom.kt:41
+1.5	fun	nextUInt	Random	0	public fun Random.nextUInt(range: UIntRange): UInt = when {	commonMain/kotlin/random/URandom.kt:54
+1.5	fun	nextULong	Random	0	public fun Random.nextULong(): ULong = nextLong().toULong()	commonMain/kotlin/random/URandom.kt:67
+1.5	fun	nextULong	Random	1	public fun Random.nextULong(until: ULong): ULong = nextULong(0uL, until)	commonMain/kotlin/random/URandom.kt:77
+1.5	fun	nextULong	Random	1	public fun Random.nextULong(from: ULong, until: ULong): ULong {	commonMain/kotlin/random/URandom.kt:87
+-	val	signedFrom	-	0	val signedFrom = from.toLong() xor Long.MIN_VALUE	commonMain/kotlin/random/URandom.kt:90
+-	val	signedUntil	-	0	val signedUntil = until.toLong() xor Long.MIN_VALUE	commonMain/kotlin/random/URandom.kt:91
+-	val	signedResult	-	1	val signedResult = nextLong(signedFrom, signedUntil) xor Long.MIN_VALUE	commonMain/kotlin/random/URandom.kt:93
+1.5	fun	nextULong	Random	0	public fun Random.nextULong(range: ULongRange): ULong = when {	commonMain/kotlin/random/URandom.kt:106
+1.3	fun	nextUBytes	Random	0	public fun Random.nextUBytes(array: UByteArray): UByteArray {	commonMain/kotlin/random/URandom.kt:120
+1.3	fun	nextUBytes	Random	0	public fun Random.nextUBytes(size: Int): UByteArray = nextBytes(size).asUByteArray()	commonMain/kotlin/random/URandom.kt:130
+1.3	fun	nextUBytes	Random	2	public fun Random.nextUBytes(array: UByteArray, fromIndex: Int = 0, toIndex: Int = array.size): UByteArray {	commonMain/kotlin/random/URandom.kt:139
+-	fun	checkUIntRangeBounds	-	2	internal fun checkUIntRangeBounds(from: UInt, until: UInt) = require(until > from) { boundsErrorMessage(from, until) }	commonMain/kotlin/random/URandom.kt:145
+-	fun	checkULongRangeBounds	-	2	internal fun checkULongRangeBounds(from: ULong, until: ULong) = require(until > from) { boundsErrorMessage(from, until) }	commonMain/kotlin/random/URandom.kt:146
+-	class	XorWowRandom	-	0	internal class XorWowRandom internal constructor(	commonMain/kotlin/random/XorWowRandom.kt:18
+-	var	Int	-	1	private var x: Int,	commonMain/kotlin/random/XorWowRandom.kt:19
+-	var	Int	-	1	private var y: Int,	commonMain/kotlin/random/XorWowRandom.kt:20
+-	var	Int	-	1	private var z: Int,	commonMain/kotlin/random/XorWowRandom.kt:21
+-	var	Int	-	1	private var w: Int,	commonMain/kotlin/random/XorWowRandom.kt:22
+-	var	Int	-	1	private var v: Int,	commonMain/kotlin/random/XorWowRandom.kt:23
+-	var	Int	-	0	private var addend: Int	commonMain/kotlin/random/XorWowRandom.kt:24
+-	var	t	-	0	var t = x	commonMain/kotlin/random/XorWowRandom.kt:40
+-	val	v0	-	0	val v0 = v	commonMain/kotlin/random/XorWowRandom.kt:45
+-	val	Long	-	0	private const val serialVersionUID: Long = 0L	commonMain/kotlin/random/XorWowRandom.kt:57
+1.3	fun	asJavaRandom	Random	0	public fun Random.asJavaRandom(): java.util.Random =	jvmMain/kotlin/random/PlatformRandom.kt:15
+1.3	fun	asKotlinRandom	java.util.Random	0	public fun java.util.Random.asKotlinRandom(): Random =	jvmMain/kotlin/random/PlatformRandom.kt:22
+-	fun	defaultPlatformRandom	-	0	internal actual inline fun defaultPlatformRandom(): Random =	jvmMain/kotlin/random/PlatformRandom.kt:28
+-	fun	doubleFromParts	-	1	internal actual fun doubleFromParts(hi26: Int, low27: Int): Double =	jvmMain/kotlin/random/PlatformRandom.kt:31
+-	class	AbstractPlatformRandom	-	0	internal abstract class AbstractPlatformRandom : Random() {	jvmMain/kotlin/random/PlatformRandom.kt:35
+-	val	Random	java.util	0	abstract val impl: java.util.Random	jvmMain/kotlin/random/PlatformRandom.kt:36
+-	class	FallbackThreadLocalRandom	-	0	internal class FallbackThreadLocalRandom : AbstractPlatformRandom() {	jvmMain/kotlin/random/PlatformRandom.kt:50
+-	val	implStorage	-	0	private val implStorage = object : ThreadLocal<java.util.Random>() {	jvmMain/kotlin/random/PlatformRandom.kt:51
+-	class	PlatformRandom	-	1	private class PlatformRandom(override val impl: java.util.Random) : AbstractPlatformRandom(), Serializable {	jvmMain/kotlin/random/PlatformRandom.kt:59
+-	val	Long	-	0	private const val serialVersionUID: Long = 0L	jvmMain/kotlin/random/PlatformRandom.kt:61
+-	class	KotlinRandom	-	0	private class KotlinRandom(val impl: Random) : java.util.Random() {	jvmMain/kotlin/random/PlatformRandom.kt:65
+-	var	Boolean	-	0	private var seedInitialized: Boolean = false	jvmMain/kotlin/random/PlatformRandom.kt:78
+-	val	Long	-	0	private const val serialVersionUID: Long = 0L	jvmMain/kotlin/random/PlatformRandom.kt:90

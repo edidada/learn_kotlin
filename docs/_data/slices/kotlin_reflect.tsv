@@ -1,0 +1,153 @@
+since	kind	name	receiver	arity	sig	loc
+-	interface	KCallable	-	0	public expect interface KCallable<out R> {	commonMain/kotlin/reflect/KCallable.kt:15
+-	val	String	-	0	public val name: String	commonMain/kotlin/reflect/KCallable.kt:25
+-	interface	KClass	-	0	public expect interface KClass<T : Any> : KClassifier {	commonMain/kotlin/reflect/KClass.kt:18
+-	val	String	-	0	public val simpleName: String?	commonMain/kotlin/reflect/KClass.kt:23
+-	val	String	-	0	public val qualifiedName: String?	commonMain/kotlin/reflect/KClass.kt:29
+1.1	fun	isInstance	-	0	public fun isInstance(value: Any?): Boolean	commonMain/kotlin/reflect/KClass.kt:35
+1.4	fun	cast	-	0	public fun <T : Any> KClass<T>.cast(value: Any?): T {	commonMain/kotlin/reflect/KClasses.kt:24
+-	val	String	-	0	internal expect val KClass<*>.qualifiedOrSimpleName: String?	commonMain/kotlin/reflect/KClasses.kt:30
+1.4	fun	safeCast	-	0	public fun <T : Any> KClass<T>.safeCast(value: Any?): T? {	commonMain/kotlin/reflect/KClasses.kt:43
+1.1	interface	KClassifier	-	0	public interface KClassifier	commonMain/kotlin/reflect/KClassifier.kt:17
+-	interface	KFunction	-	1	public expect interface KFunction<out R> : KCallable<R>, Function<R>	commonMain/kotlin/reflect/KFunction.kt:13
+-	interface	KProperty	-	0	public expect interface KProperty<out V> : KCallable<V> {	commonMain/kotlin/reflect/KProperty.kt:19
+-	interface	KMutableProperty	-	0	public expect interface KMutableProperty<V> : KProperty<V> {	commonMain/kotlin/reflect/KProperty.kt:25
+-	interface	KProperty0	-	1	public expect interface KProperty0<out V> : KProperty<V>, () -> V {	commonMain/kotlin/reflect/KProperty.kt:34
+-	fun	get	-	0	public fun get(): V	commonMain/kotlin/reflect/KProperty.kt:38
+-	interface	KMutableProperty0	-	1	public expect interface KMutableProperty0<V> : KProperty0<V>, KMutableProperty<V> {	commonMain/kotlin/reflect/KProperty.kt:44
+-	fun	set	-	0	public fun set(value: V)	commonMain/kotlin/reflect/KProperty.kt:50
+-	interface	KProperty1	-	2	public expect interface KProperty1<T, out V> : KProperty<V>, (T) -> V {	commonMain/kotlin/reflect/KProperty.kt:60
+-	fun	get	-	0	public fun get(receiver: T): V	commonMain/kotlin/reflect/KProperty.kt:68
+-	interface	KMutableProperty1	-	3	public expect interface KMutableProperty1<T, V> : KProperty1<T, V>, KMutableProperty<V> {	commonMain/kotlin/reflect/KProperty.kt:74
+-	fun	set	-	1	public fun set(receiver: T, value: V)	commonMain/kotlin/reflect/KProperty.kt:83
+-	interface	KProperty2	-	4	public expect interface KProperty2<D, E, out V> : KProperty<V>, (D, E) -> V {	commonMain/kotlin/reflect/KProperty.kt:97
+-	fun	get	-	1	public fun get(receiver1: D, receiver2: E): V	commonMain/kotlin/reflect/KProperty.kt:105
+-	interface	KMutableProperty2	-	5	public expect interface KMutableProperty2<D, E, V> : KProperty2<D, E, V>, KMutableProperty<V> {	commonMain/kotlin/reflect/KProperty.kt:111
+-	fun	set	-	2	public fun set(receiver1: D, receiver2: E, value: V)	commonMain/kotlin/reflect/KProperty.kt:119
+-	interface	KType	-	0	public expect interface KType {	commonMain/kotlin/reflect/KType.kt:14
+1.1	val	KClassifier	-	0	public val classifier: KClassifier?	commonMain/kotlin/reflect/KType.kt:22
+1.1	val	List	-	0	public val arguments: List<KTypeProjection>	commonMain/kotlin/reflect/KType.kt:33
+-	val	Boolean	-	0	public val isMarkedNullable: Boolean	commonMain/kotlin/reflect/KType.kt:52
+1.1	interface	KTypeParameter	-	0	public interface KTypeParameter : KClassifier {	commonMain/kotlin/reflect/KTypeParameter.kt:16
+-	val	String	-	0	public val name: String	commonMain/kotlin/reflect/KTypeParameter.kt:20
+-	val	List	-	0	public val upperBounds: List<KType>	commonMain/kotlin/reflect/KTypeParameter.kt:27
+-	val	KVariance	-	0	public val variance: KVariance	commonMain/kotlin/reflect/KTypeParameter.kt:34
+-	val	Boolean	-	0	public val isReified: Boolean	commonMain/kotlin/reflect/KTypeParameter.kt:41
+1.1	class	KTypeProjection	-	0	public data class KTypeProjection constructor(	commonMain/kotlin/reflect/KTypeProjection.kt:25
+-	val	KVariance	-	1	public val variance: KVariance?,	commonMain/kotlin/reflect/KTypeProjection.kt:29
+-	val	KType	-	0	public val type: KType?	commonMain/kotlin/reflect/KTypeProjection.kt:33
+-	val	KTypeProjection	-	1	internal val star: KTypeProjection = KTypeProjection(null, null)	commonMain/kotlin/reflect/KTypeProjection.kt:56
+-	val	get	-	0	public val STAR: KTypeProjection get() = star	commonMain/kotlin/reflect/KTypeProjection.kt:64
+-	fun	invariant	-	0	public fun invariant(type: KType): KTypeProjection =	commonMain/kotlin/reflect/KTypeProjection.kt:72
+-	fun	contravariant	-	0	public fun contravariant(type: KType): KTypeProjection =	commonMain/kotlin/reflect/KTypeProjection.kt:80
+-	fun	covariant	-	0	public fun covariant(type: KType): KTypeProjection =	commonMain/kotlin/reflect/KTypeProjection.kt:88
+1.1	class	KVariance	-	0	public enum class KVariance {	commonMain/kotlin/reflect/KVariance.kt:21
+1.6	fun	typeOf	-	0	public inline fun <reified T> typeOf(): KType =	commonMain/kotlin/reflect/typeOf.kt:15
+-	interface	KAnnotatedElement	-	0	public interface KAnnotatedElement {	jvmMain/kotlin/reflect/KAnnotatedElement.kt:13
+-	val	List	-	0	public val annotations: List<Annotation>	jvmMain/kotlin/reflect/KAnnotatedElement.kt:17
+-	interface	KCallable	-	0	public actual interface KCallable<out R> : KAnnotatedElement {	jvmMain/kotlin/reflect/KCallable.kt:13
+-	val	String	-	0	public actual val name: String	jvmMain/kotlin/reflect/KCallable.kt:23
+-	val	List	-	0	public val parameters: List<KParameter>	jvmMain/kotlin/reflect/KCallable.kt:30
+-	val	KType	-	0	public val returnType: KType	jvmMain/kotlin/reflect/KCallable.kt:35
+1.1	val	List	-	0	public val typeParameters: List<KTypeParameter>	jvmMain/kotlin/reflect/KCallable.kt:41
+-	fun	call	-	0	public fun call(vararg args: Any?): R	jvmMain/kotlin/reflect/KCallable.kt:48
+-	fun	callBy	-	1	public fun callBy(args: Map<KParameter, Any?>): R	jvmMain/kotlin/reflect/KCallable.kt:55
+1.1	val	KVisibility	-	0	public val visibility: KVisibility?	jvmMain/kotlin/reflect/KCallable.kt:61
+1.1	val	Boolean	-	0	public val isFinal: Boolean	jvmMain/kotlin/reflect/KCallable.kt:67
+1.1	val	Boolean	-	0	public val isOpen: Boolean	jvmMain/kotlin/reflect/KCallable.kt:73
+1.1	val	Boolean	-	0	public val isAbstract: Boolean	jvmMain/kotlin/reflect/KCallable.kt:79
+1.3	val	Boolean	-	0	public val isSuspend: Boolean	jvmMain/kotlin/reflect/KCallable.kt:85
+-	interface	KClass	-	2	public actual interface KClass<T : Any> : KDeclarationContainer, KAnnotatedElement, KClassifier {	jvmMain/kotlin/reflect/KClass.kt:16
+-	val	String	-	0	public actual val simpleName: String?	jvmMain/kotlin/reflect/KClass.kt:21
+-	val	String	-	0	public actual val qualifiedName: String?	jvmMain/kotlin/reflect/KClass.kt:27
+-	val	T	-	0	public val objectInstance: T?	jvmMain/kotlin/reflect/KClass.kt:48
+1.1	fun	isInstance	-	0	public actual fun isInstance(value: Any?): Boolean	jvmMain/kotlin/reflect/KClass.kt:54
+1.1	val	List	-	0	public val typeParameters: List<KTypeParameter>	jvmMain/kotlin/reflect/KClass.kt:60
+1.1	val	List	-	0	public val supertypes: List<KType>	jvmMain/kotlin/reflect/KClass.kt:66
+1.1	val	KVisibility	-	0	public val visibility: KVisibility?	jvmMain/kotlin/reflect/KClass.kt:78
+1.1	val	Boolean	-	0	public val isFinal: Boolean	jvmMain/kotlin/reflect/KClass.kt:84
+1.1	val	Boolean	-	0	public val isOpen: Boolean	jvmMain/kotlin/reflect/KClass.kt:90
+1.1	val	Boolean	-	0	public val isAbstract: Boolean	jvmMain/kotlin/reflect/KClass.kt:96
+1.1	val	Boolean	-	0	public val isSealed: Boolean	jvmMain/kotlin/reflect/KClass.kt:104
+1.1	val	Boolean	-	0	public val isData: Boolean	jvmMain/kotlin/reflect/KClass.kt:113
+1.1	val	Boolean	-	0	public val isInner: Boolean	jvmMain/kotlin/reflect/KClass.kt:121
+1.1	val	Boolean	-	0	public val isCompanion: Boolean	jvmMain/kotlin/reflect/KClass.kt:129
+1.4	val	Boolean	-	0	public val isFun: Boolean	jvmMain/kotlin/reflect/KClass.kt:135
+1.5	val	Boolean	-	0	public val isValue: Boolean	jvmMain/kotlin/reflect/KClass.kt:141
+-	val	String	-	0	internal actual inline val KClass<*>.qualifiedOrSimpleName: String?	jvmMain/kotlin/reflect/KClassesImpl.kt:8
+-	interface	KDeclarationContainer	-	0	public interface KDeclarationContainer {	jvmMain/kotlin/reflect/KDeclarationContainer.kt:23
+-	interface	KFunction	-	1	public actual interface KFunction<out R> : KCallable<R>, Function<R> {	jvmMain/kotlin/reflect/KFunction.kt:11
+1.1	val	Boolean	-	0	public val isInline: Boolean	jvmMain/kotlin/reflect/KFunction.kt:18
+1.1	val	Boolean	-	0	public val isExternal: Boolean	jvmMain/kotlin/reflect/KFunction.kt:26
+1.1	val	Boolean	-	0	public val isOperator: Boolean	jvmMain/kotlin/reflect/KFunction.kt:34
+1.1	val	Boolean	-	0	public val isInfix: Boolean	jvmMain/kotlin/reflect/KFunction.kt:42
+-	interface	KParameter	-	0	public interface KParameter : KAnnotatedElement {	jvmMain/kotlin/reflect/KParameter.kt:23
+-	val	Int	-	0	public val index: Int	jvmMain/kotlin/reflect/KParameter.kt:27
+-	val	String	-	0	public val name: String?	jvmMain/kotlin/reflect/KParameter.kt:36
+-	val	KType	-	0	public val type: KType	jvmMain/kotlin/reflect/KParameter.kt:42
+-	val	Kind	-	0	public val kind: Kind	jvmMain/kotlin/reflect/KParameter.kt:47
+-	class	Kind	-	0	public enum class Kind {	jvmMain/kotlin/reflect/KParameter.kt:53
+-	val	Boolean	-	0	public val isOptional: Boolean	jvmMain/kotlin/reflect/KParameter.kt:71
+1.1	val	Boolean	-	0	public val isVararg: Boolean	jvmMain/kotlin/reflect/KParameter.kt:79
+-	interface	KProperty	-	0	public actual interface KProperty<out V> : KCallable<V> {	jvmMain/kotlin/reflect/KProperty.kt:18
+1.1	val	Boolean	-	0	public val isLateinit: Boolean	jvmMain/kotlin/reflect/KProperty.kt:25
+1.1	val	Boolean	-	0	public val isConst: Boolean	jvmMain/kotlin/reflect/KProperty.kt:33
+-	val	Getter	-	0	public val getter: Getter<V>	jvmMain/kotlin/reflect/KProperty.kt:36
+-	interface	Accessor	-	0	public interface Accessor<out V> {	jvmMain/kotlin/reflect/KProperty.kt:45
+-	val	KProperty	-	0	public val property: KProperty<V>	jvmMain/kotlin/reflect/KProperty.kt:47
+-	interface	Getter	-	1	public interface Getter<out V> : Accessor<V>, KFunction<V>	jvmMain/kotlin/reflect/KProperty.kt:53
+-	interface	KMutableProperty	-	0	public actual interface KMutableProperty<V> : KProperty<V> {	jvmMain/kotlin/reflect/KProperty.kt:59
+-	val	Setter	-	0	public val setter: Setter<V>	jvmMain/kotlin/reflect/KProperty.kt:61
+-	interface	Setter	-	1	public interface Setter<V> : KProperty.Accessor<V>, KFunction<Unit>	jvmMain/kotlin/reflect/KProperty.kt:66
+-	interface	KProperty0	-	1	public actual interface KProperty0<out V> : KProperty<V>, () -> V {	jvmMain/kotlin/reflect/KProperty.kt:75
+-	fun	get	-	0	public actual fun get(): V	jvmMain/kotlin/reflect/KProperty.kt:79
+1.1	fun	getDelegate	-	0	public fun getDelegate(): Any?	jvmMain/kotlin/reflect/KProperty.kt:87
+-	interface	Getter	-	1	public interface Getter<out V> : KProperty.Getter<V>, () -> V	jvmMain/kotlin/reflect/KProperty.kt:96
+-	interface	KMutableProperty0	-	1	public actual interface KMutableProperty0<V> : KProperty0<V>, KMutableProperty<V> {	jvmMain/kotlin/reflect/KProperty.kt:102
+-	fun	set	-	0	public actual fun set(value: V)	jvmMain/kotlin/reflect/KProperty.kt:108
+-	interface	Setter	-	1	public interface Setter<V> : KMutableProperty.Setter<V>, (V) -> Unit	jvmMain/kotlin/reflect/KProperty.kt:117
+-	interface	KProperty1	-	2	public actual interface KProperty1<T, out V> : KProperty<V>, (T) -> V {	jvmMain/kotlin/reflect/KProperty.kt:127
+-	fun	get	-	0	public actual fun get(receiver: T): V	jvmMain/kotlin/reflect/KProperty.kt:135
+1.1	fun	getDelegate	-	0	public fun getDelegate(receiver: T): Any?	jvmMain/kotlin/reflect/KProperty.kt:152
+-	interface	Getter	-	2	public interface Getter<T, out V> : KProperty.Getter<V>, (T) -> V	jvmMain/kotlin/reflect/KProperty.kt:161
+-	interface	KMutableProperty1	-	3	public actual interface KMutableProperty1<T, V> : KProperty1<T, V>, KMutableProperty<V> {	jvmMain/kotlin/reflect/KProperty.kt:167
+-	fun	set	-	1	public actual fun set(receiver: T, value: V)	jvmMain/kotlin/reflect/KProperty.kt:176
+-	interface	Setter	-	3	public interface Setter<T, V> : KMutableProperty.Setter<V>, (T, V) -> Unit	jvmMain/kotlin/reflect/KProperty.kt:185
+-	interface	KProperty2	-	4	public actual interface KProperty2<D, E, out V> : KProperty<V>, (D, E) -> V {	jvmMain/kotlin/reflect/KProperty.kt:199
+-	fun	get	-	1	public actual fun get(receiver1: D, receiver2: E): V	jvmMain/kotlin/reflect/KProperty.kt:207
+1.1	fun	getDelegate	-	1	public fun getDelegate(receiver1: D, receiver2: E): Any?	jvmMain/kotlin/reflect/KProperty.kt:223
+-	interface	Getter	-	4	public interface Getter<D, E, out V> : KProperty.Getter<V>, (D, E) -> V	jvmMain/kotlin/reflect/KProperty.kt:233
+-	interface	KMutableProperty2	-	5	public actual interface KMutableProperty2<D, E, V> : KProperty2<D, E, V>, KMutableProperty<V> {	jvmMain/kotlin/reflect/KProperty.kt:239
+-	fun	set	-	2	public actual fun set(receiver1: D, receiver2: E, value: V)	jvmMain/kotlin/reflect/KProperty.kt:247
+-	interface	Setter	-	5	public interface Setter<D, E, V> : KMutableProperty.Setter<V>, (D, E, V) -> Unit	jvmMain/kotlin/reflect/KProperty.kt:257
+-	interface	KType	-	0	public actual interface KType : KAnnotatedElement {	jvmMain/kotlin/reflect/KType.kt:12
+1.1	val	KClassifier	-	0	public actual val classifier: KClassifier?	jvmMain/kotlin/reflect/KType.kt:20
+1.1	val	List	-	0	public actual val arguments: List<KTypeProjection>	jvmMain/kotlin/reflect/KType.kt:31
+-	val	Boolean	-	0	public actual val isMarkedNullable: Boolean	jvmMain/kotlin/reflect/KType.kt:50
+1.1	class	KVisibility	-	0	public enum class KVisibility {	jvmMain/kotlin/reflect/KVisibility.kt:30
+1.4	val	Type	-	0	public val KType.javaType: Type	jvmMain/kotlin/reflect/TypesJVM.kt:26
+-	fun	computeJavaType	KType	0	private fun KType.computeJavaType(forceWrapper: Boolean = false): Type {	jvmMain/kotlin/reflect/TypesJVM.kt:37
+-	val	jClass	-	0	val jClass = if (forceWrapper) classifier.javaObjectType else classifier.java	jvmMain/kotlin/reflect/TypesJVM.kt:41
+-	val	arguments	-	0	val arguments = arguments	jvmMain/kotlin/reflect/TypesJVM.kt:42
+-	val	elementType	-	1	val (variance, elementType) = arguments.singleOrNull()	jvmMain/kotlin/reflect/TypesJVM.kt:48
+-	val	javaElementType	-	0	val javaElementType = elementType!!.computeJavaType()	jvmMain/kotlin/reflect/TypesJVM.kt:54
+-	fun	createPossiblyInnerType	-	1	private fun createPossiblyInnerType(jClass: Class<*>, arguments: List<KTypeProjection>): Type {	jvmMain/kotlin/reflect/TypesJVM.kt:67
+-	val	ownerClass	-	0	val ownerClass = jClass.declaringClass	jvmMain/kotlin/reflect/TypesJVM.kt:68
+-	val	n	-	0	val n = jClass.typeParameters.size	jvmMain/kotlin/reflect/TypesJVM.kt:73
+-	val	Type	-	0	private val KTypeProjection.javaType: Type	jvmMain/kotlin/reflect/TypesJVM.kt:82
+-	val	variance	-	0	val variance = variance ?: return WildcardTypeImpl.STAR	jvmMain/kotlin/reflect/TypesJVM.kt:84
+-	val	type	-	0	val type = type!!	jvmMain/kotlin/reflect/TypesJVM.kt:85
+-	interface	TypeImpl	-	0	private interface TypeImpl : Type {	jvmMain/kotlin/reflect/TypesJVM.kt:98
+-	fun	getTypeName	-	0	fun getTypeName(): String	jvmMain/kotlin/reflect/TypesJVM.kt:103
+-	class	TypeVariableImpl	-	1	private class TypeVariableImpl(private val typeParameter: KTypeParameter) : TypeVariable<GenericDeclaration>, TypeImpl {	jvmMain/kotlin/reflect/TypesJVM.kt:110
+-	fun	getAnnotation	-	0	fun <T : Annotation> getAnnotation(annotationClass: Class<T>): T? = null	jvmMain/kotlin/reflect/TypesJVM.kt:131
+-	fun	getAnnotations	-	0	fun getAnnotations(): Array<Annotation> = emptyArray()	jvmMain/kotlin/reflect/TypesJVM.kt:134
+-	fun	getDeclaredAnnotations	-	0	fun getDeclaredAnnotations(): Array<Annotation> = emptyArray()	jvmMain/kotlin/reflect/TypesJVM.kt:137
+-	class	GenericArrayTypeImpl	-	1	private class GenericArrayTypeImpl(private val elementType: Type) : GenericArrayType, TypeImpl {	jvmMain/kotlin/reflect/TypesJVM.kt:145
+-	class	WildcardTypeImpl	-	2	private class WildcardTypeImpl(private val upperBound: Type?, private val lowerBound: Type?) : WildcardType, TypeImpl {	jvmMain/kotlin/reflect/TypesJVM.kt:158
+-	val	STAR	-	1	val STAR = WildcardTypeImpl(null, null)	jvmMain/kotlin/reflect/TypesJVM.kt:180
+-	class	ParameterizedTypeImpl	-	0	private class ParameterizedTypeImpl(	jvmMain/kotlin/reflect/TypesJVM.kt:185
+-	val	Type	-	1	private val ownerType: Type?,	jvmMain/kotlin/reflect/TypesJVM.kt:187
+-	val	typeArguments	-	0	private val typeArguments = typeArguments.toTypedArray()	jvmMain/kotlin/reflect/TypesJVM.kt:190
+-	fun	typeToString	-	0	private fun typeToString(type: Type): String =	jvmMain/kotlin/reflect/TypesJVM.kt:223
+-	val	unwrap	-	1	val unwrap = generateSequence(type, Class<*>::getComponentType)	jvmMain/kotlin/reflect/TypesJVM.kt:226

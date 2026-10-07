@@ -1,0 +1,208 @@
+since	kind	name	receiver	arity	sig	loc
+1.2	val	Double	-	0	public const val PI: Double = 3.141592653589793	commonMain/kotlin/MathH.kt:18
+1.2	val	Double	-	0	public const val E: Double = 2.718281828459045	commonMain/kotlin/MathH.kt:21
+1.2	fun	sin	-	0	public expect fun sin(x: Double): Double	commonMain/kotlin/MathH.kt:31
+1.2	fun	cos	-	0	public expect fun cos(x: Double): Double	commonMain/kotlin/MathH.kt:39
+1.2	fun	tan	-	0	public expect fun tan(x: Double): Double	commonMain/kotlin/MathH.kt:47
+1.2	fun	asin	-	0	public expect fun asin(x: Double): Double	commonMain/kotlin/MathH.kt:57
+1.2	fun	acos	-	0	public expect fun acos(x: Double): Double	commonMain/kotlin/MathH.kt:67
+1.2	fun	atan	-	0	public expect fun atan(x: Double): Double	commonMain/kotlin/MathH.kt:77
+1.2	fun	atan2	-	1	public expect fun atan2(y: Double, x: Double): Double	commonMain/kotlin/MathH.kt:96
+1.2	fun	sinh	-	0	public expect fun sinh(x: Double): Double	commonMain/kotlin/MathH.kt:107
+1.2	fun	cosh	-	0	public expect fun cosh(x: Double): Double	commonMain/kotlin/MathH.kt:117
+1.2	fun	tanh	-	0	public expect fun tanh(x: Double): Double	commonMain/kotlin/MathH.kt:128
+1.2	fun	asinh	-	0	public expect fun asinh(x: Double): Double	commonMain/kotlin/MathH.kt:141
+1.2	fun	acosh	-	0	public expect fun acosh(x: Double): Double	commonMain/kotlin/MathH.kt:154
+1.2	fun	atanh	-	0	public expect fun atanh(x: Double): Double	commonMain/kotlin/MathH.kt:168
+1.2	fun	hypot	-	1	public expect fun hypot(x: Double, y: Double): Double	commonMain/kotlin/MathH.kt:178
+1.2	fun	sqrt	-	0	public expect fun sqrt(x: Double): Double	commonMain/kotlin/MathH.kt:187
+1.2	fun	exp	-	0	public expect fun exp(x: Double): Double	commonMain/kotlin/MathH.kt:198
+1.2	fun	expm1	-	0	public expect fun expm1(x: Double): Double	commonMain/kotlin/MathH.kt:213
+1.2	fun	log	-	1	public expect fun log(x: Double, base: Double): Double	commonMain/kotlin/MathH.kt:228
+1.2	fun	ln	-	0	public expect fun ln(x: Double): Double	commonMain/kotlin/MathH.kt:240
+1.2	fun	log10	-	0	public expect fun log10(x: Double): Double	commonMain/kotlin/MathH.kt:248
+1.2	fun	log2	-	0	public expect fun log2(x: Double): Double	commonMain/kotlin/MathH.kt:256
+1.2	fun	ln1p	-	0	public expect fun ln1p(x: Double): Double	commonMain/kotlin/MathH.kt:273
+1.2	fun	ceil	-	0	public expect fun ceil(x: Double): Double	commonMain/kotlin/MathH.kt:284
+1.2	fun	floor	-	0	public expect fun floor(x: Double): Double	commonMain/kotlin/MathH.kt:295
+1.2	fun	truncate	-	0	public expect fun truncate(x: Double): Double	commonMain/kotlin/MathH.kt:306
+1.2	fun	round	-	0	public expect fun round(x: Double): Double	commonMain/kotlin/MathH.kt:315
+1.2	fun	abs	-	0	public expect fun abs(x: Double): Double	commonMain/kotlin/MathH.kt:326
+1.2	fun	sign	-	0	public expect fun sign(x: Double): Double	commonMain/kotlin/MathH.kt:338
+1.2	fun	min	-	1	public expect fun min(a: Double, b: Double): Double	commonMain/kotlin/MathH.kt:347
+1.2	fun	max	-	1	public expect fun max(a: Double, b: Double): Double	commonMain/kotlin/MathH.kt:355
+1.8	fun	cbrt	-	0	public expect fun cbrt(x: Double): Double	commonMain/kotlin/MathH.kt:370
+1.2	fun	pow	Double	0	public expect fun Double.pow(x: Double): Double	commonMain/kotlin/MathH.kt:387
+1.2	fun	pow	Double	0	public expect fun Double.pow(n: Int): Double	commonMain/kotlin/MathH.kt:395
+1.2	val	Double	-	0	public expect val Double.absoluteValue: Double	commonMain/kotlin/MathH.kt:406
+1.2	val	Double	-	0	public expect val Double.sign: Double	commonMain/kotlin/MathH.kt:418
+1.2	fun	withSign	Double	0	public expect fun Double.withSign(sign: Double): Double	commonMain/kotlin/MathH.kt:426
+1.2	fun	withSign	Double	0	public expect fun Double.withSign(sign: Int): Double	commonMain/kotlin/MathH.kt:432
+1.2	val	Double	-	0	public expect val Double.ulp: Double	commonMain/kotlin/MathH.kt:445
+1.2	fun	nextUp	Double	0	public expect fun Double.nextUp(): Double	commonMain/kotlin/MathH.kt:451
+1.2	fun	nextDown	Double	0	public expect fun Double.nextDown(): Double	commonMain/kotlin/MathH.kt:457
+1.2	fun	nextTowards	Double	0	public expect fun Double.nextTowards(to: Double): Double	commonMain/kotlin/MathH.kt:468
+1.2	fun	roundToInt	Double	0	public expect fun Double.roundToInt(): Int	commonMain/kotlin/MathH.kt:481
+1.2	fun	roundToLong	Double	0	public expect fun Double.roundToLong(): Long	commonMain/kotlin/MathH.kt:494
+1.2	fun	sin	-	0	public expect fun sin(x: Float): Float	commonMain/kotlin/MathH.kt:508
+1.2	fun	cos	-	0	public expect fun cos(x: Float): Float	commonMain/kotlin/MathH.kt:516
+1.2	fun	tan	-	0	public expect fun tan(x: Float): Float	commonMain/kotlin/MathH.kt:524
+1.2	fun	asin	-	0	public expect fun asin(x: Float): Float	commonMain/kotlin/MathH.kt:534
+1.2	fun	acos	-	0	public expect fun acos(x: Float): Float	commonMain/kotlin/MathH.kt:544
+1.2	fun	atan	-	0	public expect fun atan(x: Float): Float	commonMain/kotlin/MathH.kt:554
+1.2	fun	atan2	-	1	public expect fun atan2(y: Float, x: Float): Float	commonMain/kotlin/MathH.kt:573
+1.2	fun	sinh	-	0	public expect fun sinh(x: Float): Float	commonMain/kotlin/MathH.kt:584
+1.2	fun	cosh	-	0	public expect fun cosh(x: Float): Float	commonMain/kotlin/MathH.kt:594
+1.2	fun	tanh	-	0	public expect fun tanh(x: Float): Float	commonMain/kotlin/MathH.kt:605
+1.2	fun	asinh	-	0	public expect fun asinh(x: Float): Float	commonMain/kotlin/MathH.kt:618
+1.2	fun	acosh	-	0	public expect fun acosh(x: Float): Float	commonMain/kotlin/MathH.kt:631
+1.2	fun	atanh	-	0	public expect fun atanh(x: Float): Float	commonMain/kotlin/MathH.kt:645
+1.2	fun	hypot	-	1	public expect fun hypot(x: Float, y: Float): Float	commonMain/kotlin/MathH.kt:655
+1.2	fun	sqrt	-	0	public expect fun sqrt(x: Float): Float	commonMain/kotlin/MathH.kt:664
+1.2	fun	exp	-	0	public expect fun exp(x: Float): Float	commonMain/kotlin/MathH.kt:675
+1.2	fun	expm1	-	0	public expect fun expm1(x: Float): Float	commonMain/kotlin/MathH.kt:690
+1.2	fun	log	-	1	public expect fun log(x: Float, base: Float): Float	commonMain/kotlin/MathH.kt:705
+1.2	fun	ln	-	0	public expect fun ln(x: Float): Float	commonMain/kotlin/MathH.kt:717
+1.2	fun	log10	-	0	public expect fun log10(x: Float): Float	commonMain/kotlin/MathH.kt:725
+1.2	fun	log2	-	0	public expect fun log2(x: Float): Float	commonMain/kotlin/MathH.kt:733
+1.2	fun	ln1p	-	0	public expect fun ln1p(x: Float): Float	commonMain/kotlin/MathH.kt:750
+1.2	fun	ceil	-	0	public expect fun ceil(x: Float): Float	commonMain/kotlin/MathH.kt:761
+1.2	fun	floor	-	0	public expect fun floor(x: Float): Float	commonMain/kotlin/MathH.kt:772
+1.2	fun	truncate	-	0	public expect fun truncate(x: Float): Float	commonMain/kotlin/MathH.kt:783
+1.2	fun	round	-	0	public expect fun round(x: Float): Float	commonMain/kotlin/MathH.kt:792
+1.2	fun	abs	-	0	public expect fun abs(x: Float): Float	commonMain/kotlin/MathH.kt:804
+1.2	fun	sign	-	0	public expect fun sign(x: Float): Float	commonMain/kotlin/MathH.kt:816
+1.2	fun	min	-	1	public expect fun min(a: Float, b: Float): Float	commonMain/kotlin/MathH.kt:826
+1.2	fun	max	-	1	public expect fun max(a: Float, b: Float): Float	commonMain/kotlin/MathH.kt:834
+1.8	fun	cbrt	-	0	public expect fun cbrt(x: Float): Float	commonMain/kotlin/MathH.kt:849
+1.2	fun	pow	Float	0	public expect fun Float.pow(x: Float): Float	commonMain/kotlin/MathH.kt:867
+1.2	fun	pow	Float	0	public expect fun Float.pow(n: Int): Float	commonMain/kotlin/MathH.kt:875
+1.2	val	Float	-	0	public expect val Float.absoluteValue: Float	commonMain/kotlin/MathH.kt:886
+1.2	val	Float	-	0	public expect val Float.sign: Float	commonMain/kotlin/MathH.kt:898
+1.2	fun	withSign	Float	0	public expect fun Float.withSign(sign: Float): Float	commonMain/kotlin/MathH.kt:906
+1.2	fun	withSign	Float	0	public expect fun Float.withSign(sign: Int): Float	commonMain/kotlin/MathH.kt:912
+1.2	fun	roundToInt	Float	0	public expect fun Float.roundToInt(): Int	commonMain/kotlin/MathH.kt:926
+1.2	fun	roundToLong	Float	0	public expect fun Float.roundToLong(): Long	commonMain/kotlin/MathH.kt:939
+1.2	fun	abs	-	0	public expect fun abs(n: Int): Int	commonMain/kotlin/MathH.kt:956
+1.2	fun	min	-	1	public expect fun min(a: Int, b: Int): Int	commonMain/kotlin/MathH.kt:962
+1.2	fun	max	-	1	public expect fun max(a: Int, b: Int): Int	commonMain/kotlin/MathH.kt:968
+1.2	val	Int	-	0	public expect val Int.absoluteValue: Int	commonMain/kotlin/MathH.kt:979
+1.2	val	Int	-	0	public expect val Int.sign: Int	commonMain/kotlin/MathH.kt:988
+1.2	fun	abs	-	0	public expect fun abs(n: Long): Long	commonMain/kotlin/MathH.kt:1001
+1.2	fun	min	-	1	public expect fun min(a: Long, b: Long): Long	commonMain/kotlin/MathH.kt:1007
+1.2	fun	max	-	1	public expect fun max(a: Long, b: Long): Long	commonMain/kotlin/MathH.kt:1013
+1.2	val	Long	-	0	public expect val Long.absoluteValue: Long	commonMain/kotlin/MathH.kt:1024
+1.2	val	Int	-	0	public expect val Long.sign: Int	commonMain/kotlin/MathH.kt:1033
+1.5	fun	min	-	1	public inline fun min(a: UInt, b: UInt): UInt {	commonMain/kotlin/UMath.kt:13
+1.5	fun	min	-	1	public inline fun min(a: ULong, b: ULong): ULong {	commonMain/kotlin/UMath.kt:22
+1.5	fun	max	-	1	public inline fun max(a: UInt, b: UInt): UInt {	commonMain/kotlin/UMath.kt:31
+1.5	fun	max	-	1	public inline fun max(a: ULong, b: ULong): ULong {	commonMain/kotlin/UMath.kt:40
+-	object	Constants	-	0	private object Constants {	jvmMain/kotlin/util/MathJVM.kt:20
+-	val	Double	-	0	internal val LN2: Double = ln(2.0)	jvmMain/kotlin/util/MathJVM.kt:24
+-	val	Double	-	0	internal val epsilon: Double = nativeMath.ulp(1.0)	jvmMain/kotlin/util/MathJVM.kt:27
+-	val	taylor_2_bound	-	0	internal val taylor_2_bound = nativeMath.sqrt(epsilon)	jvmMain/kotlin/util/MathJVM.kt:29
+-	val	taylor_n_bound	-	0	internal val taylor_n_bound = nativeMath.sqrt(taylor_2_bound)	jvmMain/kotlin/util/MathJVM.kt:31
+-	val	upper_taylor_2_bound	-	0	internal val upper_taylor_2_bound = 1 / taylor_2_bound	jvmMain/kotlin/util/MathJVM.kt:33
+-	val	upper_taylor_n_bound	-	0	internal val upper_taylor_n_bound = 1 / taylor_n_bound	jvmMain/kotlin/util/MathJVM.kt:35
+1.2	fun	sin	-	0	public actual inline fun sin(x: Double): Double = nativeMath.sin(x)	jvmMain/kotlin/util/MathJVM.kt:48
+1.2	fun	cos	-	0	public actual inline fun cos(x: Double): Double = nativeMath.cos(x)	jvmMain/kotlin/util/MathJVM.kt:57
+1.2	fun	tan	-	0	public actual inline fun tan(x: Double): Double = nativeMath.tan(x)	jvmMain/kotlin/util/MathJVM.kt:66
+1.2	fun	asin	-	0	public actual inline fun asin(x: Double): Double = nativeMath.asin(x)	jvmMain/kotlin/util/MathJVM.kt:77
+1.2	fun	acos	-	0	public actual inline fun acos(x: Double): Double = nativeMath.acos(x)	jvmMain/kotlin/util/MathJVM.kt:88
+1.2	fun	atan	-	0	public actual inline fun atan(x: Double): Double = nativeMath.atan(x)	jvmMain/kotlin/util/MathJVM.kt:99
+1.2	fun	atan2	-	2	public actual inline fun atan2(y: Double, x: Double): Double = nativeMath.atan2(y, x)	jvmMain/kotlin/util/MathJVM.kt:119
+1.2	fun	sinh	-	0	public actual inline fun sinh(x: Double): Double = nativeMath.sinh(x)	jvmMain/kotlin/util/MathJVM.kt:131
+1.2	fun	cosh	-	0	public actual inline fun cosh(x: Double): Double = nativeMath.cosh(x)	jvmMain/kotlin/util/MathJVM.kt:142
+1.2	fun	tanh	-	0	public actual inline fun tanh(x: Double): Double = nativeMath.tanh(x)	jvmMain/kotlin/util/MathJVM.kt:154
+1.2	fun	asinh	-	0	public actual fun asinh(x: Double): Double =	jvmMain/kotlin/util/MathJVM.kt:171
+-	var	result	-	0	var result = x;	jvmMain/kotlin/util/MathJVM.kt:188
+1.2	fun	acosh	-	0	public actual fun acosh(x: Double): Double =	jvmMain/kotlin/util/MathJVM.kt:209
+-	val	y	-	0	val y = nativeMath.sqrt(x - 1)	jvmMain/kotlin/util/MathJVM.kt:221
+-	var	result	-	0	var result = y	jvmMain/kotlin/util/MathJVM.kt:223
+1.2	fun	atanh	-	0	public actual fun atanh(x: Double): Double {	jvmMain/kotlin/util/MathJVM.kt:245
+-	var	result	-	0	var result = x	jvmMain/kotlin/util/MathJVM.kt:247
+1.2	fun	hypot	-	2	public actual inline fun hypot(x: Double, y: Double): Double = nativeMath.hypot(x, y)	jvmMain/kotlin/util/MathJVM.kt:265
+1.2	fun	sqrt	-	0	public actual inline fun sqrt(x: Double): Double = nativeMath.sqrt(x)	jvmMain/kotlin/util/MathJVM.kt:275
+1.2	fun	exp	-	0	public actual inline fun exp(x: Double): Double = nativeMath.exp(x)	jvmMain/kotlin/util/MathJVM.kt:287
+1.2	fun	expm1	-	0	public actual inline fun expm1(x: Double): Double = nativeMath.expm1(x)	jvmMain/kotlin/util/MathJVM.kt:303
+1.2	fun	log	-	1	public actual fun log(x: Double, base: Double): Double {	jvmMain/kotlin/util/MathJVM.kt:318
+1.2	fun	ln	-	0	public actual inline fun ln(x: Double): Double = nativeMath.log(x)	jvmMain/kotlin/util/MathJVM.kt:334
+1.2	fun	log10	-	0	public actual inline fun log10(x: Double): Double = nativeMath.log10(x)	jvmMain/kotlin/util/MathJVM.kt:343
+1.2	fun	log2	-	0	public actual fun log2(x: Double): Double = nativeMath.log(x) / LN2	jvmMain/kotlin/util/MathJVM.kt:351
+1.2	fun	ln1p	-	0	public actual inline fun ln1p(x: Double): Double = nativeMath.log1p(x)	jvmMain/kotlin/util/MathJVM.kt:369
+1.2	fun	ceil	-	0	public actual inline fun ceil(x: Double): Double = nativeMath.ceil(x)	jvmMain/kotlin/util/MathJVM.kt:381
+1.2	fun	floor	-	0	public actual inline fun floor(x: Double): Double = nativeMath.floor(x)	jvmMain/kotlin/util/MathJVM.kt:393
+1.2	fun	truncate	-	0	public actual fun truncate(x: Double): Double = when {	jvmMain/kotlin/util/MathJVM.kt:404
+1.2	fun	round	-	0	public actual inline fun round(x: Double): Double = nativeMath.rint(x)	jvmMain/kotlin/util/MathJVM.kt:418
+1.2	fun	abs	-	0	public actual inline fun abs(x: Double): Double = nativeMath.abs(x)	jvmMain/kotlin/util/MathJVM.kt:431
+1.2	fun	sign	-	0	public actual inline fun sign(x: Double): Double = nativeMath.signum(x)	jvmMain/kotlin/util/MathJVM.kt:444
+1.2	fun	min	-	2	public actual inline fun min(a: Double, b: Double): Double = nativeMath.min(a, b)	jvmMain/kotlin/util/MathJVM.kt:455
+1.2	fun	max	-	2	public actual inline fun max(a: Double, b: Double): Double = nativeMath.max(a, b)	jvmMain/kotlin/util/MathJVM.kt:464
+1.8	fun	cbrt	-	0	public actual inline fun cbrt(x: Double): Double = nativeMath.cbrt(x)	jvmMain/kotlin/util/MathJVM.kt:480
+1.2	fun	pow	Double	1	public actual inline fun Double.pow(x: Double): Double = nativeMath.pow(this, x)	jvmMain/kotlin/util/MathJVM.kt:499
+1.2	fun	pow	Double	1	public actual inline fun Double.pow(n: Int): Double = nativeMath.pow(this, n.toDouble())	jvmMain/kotlin/util/MathJVM.kt:508
+1.2	fun	IEEErem	Double	1	public inline fun Double.IEEErem(divisor: Double): Double = nativeMath.IEEEremainder(this, divisor)	jvmMain/kotlin/util/MathJVM.kt:524
+1.2	val	get	-	0	public actual inline val Double.absoluteValue: Double get() = nativeMath.abs(this)	jvmMain/kotlin/util/MathJVM.kt:536
+1.2	val	get	-	0	public actual inline val Double.sign: Double get() = nativeMath.signum(this)	jvmMain/kotlin/util/MathJVM.kt:549
+1.2	fun	withSign	Double	1	public actual inline fun Double.withSign(sign: Double): Double = nativeMath.copySign(this, sign)	jvmMain/kotlin/util/MathJVM.kt:558
+1.2	fun	withSign	Double	1	public actual inline fun Double.withSign(sign: Int): Double = nativeMath.copySign(this, sign.toDouble())	jvmMain/kotlin/util/MathJVM.kt:565
+1.2	val	get	-	0	public actual inline val Double.ulp: Double get() = nativeMath.ulp(this)	jvmMain/kotlin/util/MathJVM.kt:579
+1.2	fun	nextUp	Double	0	public actual inline fun Double.nextUp(): Double = nativeMath.nextUp(this)	jvmMain/kotlin/util/MathJVM.kt:586
+1.2	fun	nextDown	Double	1	public actual inline fun Double.nextDown(): Double = nativeMath.nextAfter(this, Double.NEGATIVE_INFINITY)	jvmMain/kotlin/util/MathJVM.kt:593
+1.2	fun	nextTowards	Double	1	public actual inline fun Double.nextTowards(to: Double): Double = nativeMath.nextAfter(this, to)	jvmMain/kotlin/util/MathJVM.kt:605
+1.2	fun	roundToInt	Double	0	public actual fun Double.roundToInt(): Int = when {	jvmMain/kotlin/util/MathJVM.kt:618
+1.2	fun	roundToLong	Double	0	public actual fun Double.roundToLong(): Long =	jvmMain/kotlin/util/MathJVM.kt:636
+1.2	fun	sin	-	0	public actual inline fun sin(x: Float): Float = nativeMath.sin(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:652
+1.2	fun	cos	-	0	public actual inline fun cos(x: Float): Float = nativeMath.cos(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:661
+1.2	fun	tan	-	0	public actual inline fun tan(x: Float): Float = nativeMath.tan(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:670
+1.2	fun	asin	-	0	public actual inline fun asin(x: Float): Float = nativeMath.asin(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:681
+1.2	fun	acos	-	0	public actual inline fun acos(x: Float): Float = nativeMath.acos(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:692
+1.2	fun	atan	-	0	public actual inline fun atan(x: Float): Float = nativeMath.atan(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:703
+1.2	fun	atan2	-	2	public actual inline fun atan2(y: Float, x: Float): Float = nativeMath.atan2(y.toDouble(), x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:723
+1.2	fun	sinh	-	0	public actual inline fun sinh(x: Float): Float = nativeMath.sinh(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:735
+1.2	fun	cosh	-	0	public actual inline fun cosh(x: Float): Float = nativeMath.cosh(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:746
+1.2	fun	tanh	-	0	public actual inline fun tanh(x: Float): Float = nativeMath.tanh(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:758
+1.2	fun	asinh	-	0	public actual inline fun asinh(x: Float): Float = asinh(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:772
+1.2	fun	acosh	-	0	public actual inline fun acosh(x: Float): Float = acosh(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:786
+1.2	fun	atanh	-	0	public actual inline fun atanh(x: Float): Float = atanh(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:801
+1.2	fun	hypot	-	2	public actual inline fun hypot(x: Float, y: Float): Float = nativeMath.hypot(x.toDouble(), y.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:812
+1.2	fun	sqrt	-	0	public actual inline fun sqrt(x: Float): Float = nativeMath.sqrt(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:822
+1.2	fun	exp	-	0	public actual inline fun exp(x: Float): Float = nativeMath.exp(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:834
+1.2	fun	expm1	-	0	public actual inline fun expm1(x: Float): Float = nativeMath.expm1(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:850
+1.2	fun	log	-	1	public actual fun log(x: Float, base: Float): Float {	jvmMain/kotlin/util/MathJVM.kt:865
+1.2	fun	ln	-	0	public actual inline fun ln(x: Float): Float = nativeMath.log(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:881
+1.2	fun	log10	-	0	public actual inline fun log10(x: Float): Float = nativeMath.log10(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:890
+1.2	fun	log2	-	0	public actual fun log2(x: Float): Float = (nativeMath.log(x.toDouble()) / LN2).toFloat()	jvmMain/kotlin/util/MathJVM.kt:898
+1.2	fun	ln1p	-	0	public actual inline fun ln1p(x: Float): Float = nativeMath.log1p(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:916
+1.2	fun	ceil	-	0	public actual inline fun ceil(x: Float): Float = nativeMath.ceil(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:928
+1.2	fun	floor	-	0	public actual inline fun floor(x: Float): Float = nativeMath.floor(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:940
+1.2	fun	truncate	-	0	public actual fun truncate(x: Float): Float = when {	jvmMain/kotlin/util/MathJVM.kt:951
+1.2	fun	round	-	0	public actual inline fun round(x: Float): Float = nativeMath.rint(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:965
+1.2	fun	abs	-	0	public actual inline fun abs(x: Float): Float = nativeMath.abs(x)	jvmMain/kotlin/util/MathJVM.kt:978
+1.2	fun	sign	-	0	public actual inline fun sign(x: Float): Float = nativeMath.signum(x)	jvmMain/kotlin/util/MathJVM.kt:991
+1.2	fun	min	-	2	public actual inline fun min(a: Float, b: Float): Float = nativeMath.min(a, b)	jvmMain/kotlin/util/MathJVM.kt:1002
+1.2	fun	max	-	2	public actual inline fun max(a: Float, b: Float): Float = nativeMath.max(a, b)	jvmMain/kotlin/util/MathJVM.kt:1011
+1.8	fun	cbrt	-	0	public actual inline fun cbrt(x: Float): Float = nativeMath.cbrt(x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:1027
+1.2	fun	pow	Float	1	public actual inline fun Float.pow(x: Float): Float = nativeMath.pow(this.toDouble(), x.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:1045
+1.2	fun	pow	Float	1	public actual inline fun Float.pow(n: Int): Float = nativeMath.pow(this.toDouble(), n.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:1054
+1.2	fun	IEEErem	Float	1	public inline fun Float.IEEErem(divisor: Float): Float = nativeMath.IEEEremainder(this.toDouble(), divisor.toDouble()).toFloat()	jvmMain/kotlin/util/MathJVM.kt:1070
+1.2	val	get	-	0	public actual inline val Float.absoluteValue: Float get() = nativeMath.abs(this)	jvmMain/kotlin/util/MathJVM.kt:1082
+1.2	val	get	-	0	public actual inline val Float.sign: Float get() = nativeMath.signum(this)	jvmMain/kotlin/util/MathJVM.kt:1095
+1.2	fun	withSign	Float	1	public actual inline fun Float.withSign(sign: Float): Float = nativeMath.copySign(this, sign)	jvmMain/kotlin/util/MathJVM.kt:1104
+1.2	fun	withSign	Float	1	public actual inline fun Float.withSign(sign: Int): Float = nativeMath.copySign(this, sign.toFloat())	jvmMain/kotlin/util/MathJVM.kt:1111
+1.2	val	get	-	0	public inline val Float.ulp: Float get() = nativeMath.ulp(this)	jvmMain/kotlin/util/MathJVM.kt:1125
+1.2	fun	nextUp	Float	0	public inline fun Float.nextUp(): Float = nativeMath.nextUp(this)	jvmMain/kotlin/util/MathJVM.kt:1132
+1.2	fun	nextDown	Float	1	public inline fun Float.nextDown(): Float = nativeMath.nextAfter(this, Double.NEGATIVE_INFINITY)	jvmMain/kotlin/util/MathJVM.kt:1139
+1.2	fun	nextTowards	Float	1	public inline fun Float.nextTowards(to: Float): Float = nativeMath.nextAfter(this, to.toDouble())	jvmMain/kotlin/util/MathJVM.kt:1151
+1.2	fun	roundToInt	Float	0	public actual fun Float.roundToInt(): Int =	jvmMain/kotlin/util/MathJVM.kt:1164
+1.2	fun	roundToLong	Float	0	public actual fun Float.roundToLong(): Long = toDouble().roundToLong()	jvmMain/kotlin/util/MathJVM.kt:1178
+1.2	fun	abs	-	0	public actual inline fun abs(n: Int): Int = nativeMath.abs(n)	jvmMain/kotlin/util/MathJVM.kt:1196
+1.2	fun	min	-	2	public actual inline fun min(a: Int, b: Int): Int = nativeMath.min(a, b)	jvmMain/kotlin/util/MathJVM.kt:1203
+1.2	fun	max	-	2	public actual inline fun max(a: Int, b: Int): Int = nativeMath.max(a, b)	jvmMain/kotlin/util/MathJVM.kt:1210
+1.2	val	get	-	0	public actual inline val Int.absoluteValue: Int get() = nativeMath.abs(this)	jvmMain/kotlin/util/MathJVM.kt:1222
+1.2	val	get	-	0	public actual val Int.sign: Int get() = Integer.signum(this)	jvmMain/kotlin/util/MathJVM.kt:1231
+1.2	fun	abs	-	0	public actual inline fun abs(n: Long): Long = nativeMath.abs(n)	jvmMain/kotlin/util/MathJVM.kt:1245
+1.2	fun	min	-	2	public actual inline fun min(a: Long, b: Long): Long = nativeMath.min(a, b)	jvmMain/kotlin/util/MathJVM.kt:1252
+1.2	fun	max	-	2	public actual inline fun max(a: Long, b: Long): Long = nativeMath.max(a, b)	jvmMain/kotlin/util/MathJVM.kt:1259
+1.2	val	get	-	0	public actual inline val Long.absoluteValue: Long get() = nativeMath.abs(this)	jvmMain/kotlin/util/MathJVM.kt:1271
+1.2	val	get	-	0	public actual val Long.sign: Int get() = java.lang.Long.signum(this)	jvmMain/kotlin/util/MathJVM.kt:1280

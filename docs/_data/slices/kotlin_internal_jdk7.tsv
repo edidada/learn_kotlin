@@ -1,0 +1,5 @@
+since	kind	name	receiver	arity	sig	loc
+-	class	JDK7PlatformImplementations	-	0	internal open class JDK7PlatformImplementations : PlatformImplementations() {	jvmMain/jdk7/kotlin/internal/jdk7/JDK7PlatformImplementations.kt:11
+-	object	ReflectSdkVersion	-	0	private object ReflectSdkVersion {	jvmMain/jdk7/kotlin/internal/jdk7/JDK7PlatformImplementations.kt:13
+-	val	Int	-	0	public val sdkVersion: Int? = try {	jvmMain/jdk7/kotlin/internal/jdk7/JDK7PlatformImplementations.kt:15
+-	fun	sdkIsNullOrAtLeast	-	0	private fun sdkIsNullOrAtLeast(version: Int): Boolean = ReflectSdkVersion.sdkVersion == null || ReflectSdkVersion.sdkVersion >= version	jvmMain/jdk7/kotlin/internal/jdk7/JDK7PlatformImplementations.kt:22

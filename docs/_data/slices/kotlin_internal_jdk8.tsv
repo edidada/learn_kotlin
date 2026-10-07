@@ -1,0 +1,7 @@
+since	kind	name	receiver	arity	sig	loc
+-	class	JDK8PlatformImplementations	-	0	internal open class JDK8PlatformImplementations : JDK7PlatformImplementations() {	jvmMain/jdk8/kotlin/internal/jdk8/JDK8PlatformImplementations.kt:27
+-	object	ReflectSdkVersion	-	0	private object ReflectSdkVersion {	jvmMain/jdk8/kotlin/internal/jdk8/JDK8PlatformImplementations.kt:31
+-	val	Int	-	0	public val sdkVersion: Int? = try {	jvmMain/jdk8/kotlin/internal/jdk8/JDK8PlatformImplementations.kt:33
+-	fun	sdkIsNullOrAtLeast	-	0	private fun sdkIsNullOrAtLeast(version: Int): Boolean = ReflectSdkVersion.sdkVersion == null || ReflectSdkVersion.sdkVersion >= version	jvmMain/jdk8/kotlin/internal/jdk8/JDK8PlatformImplementations.kt:40
+-	val	matcher	-	0	val matcher = matchResult as? Matcher ?: throw UnsupportedOperationException("Retrieving groups by name is not supported on this platform.")	jvmMain/jdk8/kotlin/internal/jdk8/JDK8PlatformImplementations.kt:43
+-	val	range	-	0	val range = matcher.start(name)..matcher.end(name) - 1	jvmMain/jdk8/kotlin/internal/jdk8/JDK8PlatformImplementations.kt:45

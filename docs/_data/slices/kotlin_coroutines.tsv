@@ -1,0 +1,67 @@
+since	kind	name	receiver	arity	sig	loc
+1.3	interface	Continuation	-	0	public interface Continuation<in T> {	commonMain/kotlin/coroutines/Continuation.kt:16
+-	val	CoroutineContext	-	0	public val context: CoroutineContext	commonMain/kotlin/coroutines/Continuation.kt:20
+-	fun	resumeWith	-	0	public fun resumeWith(result: Result<T>)	commonMain/kotlin/coroutines/Continuation.kt:26
+1.3	class	RestrictsSuspension	-	0	public annotation class RestrictsSuspension	commonMain/kotlin/coroutines/Continuation.kt:37
+1.3	fun	resume	-	0	public inline fun <T> Continuation<T>.resume(value: T): Unit =	commonMain/kotlin/coroutines/Continuation.kt:44
+1.3	fun	resumeWithException	-	0	public inline fun <T> Continuation<T>.resumeWithException(exception: Throwable): Unit =	commonMain/kotlin/coroutines/Continuation.kt:53
+1.3	fun	Continuation	-	0	public inline fun <T> Continuation(	commonMain/kotlin/coroutines/Continuation.kt:62
+1.3	fun	suspendCoroutine	-	0	public suspend inline fun <T> suspendCoroutine(crossinline block: (Continuation<T>) -> Unit): T {	commonMain/kotlin/coroutines/Continuation.kt:142
+-	val	safe	-	0	val safe = SafeContinuation(c.intercepted())	commonMain/kotlin/coroutines/Continuation.kt:145
+1.3	val	CoroutineContext	-	0	public suspend inline val coroutineContext: CoroutineContext	commonMain/kotlin/coroutines/Continuation.kt:157
+1.3	interface	ContinuationInterceptor	-	0	public interface ContinuationInterceptor : CoroutineContext.Element {	commonMain/kotlin/coroutines/ContinuationInterceptor.kt:20
+-	object	Key	-	0	public companion object Key : CoroutineContext.Key<ContinuationInterceptor>	commonMain/kotlin/coroutines/ContinuationInterceptor.kt:24
+-	fun	interceptContinuation	-	0	public fun <T> interceptContinuation(continuation: Continuation<T>): Continuation<T>	commonMain/kotlin/coroutines/ContinuationInterceptor.kt:37
+-	fun	releaseInterceptedContinuation	-	0	public fun releaseInterceptedContinuation(continuation: Continuation<*>) {	commonMain/kotlin/coroutines/ContinuationInterceptor.kt:48
+1.3	interface	CoroutineContext	-	0	public interface CoroutineContext {	commonMain/kotlin/coroutines/CoroutineContext.kt:14
+-	fun	get	-	0	public operator fun <E : Element> get(key: Key<E>): E?	commonMain/kotlin/coroutines/CoroutineContext.kt:18
+-	fun	fold	-	2	public fun <R> fold(initial: R, operation: (R, Element) -> R): R	commonMain/kotlin/coroutines/CoroutineContext.kt:24
+-	fun	plus	-	0	public operator fun plus(context: CoroutineContext): CoroutineContext =	commonMain/kotlin/coroutines/CoroutineContext.kt:30
+-	val	removed	-	0	val removed = acc.minusKey(element.key)	commonMain/kotlin/coroutines/CoroutineContext.kt:33
+-	val	interceptor	-	0	val interceptor = removed[ContinuationInterceptor]	commonMain/kotlin/coroutines/CoroutineContext.kt:36
+-	val	left	-	0	val left = removed.minusKey(ContinuationInterceptor)	commonMain/kotlin/coroutines/CoroutineContext.kt:38
+-	fun	minusKey	-	0	public fun minusKey(key: Key<*>): CoroutineContext	commonMain/kotlin/coroutines/CoroutineContext.kt:49
+-	interface	Key	-	0	public interface Key<E : Element>	commonMain/kotlin/coroutines/CoroutineContext.kt:54
+-	interface	Element	-	0	public interface Element : CoroutineContext {	commonMain/kotlin/coroutines/CoroutineContext.kt:59
+-	val	Key	-	0	public val key: Key<*>	commonMain/kotlin/coroutines/CoroutineContext.kt:63
+1.3	class	AbstractCoroutineContextElement	-	0	public abstract class AbstractCoroutineContextElement(public override val key: Key<*>) : Element	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:17
+1.3	class	AbstractCoroutineContextKey	-	1	public abstract class AbstractCoroutineContextKey<B : Element, E : B>(	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:50
+-	val	E	-	0	private val safeCast: (element: Element) -> E?	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:52
+-	val	Key	-	1	private val topmostKey: Key<*> = if (baseKey is AbstractCoroutineContextKey<*, *>) baseKey.topmostKey else baseKey	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:54
+-	fun	tryCast	-	0	internal fun tryCast(element: Element): E? = safeCast(element)	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:56
+-	fun	isSubKey	-	0	internal fun isSubKey(key: Key<*>): Boolean = key === this || topmostKey === key	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:57
+1.3	fun	getPolymorphicElement	Element	0	public fun <E : Element> Element.getPolymorphicElement(key: Key<E>): E? {	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:68
+1.3	fun	minusPolymorphicKey	Element	0	public fun Element.minusPolymorphicKey(key: Key<*>): CoroutineContext {	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:86
+1.3	object	EmptyCoroutineContext	-	1	public object EmptyCoroutineContext : CoroutineContext, Serializable {	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:97
+-	val	Long	-	0	private const val serialVersionUID: Long = 0	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:98
+-	fun	readResolve	-	0	private fun readResolve(): Any = EmptyCoroutineContext	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:99
+1.3	class	CombinedContext	-	0	internal class CombinedContext(	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:114
+-	val	CoroutineContext	-	1	private val left: CoroutineContext,	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:115
+-	val	Element	-	0	private val element: Element	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:116
+-	var	cur	-	0	var cur = this	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:120
+-	val	next	-	0	val next = cur.left	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:123
+-	val	newLeft	-	0	val newLeft = left.minusKey(key)	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:137
+-	fun	size	-	0	private fun size(): Int {	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:145
+-	var	cur	-	0	var cur = this	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:146
+-	var	size	-	0	var size = 2	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:147
+-	fun	contains	-	0	private fun contains(element: Element): Boolean =	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:154
+-	fun	containsAll	-	0	private fun containsAll(context: CombinedContext): Boolean {	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:157
+-	var	cur	-	0	var cur = context	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:158
+-	val	next	-	0	val next = cur.left	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:161
+-	fun	writeReplace	-	0	private fun writeReplace(): Any {	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:180
+-	val	n	-	0	val n = size()	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:181
+-	val	elements	-	0	val elements = arrayOfNulls<CoroutineContext>(n)	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:182
+-	var	index	-	0	var index = 0	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:183
+-	fun	readObject	-	0	private fun readObject(input: ReadObjectParameterType): Unit = throwReadObjectNotSupported()	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:190
+-	class	Serialized	-	0	private class Serialized(val elements: Array<CoroutineContext>) : Serializable {	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:192
+-	val	Long	-	0	private const val serialVersionUID: Long = 0L	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:194
+-	fun	readResolve	-	1	private fun readResolve(): Any = elements.fold(EmptyCoroutineContext, CoroutineContext::plus)	commonMain/kotlin/coroutines/CoroutineContextImpl.kt:197
+1.3	class	SafeContinuation	-	0	internal expect class SafeContinuation<in T> : Continuation<T> {	commonMain/kotlin/coroutines/CoroutinesH.kt:10
+-	fun	getOrThrow	-	0	internal fun getOrThrow(): Any?	commonMain/kotlin/coroutines/CoroutinesH.kt:17
+1.3	class	SafeContinuation	-	0	internal actual class SafeContinuation<in T>	jvmMain/kotlin/coroutines/SafeContinuationJvm.kt:14
+-	var	Any	-	0	private var result: Any? = initialResult	jvmMain/kotlin/coroutines/SafeContinuationJvm.kt:26
+-	val	RESULT	-	1	private val RESULT = AtomicReferenceFieldUpdater.newUpdater<SafeContinuation<*>, Any?>(	jvmMain/kotlin/coroutines/SafeContinuationJvm.kt:30
+-	val	cur	-	0	val cur = this.result	jvmMain/kotlin/coroutines/SafeContinuationJvm.kt:37
+-	fun	getOrThrow	-	0	internal actual fun getOrThrow(): Any? {	jvmMain/kotlin/coroutines/SafeContinuationJvm.kt:50
+-	var	result	-	0	var result = this.result	jvmMain/kotlin/coroutines/SafeContinuationJvm.kt:51
+-	fun	hackToForceKotlinBuiltinsForKotlinCoroutinesPackage	-	0	private fun hackToForceKotlinBuiltinsForKotlinCoroutinesPackage() {}	jvmMain/kotlin/Coroutines.kt:15

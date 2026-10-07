@@ -1,0 +1,310 @@
+since	kind	name	receiver	arity	sig	loc
+1.7	fun	first	IntProgression	0	public fun IntProgression.first(): Int {	commonMain/generated/_Ranges.kt:25
+1.7	fun	first	LongProgression	0	public fun LongProgression.first(): Long {	commonMain/generated/_Ranges.kt:37
+1.7	fun	first	CharProgression	0	public fun CharProgression.first(): Char {	commonMain/generated/_Ranges.kt:49
+1.7	fun	firstOrNull	IntProgression	0	public fun IntProgression.firstOrNull(): Int? {	commonMain/generated/_Ranges.kt:59
+1.7	fun	firstOrNull	LongProgression	0	public fun LongProgression.firstOrNull(): Long? {	commonMain/generated/_Ranges.kt:67
+1.7	fun	firstOrNull	CharProgression	0	public fun CharProgression.firstOrNull(): Char? {	commonMain/generated/_Ranges.kt:75
+1.7	fun	last	IntProgression	0	public fun IntProgression.last(): Int {	commonMain/generated/_Ranges.kt:87
+1.7	fun	last	LongProgression	0	public fun LongProgression.last(): Long {	commonMain/generated/_Ranges.kt:101
+1.7	fun	last	CharProgression	0	public fun CharProgression.last(): Char {	commonMain/generated/_Ranges.kt:115
+1.7	fun	lastOrNull	IntProgression	0	public fun IntProgression.lastOrNull(): Int? {	commonMain/generated/_Ranges.kt:127
+1.7	fun	lastOrNull	LongProgression	0	public fun LongProgression.lastOrNull(): Long? {	commonMain/generated/_Ranges.kt:137
+1.7	fun	lastOrNull	CharProgression	0	public fun CharProgression.lastOrNull(): Char? {	commonMain/generated/_Ranges.kt:147
+1.3	fun	random	IntRange	0	public inline fun IntRange.random(): Int {	commonMain/generated/_Ranges.kt:158
+1.3	fun	random	LongRange	0	public inline fun LongRange.random(): Long {	commonMain/generated/_Ranges.kt:169
+1.3	fun	random	CharRange	0	public inline fun CharRange.random(): Char {	commonMain/generated/_Ranges.kt:180
+1.3	fun	random	IntRange	0	public fun IntRange.random(random: Random): Int {	commonMain/generated/_Ranges.kt:190
+1.3	fun	random	LongRange	0	public fun LongRange.random(random: Random): Long {	commonMain/generated/_Ranges.kt:204
+1.3	fun	random	CharRange	0	public fun CharRange.random(random: Random): Char {	commonMain/generated/_Ranges.kt:218
+1.4	fun	randomOrNull	IntRange	0	public inline fun IntRange.randomOrNull(): Int? {	commonMain/generated/_Ranges.kt:231
+1.4	fun	randomOrNull	LongRange	0	public inline fun LongRange.randomOrNull(): Long? {	commonMain/generated/_Ranges.kt:240
+1.4	fun	randomOrNull	CharRange	0	public inline fun CharRange.randomOrNull(): Char? {	commonMain/generated/_Ranges.kt:249
+1.4	fun	randomOrNull	IntRange	0	public fun IntRange.randomOrNull(random: Random): Int? {	commonMain/generated/_Ranges.kt:257
+1.4	fun	randomOrNull	LongRange	0	public fun LongRange.randomOrNull(random: Random): Long? {	commonMain/generated/_Ranges.kt:267
+1.4	fun	randomOrNull	CharRange	0	public fun CharRange.randomOrNull(random: Random): Char? {	commonMain/generated/_Ranges.kt:277
+1.3	fun	contains	IntRange	0	public inline operator fun IntRange.contains(element: Int?): Boolean {	commonMain/generated/_Ranges.kt:290
+1.3	fun	contains	LongRange	0	public inline operator fun LongRange.contains(element: Long?): Boolean {	commonMain/generated/_Ranges.kt:301
+1.3	fun	contains	CharRange	0	public inline operator fun CharRange.contains(element: Char?): Boolean {	commonMain/generated/_Ranges.kt:312
+-	fun	contains	-	0	public operator fun ClosedRange<Int>.contains(value: Byte): Boolean {	commonMain/generated/_Ranges.kt:320
+-	fun	contains	-	0	public operator fun ClosedRange<Long>.contains(value: Byte): Boolean {	commonMain/generated/_Ranges.kt:328
+-	fun	contains	-	0	public operator fun ClosedRange<Short>.contains(value: Byte): Boolean {	commonMain/generated/_Ranges.kt:336
+-	fun	contains	-	0	public operator fun ClosedRange<Double>.contains(value: Byte): Boolean {	commonMain/generated/_Ranges.kt:346
+-	fun	contains	-	0	public operator fun ClosedRange<Float>.contains(value: Byte): Boolean {	commonMain/generated/_Ranges.kt:356
+1.9	fun	contains	-	0	public operator fun OpenEndRange<Int>.contains(value: Byte): Boolean {	commonMain/generated/_Ranges.kt:366
+1.9	fun	contains	-	0	public operator fun OpenEndRange<Long>.contains(value: Byte): Boolean {	commonMain/generated/_Ranges.kt:376
+1.9	fun	contains	-	0	public operator fun OpenEndRange<Short>.contains(value: Byte): Boolean {	commonMain/generated/_Ranges.kt:386
+-	fun	contains	IntRange	0	public inline operator fun IntRange.contains(value: Byte): Boolean {	commonMain/generated/_Ranges.kt:394
+-	fun	contains	LongRange	0	public inline operator fun LongRange.contains(value: Byte): Boolean {	commonMain/generated/_Ranges.kt:402
+-	fun	contains	-	0	public operator fun ClosedRange<Int>.contains(value: Double): Boolean {	commonMain/generated/_Ranges.kt:412
+-	fun	contains	-	0	public operator fun ClosedRange<Long>.contains(value: Double): Boolean {	commonMain/generated/_Ranges.kt:422
+-	fun	contains	-	0	public operator fun ClosedRange<Byte>.contains(value: Double): Boolean {	commonMain/generated/_Ranges.kt:432
+-	fun	contains	-	0	public operator fun ClosedRange<Short>.contains(value: Double): Boolean {	commonMain/generated/_Ranges.kt:442
+-	fun	contains	-	0	public operator fun ClosedRange<Float>.contains(value: Double): Boolean {	commonMain/generated/_Ranges.kt:450
+-	fun	contains	-	0	public operator fun ClosedRange<Int>.contains(value: Float): Boolean {	commonMain/generated/_Ranges.kt:460
+-	fun	contains	-	0	public operator fun ClosedRange<Long>.contains(value: Float): Boolean {	commonMain/generated/_Ranges.kt:470
+-	fun	contains	-	0	public operator fun ClosedRange<Byte>.contains(value: Float): Boolean {	commonMain/generated/_Ranges.kt:480
+-	fun	contains	-	0	public operator fun ClosedRange<Short>.contains(value: Float): Boolean {	commonMain/generated/_Ranges.kt:490
+-	fun	contains	-	0	public operator fun ClosedRange<Double>.contains(value: Float): Boolean {	commonMain/generated/_Ranges.kt:498
+1.9	fun	contains	-	0	public operator fun OpenEndRange<Double>.contains(value: Float): Boolean {	commonMain/generated/_Ranges.kt:508
+-	fun	contains	-	0	public operator fun ClosedRange<Long>.contains(value: Int): Boolean {	commonMain/generated/_Ranges.kt:516
+-	fun	contains	-	0	public operator fun ClosedRange<Byte>.contains(value: Int): Boolean {	commonMain/generated/_Ranges.kt:524
+-	fun	contains	-	0	public operator fun ClosedRange<Short>.contains(value: Int): Boolean {	commonMain/generated/_Ranges.kt:532
+-	fun	contains	-	0	public operator fun ClosedRange<Double>.contains(value: Int): Boolean {	commonMain/generated/_Ranges.kt:542
+-	fun	contains	-	0	public operator fun ClosedRange<Float>.contains(value: Int): Boolean {	commonMain/generated/_Ranges.kt:552
+1.9	fun	contains	-	0	public operator fun OpenEndRange<Long>.contains(value: Int): Boolean {	commonMain/generated/_Ranges.kt:562
+1.9	fun	contains	-	0	public operator fun OpenEndRange<Byte>.contains(value: Int): Boolean {	commonMain/generated/_Ranges.kt:572
+1.9	fun	contains	-	0	public operator fun OpenEndRange<Short>.contains(value: Int): Boolean {	commonMain/generated/_Ranges.kt:582
+-	fun	contains	LongRange	0	public inline operator fun LongRange.contains(value: Int): Boolean {	commonMain/generated/_Ranges.kt:590
+-	fun	contains	-	0	public operator fun ClosedRange<Int>.contains(value: Long): Boolean {	commonMain/generated/_Ranges.kt:598
+-	fun	contains	-	0	public operator fun ClosedRange<Byte>.contains(value: Long): Boolean {	commonMain/generated/_Ranges.kt:606
+-	fun	contains	-	0	public operator fun ClosedRange<Short>.contains(value: Long): Boolean {	commonMain/generated/_Ranges.kt:614
+-	fun	contains	-	0	public operator fun ClosedRange<Double>.contains(value: Long): Boolean {	commonMain/generated/_Ranges.kt:624
+-	fun	contains	-	0	public operator fun ClosedRange<Float>.contains(value: Long): Boolean {	commonMain/generated/_Ranges.kt:634
+1.9	fun	contains	-	0	public operator fun OpenEndRange<Int>.contains(value: Long): Boolean {	commonMain/generated/_Ranges.kt:644
+1.9	fun	contains	-	0	public operator fun OpenEndRange<Byte>.contains(value: Long): Boolean {	commonMain/generated/_Ranges.kt:654
+1.9	fun	contains	-	0	public operator fun OpenEndRange<Short>.contains(value: Long): Boolean {	commonMain/generated/_Ranges.kt:664
+-	fun	contains	IntRange	0	public inline operator fun IntRange.contains(value: Long): Boolean {	commonMain/generated/_Ranges.kt:672
+-	fun	contains	-	0	public operator fun ClosedRange<Int>.contains(value: Short): Boolean {	commonMain/generated/_Ranges.kt:680
+-	fun	contains	-	0	public operator fun ClosedRange<Long>.contains(value: Short): Boolean {	commonMain/generated/_Ranges.kt:688
+-	fun	contains	-	0	public operator fun ClosedRange<Byte>.contains(value: Short): Boolean {	commonMain/generated/_Ranges.kt:696
+-	fun	contains	-	0	public operator fun ClosedRange<Double>.contains(value: Short): Boolean {	commonMain/generated/_Ranges.kt:706
+-	fun	contains	-	0	public operator fun ClosedRange<Float>.contains(value: Short): Boolean {	commonMain/generated/_Ranges.kt:716
+1.9	fun	contains	-	0	public operator fun OpenEndRange<Int>.contains(value: Short): Boolean {	commonMain/generated/_Ranges.kt:726
+1.9	fun	contains	-	0	public operator fun OpenEndRange<Long>.contains(value: Short): Boolean {	commonMain/generated/_Ranges.kt:736
+1.9	fun	contains	-	0	public operator fun OpenEndRange<Byte>.contains(value: Short): Boolean {	commonMain/generated/_Ranges.kt:746
+-	fun	contains	IntRange	0	public inline operator fun IntRange.contains(value: Short): Boolean {	commonMain/generated/_Ranges.kt:754
+-	fun	contains	LongRange	0	public inline operator fun LongRange.contains(value: Short): Boolean {	commonMain/generated/_Ranges.kt:762
+-	fun	downTo	Int	0	public infix fun Int.downTo(to: Byte): IntProgression {	commonMain/generated/_Ranges.kt:774
+-	fun	downTo	Long	0	public infix fun Long.downTo(to: Byte): LongProgression {	commonMain/generated/_Ranges.kt:786
+-	fun	downTo	Byte	0	public infix fun Byte.downTo(to: Byte): IntProgression {	commonMain/generated/_Ranges.kt:798
+-	fun	downTo	Short	0	public infix fun Short.downTo(to: Byte): IntProgression {	commonMain/generated/_Ranges.kt:810
+-	fun	downTo	Char	0	public infix fun Char.downTo(to: Char): CharProgression {	commonMain/generated/_Ranges.kt:822
+-	fun	downTo	Int	0	public infix fun Int.downTo(to: Int): IntProgression {	commonMain/generated/_Ranges.kt:834
+-	fun	downTo	Long	0	public infix fun Long.downTo(to: Int): LongProgression {	commonMain/generated/_Ranges.kt:846
+-	fun	downTo	Byte	0	public infix fun Byte.downTo(to: Int): IntProgression {	commonMain/generated/_Ranges.kt:858
+-	fun	downTo	Short	0	public infix fun Short.downTo(to: Int): IntProgression {	commonMain/generated/_Ranges.kt:870
+-	fun	downTo	Int	0	public infix fun Int.downTo(to: Long): LongProgression {	commonMain/generated/_Ranges.kt:882
+-	fun	downTo	Long	0	public infix fun Long.downTo(to: Long): LongProgression {	commonMain/generated/_Ranges.kt:894
+-	fun	downTo	Byte	0	public infix fun Byte.downTo(to: Long): LongProgression {	commonMain/generated/_Ranges.kt:906
+-	fun	downTo	Short	0	public infix fun Short.downTo(to: Long): LongProgression {	commonMain/generated/_Ranges.kt:918
+-	fun	downTo	Int	0	public infix fun Int.downTo(to: Short): IntProgression {	commonMain/generated/_Ranges.kt:930
+-	fun	downTo	Long	0	public infix fun Long.downTo(to: Short): LongProgression {	commonMain/generated/_Ranges.kt:942
+-	fun	downTo	Byte	0	public infix fun Byte.downTo(to: Short): IntProgression {	commonMain/generated/_Ranges.kt:954
+-	fun	downTo	Short	0	public infix fun Short.downTo(to: Short): IntProgression {	commonMain/generated/_Ranges.kt:966
+-	fun	reversed	IntProgression	0	public fun IntProgression.reversed(): IntProgression {	commonMain/generated/_Ranges.kt:973
+-	fun	reversed	LongProgression	0	public fun LongProgression.reversed(): LongProgression {	commonMain/generated/_Ranges.kt:980
+-	fun	reversed	CharProgression	0	public fun CharProgression.reversed(): CharProgression {	commonMain/generated/_Ranges.kt:987
+-	fun	step	IntProgression	0	public infix fun IntProgression.step(step: Int): IntProgression {	commonMain/generated/_Ranges.kt:996
+-	fun	step	LongProgression	0	public infix fun LongProgression.step(step: Long): LongProgression {	commonMain/generated/_Ranges.kt:1006
+-	fun	step	CharProgression	0	public infix fun CharProgression.step(step: Int): CharProgression {	commonMain/generated/_Ranges.kt:1016
+-	fun	toByteExactOrNull	Int	0	internal fun Int.toByteExactOrNull(): Byte? {	commonMain/generated/_Ranges.kt:1021
+-	fun	toByteExactOrNull	Long	0	internal fun Long.toByteExactOrNull(): Byte? {	commonMain/generated/_Ranges.kt:1025
+-	fun	toByteExactOrNull	Short	0	internal fun Short.toByteExactOrNull(): Byte? {	commonMain/generated/_Ranges.kt:1029
+-	fun	toByteExactOrNull	Double	0	internal fun Double.toByteExactOrNull(): Byte? {	commonMain/generated/_Ranges.kt:1033
+-	fun	toByteExactOrNull	Float	0	internal fun Float.toByteExactOrNull(): Byte? {	commonMain/generated/_Ranges.kt:1037
+-	fun	toIntExactOrNull	Long	0	internal fun Long.toIntExactOrNull(): Int? {	commonMain/generated/_Ranges.kt:1041
+-	fun	toIntExactOrNull	Double	0	internal fun Double.toIntExactOrNull(): Int? {	commonMain/generated/_Ranges.kt:1045
+-	fun	toIntExactOrNull	Float	0	internal fun Float.toIntExactOrNull(): Int? {	commonMain/generated/_Ranges.kt:1049
+-	fun	toLongExactOrNull	Double	0	internal fun Double.toLongExactOrNull(): Long? {	commonMain/generated/_Ranges.kt:1053
+-	fun	toLongExactOrNull	Float	0	internal fun Float.toLongExactOrNull(): Long? {	commonMain/generated/_Ranges.kt:1057
+-	fun	toShortExactOrNull	Int	0	internal fun Int.toShortExactOrNull(): Short? {	commonMain/generated/_Ranges.kt:1061
+-	fun	toShortExactOrNull	Long	0	internal fun Long.toShortExactOrNull(): Short? {	commonMain/generated/_Ranges.kt:1065
+-	fun	toShortExactOrNull	Double	0	internal fun Double.toShortExactOrNull(): Short? {	commonMain/generated/_Ranges.kt:1069
+-	fun	toShortExactOrNull	Float	0	internal fun Float.toShortExactOrNull(): Short? {	commonMain/generated/_Ranges.kt:1073
+-	fun	until	Int	0	public infix fun Int.until(to: Byte): IntRange {	commonMain/generated/_Ranges.kt:1082
+-	fun	until	Long	0	public infix fun Long.until(to: Byte): LongRange {	commonMain/generated/_Ranges.kt:1091
+-	fun	until	Byte	0	public infix fun Byte.until(to: Byte): IntRange {	commonMain/generated/_Ranges.kt:1100
+-	fun	until	Short	0	public infix fun Short.until(to: Byte): IntRange {	commonMain/generated/_Ranges.kt:1109
+-	fun	until	Char	0	public infix fun Char.until(to: Char): CharRange {	commonMain/generated/_Ranges.kt:1118
+-	fun	until	Int	0	public infix fun Int.until(to: Int): IntRange {	commonMain/generated/_Ranges.kt:1128
+-	fun	until	Long	0	public infix fun Long.until(to: Int): LongRange {	commonMain/generated/_Ranges.kt:1138
+-	fun	until	Byte	0	public infix fun Byte.until(to: Int): IntRange {	commonMain/generated/_Ranges.kt:1147
+-	fun	until	Short	0	public infix fun Short.until(to: Int): IntRange {	commonMain/generated/_Ranges.kt:1157
+-	fun	until	Int	0	public infix fun Int.until(to: Long): LongRange {	commonMain/generated/_Ranges.kt:1167
+-	fun	until	Long	0	public infix fun Long.until(to: Long): LongRange {	commonMain/generated/_Ranges.kt:1177
+-	fun	until	Byte	0	public infix fun Byte.until(to: Long): LongRange {	commonMain/generated/_Ranges.kt:1187
+-	fun	until	Short	0	public infix fun Short.until(to: Long): LongRange {	commonMain/generated/_Ranges.kt:1197
+-	fun	until	Int	0	public infix fun Int.until(to: Short): IntRange {	commonMain/generated/_Ranges.kt:1207
+-	fun	until	Long	0	public infix fun Long.until(to: Short): LongRange {	commonMain/generated/_Ranges.kt:1216
+-	fun	until	Byte	0	public infix fun Byte.until(to: Short): IntRange {	commonMain/generated/_Ranges.kt:1225
+-	fun	until	Short	0	public infix fun Short.until(to: Short): IntRange {	commonMain/generated/_Ranges.kt:1234
+-	fun	coerceAtLeast	T	0	public fun <T : Comparable<T>> T.coerceAtLeast(minimumValue: T): T {	commonMain/generated/_Ranges.kt:1245
+-	fun	coerceAtLeast	Byte	0	public fun Byte.coerceAtLeast(minimumValue: Byte): Byte {	commonMain/generated/_Ranges.kt:1256
+-	fun	coerceAtLeast	Short	0	public fun Short.coerceAtLeast(minimumValue: Short): Short {	commonMain/generated/_Ranges.kt:1267
+-	fun	coerceAtLeast	Int	0	public fun Int.coerceAtLeast(minimumValue: Int): Int {	commonMain/generated/_Ranges.kt:1278
+-	fun	coerceAtLeast	Long	0	public fun Long.coerceAtLeast(minimumValue: Long): Long {	commonMain/generated/_Ranges.kt:1289
+-	fun	coerceAtLeast	Float	0	public fun Float.coerceAtLeast(minimumValue: Float): Float {	commonMain/generated/_Ranges.kt:1300
+-	fun	coerceAtLeast	Double	0	public fun Double.coerceAtLeast(minimumValue: Double): Double {	commonMain/generated/_Ranges.kt:1311
+-	fun	coerceAtMost	T	0	public fun <T : Comparable<T>> T.coerceAtMost(maximumValue: T): T {	commonMain/generated/_Ranges.kt:1322
+-	fun	coerceAtMost	Byte	0	public fun Byte.coerceAtMost(maximumValue: Byte): Byte {	commonMain/generated/_Ranges.kt:1333
+-	fun	coerceAtMost	Short	0	public fun Short.coerceAtMost(maximumValue: Short): Short {	commonMain/generated/_Ranges.kt:1344
+-	fun	coerceAtMost	Int	0	public fun Int.coerceAtMost(maximumValue: Int): Int {	commonMain/generated/_Ranges.kt:1355
+-	fun	coerceAtMost	Long	0	public fun Long.coerceAtMost(maximumValue: Long): Long {	commonMain/generated/_Ranges.kt:1366
+-	fun	coerceAtMost	Float	0	public fun Float.coerceAtMost(maximumValue: Float): Float {	commonMain/generated/_Ranges.kt:1377
+-	fun	coerceAtMost	Double	0	public fun Double.coerceAtMost(maximumValue: Double): Double {	commonMain/generated/_Ranges.kt:1388
+-	fun	coerceIn	T	1	public fun <T : Comparable<T>> T.coerceIn(minimumValue: T?, maximumValue: T?): T {	commonMain/generated/_Ranges.kt:1399
+-	fun	coerceIn	Byte	1	public fun Byte.coerceIn(minimumValue: Byte, maximumValue: Byte): Byte {	commonMain/generated/_Ranges.kt:1419
+-	fun	coerceIn	Short	1	public fun Short.coerceIn(minimumValue: Short, maximumValue: Short): Short {	commonMain/generated/_Ranges.kt:1433
+-	fun	coerceIn	Int	1	public fun Int.coerceIn(minimumValue: Int, maximumValue: Int): Int {	commonMain/generated/_Ranges.kt:1447
+-	fun	coerceIn	Long	1	public fun Long.coerceIn(minimumValue: Long, maximumValue: Long): Long {	commonMain/generated/_Ranges.kt:1461
+-	fun	coerceIn	Float	1	public fun Float.coerceIn(minimumValue: Float, maximumValue: Float): Float {	commonMain/generated/_Ranges.kt:1475
+-	fun	coerceIn	Double	1	public fun Double.coerceIn(minimumValue: Double, maximumValue: Double): Double {	commonMain/generated/_Ranges.kt:1489
+1.1	fun	coerceIn	T	0	public fun <T : Comparable<T>> T.coerceIn(range: ClosedFloatingPointRange<T>): T {	commonMain/generated/_Ranges.kt:1504
+-	fun	coerceIn	T	0	public fun <T : Comparable<T>> T.coerceIn(range: ClosedRange<T>): T {	commonMain/generated/_Ranges.kt:1522
+-	fun	coerceIn	Int	0	public fun Int.coerceIn(range: ClosedRange<Int>): Int {	commonMain/generated/_Ranges.kt:1541
+-	fun	coerceIn	Long	0	public fun Long.coerceIn(range: ClosedRange<Long>): Long {	commonMain/generated/_Ranges.kt:1560
+1.7	fun	first	UIntProgression	0	public fun UIntProgression.first(): UInt {	commonMain/generated/_URanges.kt:25
+1.7	fun	first	ULongProgression	0	public fun ULongProgression.first(): ULong {	commonMain/generated/_URanges.kt:37
+1.7	fun	firstOrNull	UIntProgression	0	public fun UIntProgression.firstOrNull(): UInt? {	commonMain/generated/_URanges.kt:47
+1.7	fun	firstOrNull	ULongProgression	0	public fun ULongProgression.firstOrNull(): ULong? {	commonMain/generated/_URanges.kt:55
+1.7	fun	last	UIntProgression	0	public fun UIntProgression.last(): UInt {	commonMain/generated/_URanges.kt:67
+1.7	fun	last	ULongProgression	0	public fun ULongProgression.last(): ULong {	commonMain/generated/_URanges.kt:81
+1.7	fun	lastOrNull	UIntProgression	0	public fun UIntProgression.lastOrNull(): UInt? {	commonMain/generated/_URanges.kt:93
+1.7	fun	lastOrNull	ULongProgression	0	public fun ULongProgression.lastOrNull(): ULong? {	commonMain/generated/_URanges.kt:103
+1.5	fun	random	UIntRange	0	public inline fun UIntRange.random(): UInt {	commonMain/generated/_URanges.kt:114
+1.5	fun	random	ULongRange	0	public inline fun ULongRange.random(): ULong {	commonMain/generated/_URanges.kt:125
+1.5	fun	random	UIntRange	0	public fun UIntRange.random(random: Random): UInt {	commonMain/generated/_URanges.kt:135
+1.5	fun	random	ULongRange	0	public fun ULongRange.random(random: Random): ULong {	commonMain/generated/_URanges.kt:149
+1.5	fun	randomOrNull	UIntRange	0	public inline fun UIntRange.randomOrNull(): UInt? {	commonMain/generated/_URanges.kt:162
+1.5	fun	randomOrNull	ULongRange	0	public inline fun ULongRange.randomOrNull(): ULong? {	commonMain/generated/_URanges.kt:171
+1.5	fun	randomOrNull	UIntRange	0	public fun UIntRange.randomOrNull(random: Random): UInt? {	commonMain/generated/_URanges.kt:179
+1.5	fun	randomOrNull	ULongRange	0	public fun ULongRange.randomOrNull(random: Random): ULong? {	commonMain/generated/_URanges.kt:189
+1.5	fun	contains	UIntRange	0	public inline operator fun UIntRange.contains(element: UInt?): Boolean {	commonMain/generated/_URanges.kt:202
+1.5	fun	contains	ULongRange	0	public inline operator fun ULongRange.contains(element: ULong?): Boolean {	commonMain/generated/_URanges.kt:213
+1.5	fun	contains	UIntRange	0	public operator fun UIntRange.contains(value: UByte): Boolean {	commonMain/generated/_URanges.kt:221
+1.5	fun	contains	ULongRange	0	public operator fun ULongRange.contains(value: UByte): Boolean {	commonMain/generated/_URanges.kt:229
+1.5	fun	contains	ULongRange	0	public operator fun ULongRange.contains(value: UInt): Boolean {	commonMain/generated/_URanges.kt:237
+1.5	fun	contains	UIntRange	0	public operator fun UIntRange.contains(value: ULong): Boolean {	commonMain/generated/_URanges.kt:245
+1.5	fun	contains	UIntRange	0	public operator fun UIntRange.contains(value: UShort): Boolean {	commonMain/generated/_URanges.kt:253
+1.5	fun	contains	ULongRange	0	public operator fun ULongRange.contains(value: UShort): Boolean {	commonMain/generated/_URanges.kt:261
+1.5	fun	downTo	UByte	0	public infix fun UByte.downTo(to: UByte): UIntProgression {	commonMain/generated/_URanges.kt:274
+1.5	fun	downTo	UInt	0	public infix fun UInt.downTo(to: UInt): UIntProgression {	commonMain/generated/_URanges.kt:287
+1.5	fun	downTo	ULong	0	public infix fun ULong.downTo(to: ULong): ULongProgression {	commonMain/generated/_URanges.kt:300
+1.5	fun	downTo	UShort	0	public infix fun UShort.downTo(to: UShort): UIntProgression {	commonMain/generated/_URanges.kt:313
+1.5	fun	reversed	UIntProgression	0	public fun UIntProgression.reversed(): UIntProgression {	commonMain/generated/_URanges.kt:321
+1.5	fun	reversed	ULongProgression	0	public fun ULongProgression.reversed(): ULongProgression {	commonMain/generated/_URanges.kt:329
+1.5	fun	step	UIntProgression	0	public infix fun UIntProgression.step(step: Int): UIntProgression {	commonMain/generated/_URanges.kt:339
+1.5	fun	step	ULongProgression	0	public infix fun ULongProgression.step(step: Long): ULongProgression {	commonMain/generated/_URanges.kt:350
+1.5	fun	until	UByte	0	public infix fun UByte.until(to: UByte): UIntRange {	commonMain/generated/_URanges.kt:361
+1.5	fun	until	UInt	0	public infix fun UInt.until(to: UInt): UIntRange {	commonMain/generated/_URanges.kt:372
+1.5	fun	until	ULong	0	public infix fun ULong.until(to: ULong): ULongRange {	commonMain/generated/_URanges.kt:383
+1.5	fun	until	UShort	0	public infix fun UShort.until(to: UShort): UIntRange {	commonMain/generated/_URanges.kt:394
+1.5	fun	coerceAtLeast	UInt	0	public fun UInt.coerceAtLeast(minimumValue: UInt): UInt {	commonMain/generated/_URanges.kt:407
+1.5	fun	coerceAtLeast	ULong	0	public fun ULong.coerceAtLeast(minimumValue: ULong): ULong {	commonMain/generated/_URanges.kt:419
+1.5	fun	coerceAtLeast	UByte	0	public fun UByte.coerceAtLeast(minimumValue: UByte): UByte {	commonMain/generated/_URanges.kt:431
+1.5	fun	coerceAtLeast	UShort	0	public fun UShort.coerceAtLeast(minimumValue: UShort): UShort {	commonMain/generated/_URanges.kt:443
+1.5	fun	coerceAtMost	UInt	0	public fun UInt.coerceAtMost(maximumValue: UInt): UInt {	commonMain/generated/_URanges.kt:455
+1.5	fun	coerceAtMost	ULong	0	public fun ULong.coerceAtMost(maximumValue: ULong): ULong {	commonMain/generated/_URanges.kt:467
+1.5	fun	coerceAtMost	UByte	0	public fun UByte.coerceAtMost(maximumValue: UByte): UByte {	commonMain/generated/_URanges.kt:479
+1.5	fun	coerceAtMost	UShort	0	public fun UShort.coerceAtMost(maximumValue: UShort): UShort {	commonMain/generated/_URanges.kt:491
+1.5	fun	coerceIn	UInt	1	public fun UInt.coerceIn(minimumValue: UInt, maximumValue: UInt): UInt {	commonMain/generated/_URanges.kt:503
+1.5	fun	coerceIn	ULong	1	public fun ULong.coerceIn(minimumValue: ULong, maximumValue: ULong): ULong {	commonMain/generated/_URanges.kt:518
+1.5	fun	coerceIn	UByte	1	public fun UByte.coerceIn(minimumValue: UByte, maximumValue: UByte): UByte {	commonMain/generated/_URanges.kt:533
+1.5	fun	coerceIn	UShort	1	public fun UShort.coerceIn(minimumValue: UShort, maximumValue: UShort): UShort {	commonMain/generated/_URanges.kt:548
+1.5	fun	coerceIn	UInt	0	public fun UInt.coerceIn(range: ClosedRange<UInt>): UInt {	commonMain/generated/_URanges.kt:563
+1.5	fun	coerceIn	ULong	0	public fun ULong.coerceIn(range: ClosedRange<ULong>): ULong {	commonMain/generated/_URanges.kt:583
+-	class	CharRange	-	5	public class CharRange(start: Char, endInclusive: Char) : CharProgression(start, endInclusive, 1), ClosedRange<Char>, OpenEndRange<Char> {	commonMain/kotlin/ranges/PrimitiveRanges.kt:15
+-	val	CharRange	-	1	public val EMPTY: CharRange = CharRange(1.toChar(), 0.toChar())	commonMain/kotlin/ranges/PrimitiveRanges.kt:47
+-	class	IntRange	-	5	public class IntRange(start: Int, endInclusive: Int) : IntProgression(start, endInclusive, 1), ClosedRange<Int>, OpenEndRange<Int> {	commonMain/kotlin/ranges/PrimitiveRanges.kt:54
+-	val	IntRange	-	1	public val EMPTY: IntRange = IntRange(1, 0)	commonMain/kotlin/ranges/PrimitiveRanges.kt:86
+-	class	LongRange	-	5	public class LongRange(start: Long, endInclusive: Long) : LongProgression(start, endInclusive, 1), ClosedRange<Long>, OpenEndRange<Long> {	commonMain/kotlin/ranges/PrimitiveRanges.kt:93
+-	val	LongRange	-	1	public val EMPTY: LongRange = LongRange(1, 0)	commonMain/kotlin/ranges/PrimitiveRanges.kt:125
+-	class	CharProgressionIterator	-	2	internal class CharProgressionIterator(first: Char, last: Char, val step: Int) : CharIterator() {	commonMain/kotlin/ranges/ProgressionIterators.kt:16
+-	val	Int	-	0	private val finalElement: Int = last.code	commonMain/kotlin/ranges/ProgressionIterators.kt:17
+-	var	Boolean	-	0	private var hasNext: Boolean = if (step > 0) first <= last else first >= last	commonMain/kotlin/ranges/ProgressionIterators.kt:18
+-	var	Int	-	0	private var next: Int = if (hasNext) first.code else finalElement	commonMain/kotlin/ranges/ProgressionIterators.kt:19
+-	val	value	-	0	val value = next	commonMain/kotlin/ranges/ProgressionIterators.kt:24
+-	class	IntProgressionIterator	-	2	internal class IntProgressionIterator(first: Int, last: Int, val step: Int) : IntIterator() {	commonMain/kotlin/ranges/ProgressionIterators.kt:40
+-	val	Int	-	0	private val finalElement: Int = last	commonMain/kotlin/ranges/ProgressionIterators.kt:41
+-	var	Boolean	-	0	private var hasNext: Boolean = if (step > 0) first <= last else first >= last	commonMain/kotlin/ranges/ProgressionIterators.kt:42
+-	var	Int	-	0	private var next: Int = if (hasNext) first else finalElement	commonMain/kotlin/ranges/ProgressionIterators.kt:43
+-	val	value	-	0	val value = next	commonMain/kotlin/ranges/ProgressionIterators.kt:48
+-	class	LongProgressionIterator	-	2	internal class LongProgressionIterator(first: Long, last: Long, val step: Long) : LongIterator() {	commonMain/kotlin/ranges/ProgressionIterators.kt:64
+-	val	Long	-	0	private val finalElement: Long = last	commonMain/kotlin/ranges/ProgressionIterators.kt:65
+-	var	Boolean	-	0	private var hasNext: Boolean = if (step > 0) first <= last else first >= last	commonMain/kotlin/ranges/ProgressionIterators.kt:66
+-	var	Long	-	0	private var next: Long = if (hasNext) first else finalElement	commonMain/kotlin/ranges/ProgressionIterators.kt:67
+-	val	value	-	0	val value = next	commonMain/kotlin/ranges/ProgressionIterators.kt:72
+-	class	CharProgression	-	0	public open class CharProgression	commonMain/kotlin/ranges/Progressions.kt:17
+-	val	Char	-	0	public val first: Char = start	commonMain/kotlin/ranges/Progressions.kt:32
+-	val	Char	-	2	public val last: Char = getProgressionLastElement(start.code, endInclusive.code, step).toChar()	commonMain/kotlin/ranges/Progressions.kt:37
+-	val	Int	-	0	public val step: Int = step	commonMain/kotlin/ranges/Progressions.kt:42
+-	fun	isEmpty	-	0	public open fun isEmpty(): Boolean = if (step > 0) first > last else first < last	commonMain/kotlin/ranges/Progressions.kt:52
+-	fun	fromClosedRange	-	4	public fun fromClosedRange(rangeStart: Char, rangeEnd: Char, step: Int): CharProgression = CharProgression(rangeStart, rangeEnd, step)	commonMain/kotlin/ranges/Progressions.kt:72
+-	class	IntProgression	-	0	public open class IntProgression	commonMain/kotlin/ranges/Progressions.kt:79
+-	val	Int	-	0	public val first: Int = start	commonMain/kotlin/ranges/Progressions.kt:94
+-	val	Int	-	2	public val last: Int = getProgressionLastElement(start, endInclusive, step)	commonMain/kotlin/ranges/Progressions.kt:99
+-	val	Int	-	0	public val step: Int = step	commonMain/kotlin/ranges/Progressions.kt:104
+-	fun	isEmpty	-	0	public open fun isEmpty(): Boolean = if (step > 0) first > last else first < last	commonMain/kotlin/ranges/Progressions.kt:114
+-	fun	fromClosedRange	-	4	public fun fromClosedRange(rangeStart: Int, rangeEnd: Int, step: Int): IntProgression = IntProgression(rangeStart, rangeEnd, step)	commonMain/kotlin/ranges/Progressions.kt:134
+-	class	LongProgression	-	0	public open class LongProgression	commonMain/kotlin/ranges/Progressions.kt:141
+-	val	Long	-	0	public val first: Long = start	commonMain/kotlin/ranges/Progressions.kt:156
+-	val	Long	-	2	public val last: Long = getProgressionLastElement(start, endInclusive, step)	commonMain/kotlin/ranges/Progressions.kt:161
+-	val	Long	-	0	public val step: Long = step	commonMain/kotlin/ranges/Progressions.kt:166
+-	fun	isEmpty	-	0	public open fun isEmpty(): Boolean = if (step > 0) first > last else first < last	commonMain/kotlin/ranges/Progressions.kt:176
+-	fun	fromClosedRange	-	4	public fun fromClosedRange(rangeStart: Long, rangeEnd: Long, step: Long): LongProgression = LongProgression(rangeStart, rangeEnd, step)	commonMain/kotlin/ranges/Progressions.kt:196
+-	interface	ClosedRange	-	0	public interface ClosedRange<T : Comparable<T>> {	commonMain/kotlin/ranges/Range.kt:14
+-	val	T	-	0	public val start: T	commonMain/kotlin/ranges/Range.kt:18
+-	val	T	-	0	public val endInclusive: T	commonMain/kotlin/ranges/Range.kt:23
+-	fun	contains	-	0	public operator fun contains(value: T): Boolean = value >= start && value <= endInclusive	commonMain/kotlin/ranges/Range.kt:32
+-	fun	isEmpty	-	0	public fun isEmpty(): Boolean = start > endInclusive	commonMain/kotlin/ranges/Range.kt:39
+1.9	interface	OpenEndRange	-	0	public interface OpenEndRange<T : Comparable<T>> {	commonMain/kotlin/ranges/Range.kt:48
+-	val	T	-	0	public val start: T	commonMain/kotlin/ranges/Range.kt:52
+-	val	T	-	0	public val endExclusive: T	commonMain/kotlin/ranges/Range.kt:60
+-	fun	contains	-	0	public operator fun contains(value: T): Boolean = value >= start && value < endExclusive	commonMain/kotlin/ranges/Range.kt:69
+-	fun	isEmpty	-	0	public fun isEmpty(): Boolean = start >= endExclusive	commonMain/kotlin/ranges/Range.kt:76
+-	class	ComparableRange	-	0	private open class ComparableRange<T : Comparable<T>>(	commonMain/kotlin/ranges/Ranges.kt:14
+-	fun	rangeTo	T	1	public operator fun <T : Comparable<T>> T.rangeTo(that: T): ClosedRange<T> = ComparableRange(this, that)	commonMain/kotlin/ranges/Ranges.kt:37
+-	class	ComparableOpenEndRange	-	0	private open class ComparableOpenEndRange<T : Comparable<T>>(	commonMain/kotlin/ranges/Ranges.kt:42
+1.9	fun	rangeUntil	T	1	public operator fun <T : Comparable<T>> T.rangeUntil(that: T): OpenEndRange<T> = ComparableOpenEndRange(this, that)	commonMain/kotlin/ranges/Ranges.kt:67
+1.1	interface	ClosedFloatingPointRange	-	0	public interface ClosedFloatingPointRange<T : Comparable<T>> : ClosedRange<T> {	commonMain/kotlin/ranges/Ranges.kt:78
+-	fun	lessThanOrEquals	-	1	public fun lessThanOrEquals(a: T, b: T): Boolean	commonMain/kotlin/ranges/Ranges.kt:85
+-	class	ClosedDoubleRange	-	0	private class ClosedDoubleRange(	commonMain/kotlin/ranges/Ranges.kt:94
+-	val	_start	-	0	private val _start = start	commonMain/kotlin/ranges/Ranges.kt:98
+-	val	_endInclusive	-	0	private val _endInclusive = endInclusive	commonMain/kotlin/ranges/Ranges.kt:99
+1.1	fun	rangeTo	Double	1	public operator fun Double.rangeTo(that: Double): ClosedFloatingPointRange<Double> = ClosedDoubleRange(this, that)	commonMain/kotlin/ranges/Ranges.kt:127
+-	class	OpenEndDoubleRange	-	0	private class OpenEndDoubleRange(	commonMain/kotlin/ranges/Ranges.kt:134
+-	val	_start	-	0	private val _start = start	commonMain/kotlin/ranges/Ranges.kt:138
+-	val	_endExclusive	-	0	private val _endExclusive = endExclusive	commonMain/kotlin/ranges/Ranges.kt:139
+-	fun	lessThanOrEquals	-	1	private fun lessThanOrEquals(a: Double, b: Double): Boolean = a <= b	commonMain/kotlin/ranges/Ranges.kt:143
+1.9	fun	rangeUntil	Double	1	public operator fun Double.rangeUntil(that: Double): OpenEndRange<Double> = OpenEndDoubleRange(this, that)	commonMain/kotlin/ranges/Ranges.kt:167
+-	class	ClosedFloatRange	-	0	private class ClosedFloatRange(	commonMain/kotlin/ranges/Ranges.kt:175
+-	val	_start	-	0	private val _start = start	commonMain/kotlin/ranges/Ranges.kt:179
+-	val	_endInclusive	-	0	private val _endInclusive = endInclusive	commonMain/kotlin/ranges/Ranges.kt:180
+1.1	fun	rangeTo	Float	1	public operator fun Float.rangeTo(that: Float): ClosedFloatingPointRange<Float> = ClosedFloatRange(this, that)	commonMain/kotlin/ranges/Ranges.kt:208
+-	class	OpenEndFloatRange	-	0	private class OpenEndFloatRange(	commonMain/kotlin/ranges/Ranges.kt:216
+-	val	_start	-	0	private val _start = start	commonMain/kotlin/ranges/Ranges.kt:220
+-	val	_endExclusive	-	0	private val _endExclusive = endExclusive	commonMain/kotlin/ranges/Ranges.kt:221
+-	fun	lessThanOrEquals	-	1	private fun lessThanOrEquals(a: Float, b: Float): Boolean = a <= b	commonMain/kotlin/ranges/Ranges.kt:225
+1.9	fun	rangeUntil	Float	1	public operator fun Float.rangeUntil(that: Float): OpenEndRange<Float> = OpenEndFloatRange(this, that)	commonMain/kotlin/ranges/Ranges.kt:249
+1.3	fun	contains	R	3	public inline operator fun <T, R> R.contains(element: T?): Boolean where T : Any, R : ClosedRange<T>, R : Iterable<T> =	commonMain/kotlin/ranges/Ranges.kt:259
+1.9	fun	contains	R	3	public inline operator fun <T, R> R.contains(element: T?): Boolean where T : Any, R : OpenEndRange<T>, R : Iterable<T> =	commonMain/kotlin/ranges/Ranges.kt:270
+-	fun	checkStepIsPositive	-	1	internal fun checkStepIsPositive(isPositive: Boolean, step: Number) {	commonMain/kotlin/ranges/Ranges.kt:273
+1.5	class	UIntRange	-	5	public class UIntRange(start: UInt, endInclusive: UInt) : UIntProgression(start, endInclusive, 1), ClosedRange<UInt>, OpenEndRange<UInt> {	commonMain/kotlin/UIntRange.kt:19
+-	val	UIntRange	-	1	public val EMPTY: UIntRange = UIntRange(UInt.MAX_VALUE, UInt.MIN_VALUE)	commonMain/kotlin/UIntRange.kt:51
+1.5	class	UIntProgression	-	0	public open class UIntProgression	commonMain/kotlin/UIntRange.kt:59
+-	val	UInt	-	0	public val first: UInt = start	commonMain/kotlin/UIntRange.kt:73
+-	val	UInt	-	2	public val last: UInt = getProgressionLastElement(start, endInclusive, step)	commonMain/kotlin/UIntRange.kt:78
+-	val	Int	-	0	public val step: Int = step	commonMain/kotlin/UIntRange.kt:83
+-	fun	isEmpty	-	0	public open fun isEmpty(): Boolean = if (step > 0) first > last else first < last	commonMain/kotlin/UIntRange.kt:93
+-	fun	fromClosedRange	-	4	public fun fromClosedRange(rangeStart: UInt, rangeEnd: UInt, step: Int): UIntProgression = UIntProgression(rangeStart, rangeEnd, step)	commonMain/kotlin/UIntRange.kt:113
+1.3	class	UIntProgressionIterator	-	2	private class UIntProgressionIterator(first: UInt, last: UInt, step: Int) : Iterator<UInt> {	commonMain/kotlin/UIntRange.kt:123
+-	val	finalElement	-	0	private val finalElement = last	commonMain/kotlin/UIntRange.kt:124
+-	var	Boolean	-	0	private var hasNext: Boolean = if (step > 0) first <= last else first >= last	commonMain/kotlin/UIntRange.kt:125
+-	val	step	-	0	private val step = step.toUInt()	commonMain/kotlin/UIntRange.kt:126
+-	var	next	-	0	private var next = if (hasNext) first else finalElement	commonMain/kotlin/UIntRange.kt:127
+-	val	value	-	0	val value = next	commonMain/kotlin/UIntRange.kt:132
+1.5	class	ULongRange	-	5	public class ULongRange(start: ULong, endInclusive: ULong) : ULongProgression(start, endInclusive, 1), ClosedRange<ULong>, OpenEndRange<ULong> {	commonMain/kotlin/ULongRange.kt:19
+-	val	ULongRange	-	1	public val EMPTY: ULongRange = ULongRange(ULong.MAX_VALUE, ULong.MIN_VALUE)	commonMain/kotlin/ULongRange.kt:51
+1.5	class	ULongProgression	-	0	public open class ULongProgression	commonMain/kotlin/ULongRange.kt:59
+-	val	ULong	-	0	public val first: ULong = start	commonMain/kotlin/ULongRange.kt:73
+-	val	ULong	-	2	public val last: ULong = getProgressionLastElement(start, endInclusive, step)	commonMain/kotlin/ULongRange.kt:78
+-	val	Long	-	0	public val step: Long = step	commonMain/kotlin/ULongRange.kt:83
+-	fun	isEmpty	-	0	public open fun isEmpty(): Boolean = if (step > 0) first > last else first < last	commonMain/kotlin/ULongRange.kt:93
+-	fun	fromClosedRange	-	4	public fun fromClosedRange(rangeStart: ULong, rangeEnd: ULong, step: Long): ULongProgression = ULongProgression(rangeStart, rangeEnd, step)	commonMain/kotlin/ULongRange.kt:113
+1.3	class	ULongProgressionIterator	-	2	private class ULongProgressionIterator(first: ULong, last: ULong, step: Long) : Iterator<ULong> {	commonMain/kotlin/ULongRange.kt:123
+-	val	finalElement	-	0	private val finalElement = last	commonMain/kotlin/ULongRange.kt:124
+-	var	Boolean	-	0	private var hasNext: Boolean = if (step > 0) first <= last else first >= last	commonMain/kotlin/ULongRange.kt:125
+-	val	step	-	0	private val step = step.toULong()	commonMain/kotlin/ULongRange.kt:126
+-	var	next	-	0	private var next = if (hasNext) first else finalElement	commonMain/kotlin/ULongRange.kt:127
+-	val	value	-	0	val value = next	commonMain/kotlin/ULongRange.kt:132

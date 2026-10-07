@@ -1,0 +1,85 @@
+since	kind	name	receiver	arity	sig	loc
+2.0	class	ExperimentalUuidApi	-	0	public annotation class ExperimentalUuidApi	commonMain/kotlin/uuid/ExperimentalUuidApi.kt:37
+2.0	class	Uuid	-	0	public class Uuid private constructor(	commonMain/kotlin/uuid/Uuid.kt:42
+-	val	Long	-	1	@PublishedApi internal val mostSignificantBits: Long,	commonMain/kotlin/uuid/Uuid.kt:43
+-	val	Long	-	0	@PublishedApi internal val leastSignificantBits: Long	commonMain/kotlin/uuid/Uuid.kt:44
+-	fun	toLongs	-	1	public inline fun <T> toLongs(action: (mostSignificantBits: Long, leastSignificantBits: Long) -> T): T {	commonMain/kotlin/uuid/Uuid.kt:74
+-	fun	toULongs	-	1	public inline fun <T> toULongs(action: (mostSignificantBits: ULong, leastSignificantBits: ULong) -> T): T {	commonMain/kotlin/uuid/Uuid.kt:108
+2.1	fun	toHexDashString	-	0	public fun toHexDashString(): String {	commonMain/kotlin/uuid/Uuid.kt:155
+-	val	bytes	-	0	val bytes = ByteArray(36)	commonMain/kotlin/uuid/Uuid.kt:156
+-	fun	toHexString	-	0	public fun toHexString(): String {	commonMain/kotlin/uuid/Uuid.kt:184
+-	val	bytes	-	0	val bytes = ByteArray(32)	commonMain/kotlin/uuid/Uuid.kt:185
+-	fun	toByteArray	-	0	public fun toByteArray(): ByteArray {	commonMain/kotlin/uuid/Uuid.kt:201
+-	val	bytes	-	0	val bytes = ByteArray(SIZE_BYTES)	commonMain/kotlin/uuid/Uuid.kt:202
+2.1	fun	toUByteArray	-	0	public fun toUByteArray(): UByteArray {	commonMain/kotlin/uuid/Uuid.kt:220
+-	fun	writeReplace	-	0	private fun writeReplace(): Any = serializedUuid(this)	commonMain/kotlin/uuid/Uuid.kt:273
+-	fun	readObject	-	0	private fun readObject(input: ReadObjectParameterType): Unit = throwReadObjectNotSupported()	commonMain/kotlin/uuid/Uuid.kt:275
+-	val	Uuid	-	1	public val NIL: Uuid = Uuid(0, 0)	commonMain/kotlin/uuid/Uuid.kt:284
+-	val	Int	-	0	public const val SIZE_BYTES: Int = 16	commonMain/kotlin/uuid/Uuid.kt:287
+-	val	Int	-	0	public const val SIZE_BITS: Int = 128	commonMain/kotlin/uuid/Uuid.kt:290
+-	fun	fromLongs	-	1	public fun fromLongs(mostSignificantBits: Long, leastSignificantBits: Long): Uuid =	commonMain/kotlin/uuid/Uuid.kt:304
+-	fun	fromULongs	-	1	public fun fromULongs(mostSignificantBits: ULong, leastSignificantBits: ULong): Uuid =	commonMain/kotlin/uuid/Uuid.kt:323
+-	fun	fromByteArray	-	0	public fun fromByteArray(byteArray: ByteArray): Uuid {	commonMain/kotlin/uuid/Uuid.kt:340
+2.1	fun	fromUByteArray	-	0	public fun fromUByteArray(ubyteArray: UByteArray): Uuid {	commonMain/kotlin/uuid/Uuid.kt:364
+-	fun	parse	-	0	public fun parse(uuidString: String): Uuid {	commonMain/kotlin/uuid/Uuid.kt:390
+2.1	fun	parseHexDash	-	0	public fun parseHexDash(hexDashString: String): Uuid {	commonMain/kotlin/uuid/Uuid.kt:423
+-	fun	parseHex	-	0	public fun parseHex(hexString: String): Uuid {	commonMain/kotlin/uuid/Uuid.kt:447
+-	fun	random	-	0	public fun random(): Uuid =	commonMain/kotlin/uuid/Uuid.kt:489
+-	val	Comparator	-	0	public val LEXICAL_ORDER: Comparator<Uuid>	commonMain/kotlin/uuid/Uuid.kt:518
+-	fun	serializedUuid	-	0	internal expect fun serializedUuid(uuid: Uuid): Any	commonMain/kotlin/uuid/Uuid.kt:524
+-	fun	secureRandomUuid	-	0	internal expect fun secureRandomUuid(): Uuid	commonMain/kotlin/uuid/Uuid.kt:527
+-	fun	uuidFromRandomBytes	-	0	internal fun uuidFromRandomBytes(randomBytes: ByteArray): Uuid {	commonMain/kotlin/uuid/Uuid.kt:530
+-	fun	getLongAt	ByteArray	0	internal expect fun ByteArray.getLongAt(index: Int): Long	commonMain/kotlin/uuid/Uuid.kt:546
+-	fun	getLongAtCommonImpl	ByteArray	0	internal fun ByteArray.getLongAtCommonImpl(index: Int): Long {	commonMain/kotlin/uuid/Uuid.kt:548
+-	fun	formatBytesInto	Long	3	internal expect fun Long.formatBytesInto(dst: ByteArray, dstOffset: Int, startIndex: Int, endIndex: Int)	commonMain/kotlin/uuid/Uuid.kt:567
+-	fun	formatBytesIntoCommonImpl	Long	3	internal fun Long.formatBytesIntoCommonImpl(dst: ByteArray, dstOffset: Int, startIndex: Int, endIndex: Int) {	commonMain/kotlin/uuid/Uuid.kt:571
+-	var	dstIndex	-	0	var dstIndex = dstOffset	commonMain/kotlin/uuid/Uuid.kt:572
+-	val	shift	-	0	val shift = reversedIndex shl 3	commonMain/kotlin/uuid/Uuid.kt:574
+-	val	byte	-	0	val byte = ((this shr shift) and 0xFF).toInt()	commonMain/kotlin/uuid/Uuid.kt:575
+-	val	byteDigits	-	0	val byteDigits = BYTE_TO_LOWER_CASE_HEX_DIGITS[byte]	commonMain/kotlin/uuid/Uuid.kt:576
+-	fun	checkHyphenAt	String	0	internal fun String.checkHyphenAt(index: Int) {	commonMain/kotlin/uuid/Uuid.kt:582
+-	fun	setLongAt	ByteArray	1	internal expect fun ByteArray.setLongAt(index: Int, value: Long)	commonMain/kotlin/uuid/Uuid.kt:594
+-	fun	setLongAtCommonImpl	ByteArray	1	internal fun ByteArray.setLongAtCommonImpl(index: Int, value: Long) {	commonMain/kotlin/uuid/Uuid.kt:596
+-	var	i	-	0	var i = index	commonMain/kotlin/uuid/Uuid.kt:597
+-	val	shift	-	0	val shift = reversedIndex shl 3	commonMain/kotlin/uuid/Uuid.kt:599
+-	fun	uuidParseHexDash	-	0	internal expect fun uuidParseHexDash(hexDashString: String): Uuid	commonMain/kotlin/uuid/Uuid.kt:606
+-	fun	uuidParseHexDashCommonImpl	-	0	internal fun uuidParseHexDashCommonImpl(hexDashString: String): Uuid {	commonMain/kotlin/uuid/Uuid.kt:610
+-	val	part1	-	1	val part1 = hexDashString.hexToLong(startIndex = 0, endIndex = 8)	commonMain/kotlin/uuid/Uuid.kt:613
+-	val	part2	-	1	val part2 = hexDashString.hexToLong(startIndex = 9, endIndex = 13)	commonMain/kotlin/uuid/Uuid.kt:615
+-	val	part3	-	1	val part3 = hexDashString.hexToLong(startIndex = 14, endIndex = 18)	commonMain/kotlin/uuid/Uuid.kt:617
+-	val	part4	-	1	val part4 = hexDashString.hexToLong(startIndex = 19, endIndex = 23)	commonMain/kotlin/uuid/Uuid.kt:619
+-	val	part5	-	1	val part5 = hexDashString.hexToLong(startIndex = 24, endIndex = 36)	commonMain/kotlin/uuid/Uuid.kt:621
+-	val	msb	-	0	val msb = (part1 shl 32) or (part2 shl 16) or part3	commonMain/kotlin/uuid/Uuid.kt:623
+-	val	lsb	-	0	val lsb = (part4 shl 48) or part5	commonMain/kotlin/uuid/Uuid.kt:624
+-	fun	uuidParseHex	-	0	internal expect fun uuidParseHex(hexString: String): Uuid	commonMain/kotlin/uuid/Uuid.kt:630
+-	fun	uuidParseHexCommonImpl	-	0	internal fun uuidParseHexCommonImpl(hexString: String): Uuid {	commonMain/kotlin/uuid/Uuid.kt:634
+-	val	msb	-	1	val msb = hexString.hexToLong(startIndex = 0, endIndex = 16)	commonMain/kotlin/uuid/Uuid.kt:636
+-	val	lsb	-	1	val lsb = hexString.hexToLong(startIndex = 16, endIndex = 32)	commonMain/kotlin/uuid/Uuid.kt:637
+-	fun	truncateForErrorMessage	String	0	private fun String.truncateForErrorMessage(maxLength: Int): String {	commonMain/kotlin/uuid/Uuid.kt:641
+-	fun	truncateForErrorMessage	ByteArray	0	private fun ByteArray.truncateForErrorMessage(maxSize: Int): String {	commonMain/kotlin/uuid/Uuid.kt:645
+-	object	SecureRandomHolder	-	0	private object SecureRandomHolder {	jvmMain/kotlin/uuid/UuidJVM.kt:15
+-	val	instance	-	0	val instance = SecureRandom()	jvmMain/kotlin/uuid/UuidJVM.kt:16
+-	fun	secureRandomUuid	-	0	internal actual fun secureRandomUuid(): Uuid {	jvmMain/kotlin/uuid/UuidJVM.kt:20
+-	val	randomBytes	-	0	val randomBytes = ByteArray(Uuid.SIZE_BYTES)	jvmMain/kotlin/uuid/UuidJVM.kt:21
+-	class	UuidSerialized	-	0	private class UuidSerialized(	jvmMain/kotlin/uuid/UuidJVM.kt:27
+-	var	Long	-	1	var mostSignificantBits: Long,	jvmMain/kotlin/uuid/UuidJVM.kt:28
+-	var	Long	-	0	var leastSignificantBits: Long	jvmMain/kotlin/uuid/UuidJVM.kt:29
+-	fun	readResolve	-	0	private fun readResolve(): Any =	jvmMain/kotlin/uuid/UuidJVM.kt:44
+-	val	Long	-	0	private const val serialVersionUID: Long = 0L	jvmMain/kotlin/uuid/UuidJVM.kt:48
+-	fun	serializedUuid	-	0	internal actual fun serializedUuid(uuid: Uuid): Any =	jvmMain/kotlin/uuid/UuidJVM.kt:53
+-	fun	getLongAt	ByteArray	0	internal actual fun ByteArray.getLongAt(index: Int): Long =	jvmMain/kotlin/uuid/UuidJVM.kt:57
+-	fun	formatBytesInto	Long	3	internal actual fun Long.formatBytesInto(dst: ByteArray, dstOffset: Int, startIndex: Int, endIndex: Int) =	jvmMain/kotlin/uuid/UuidJVM.kt:61
+-	fun	setLongAt	ByteArray	1	internal actual fun ByteArray.setLongAt(index: Int, value: Long) =	jvmMain/kotlin/uuid/UuidJVM.kt:65
+-	fun	uuidParseHexDash	-	0	internal actual fun uuidParseHexDash(hexDashString: String): Uuid =	jvmMain/kotlin/uuid/UuidJVM.kt:69
+-	fun	uuidParseHex	-	0	internal actual fun uuidParseHex(hexString: String): Uuid =	jvmMain/kotlin/uuid/UuidJVM.kt:73
+2.0	fun	toKotlinUuid	java.util.UUID	0	public inline fun java.util.UUID.toKotlinUuid(): Uuid =	jvmMain/kotlin/uuid/UuidJVM.kt:88
+2.0	fun	toJavaUuid	Uuid	1	public inline fun Uuid.toJavaUuid(): java.util.UUID = toLongs { mostSignificantBits, leastSignificantBits ->	jvmMain/kotlin/uuid/UuidJVM.kt:102
+2.0	fun	getUuid	ByteBuffer	0	public fun ByteBuffer.getUuid(): Uuid {	jvmMain/kotlin/uuid/UuidJVM.kt:132
+-	var	msb	-	0	var msb = getLong()	jvmMain/kotlin/uuid/UuidJVM.kt:136
+-	var	lsb	-	0	var lsb = getLong()	jvmMain/kotlin/uuid/UuidJVM.kt:137
+2.0	fun	getUuid	ByteBuffer	0	public fun ByteBuffer.getUuid(index: Int): Uuid {	jvmMain/kotlin/uuid/UuidJVM.kt:175
+-	var	msb	-	0	var msb = getLong(index)	jvmMain/kotlin/uuid/UuidJVM.kt:181
+-	var	lsb	-	0	var lsb = getLong(index + 8)	jvmMain/kotlin/uuid/UuidJVM.kt:182
+2.0	fun	putUuid	ByteBuffer	1	public fun ByteBuffer.putUuid(uuid: Uuid): ByteBuffer = uuid.toLongs { msb, lsb ->	jvmMain/kotlin/uuid/UuidJVM.kt:216
+2.0	fun	putUuid	ByteBuffer	2	public fun ByteBuffer.putUuid(index: Int, uuid: Uuid): ByteBuffer = uuid.toLongs { msb, lsb ->	jvmMain/kotlin/uuid/UuidJVM.kt:261
+-	fun	reverseBytes	Long	0	internal inline fun Long.reverseBytes(): Long = java.lang.Long.reverseBytes(this)	jvmMain/kotlin/uuid/UuidJVM.kt:277

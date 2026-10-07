@@ -1,0 +1,86 @@
+since	kind	name	receiver	arity	sig	loc
+1.3	fun	boxBoolean	-	0	internal fun boxBoolean(primitive: Boolean): java.lang.Boolean = java.lang.Boolean.valueOf(primitive) as java.lang.Boolean	jvmMain/kotlin/coroutines/jvm/internal/boxing.kt:20
+1.3	fun	boxByte	-	0	internal fun boxByte(primitive: Byte): java.lang.Byte = java.lang.Byte.valueOf(primitive) as java.lang.Byte	jvmMain/kotlin/coroutines/jvm/internal/boxing.kt:24
+1.3	fun	boxShort	-	0	internal fun boxShort(primitive: Short): java.lang.Short = java.lang.Short(primitive)	jvmMain/kotlin/coroutines/jvm/internal/boxing.kt:28
+1.3	fun	boxInt	-	0	internal fun boxInt(primitive: Int): java.lang.Integer = java.lang.Integer(primitive)	jvmMain/kotlin/coroutines/jvm/internal/boxing.kt:32
+1.3	fun	boxLong	-	0	internal fun boxLong(primitive: Long): java.lang.Long = java.lang.Long(primitive)	jvmMain/kotlin/coroutines/jvm/internal/boxing.kt:36
+1.3	fun	boxFloat	-	0	internal fun boxFloat(primitive: Float): java.lang.Float = java.lang.Float(primitive)	jvmMain/kotlin/coroutines/jvm/internal/boxing.kt:40
+1.3	fun	boxDouble	-	0	internal fun boxDouble(primitive: Double): java.lang.Double = java.lang.Double(primitive)	jvmMain/kotlin/coroutines/jvm/internal/boxing.kt:44
+1.3	fun	boxChar	-	0	internal fun boxChar(primitive: Char): java.lang.Character = java.lang.Character(primitive)	jvmMain/kotlin/coroutines/jvm/internal/boxing.kt:48
+1.3	class	BaseContinuationImpl	-	0	internal abstract class BaseContinuationImpl(	jvmMain/kotlin/coroutines/jvm/internal/ContinuationImpl.kt:15
+-	var	current	-	0	var current = this	jvmMain/kotlin/coroutines/jvm/internal/ContinuationImpl.kt:23
+-	var	param	-	0	var param = result	jvmMain/kotlin/coroutines/jvm/internal/ContinuationImpl.kt:24
+-	val	completion	-	0	val completion = completion!!	jvmMain/kotlin/coroutines/jvm/internal/ContinuationImpl.kt:30
+-	val	Result	-	0	val outcome: Result<Any?> =	jvmMain/kotlin/coroutines/jvm/internal/ContinuationImpl.kt:31
+-	val	outcome	-	0	val outcome = invokeSuspend(param)	jvmMain/kotlin/coroutines/jvm/internal/ContinuationImpl.kt:33
+-	fun	invokeSuspend	-	0	protected abstract fun invokeSuspend(result: Result<Any?>): Any?	jvmMain/kotlin/coroutines/jvm/internal/ContinuationImpl.kt:53
+-	fun	releaseIntercepted	-	0	protected open fun releaseIntercepted() {	jvmMain/kotlin/coroutines/jvm/internal/ContinuationImpl.kt:55
+-	fun	create	-	0	public open fun create(completion: Continuation<*>): Continuation<Unit> {	jvmMain/kotlin/coroutines/jvm/internal/ContinuationImpl.kt:59
+-	fun	create	-	1	public open fun create(value: Any?, completion: Continuation<*>): Continuation<Unit> {	jvmMain/kotlin/coroutines/jvm/internal/ContinuationImpl.kt:63
+1.3	class	RestrictedContinuationImpl	-	0	internal abstract class RestrictedContinuationImpl(	jvmMain/kotlin/coroutines/jvm/internal/ContinuationImpl.kt:81
+1.3	class	ContinuationImpl	-	0	internal abstract class ContinuationImpl(	jvmMain/kotlin/coroutines/jvm/internal/ContinuationImpl.kt:98
+-	val	CoroutineContext	-	0	private val _context: CoroutineContext?	jvmMain/kotlin/coroutines/jvm/internal/ContinuationImpl.kt:100
+-	fun	intercepted	-	0	public fun intercepted(): Continuation<Any?> =	jvmMain/kotlin/coroutines/jvm/internal/ContinuationImpl.kt:110
+-	val	intercepted	-	0	val intercepted = intercepted	jvmMain/kotlin/coroutines/jvm/internal/ContinuationImpl.kt:116
+-	object	CompletedContinuation	-	0	internal object CompletedContinuation : Continuation<Any?> {	jvmMain/kotlin/coroutines/jvm/internal/ContinuationImpl.kt:124
+1.3	interface	SuspendFunction	-	0	internal interface SuspendFunction	jvmMain/kotlin/coroutines/jvm/internal/ContinuationImpl.kt:137
+1.3	class	RestrictedSuspendLambda	-	0	internal abstract class RestrictedSuspendLambda(	jvmMain/kotlin/coroutines/jvm/internal/ContinuationImpl.kt:141
+1.3	class	SuspendLambda	-	0	internal abstract class SuspendLambda(	jvmMain/kotlin/coroutines/jvm/internal/ContinuationImpl.kt:156
+1.3	interface	CoroutineStackFrame	-	0	public interface CoroutineStackFrame {	jvmMain/kotlin/coroutines/jvm/internal/CoroutineStackFrame.kt:16
+-	val	CoroutineStackFrame	-	0	public val callerFrame: CoroutineStackFrame?	jvmMain/kotlin/coroutines/jvm/internal/CoroutineStackFrame.kt:22
+-	fun	getStackTraceElement	-	0	public fun getStackTraceElement(): StackTraceElement?	jvmMain/kotlin/coroutines/jvm/internal/CoroutineStackFrame.kt:30
+1.3	class	DebugMetadata	-	0	internal annotation class DebugMetadata(	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:12
+-	val	Int	-	1	val version: Int = 1,	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:14
+-	val	String	-	1	val sourceFile: String = "",	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:16
+-	val	IntArray	-	1	val lineNumbers: IntArray = [],	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:18
+-	val	Array	-	1	val localNames: Array<String> = [],	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:20
+-	val	Array	-	1	val spilled: Array<String> = [],	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:22
+-	val	IntArray	-	1	val indexToLabel: IntArray = [],	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:24
+-	val	String	-	1	val methodName: String = "",	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:26
+-	val	String	-	0	val className: String = ""	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:28
+1.3	fun	getStackTraceElementImpl	BaseContinuationImpl	0	internal fun BaseContinuationImpl.getStackTraceElementImpl(): StackTraceElement? {	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:41
+-	val	debugMetadata	-	0	val debugMetadata = getDebugMetadataAnnotation() ?: return null	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:42
+-	val	label	-	0	val label = getLabel()	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:44
+-	val	lineNumber	-	0	val lineNumber = if (label < 0) -1 else debugMetadata.lineNumbers[label]	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:45
+-	val	moduleName	-	0	val moduleName = ModuleNameRetriever.getModuleName(this)	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:46
+-	val	moduleAndClass	-	0	val moduleAndClass = if (moduleName == null) debugMetadata.className else "$moduleName/${debugMetadata.className}"	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:47
+-	object	ModuleNameRetriever	-	0	private object ModuleNameRetriever {	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:51
+-	class	Cache	-	0	private class Cache(	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:52
+-	val	Method	-	1	val getModuleMethod: Method?,	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:54
+-	val	Method	-	1	val getDescriptorMethod: Method?,	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:56
+-	val	Method	-	0	val nameMethod: Method?	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:58
+-	val	notOnJava9	-	2	private val notOnJava9 = Cache(null, null, null)	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:61
+-	var	Cache	-	0	private var cache: Cache? = null	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:63
+-	fun	getModuleName	-	0	fun getModuleName(continuation: BaseContinuationImpl): String? {	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:65
+-	val	cache	-	0	val cache = this.cache ?: buildCache(continuation)	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:66
+-	val	module	-	0	val module = cache.getModuleMethod?.invoke(continuation.javaClass) ?: return null	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:70
+-	val	descriptor	-	0	val descriptor = cache.getDescriptorMethod?.invoke(module) ?: return null	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:71
+-	fun	buildCache	-	0	private fun buildCache(continuation: BaseContinuationImpl): Cache {	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:75
+-	val	getModuleMethod	-	0	val getModuleMethod = Class::class.java.getDeclaredMethod("getModule")	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:77
+-	val	methodClass	-	0	val methodClass = continuation.javaClass.classLoader.loadClass("java.lang.Module")	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:78
+-	val	getDescriptorMethod	-	0	val getDescriptorMethod = methodClass.getDeclaredMethod("getDescriptor")	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:79
+-	val	moduleDescriptorClass	-	0	val moduleDescriptorClass = continuation.javaClass.classLoader.loadClass("java.lang.module.ModuleDescriptor")	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:80
+-	val	nameMethod	-	0	val nameMethod = moduleDescriptorClass.getDeclaredMethod("name")	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:81
+-	fun	getDebugMetadataAnnotation	BaseContinuationImpl	0	private fun BaseContinuationImpl.getDebugMetadataAnnotation(): DebugMetadata? =	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:89
+-	fun	getLabel	BaseContinuationImpl	0	private fun BaseContinuationImpl.getLabel(): Int =	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:92
+-	val	field	-	0	val field = javaClass.getDeclaredField("label")	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:94
+-	fun	checkDebugMetadataVersion	-	1	private fun checkDebugMetadataVersion(expected: Int, actual: Int) {	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:101
+1.3	fun	getSpilledVariableFieldMapping	BaseContinuationImpl	0	internal fun BaseContinuationImpl.getSpilledVariableFieldMapping(): Array<String>? {	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:120
+-	val	debugMetadata	-	0	val debugMetadata = getDebugMetadataAnnotation() ?: return null	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:121
+-	val	res	-	0	val res = arrayListOf<String>()	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:123
+-	val	label	-	0	val label = getLabel()	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:124
+-	val	COROUTINES_DEBUG_METADATA_VERSION	-	0	private const val COROUTINES_DEBUG_METADATA_VERSION = 1	jvmMain/kotlin/coroutines/jvm/internal/DebugMetadata.kt:134
+1.3	fun	probeCoroutineCreated	-	0	internal fun <T> probeCoroutineCreated(completion: Continuation<T>): Continuation<T> {	jvmMain/kotlin/coroutines/jvm/internal/DebugProbes.kt:45
+1.3	fun	probeCoroutineResumed	-	0	internal fun probeCoroutineResumed(frame: Continuation<*>) {	jvmMain/kotlin/coroutines/jvm/internal/DebugProbes.kt:64
+1.3	fun	probeCoroutineSuspended	-	0	internal fun probeCoroutineSuspended(frame: Continuation<*>) {	jvmMain/kotlin/coroutines/jvm/internal/DebugProbes.kt:80
+-	fun	checkContinuation	-	0	internal inline fun checkContinuation() {}	jvmMain/kotlin/coroutines/jvm/internal/GeneratedCodeMarkers.kt:19
+-	fun	lambdaArgumentsUnspilling	-	0	internal inline fun lambdaArgumentsUnspilling() {}	jvmMain/kotlin/coroutines/jvm/internal/GeneratedCodeMarkers.kt:24
+-	fun	tableswitch	-	0	internal inline fun tableswitch() {}	jvmMain/kotlin/coroutines/jvm/internal/GeneratedCodeMarkers.kt:29
+-	fun	checkResult	-	0	internal inline fun checkResult() {}	jvmMain/kotlin/coroutines/jvm/internal/GeneratedCodeMarkers.kt:34
+-	fun	checkCOROUTINE_SUSPENDED	-	0	internal inline fun checkCOROUTINE_SUSPENDED() {}	jvmMain/kotlin/coroutines/jvm/internal/GeneratedCodeMarkers.kt:39
+-	fun	unreachable	-	0	internal inline fun unreachable() {}	jvmMain/kotlin/coroutines/jvm/internal/GeneratedCodeMarkers.kt:44
+1.3	fun	runSuspend	-	0	internal fun runSuspend(block: suspend () -> Unit) {	jvmMain/kotlin/coroutines/jvm/internal/RunSuspend.kt:17
+-	val	run	-	0	val run = RunSuspend()	jvmMain/kotlin/coroutines/jvm/internal/RunSuspend.kt:18
+-	class	RunSuspend	-	0	private class RunSuspend : Continuation<Unit> {	jvmMain/kotlin/coroutines/jvm/internal/RunSuspend.kt:23
+-	fun	await	-	0	fun await() = synchronized(this) {	jvmMain/kotlin/coroutines/jvm/internal/RunSuspend.kt:34
+-	fun	nullOutSpilledVariable	-	0	internal fun nullOutSpilledVariable(value: Any?): Any? = null	jvmMain/kotlin/coroutines/jvm/internal/Spilling.kt:17

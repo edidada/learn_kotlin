@@ -1,0 +1,10 @@
+since	kind	name	receiver	arity	sig	loc
+1.2	fun	asSequence	-	0	public fun <T> Stream<T>.asSequence(): Sequence<T> = Sequence { iterator() }	jvmMain/jdk8/kotlin/streams/Streams.kt:31
+1.2	fun	asSequence	IntStream	0	public fun IntStream.asSequence(): Sequence<Int> = Sequence { iterator() }	jvmMain/jdk8/kotlin/streams/Streams.kt:39
+1.2	fun	asSequence	LongStream	0	public fun LongStream.asSequence(): Sequence<Long> = Sequence { iterator() }	jvmMain/jdk8/kotlin/streams/Streams.kt:47
+1.2	fun	asSequence	DoubleStream	0	public fun DoubleStream.asSequence(): Sequence<Double> = Sequence { iterator() }	jvmMain/jdk8/kotlin/streams/Streams.kt:55
+1.2	fun	asStream	-	0	public fun <T> Sequence<T>.asStream(): Stream<T> =	jvmMain/jdk8/kotlin/streams/Streams.kt:63
+1.2	fun	toList	-	0	public fun <T> Stream<T>.toList(): List<T> = collect(Collectors.toList<T>())	jvmMain/jdk8/kotlin/streams/Streams.kt:72
+1.2	fun	toList	IntStream	0	public fun IntStream.toList(): List<Int> = toArray().asList()	jvmMain/jdk8/kotlin/streams/Streams.kt:80
+1.2	fun	toList	LongStream	0	public fun LongStream.toList(): List<Long> = toArray().asList()	jvmMain/jdk8/kotlin/streams/Streams.kt:88
+1.2	fun	toList	DoubleStream	0	public fun DoubleStream.toList(): List<Double> = toArray().asList()	jvmMain/jdk8/kotlin/streams/Streams.kt:96

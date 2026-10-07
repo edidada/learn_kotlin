@@ -1,0 +1,18 @@
+since	kind	name	receiver	arity	sig	loc
+-	object	Delegates	-	0	public object Delegates {	commonMain/kotlin/properties/Delegates.kt:13
+-	fun	notNull	-	1	public fun <T : Any> notNull(): ReadWriteProperty<Any?, T> = NotNullVar()	commonMain/kotlin/properties/Delegates.kt:21
+-	fun	observable	-	3	public inline fun <T> observable(initialValue: T, crossinline onChange: (property: KProperty<*>, oldValue: T, newValue: T) -> Unit):	commonMain/kotlin/properties/Delegates.kt:31
+-	fun	vetoable	-	3	public inline fun <T> vetoable(initialValue: T, crossinline onChange: (property: KProperty<*>, oldValue: T, newValue: T) -> Boolean):	commonMain/kotlin/properties/Delegates.kt:49
+-	class	NotNullVar	-	1	private class NotNullVar<T : Any>() : ReadWriteProperty<Any?, T> {	commonMain/kotlin/properties/Delegates.kt:58
+-	var	T	-	0	private var value: T? = null	commonMain/kotlin/properties/Delegates.kt:59
+-	fun	ReadOnlyProperty	-	1	public fun interface ReadOnlyProperty<in T, out V> {	commonMain/kotlin/properties/Interfaces.kt:19
+-	fun	getValue	-	1	public operator fun getValue(thisRef: T, property: KProperty<*>): V	commonMain/kotlin/properties/Interfaces.kt:26
+-	interface	ReadWriteProperty	-	2	public interface ReadWriteProperty<in T, V> : ReadOnlyProperty<T, V> {	commonMain/kotlin/properties/Interfaces.kt:38
+-	fun	setValue	-	2	public operator fun setValue(thisRef: T, property: KProperty<*>, value: V)	commonMain/kotlin/properties/Interfaces.kt:53
+1.4	fun	PropertyDelegateProvider	-	1	public fun interface PropertyDelegateProvider<in T, out D> {	commonMain/kotlin/properties/Interfaces.kt:66
+-	fun	provideDelegate	-	1	public operator fun provideDelegate(thisRef: T, property: KProperty<*>): D	commonMain/kotlin/properties/Interfaces.kt:77
+-	class	ObservableProperty	-	1	public abstract class ObservableProperty<V>(initialValue: V) : ReadWriteProperty<Any?, V> {	commonMain/kotlin/properties/ObservableProperty.kt:14
+-	var	value	-	0	private var value = initialValue	commonMain/kotlin/properties/ObservableProperty.kt:15
+-	fun	beforeChange	-	2	protected open fun beforeChange(property: KProperty<*>, oldValue: V, newValue: V): Boolean = true	commonMain/kotlin/properties/ObservableProperty.kt:23
+-	fun	afterChange	-	2	protected open fun afterChange(property: KProperty<*>, oldValue: V, newValue: V): Unit {}	commonMain/kotlin/properties/ObservableProperty.kt:29
+-	val	oldValue	-	0	val oldValue = this.value	commonMain/kotlin/properties/ObservableProperty.kt:36

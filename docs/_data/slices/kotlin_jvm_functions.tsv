@@ -1,0 +1,49 @@
+since	kind	name	receiver	arity	sig	loc
+1.3	interface	FunctionN	-	1	public interface FunctionN<out R> : Function<R>, FunctionBase<R> {	jvmMain/kotlin/jvm/functions/FunctionN.kt:16
+-	fun	invoke	-	0	public operator fun invoke(vararg args: Any?): R	jvmMain/kotlin/jvm/functions/FunctionN.kt:24
+-	interface	Function0	-	0	public interface Function0<out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:12
+-	fun	invoke	-	0	public operator fun invoke(): R	jvmMain/kotlin/jvm/functions/Functions.kt:14
+-	interface	Function1	-	1	public interface Function1<in P1, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:17
+-	fun	invoke	-	0	public operator fun invoke(p1: P1): R	jvmMain/kotlin/jvm/functions/Functions.kt:19
+-	interface	Function2	-	2	public interface Function2<in P1, in P2, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:22
+-	fun	invoke	-	1	public operator fun invoke(p1: P1, p2: P2): R	jvmMain/kotlin/jvm/functions/Functions.kt:24
+-	interface	Function3	-	3	public interface Function3<in P1, in P2, in P3, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:27
+-	fun	invoke	-	2	public operator fun invoke(p1: P1, p2: P2, p3: P3): R	jvmMain/kotlin/jvm/functions/Functions.kt:29
+-	interface	Function4	-	4	public interface Function4<in P1, in P2, in P3, in P4, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:32
+-	fun	invoke	-	3	public operator fun invoke(p1: P1, p2: P2, p3: P3, p4: P4): R	jvmMain/kotlin/jvm/functions/Functions.kt:34
+-	interface	Function5	-	5	public interface Function5<in P1, in P2, in P3, in P4, in P5, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:37
+-	fun	invoke	-	4	public operator fun invoke(p1: P1, p2: P2, p3: P3, p4: P4, p5: P5): R	jvmMain/kotlin/jvm/functions/Functions.kt:39
+-	interface	Function6	-	6	public interface Function6<in P1, in P2, in P3, in P4, in P5, in P6, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:42
+-	fun	invoke	-	5	public operator fun invoke(p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6): R	jvmMain/kotlin/jvm/functions/Functions.kt:44
+-	interface	Function7	-	7	public interface Function7<in P1, in P2, in P3, in P4, in P5, in P6, in P7, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:47
+-	fun	invoke	-	6	public operator fun invoke(p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7): R	jvmMain/kotlin/jvm/functions/Functions.kt:49
+-	interface	Function8	-	8	public interface Function8<in P1, in P2, in P3, in P4, in P5, in P6, in P7, in P8, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:52
+-	fun	invoke	-	7	public operator fun invoke(p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7, p8: P8): R	jvmMain/kotlin/jvm/functions/Functions.kt:54
+-	interface	Function9	-	9	public interface Function9<in P1, in P2, in P3, in P4, in P5, in P6, in P7, in P8, in P9, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:57
+-	fun	invoke	-	8	public operator fun invoke(p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7, p8: P8, p9: P9): R	jvmMain/kotlin/jvm/functions/Functions.kt:59
+-	interface	Function10	-	10	public interface Function10<in P1, in P2, in P3, in P4, in P5, in P6, in P7, in P8, in P9, in P10, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:62
+-	fun	invoke	-	9	public operator fun invoke(p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7, p8: P8, p9: P9, p10: P10): R	jvmMain/kotlin/jvm/functions/Functions.kt:64
+-	interface	Function11	-	11	public interface Function11<in P1, in P2, in P3, in P4, in P5, in P6, in P7, in P8, in P9, in P10, in P11, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:67
+-	fun	invoke	-	10	public operator fun invoke(p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7, p8: P8, p9: P9, p10: P10, p11: P11): R	jvmMain/kotlin/jvm/functions/Functions.kt:69
+-	interface	Function12	-	12	public interface Function12<in P1, in P2, in P3, in P4, in P5, in P6, in P7, in P8, in P9, in P10, in P11, in P12, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:72
+-	fun	invoke	-	11	public operator fun invoke(p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7, p8: P8, p9: P9, p10: P10, p11: P11, p12: P12): R	jvmMain/kotlin/jvm/functions/Functions.kt:74
+-	interface	Function13	-	13	public interface Function13<in P1, in P2, in P3, in P4, in P5, in P6, in P7, in P8, in P9, in P10, in P11, in P12, in P13, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:77
+-	fun	invoke	-	12	public operator fun invoke(p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7, p8: P8, p9: P9, p10: P10, p11: P11, p12: P12, p13: P13): R	jvmMain/kotlin/jvm/functions/Functions.kt:79
+-	interface	Function14	-	14	public interface Function14<in P1, in P2, in P3, in P4, in P5, in P6, in P7, in P8, in P9, in P10, in P11, in P12, in P13, in P14, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:82
+-	fun	invoke	-	13	public operator fun invoke(p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7, p8: P8, p9: P9, p10: P10, p11: P11, p12: P12, p13: P13, p14: P14): R	jvmMain/kotlin/jvm/functions/Functions.kt:84
+-	interface	Function15	-	15	public interface Function15<in P1, in P2, in P3, in P4, in P5, in P6, in P7, in P8, in P9, in P10, in P11, in P12, in P13, in P14, in P15, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:87
+-	fun	invoke	-	14	public operator fun invoke(p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7, p8: P8, p9: P9, p10: P10, p11: P11, p12: P12, p13: P13, p14: P14, p15: P15): R	jvmMain/kotlin/jvm/functions/Functions.kt:89
+-	interface	Function16	-	16	public interface Function16<in P1, in P2, in P3, in P4, in P5, in P6, in P7, in P8, in P9, in P10, in P11, in P12, in P13, in P14, in P15, in P16, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:92
+-	fun	invoke	-	15	public operator fun invoke(p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7, p8: P8, p9: P9, p10: P10, p11: P11, p12: P12, p13: P13, p14: P14, p15: P15, p16: P16): R	jvmMain/kotlin/jvm/functions/Functions.kt:94
+-	interface	Function17	-	17	public interface Function17<in P1, in P2, in P3, in P4, in P5, in P6, in P7, in P8, in P9, in P10, in P11, in P12, in P13, in P14, in P15, in P16, in P17, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:97
+-	fun	invoke	-	16	public operator fun invoke(p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7, p8: P8, p9: P9, p10: P10, p11: P11, p12: P12, p13: P13, p14: P14, p15: P15, p16: P16, p17: P17): R	jvmMain/kotlin/jvm/functions/Functions.kt:99
+-	interface	Function18	-	18	public interface Function18<in P1, in P2, in P3, in P4, in P5, in P6, in P7, in P8, in P9, in P10, in P11, in P12, in P13, in P14, in P15, in P16, in P17, in P18, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:102
+-	fun	invoke	-	17	public operator fun invoke(p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7, p8: P8, p9: P9, p10: P10, p11: P11, p12: P12, p13: P13, p14: P14, p15: P15, p16: P16, p17: P17, p18: P18): R	jvmMain/kotlin/jvm/functions/Functions.kt:104
+-	interface	Function19	-	19	public interface Function19<in P1, in P2, in P3, in P4, in P5, in P6, in P7, in P8, in P9, in P10, in P11, in P12, in P13, in P14, in P15, in P16, in P17, in P18, in P19, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:107
+-	fun	invoke	-	18	public operator fun invoke(p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7, p8: P8, p9: P9, p10: P10, p11: P11, p12: P12, p13: P13, p14: P14, p15: P15, p16: P16, p17: P17, p18: P18, p19: P19): R	jvmMain/kotlin/jvm/functions/Functions.kt:109
+-	interface	Function20	-	20	public interface Function20<in P1, in P2, in P3, in P4, in P5, in P6, in P7, in P8, in P9, in P10, in P11, in P12, in P13, in P14, in P15, in P16, in P17, in P18, in P19, in P20, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:112
+-	fun	invoke	-	19	public operator fun invoke(p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7, p8: P8, p9: P9, p10: P10, p11: P11, p12: P12, p13: P13, p14: P14, p15: P15, p16: P16, p17: P17, p18: P18, p19: P19, p20: P20): R	jvmMain/kotlin/jvm/functions/Functions.kt:114
+-	interface	Function21	-	21	public interface Function21<in P1, in P2, in P3, in P4, in P5, in P6, in P7, in P8, in P9, in P10, in P11, in P12, in P13, in P14, in P15, in P16, in P17, in P18, in P19, in P20, in P21, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:117
+-	fun	invoke	-	20	public operator fun invoke(p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7, p8: P8, p9: P9, p10: P10, p11: P11, p12: P12, p13: P13, p14: P14, p15: P15, p16: P16, p17: P17, p18: P18, p19: P19, p20: P20, p21: P21): R	jvmMain/kotlin/jvm/functions/Functions.kt:119
+-	interface	Function22	-	22	public interface Function22<in P1, in P2, in P3, in P4, in P5, in P6, in P7, in P8, in P9, in P10, in P11, in P12, in P13, in P14, in P15, in P16, in P17, in P18, in P19, in P20, in P21, in P22, out R> : Function<R> {	jvmMain/kotlin/jvm/functions/Functions.kt:122
+-	fun	invoke	-	21	public operator fun invoke(p1: P1, p2: P2, p3: P3, p4: P4, p5: P5, p6: P6, p7: P7, p8: P8, p9: P9, p10: P10, p11: P11, p12: P12, p13: P13, p14: P14, p15: P15, p16: P16, p17: P17, p18: P18, p19: P19, p20: P20, p21: P21, p22: P22): R	jvmMain/kotlin/jvm/functions/Functions.kt:124

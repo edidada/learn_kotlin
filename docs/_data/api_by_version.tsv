@@ -1,0 +1,1008 @@
+1.1	kotlin	fun	addSuppressed	public expect fun Throwable.addSuppressed(exception: Throwable)
+1.1	kotlin	fun	also	public inline fun <T> T.also(block: (T) -> Unit): T {
+1.1	kotlin	typealias	AssertionError	@SinceKotlin("1.1") public actual typealias AssertionError = java.lang.AssertionError
+1.1	kotlin	typealias	ClassCastException	@SinceKotlin("1.1") public actual typealias ClassCastException = java.lang.ClassCastException
+1.1	kotlin	typealias	Comparator	@SinceKotlin("1.1") public actual typealias Comparator<T> = java.util.Comparator<T>
+1.1	kotlin	class	DslMarker	public annotation class DslMarker
+1.1	kotlin	fun	enumValueOf	public expect inline fun <reified T : Enum<T>> enumValueOf(name: String): T
+1.1	kotlin	fun	enumValues	public expect inline fun <reified T : Enum<T>> enumValues(): Array<T>
+1.1	kotlin	typealias	Error	@SinceKotlin("1.1") public actual typealias Error = java.lang.Error
+1.1	kotlin	typealias	Exception	@SinceKotlin("1.1") public actual typealias Exception = java.lang.Exception
+1.1	kotlin	typealias	IllegalArgumentException	@SinceKotlin("1.1") public actual typealias IllegalArgumentException = java.lang.IllegalArgumentException
+1.1	kotlin	typealias	IllegalStateException	@SinceKotlin("1.1") public actual typealias IllegalStateException = java.lang.IllegalStateException
+1.1	kotlin	typealias	IndexOutOfBoundsException	@SinceKotlin("1.1") public actual typealias IndexOutOfBoundsException = java.lang.IndexOutOfBoundsException
+1.1	kotlin	val	Int	val kind: Int = 1,
+1.1	kotlin	class	KotlinVersion	public class KotlinVersion(public val major: Int, public val minor: Int, public val patch: Int) : Comparable<KotlinVersion> {
+1.1	kotlin	typealias	NoSuchElementException	@SinceKotlin("1.1") public actual typealias NoSuchElementException = java.util.NoSuchElementException
+1.1	kotlin	typealias	NullPointerException	@SinceKotlin("1.1") public actual typealias NullPointerException = java.lang.NullPointerException
+1.1	kotlin	typealias	NumberFormatException	@SinceKotlin("1.1") public actual typealias NumberFormatException = java.lang.NumberFormatException
+1.1	kotlin	class	ParameterName	public annotation class ParameterName(val name: String)
+1.1	kotlin	class	PublishedApi	public annotation class PublishedApi
+1.1	kotlin	fun	rem	public operator fun rem(other: Int): Int
+1.1	kotlin	typealias	RuntimeException	@SinceKotlin("1.1") public actual typealias RuntimeException = java.lang.RuntimeException
+1.1	kotlin	fun	takeIf	public inline fun <T> T.takeIf(predicate: (T) -> Boolean): T? {
+1.1	kotlin	fun	takeUnless	public inline fun <T> T.takeUnless(predicate: (T) -> Boolean): T? {
+1.1	kotlin	typealias	UnsupportedOperationException	@SinceKotlin("1.1") public actual typealias UnsupportedOperationException = java.lang.UnsupportedOperationException
+1.1	kotlin.collections	class	AbstractCollection	public abstract class AbstractCollection<out E> protected constructor() : Collection<E> {
+1.1	kotlin.collections	class	AbstractList	public abstract class AbstractList<out E> protected constructor() : AbstractCollection<E>(), List<E> {
+1.1	kotlin.collections	class	AbstractMap	public abstract class AbstractMap<K, out V> protected constructor() : Map<K, V> {
+1.1	kotlin.collections	class	AbstractMutableCollection	public expect abstract class AbstractMutableCollection<E> : MutableCollection<E> {
+1.1	kotlin.collections	class	AbstractMutableList	public expect abstract class AbstractMutableList<E> : MutableList<E> {
+1.1	kotlin.collections	class	AbstractMutableMap	public expect abstract class AbstractMutableMap<K, V> : MutableMap<K, V> {
+1.1	kotlin.collections	class	AbstractMutableSet	public expect abstract class AbstractMutableSet<E> : MutableSet<E> {
+1.1	kotlin.collections	class	AbstractSet	public abstract class AbstractSet<out E> protected constructor() : AbstractCollection<E>(), Set<E> {
+1.1	kotlin.collections	fun	aggregate	public inline fun <T, K, R> Grouping<T, K>.aggregate(
+1.1	kotlin.collections	fun	aggregateTo	public inline fun <T, K, R, M : MutableMap<in K, R>> Grouping<T, K>.aggregateTo(
+1.1	kotlin.collections	typealias	ArrayList	@SinceKotlin("1.1") public actual typealias ArrayList<E> = java.util.ArrayList<E>
+1.1	kotlin.collections	fun	arrayListOf	public fun <T> arrayListOf(vararg elements: T): ArrayList<T> =
+1.1	kotlin.collections	fun	contentDeepEquals	public expect infix fun <T> Array<out T>.contentDeepEquals(other: Array<out T>): Boolean
+1.1	kotlin.collections	fun	contentDeepHashCode	public expect fun <T> Array<out T>.contentDeepHashCode(): Int
+1.1	kotlin.collections	fun	contentDeepToString	public expect fun <T> Array<out T>.contentDeepToString(): String
+1.1	kotlin.collections	fun	eachCount	public expect fun <T, K> Grouping<T, K>.eachCount(): Map<K, Int>
+1.1	kotlin.collections	fun	eachCountTo	public fun <T, K, M : MutableMap<in K, Int>> Grouping<T, K>.eachCountTo(destination: M): M =
+1.1	kotlin.collections	fun	eachSumOfTo	public inline fun <T, K, M : MutableMap<in K, Int>> Grouping<T, K>.eachSumOfTo(destination: M, valueSelector: (T) -> Int): M =
+1.1	kotlin.collections	fun	fold	public inline fun <T, K, R> Grouping<T, K>.fold(
+1.1	kotlin.collections	fun	foldTo	public inline fun <T, K, R, M : MutableMap<in K, R>> Grouping<T, K>.foldTo(
+1.1	kotlin.collections	fun	getOrDefault	public fun getOrDefault(key: K, defaultValue: @UnsafeVariance V): V {
+1.1	kotlin.collections	fun	getValue	public fun <K, V> Map<K, V>.getValue(key: K): V = getOrImplicitDefault(key)
+1.1	kotlin.collections	interface	Grouping	public interface Grouping<T, out K> {
+1.1	kotlin.collections	fun	groupingBy	public inline fun <T, K> Iterable<T>.groupingBy(crossinline keySelector: (T) -> K): Grouping<T, K> {
+1.1	kotlin.collections	typealias	HashMap	@SinceKotlin("1.1") public actual typealias HashMap<K, V> = java.util.HashMap<K, V>
+1.1	kotlin.collections	fun	hashMapOf	public inline fun <K, V> hashMapOf(): HashMap<K, V> = HashMap<K, V>()
+1.1	kotlin.collections	typealias	HashSet	@SinceKotlin("1.1") public actual typealias HashSet<E> = java.util.HashSet<E>
+1.1	kotlin.collections	fun	hashSetOf	public inline fun <T> hashSetOf(): HashSet<T> = HashSet()
+1.1	kotlin.collections	typealias	LinkedHashMap	@SinceKotlin("1.1") public actual typealias LinkedHashMap<K, V> = java.util.LinkedHashMap<K, V>
+1.1	kotlin.collections	typealias	LinkedHashSet	@SinceKotlin("1.1") public actual typealias LinkedHashSet<E> = java.util.LinkedHashSet<E>
+1.1	kotlin.collections	fun	linkedMapOf	public inline fun <K, V> linkedMapOf(): LinkedHashMap<K, V> = LinkedHashMap<K, V>()
+1.1	kotlin.collections	fun	linkedSetOf	public inline fun <T> linkedSetOf(): LinkedHashSet<T> = LinkedHashSet()
+1.1	kotlin.collections	fun	List	public inline fun <T> List(size: Int, init: (index: Int) -> T): List<T> = MutableList(size, init)
+1.1	kotlin.collections	fun	max	public fun IntArray.max(): Int {
+1.1	kotlin.collections	fun	min	public fun IntArray.min(): Int {
+1.1	kotlin.collections	fun	minus	public operator fun <T> Set<T>.minus(element: T): Set<T> {
+1.1	kotlin.collections	fun	minusAssign	public inline operator fun <K, V> MutableMap<K, V>.minusAssign(key: K) {
+1.1	kotlin.collections	fun	MutableList	public inline fun <T> MutableList(size: Int, init: (index: Int) -> T): MutableList<T> {
+1.1	kotlin.collections	fun	mutableListOf	public fun <T> mutableListOf(vararg elements: T): MutableList<T> =
+1.1	kotlin.collections	fun	mutableMapOf	public inline fun <K, V> mutableMapOf(): MutableMap<K, V> = LinkedHashMap()
+1.1	kotlin.collections	fun	mutableSetOf	public inline fun <T> mutableSetOf(): MutableSet<T> = LinkedHashSet()
+1.1	kotlin.collections	fun	onEach	public inline fun IntArray.onEach(action: (Int) -> Unit): IntArray {
+1.1	kotlin.collections	typealias	RandomAccess	@SinceKotlin("1.1") public actual typealias RandomAccess = java.util.RandomAccess
+1.1	kotlin.collections	fun	reduce	public inline fun <S, T : S, K> Grouping<T, K>.reduce(
+1.1	kotlin.collections	fun	reduceTo	public inline fun <S, T : S, K, M : MutableMap<in K, S>> Grouping<T, K>.reduceTo(
+1.1	kotlin.collections	fun	remove	public fun remove(): Unit
+1.1	kotlin.collections	fun	toMap	public fun <K, V> Iterable<Pair<K, V>>.toMap(): Map<K, V> {
+1.1	kotlin.collections	fun	toMutableMap	public fun <K, V> Map<out K, V>.toMutableMap(): MutableMap<K, V> = LinkedHashMap(this)
+1.1	kotlin.comparisons	fun	maxOf	public fun maxOf(a: UInt, b: UInt): UInt {
+1.1	kotlin.comparisons	fun	minOf	public fun minOf(a: UInt, b: UInt): UInt {
+1.1	kotlin.experimental	fun	and	public inline infix fun Byte.and(other: Byte): Byte = (this.toInt() and other.toInt()).toByte()
+1.1	kotlin.experimental	fun	inv	public inline fun Byte.inv(): Byte = (this.toInt().inv()).toByte()
+1.1	kotlin.experimental	fun	or	public inline infix fun Byte.or(other: Byte): Byte = (this.toInt() or other.toInt()).toByte()
+1.1	kotlin.experimental	fun	xor	public inline infix fun Byte.xor(other: Byte): Byte = (this.toInt() xor other.toInt()).toByte()
+1.1	kotlin.io	fun	closeFinally	internal fun Closeable?.closeFinally(cause: Throwable?): Unit = when {
+1.1	kotlin.jvm.internal	class	LocalVariableReference	public open class LocalVariableReference : PropertyReference0() {
+1.1	kotlin.jvm.internal	class	MutableLocalVariableReference	public open class MutableLocalVariableReference : MutablePropertyReference0() {
+1.1	kotlin.jvm.internal	class	PackageReference	public class PackageReference(
+1.1	kotlin.ranges	interface	ClosedFloatingPointRange	public interface ClosedFloatingPointRange<T : Comparable<T>> : ClosedRange<T> {
+1.1	kotlin.ranges	fun	coerceIn	public fun Int.coerceIn(range: ClosedRange<Int>): Int {
+1.1	kotlin.ranges	fun	rangeTo	public operator fun <T : Comparable<T>> T.rangeTo(that: T): ClosedRange<T> = ComparableRange(this, that)
+1.1	kotlin.reflect	val	Boolean	public val isFun: Boolean
+1.1	kotlin.reflect	fun	getDelegate	public fun getDelegate(): Any?
+1.1	kotlin.reflect	fun	isInstance	public fun isInstance(value: Any?): Boolean
+1.1	kotlin.reflect	interface	KClassifier	public interface KClassifier
+1.1	kotlin.reflect	val	KClassifier	public val classifier: KClassifier?
+1.1	kotlin.reflect	interface	KTypeParameter	public interface KTypeParameter : KClassifier {
+1.1	kotlin.reflect	class	KTypeProjection	public data class KTypeProjection constructor(
+1.1	kotlin.reflect	class	KVariance	public enum class KVariance {
+1.1	kotlin.reflect	val	KVisibility	public val visibility: KVisibility?
+1.1	kotlin.reflect	class	KVisibility	public enum class KVisibility {
+1.1	kotlin.reflect	val	List	public val supertypes: List<KType>
+1.1	kotlin.sequences	fun	groupingBy	public inline fun <T, K> Sequence<T>.groupingBy(crossinline keySelector: (T) -> K): Grouping<T, K> {
+1.1	kotlin.sequences	fun	max	public fun Sequence<Float>.max(): Float {
+1.1	kotlin.sequences	fun	min	public fun Sequence<Float>.min(): Float {
+1.1	kotlin.sequences	fun	onEach	public fun <T> Sequence<T>.onEach(action: (T) -> Unit): Sequence<T> {
+1.1	kotlin.text	typealias	Appendable	@SinceKotlin("1.1") public actual typealias Appendable = java.lang.Appendable
+1.1	kotlin.text	fun	buildString	public inline fun buildString(builderAction: StringBuilder.() -> Unit): String {
+1.1	kotlin.text	fun	groupingBy	public inline fun <K> CharSequence.groupingBy(crossinline keySelector: (Char) -> K): Grouping<Char, K> {
+1.1	kotlin.text	interface	MatchNamedGroupCollection	public interface MatchNamedGroupCollection : MatchGroupCollection {
+1.1	kotlin.text	fun	onEach	public inline fun <S : CharSequence> S.onEach(action: (Char) -> Unit): S {
+1.1	kotlin.text	typealias	StringBuilder	@SinceKotlin("1.1") public actual typealias StringBuilder = java.lang.StringBuilder
+1.1	kotlin.text	fun	toByte	public expect fun String.toByte(): Byte
+1.1	kotlin.text	fun	toByteOrNull	public fun String.toByteOrNull(radix: Int): Byte? {
+1.1	kotlin.text	fun	toDoubleOrNull	public expect fun String.toDoubleOrNull(): Double?
+1.1	kotlin.text	fun	toFloatOrNull	public expect fun String.toFloatOrNull(): Float?
+1.1	kotlin.text	fun	toInt	public expect fun String.toInt(): Int
+1.1	kotlin.text	fun	toIntOrNull	public fun String.toIntOrNull(radix: Int): Int? {
+1.1	kotlin.text	fun	toLong	public expect fun String.toLong(): Long
+1.1	kotlin.text	fun	toLongOrNull	public fun String.toLongOrNull(radix: Int): Long? {
+1.1	kotlin.text	fun	toShort	public expect fun String.toShort(): Short
+1.1	kotlin.text	fun	toShortOrNull	public fun String.toShortOrNull(radix: Int): Short? {
+1.1	kotlin.text	fun	toString	public expect fun Int.toString(radix: Int): String
+1.2	kotlin	fun	and	public infix fun and(other: Int): Int
+1.2	kotlin	val	Boolean	internal val ENABLED: Boolean = javaClass.desiredAssertionStatus()
+1.2	kotlin	fun	closeFinally	internal fun AutoCloseable?.closeFinally(cause: Throwable?): Unit = when {
+1.2	kotlin	fun	dec	public operator fun dec(): Int
+1.2	kotlin	fun	fromBits	public expect fun Float.Companion.fromBits(bits: Int): Float
+1.2	kotlin	fun	inc	public operator fun inc(): Int
+1.2	kotlin	fun	inv	public fun inv(): Int
+1.2	kotlin	fun	or	public infix fun or(other: Int): Int
+1.2	kotlin	fun	shl	public infix fun shl(bitCount: Int): Int
+1.2	kotlin	fun	shr	public infix fun shr(bitCount: Int): Int
+1.2	kotlin	val	String	val message: String,
+1.2	kotlin	fun	suspend	public inline fun <R> suspend(noinline block: suspend () -> R): suspend () -> R = block
+1.2	kotlin	fun	toBigDecimal	public inline fun BigInteger.toBigDecimal(): BigDecimal = BigDecimal(this)
+1.2	kotlin	fun	toBigInteger	public inline fun Long.toBigInteger(): BigInteger = BigInteger.valueOf(this)
+1.2	kotlin	fun	toBits	public expect fun Float.toBits(): Int
+1.2	kotlin	fun	toRawBits	public expect fun Float.toRawBits(): Int
+1.2	kotlin	fun	use	public expect inline fun <T : AutoCloseable?, R> T.use(block: (T) -> R): R {
+1.2	kotlin	fun	xor	public infix fun xor(other: Int): Int
+1.2	kotlin.collections	fun	chunked	public fun <T> Iterable<T>.chunked(size: Int): List<List<T>> {
+1.2	kotlin.collections	fun	fill	public expect fun <T> MutableList<T>.fill(value: T): Unit
+1.2	kotlin.collections	fun	getOrDefault	public fun getOrDefault(key: K, defaultValue: @UnsafeVariance V): V {
+1.2	kotlin.collections	fun	remove	public fun remove(): Unit
+1.2	kotlin.collections	fun	shuffle	public fun IntArray.shuffle(): Unit {
+1.2	kotlin.collections	fun	shuffled	public expect fun <T> Iterable<T>.shuffled(): List<T>
+1.2	kotlin.collections	fun	windowed	public fun <T> Iterable<T>.windowed(size: Int, step: Int = 1, partialWindows: Boolean = false): List<List<T>> {
+1.2	kotlin.collections	fun	zipWithNext	public fun <T> Iterable<T>.zipWithNext(): List<Pair<T, T>> {
+1.2	kotlin.internal	class	AccessibleLateinitPropertyLiteral	internal annotation class AccessibleLateinitPropertyLiteral
+1.2	kotlin.internal	fun	apiVersionIsAtLeast	internal fun apiVersionIsAtLeast(major: Int, minor: Int, patch: Int): Boolean =
+1.2	kotlin.internal	class	ContractsDsl	internal annotation class ContractsDsl
+1.2	kotlin.internal	class	RequireKotlin	internal annotation class RequireKotlin(
+1.2	kotlin.internal	class	RequireKotlinVersionKind	internal enum class RequireKotlinVersionKind {
+1.2	kotlin.jvm	class	JvmDefault	public annotation class JvmDefault
+1.2	kotlin.jvm	class	JvmPackageName	internal expect annotation class JvmPackageName(val name: String)
+1.2	kotlin.math	fun	abs	public expect fun abs(n: Int): Int
+1.2	kotlin.math	fun	acos	public expect fun acos(x: Float): Float
+1.2	kotlin.math	fun	acosh	public expect fun acosh(x: Float): Float
+1.2	kotlin.math	fun	asin	public expect fun asin(x: Float): Float
+1.2	kotlin.math	fun	asinh	public expect fun asinh(x: Float): Float
+1.2	kotlin.math	fun	atan	public expect fun atan(x: Float): Float
+1.2	kotlin.math	fun	atan2	public expect fun atan2(y: Float, x: Float): Float
+1.2	kotlin.math	fun	atanh	public expect fun atanh(x: Float): Float
+1.2	kotlin.math	fun	ceil	public expect fun ceil(x: Float): Float
+1.2	kotlin.math	fun	cos	public expect fun cos(x: Float): Float
+1.2	kotlin.math	fun	cosh	public expect fun cosh(x: Float): Float
+1.2	kotlin.math	val	Double	internal val LN2: Double = ln(2.0)
+1.2	kotlin.math	fun	exp	public expect fun exp(x: Float): Float
+1.2	kotlin.math	fun	expm1	public expect fun expm1(x: Float): Float
+1.2	kotlin.math	val	Float	public expect val Float.sign: Float
+1.2	kotlin.math	fun	floor	public expect fun floor(x: Float): Float
+1.2	kotlin.math	val	get	public actual val Int.sign: Int get() = Integer.signum(this)
+1.2	kotlin.math	fun	hypot	public expect fun hypot(x: Float, y: Float): Float
+1.2	kotlin.math	fun	IEEErem	public inline fun Double.IEEErem(divisor: Double): Double = nativeMath.IEEEremainder(this, divisor)
+1.2	kotlin.math	val	Int	public expect val Int.sign: Int
+1.2	kotlin.math	fun	ln	public expect fun ln(x: Float): Float
+1.2	kotlin.math	fun	ln1p	public expect fun ln1p(x: Float): Float
+1.2	kotlin.math	fun	log	public expect fun log(x: Float, base: Float): Float
+1.2	kotlin.math	fun	log10	public expect fun log10(x: Float): Float
+1.2	kotlin.math	fun	log2	public expect fun log2(x: Float): Float
+1.2	kotlin.math	val	Long	public expect val Long.absoluteValue: Long
+1.2	kotlin.math	fun	max	public expect fun max(a: Int, b: Int): Int
+1.2	kotlin.math	fun	min	public expect fun min(a: Int, b: Int): Int
+1.2	kotlin.math	fun	nextDown	public expect fun Double.nextDown(): Double
+1.2	kotlin.math	fun	nextTowards	public expect fun Double.nextTowards(to: Double): Double
+1.2	kotlin.math	fun	nextUp	public expect fun Double.nextUp(): Double
+1.2	kotlin.math	fun	pow	public expect fun Float.pow(n: Int): Float
+1.2	kotlin.math	fun	round	public expect fun round(x: Float): Float
+1.2	kotlin.math	fun	roundToInt	public expect fun Float.roundToInt(): Int
+1.2	kotlin.math	fun	roundToLong	public expect fun Float.roundToLong(): Long
+1.2	kotlin.math	fun	sign	public expect fun sign(x: Float): Float
+1.2	kotlin.math	fun	sin	public expect fun sin(x: Float): Float
+1.2	kotlin.math	fun	sinh	public expect fun sinh(x: Float): Float
+1.2	kotlin.math	fun	sqrt	public expect fun sqrt(x: Float): Float
+1.2	kotlin.math	fun	tan	public expect fun tan(x: Float): Float
+1.2	kotlin.math	fun	tanh	public expect fun tanh(x: Float): Float
+1.2	kotlin.math	fun	truncate	public expect fun truncate(x: Float): Float
+1.2	kotlin.math	fun	withSign	public expect fun Float.withSign(sign: Int): Float
+1.2	kotlin.sequences	fun	chunked	public fun <T> Sequence<T>.chunked(size: Int): Sequence<List<T>> {
+1.2	kotlin.sequences	fun	windowed	public fun <T> Sequence<T>.windowed(size: Int, step: Int = 1, partialWindows: Boolean = false): Sequence<List<T>> {
+1.2	kotlin.sequences	fun	zipWithNext	public fun <T> Sequence<T>.zipWithNext(): Sequence<Pair<T, T>> {
+1.2	kotlin.streams	fun	asSequence	public fun IntStream.asSequence(): Sequence<Int> = Sequence { iterator() }
+1.2	kotlin.streams	fun	asStream	public fun <T> Sequence<T>.asStream(): Stream<T> =
+1.2	kotlin.streams	fun	toList	public fun IntStream.toList(): List<Int> = toArray().asList()
+1.2	kotlin.text	fun	chunked	public fun CharSequence.chunked(size: Int): List<String> {
+1.2	kotlin.text	fun	chunkedSequence	public fun CharSequence.chunkedSequence(size: Int): Sequence<String> {
+1.2	kotlin.text	val	Comparator	public expect val String.Companion.CASE_INSENSITIVE_ORDER: Comparator<String>
+1.2	kotlin.text	fun	compareTo	public expect fun String.compareTo(other: String, ignoreCase: Boolean = false): Int
+1.2	kotlin.text	fun	get	public operator fun get(index: Int): MatchGroup?
+1.2	kotlin.text	fun	String	public expect fun String(chars: CharArray): String
+1.2	kotlin.text	fun	toBigDecimal	public inline fun String.toBigDecimal(): java.math.BigDecimal =
+1.2	kotlin.text	fun	toBigDecimalOrNull	public fun String.toBigDecimalOrNull(): java.math.BigDecimal? =
+1.2	kotlin.text	fun	toBigInteger	public inline fun String.toBigInteger(): java.math.BigInteger =
+1.2	kotlin.text	fun	toBigIntegerOrNull	public fun String.toBigIntegerOrNull(radix: Int): java.math.BigInteger? {
+1.2	kotlin.text	fun	toString	public expect fun Int.toString(radix: Int): String
+1.2	kotlin.text	fun	windowed	public fun CharSequence.windowed(size: Int, step: Int = 1, partialWindows: Boolean = false): List<String> {
+1.2	kotlin.text	fun	windowedSequence	public fun CharSequence.windowedSequence(size: Int, step: Int = 1, partialWindows: Boolean = false): Sequence<String> {
+1.2	kotlin.text	fun	zipWithNext	public fun CharSequence.zipWithNext(): List<Pair<Char, Char>> {
+1.3	kotlin	class	ArithmeticException	public expect open class ArithmeticException : RuntimeException {
+1.3	kotlin	typealias	ArithmeticException	@SinceKotlin("1.3") public actual typealias ArithmeticException = java.lang.ArithmeticException
+1.3	kotlin	class	BuilderInference	public annotation class BuilderInference
+1.3	kotlin	val	Char	public const val MIN_VALUE: Char = '\u0000'
+1.3	kotlin	typealias	ConcurrentModificationException	@SinceKotlin("1.3") public actual typealias ConcurrentModificationException = java.util.ConcurrentModificationException
+1.3	kotlin	fun	createFailure	internal fun createFailure(exception: Throwable): Any =
+1.3	kotlin	class	ExperimentalStdlibApi	public annotation class ExperimentalStdlibApi
+1.3	kotlin	fun	fold	public inline fun <R, T> Result<T>.fold(
+1.3	kotlin	fun	getOrDefault	public inline fun <R, T : R> Result<T>.getOrDefault(defaultValue: R): R {
+1.3	kotlin	fun	getOrElse	public inline fun <R, T : R> Result<T>.getOrElse(onFailure: (exception: Throwable) -> R): R {
+1.3	kotlin	fun	getOrThrow	public inline fun <T> Result<T>.getOrThrow(): T {
+1.3	kotlin	fun	hashCode	public open fun hashCode(): Int
+1.3	kotlin	val	Int	val kind: Int = 1,
+1.3	kotlin	fun	map	public inline fun <R, T> Result<T>.map(transform: (value: T) -> R): Result<R> {
+1.3	kotlin	fun	mapCatching	public inline fun <R, T> Result<T>.mapCatching(transform: (value: T) -> R): Result<R> {
+1.3	kotlin	class	Metadata	public annotation class Metadata(
+1.3	kotlin	fun	onFailure	public inline fun <T> Result<T>.onFailure(action: (exception: Throwable) -> Unit): Result<T> {
+1.3	kotlin	fun	onSuccess	public inline fun <T> Result<T>.onSuccess(action: (value: T) -> Unit): Result<T> {
+1.3	kotlin	class	OptIn	public annotation class OptIn(
+1.3	kotlin	fun	recover	public inline fun <R, T : R> Result<T>.recover(transform: (exception: Throwable) -> R): Result<R> {
+1.3	kotlin	fun	recoverCatching	public inline fun <R, T : R> Result<T>.recoverCatching(transform: (exception: Throwable) -> R): Result<R> {
+1.3	kotlin	class	RequiresOptIn	public annotation class RequiresOptIn(
+1.3	kotlin	class	Result	public value class Result<out T> @PublishedApi internal constructor(
+1.3	kotlin	fun	runCatching	public inline fun <R> runCatching(block: () -> R): Result<R> {
+1.3	kotlin	fun	throwOnFailure	internal fun Result<*>.throwOnFailure() {
+1.3	kotlin	class	UByteArray	public value class UByteArray
+1.3	kotlin	fun	UByteArray	public inline fun UByteArray(size: Int, init: (Int) -> UByte): UByteArray {
+1.3	kotlin	fun	ubyteArrayOf	public inline fun ubyteArrayOf(vararg elements: UByte): UByteArray = elements
+1.3	kotlin	class	UIntArray	public value class UIntArray
+1.3	kotlin	fun	UIntArray	public inline fun UIntArray(size: Int, init: (Int) -> UInt): UIntArray {
+1.3	kotlin	fun	uintArrayOf	public inline fun uintArrayOf(vararg elements: UInt): UIntArray = elements
+1.3	kotlin	class	ULongArray	public value class ULongArray
+1.3	kotlin	fun	ULongArray	public inline fun ULongArray(size: Int, init: (Int) -> ULong): ULongArray {
+1.3	kotlin	fun	ulongArrayOf	public inline fun ulongArrayOf(vararg elements: ULong): ULongArray = elements
+1.3	kotlin	class	UShortArray	public value class UShortArray
+1.3	kotlin	fun	UShortArray	public inline fun UShortArray(size: Int, init: (Int) -> UShort): UShortArray {
+1.3	kotlin	fun	ushortArrayOf	public inline fun ushortArrayOf(vararg elements: UShort): UShortArray = elements
+1.3	kotlin.collections	class	AbstractMutableCollection	public expect abstract class AbstractMutableCollection<E> : MutableCollection<E> {
+1.3	kotlin.collections	class	AbstractMutableMap	public expect abstract class AbstractMutableMap<K, V> : MutableMap<K, V> {
+1.3	kotlin.collections	class	AbstractMutableSet	public expect abstract class AbstractMutableSet<E> : MutableSet<E> {
+1.3	kotlin.collections	fun	all	public inline fun IntArray.all(predicate: (Int) -> Boolean): Boolean {
+1.3	kotlin.collections	fun	any	public fun IntArray.any(): Boolean {
+1.3	kotlin.collections	fun	asByteArray	public inline fun UByteArray.asByteArray(): ByteArray {
+1.3	kotlin.collections	fun	asIntArray	public inline fun UIntArray.asIntArray(): IntArray {
+1.3	kotlin.collections	fun	asList	public expect fun IntArray.asList(): List<Int>
+1.3	kotlin.collections	fun	asLongArray	public inline fun ULongArray.asLongArray(): LongArray {
+1.3	kotlin.collections	fun	asShortArray	public inline fun UShortArray.asShortArray(): ShortArray {
+1.3	kotlin.collections	fun	associateWith	public inline fun <V> IntArray.associateWith(valueSelector: (Int) -> V): Map<Int, V> {
+1.3	kotlin.collections	fun	associateWithTo	public inline fun <V, M : MutableMap<in Int, in V>> IntArray.associateWithTo(destination: M, valueSelector: (Int) -> V): M {
+1.3	kotlin.collections	fun	asUByteArray	public inline fun ByteArray.asUByteArray(): UByteArray {
+1.3	kotlin.collections	fun	asUIntArray	public inline fun IntArray.asUIntArray(): UIntArray {
+1.3	kotlin.collections	fun	asULongArray	public inline fun LongArray.asULongArray(): ULongArray {
+1.3	kotlin.collections	fun	asUShortArray	public inline fun ShortArray.asUShortArray(): UShortArray {
+1.3	kotlin.collections	fun	binarySearch	public fun IntArray.binarySearch(element: Int, fromIndex: Int = 0, toIndex: Int = size): Int {
+1.3	kotlin.collections	fun	build	internal fun <E> build(builder: MutableSet<E>): Set<E> {
+1.3	kotlin.collections	fun	buildListInternal	internal expect inline fun <E> buildListInternal(builderAction: MutableList<E>.() -> Unit): List<E>
+1.3	kotlin.collections	fun	buildMapInternal	internal expect inline fun <K, V> buildMapInternal(builderAction: MutableMap<K, V>.() -> Unit): Map<K, V>
+1.3	kotlin.collections	fun	buildSetInternal	internal expect inline fun <E> buildSetInternal(builderAction: MutableSet<E>.() -> Unit): Set<E>
+1.3	kotlin.collections	fun	checkCountOverflow	internal expect fun checkCountOverflow(count: Int): Int
+1.3	kotlin.collections	fun	checkIndexOverflow	internal expect fun checkIndexOverflow(index: Int): Int
+1.3	kotlin.collections	fun	component1	public inline operator fun IntArray.component1(): Int {
+1.3	kotlin.collections	fun	component2	public inline operator fun IntArray.component2(): Int {
+1.3	kotlin.collections	fun	component3	public inline operator fun IntArray.component3(): Int {
+1.3	kotlin.collections	fun	component4	public inline operator fun IntArray.component4(): Int {
+1.3	kotlin.collections	fun	component5	public inline operator fun IntArray.component5(): Int {
+1.3	kotlin.collections	fun	contentDeepEqualsImpl	internal fun <T> Array<out T>?.contentDeepEqualsImpl(other: Array<out T>?): Boolean {
+1.3	kotlin.collections	fun	contentDeepHashCodeImpl	internal fun <T> Array<out T>?.contentDeepHashCodeImpl(): Int =
+1.3	kotlin.collections	fun	contentDeepToStringImpl	internal fun <T> Array<out T>?.contentDeepToStringImpl(): String {
+1.3	kotlin.collections	fun	copyInto	public expect fun IntArray.copyInto(destination: IntArray, destinationOffset: Int = 0, startIndex: Int = 0, endIndex: Int = size): IntArray
+1.3	kotlin.collections	fun	copyOf	public expect fun IntArray.copyOf(): IntArray
+1.3	kotlin.collections	fun	copyOfRange	public expect fun IntArray.copyOfRange(fromIndex: Int, toIndex: Int): IntArray
+1.3	kotlin.collections	fun	copyOfRangeImpl	internal fun IntArray.copyOfRangeImpl(fromIndex: Int, toIndex: Int): IntArray {
+1.3	kotlin.collections	fun	copyOfRangeToIndexCheck	internal fun copyOfRangeToIndexCheck(toIndex: Int, size: Int) {
+1.3	kotlin.collections	fun	count	public inline fun IntArray.count(): Int {
+1.3	kotlin.collections	fun	createListBuilder	internal fun <E> createListBuilder(): MutableList<E> {
+1.3	kotlin.collections	fun	createMapBuilder	internal fun <K, V> createMapBuilder(): MutableMap<K, V> {
+1.3	kotlin.collections	fun	createSetBuilder	internal fun <E> createSetBuilder(): MutableSet<E> {
+1.3	kotlin.collections	fun	drop	public fun IntArray.drop(n: Int): List<Int> {
+1.3	kotlin.collections	fun	dropLast	public fun IntArray.dropLast(n: Int): List<Int> {
+1.3	kotlin.collections	fun	dropLastWhile	public inline fun <T> List<T>.dropLastWhile(predicate: (T) -> Boolean): List<T> {
+1.3	kotlin.collections	fun	dropWhile	public inline fun IntArray.dropWhile(predicate: (Int) -> Boolean): List<Int> {
+1.3	kotlin.collections	fun	elementAt	public expect fun IntArray.elementAt(index: Int): Int
+1.3	kotlin.collections	fun	elementAtOrElse	public fun <T> Iterable<T>.elementAtOrElse(index: Int, defaultValue: (Int) -> T): T {
+1.3	kotlin.collections	fun	elementAtOrNull	public fun <T> Iterable<T>.elementAtOrNull(index: Int): T? {
+1.3	kotlin.collections	fun	fill	public expect fun <T> MutableList<T>.fill(value: T): Unit
+1.3	kotlin.collections	fun	filter	public inline fun IntArray.filter(predicate: (Int) -> Boolean): List<Int> {
+1.3	kotlin.collections	fun	filterIndexed	public inline fun IntArray.filterIndexed(predicate: (index: Int, Int) -> Boolean): List<Int> {
+1.3	kotlin.collections	fun	filterIndexedTo	public inline fun <C : MutableCollection<in Int>> IntArray.filterIndexedTo(destination: C, predicate: (index: Int, Int) -> Boolean): C {
+1.3	kotlin.collections	fun	filterNot	public inline fun IntArray.filterNot(predicate: (Int) -> Boolean): List<Int> {
+1.3	kotlin.collections	fun	filterNotTo	public inline fun <C : MutableCollection<in Int>> IntArray.filterNotTo(destination: C, predicate: (Int) -> Boolean): C {
+1.3	kotlin.collections	fun	filterTo	public inline fun <C : MutableCollection<in Int>> IntArray.filterTo(destination: C, predicate: (Int) -> Boolean): C {
+1.3	kotlin.collections	fun	find	public inline fun IntArray.find(predicate: (Int) -> Boolean): Int? {
+1.3	kotlin.collections	fun	findLast	public inline fun <T> List<T>.findLast(predicate: (T) -> Boolean): T? {
+1.3	kotlin.collections	fun	first	public fun IntArray.first(): Int {
+1.3	kotlin.collections	fun	firstOrNull	public fun IntArray.firstOrNull(): Int? {
+1.3	kotlin.collections	fun	flatMap	public inline fun <R> IntArray.flatMap(transform: (Int) -> Iterable<R>): List<R> {
+1.3	kotlin.collections	fun	flatMapTo	public inline fun <R, C : MutableCollection<in R>> IntArray.flatMapTo(destination: C, transform: (Int) -> Iterable<R>): C {
+1.3	kotlin.collections	fun	fold	public inline fun <T, K, R> Grouping<T, K>.fold(
+1.3	kotlin.collections	fun	foldIndexed	public inline fun <R> IntArray.foldIndexed(initial: R, operation: (index: Int, acc: R, Int) -> R): R {
+1.3	kotlin.collections	fun	foldRight	public inline fun <R> IntArray.foldRight(initial: R, operation: (Int, acc: R) -> R): R {
+1.3	kotlin.collections	fun	foldRightIndexed	public inline fun <R> IntArray.foldRightIndexed(initial: R, operation: (index: Int, Int, acc: R) -> R): R {
+1.3	kotlin.collections	fun	forEach	public inline fun IntArray.forEach(action: (Int) -> Unit): Unit {
+1.3	kotlin.collections	fun	forEachIndexed	public inline fun IntArray.forEachIndexed(action: (index: Int, Int) -> Unit): Unit {
+1.3	kotlin.collections	fun	getOrElse	public inline fun <K, V> Map<K, V>.getOrElse(key: K, defaultValue: () -> V): V {
+1.3	kotlin.collections	fun	getOrNull	public fun IntArray.getOrNull(index: Int): Int? {
+1.3	kotlin.collections	fun	groupBy	public inline fun <K> IntArray.groupBy(keySelector: (Int) -> K): Map<K, List<Int>> {
+1.3	kotlin.collections	fun	groupByTo	public inline fun <K, M : MutableMap<in K, MutableList<Int>>> IntArray.groupByTo(destination: M, keySelector: (Int) -> K): M {
+1.3	kotlin.collections	fun	ifEmpty	public inline fun <C, R> C.ifEmpty(defaultValue: () -> R): R where C : Array<*>, C : R {
+1.3	kotlin.collections	fun	indexOf	public fun IntArray.indexOf(element: Int): Int {
+1.3	kotlin.collections	fun	indexOfFirst	public inline fun IntArray.indexOfFirst(predicate: (Int) -> Boolean): Int {
+1.3	kotlin.collections	fun	indexOfLast	public inline fun IntArray.indexOfLast(predicate: (Int) -> Boolean): Int {
+1.3	kotlin.collections	val	Int	public val size: Int
+1.3	kotlin.collections	val	IntRange	public val IntArray.indices: IntRange
+1.3	kotlin.collections	fun	isNullOrEmpty	public inline fun Array<*>?.isNullOrEmpty(): Boolean {
+1.3	kotlin.collections	fun	last	public fun IntArray.last(): Int {
+1.3	kotlin.collections	fun	lastIndexOf	public fun IntArray.lastIndexOf(element: Int): Int {
+1.3	kotlin.collections	fun	lastOrNull	public fun IntArray.lastOrNull(): Int? {
+1.3	kotlin.collections	fun	map	public inline fun <R> IntArray.map(transform: (Int) -> R): List<R> {
+1.3	kotlin.collections	fun	mapIndexed	public inline fun <R> IntArray.mapIndexed(transform: (index: Int, Int) -> R): List<R> {
+1.3	kotlin.collections	fun	mapIndexedTo	public inline fun <R, C : MutableCollection<in R>> IntArray.mapIndexedTo(destination: C, transform: (index: Int, Int) -> R): C {
+1.3	kotlin.collections	fun	mapTo	public inline fun <R, C : MutableCollection<in R>> IntArray.mapTo(destination: C, transform: (Int) -> R): C {
+1.3	kotlin.collections	fun	max	public fun IntArray.max(): Int {
+1.3	kotlin.collections	fun	maxBy	public inline fun <R : Comparable<R>> IntArray.maxBy(selector: (Int) -> R): Int {
+1.3	kotlin.collections	fun	maxWith	public fun IntArray.maxWith(comparator: Comparator<in Int>): Int {
+1.3	kotlin.collections	fun	min	public fun IntArray.min(): Int {
+1.3	kotlin.collections	fun	minBy	public inline fun <R : Comparable<R>> IntArray.minBy(selector: (Int) -> R): Int {
+1.3	kotlin.collections	fun	minWith	public fun IntArray.minWith(comparator: Comparator<in Int>): Int {
+1.3	kotlin.collections	fun	none	public fun IntArray.none(): Boolean {
+1.3	kotlin.collections	fun	plus	public operator fun <T> Set<T>.plus(element: T): Set<T> {
+1.3	kotlin.collections	fun	random	public inline fun IntArray.random(): Int {
+1.3	kotlin.collections	fun	reduce	public inline fun <S, T : S, K> Grouping<T, K>.reduce(
+1.3	kotlin.collections	fun	reduceIndexed	public inline fun IntArray.reduceIndexed(operation: (index: Int, acc: Int, Int) -> Int): Int {
+1.3	kotlin.collections	fun	reduceRight	public inline fun IntArray.reduceRight(operation: (Int, acc: Int) -> Int): Int {
+1.3	kotlin.collections	fun	reduceRightIndexed	public inline fun IntArray.reduceRightIndexed(operation: (index: Int, Int, acc: Int) -> Int): Int {
+1.3	kotlin.collections	fun	reverse	public fun IntArray.reverse(): Unit {
+1.3	kotlin.collections	fun	reversed	public fun IntArray.reversed(): List<Int> {
+1.3	kotlin.collections	fun	reversedArray	public fun IntArray.reversedArray(): IntArray {
+1.3	kotlin.collections	fun	shuffle	public fun IntArray.shuffle(): Unit {
+1.3	kotlin.collections	fun	shuffled	public expect fun <T> Iterable<T>.shuffled(): List<T>
+1.3	kotlin.collections	fun	single	public fun IntArray.single(): Int {
+1.3	kotlin.collections	fun	singleOrNull	public fun IntArray.singleOrNull(): Int? {
+1.3	kotlin.collections	fun	slice	public fun IntArray.slice(indices: IntRange): List<Int> {
+1.3	kotlin.collections	fun	sliceArray	public fun IntArray.sliceArray(indices: IntRange): IntArray {
+1.3	kotlin.collections	fun	sort	public fun UIntArray.sort(): Unit {
+1.3	kotlin.collections	fun	sortDescending	public fun IntArray.sortDescending(): Unit {
+1.3	kotlin.collections	fun	sorted	public fun IntArray.sorted(): List<Int> {
+1.3	kotlin.collections	fun	sortedArray	public fun IntArray.sortedArray(): IntArray {
+1.3	kotlin.collections	fun	sortedArrayDescending	public fun IntArray.sortedArrayDescending(): IntArray {
+1.3	kotlin.collections	fun	sortedDescending	public fun IntArray.sortedDescending(): List<Int> {
+1.3	kotlin.collections	fun	sum	public fun IntArray.sum(): Int {
+1.3	kotlin.collections	fun	sumBy	public inline fun IntArray.sumBy(selector: (Int) -> Int): Int {
+1.3	kotlin.collections	fun	sumByDouble	public inline fun IntArray.sumByDouble(selector: (Int) -> Double): Double {
+1.3	kotlin.collections	fun	take	public fun IntArray.take(n: Int): List<Int> {
+1.3	kotlin.collections	fun	takeLast	public fun IntArray.takeLast(n: Int): List<Int> {
+1.3	kotlin.collections	fun	takeLastWhile	public inline fun <T> List<T>.takeLastWhile(predicate: (T) -> Boolean): List<T> {
+1.3	kotlin.collections	fun	takeWhile	public inline fun IntArray.takeWhile(predicate: (Int) -> Boolean): List<Int> {
+1.3	kotlin.collections	fun	throwCountOverflow	internal fun throwCountOverflow() { throw ArithmeticException("Count overflow has happened.") }
+1.3	kotlin.collections	fun	throwIndexOverflow	internal fun throwIndexOverflow() { throw ArithmeticException("Index overflow has happened.") }
+1.3	kotlin.collections	fun	toByteArray	public fun Array<out Byte>.toByteArray(): ByteArray {
+1.3	kotlin.collections	fun	toIntArray	public fun Array<out Int>.toIntArray(): IntArray {
+1.3	kotlin.collections	fun	toLongArray	public fun Array<out Long>.toLongArray(): LongArray {
+1.3	kotlin.collections	fun	toShortArray	public fun Array<out Short>.toShortArray(): ShortArray {
+1.3	kotlin.collections	fun	toTypedArray	public fun UIntArray.toTypedArray(): Array<UInt> {
+1.3	kotlin.collections	fun	toUByteArray	public fun Array<out UByte>.toUByteArray(): UByteArray {
+1.3	kotlin.collections	fun	toUIntArray	public fun Array<out UInt>.toUIntArray(): UIntArray {
+1.3	kotlin.collections	fun	toULongArray	public fun Array<out ULong>.toULongArray(): ULongArray {
+1.3	kotlin.collections	fun	toUShortArray	public fun Array<out UShort>.toUShortArray(): UShortArray {
+1.3	kotlin.collections	fun	withIndex	public fun IntArray.withIndex(): Iterable<IndexedValue<Int>> {
+1.3	kotlin.collections	fun	zip	public infix fun IntArray.zip(other: IntArray): List<Pair<Int, Int>> {
+1.3	kotlin.contracts	interface	CallsInPlace	public interface CallsInPlace : Effect
+1.3	kotlin.contracts	interface	ConditionalEffect	public interface ConditionalEffect : Effect
+1.3	kotlin.contracts	fun	contract	public inline fun contract(builder: ContractBuilder.() -> Unit) { }
+1.3	kotlin.contracts	interface	ContractBuilder	public interface ContractBuilder {
+1.3	kotlin.contracts	interface	Effect	public interface Effect
+1.3	kotlin.contracts	class	ExperimentalContracts	public annotation class ExperimentalContracts
+1.3	kotlin.contracts	class	InvocationKind	public enum class InvocationKind {
+1.3	kotlin.contracts	interface	Returns	public interface Returns : SimpleEffect
+1.3	kotlin.contracts	interface	ReturnsNotNull	public interface ReturnsNotNull : SimpleEffect
+1.3	kotlin.contracts	interface	SimpleEffect	public interface SimpleEffect : Effect {
+1.3	kotlin.coroutines	class	AbstractCoroutineContextElement	public abstract class AbstractCoroutineContextElement(public override val key: Key<*>) : Element
+1.3	kotlin.coroutines	class	AbstractCoroutineContextKey	public abstract class AbstractCoroutineContextKey<B : Element, E : B>(
+1.3	kotlin.coroutines	class	CombinedContext	internal class CombinedContext(
+1.3	kotlin.coroutines	interface	Continuation	public interface Continuation<in T> {
+1.3	kotlin.coroutines	fun	Continuation	public inline fun <T> Continuation(
+1.3	kotlin.coroutines	interface	ContinuationInterceptor	public interface ContinuationInterceptor : CoroutineContext.Element {
+1.3	kotlin.coroutines	val	CoroutineContext	private val left: CoroutineContext,
+1.3	kotlin.coroutines	interface	CoroutineContext	public interface CoroutineContext {
+1.3	kotlin.coroutines	object	EmptyCoroutineContext	public object EmptyCoroutineContext : CoroutineContext, Serializable {
+1.3	kotlin.coroutines	fun	getPolymorphicElement	public fun <E : Element> Element.getPolymorphicElement(key: Key<E>): E? {
+1.3	kotlin.coroutines	fun	minusPolymorphicKey	public fun Element.minusPolymorphicKey(key: Key<*>): CoroutineContext {
+1.3	kotlin.coroutines	class	RestrictsSuspension	public annotation class RestrictsSuspension
+1.3	kotlin.coroutines	fun	resume	public inline fun <T> Continuation<T>.resume(value: T): Unit =
+1.3	kotlin.coroutines	fun	resumeWithException	public inline fun <T> Continuation<T>.resumeWithException(exception: Throwable): Unit =
+1.3	kotlin.coroutines	class	SafeContinuation	internal actual class SafeContinuation<in T>
+1.3	kotlin.coroutines	fun	suspendCoroutine	public suspend inline fun <T> suspendCoroutine(crossinline block: (Continuation<T>) -> Unit): T {
+1.3	kotlin.coroutines.intrinsics	class	CoroutineSingletons	internal enum class CoroutineSingletons { COROUTINE_SUSPENDED, UNDECIDED, RESUMED }
+1.3	kotlin.coroutines.intrinsics	fun	createCoroutineFromSuspendFunction	private inline fun <T> createCoroutineFromSuspendFunction(
+1.3	kotlin.coroutines.intrinsics	val	get	public val COROUTINE_SUSPENDED: Any get() = CoroutineSingletons.COROUTINE_SUSPENDED
+1.3	kotlin.coroutines.intrinsics	fun	intercepted	public expect fun <T> Continuation<T>.intercepted(): Continuation<T>
+1.3	kotlin.coroutines.intrinsics	fun	suspendCoroutineUninterceptedOrReturn	public suspend inline fun <T> suspendCoroutineUninterceptedOrReturn(crossinline block: (Continuation<T>) -> Any?): T {
+1.3	kotlin.coroutines.jvm.internal	class	BaseContinuationImpl	internal abstract class BaseContinuationImpl(
+1.3	kotlin.coroutines.jvm.internal	fun	boxBoolean	internal fun boxBoolean(primitive: Boolean): java.lang.Boolean = java.lang.Boolean.valueOf(primitive) as java.lang.Boolean
+1.3	kotlin.coroutines.jvm.internal	fun	boxByte	internal fun boxByte(primitive: Byte): java.lang.Byte = java.lang.Byte.valueOf(primitive) as java.lang.Byte
+1.3	kotlin.coroutines.jvm.internal	fun	boxChar	internal fun boxChar(primitive: Char): java.lang.Character = java.lang.Character(primitive)
+1.3	kotlin.coroutines.jvm.internal	fun	boxDouble	internal fun boxDouble(primitive: Double): java.lang.Double = java.lang.Double(primitive)
+1.3	kotlin.coroutines.jvm.internal	fun	boxFloat	internal fun boxFloat(primitive: Float): java.lang.Float = java.lang.Float(primitive)
+1.3	kotlin.coroutines.jvm.internal	fun	boxInt	internal fun boxInt(primitive: Int): java.lang.Integer = java.lang.Integer(primitive)
+1.3	kotlin.coroutines.jvm.internal	fun	boxLong	internal fun boxLong(primitive: Long): java.lang.Long = java.lang.Long(primitive)
+1.3	kotlin.coroutines.jvm.internal	fun	boxShort	internal fun boxShort(primitive: Short): java.lang.Short = java.lang.Short(primitive)
+1.3	kotlin.coroutines.jvm.internal	class	ContinuationImpl	internal abstract class ContinuationImpl(
+1.3	kotlin.coroutines.jvm.internal	interface	CoroutineStackFrame	public interface CoroutineStackFrame {
+1.3	kotlin.coroutines.jvm.internal	class	DebugMetadata	internal annotation class DebugMetadata(
+1.3	kotlin.coroutines.jvm.internal	fun	getSpilledVariableFieldMapping	internal fun BaseContinuationImpl.getSpilledVariableFieldMapping(): Array<String>? {
+1.3	kotlin.coroutines.jvm.internal	fun	getStackTraceElementImpl	internal fun BaseContinuationImpl.getStackTraceElementImpl(): StackTraceElement? {
+1.3	kotlin.coroutines.jvm.internal	fun	probeCoroutineCreated	internal fun <T> probeCoroutineCreated(completion: Continuation<T>): Continuation<T> {
+1.3	kotlin.coroutines.jvm.internal	fun	probeCoroutineResumed	internal fun probeCoroutineResumed(frame: Continuation<*>) {
+1.3	kotlin.coroutines.jvm.internal	fun	probeCoroutineSuspended	internal fun probeCoroutineSuspended(frame: Continuation<*>) {
+1.3	kotlin.coroutines.jvm.internal	class	RestrictedContinuationImpl	internal abstract class RestrictedContinuationImpl(
+1.3	kotlin.coroutines.jvm.internal	class	RestrictedSuspendLambda	internal abstract class RestrictedSuspendLambda(
+1.3	kotlin.coroutines.jvm.internal	fun	runSuspend	internal fun runSuspend(block: suspend () -> Unit) {
+1.3	kotlin.coroutines.jvm.internal	interface	SuspendFunction	internal interface SuspendFunction
+1.3	kotlin.coroutines.jvm.internal	class	SuspendLambda	internal abstract class SuspendLambda(
+1.3	kotlin.experimental	class	ExperimentalTypeInference	public annotation class ExperimentalTypeInference
+1.3	kotlin.internal	fun	getProgressionLastElement	internal fun getProgressionLastElement(start: Int, end: Int, step: Int): Int = when {
+1.3	kotlin.io	fun	readBytes	public fun InputStream.readBytes(): ByteArray {
+1.3	kotlin.jvm.functions	interface	FunctionN	public interface FunctionN<out R> : Function<R>, FunctionBase<R> {
+1.3	kotlin.jvm.internal	object	BooleanCompanionObject	internal object BooleanCompanionObject {}
+1.3	kotlin.jvm.internal	val	Char	const val MIN_VALUE: Char = '\u0000'
+1.3	kotlin.jvm.internal	val	Int	public val arity: Int
+1.3	kotlin.random	fun	asJavaRandom	public fun Random.asJavaRandom(): java.util.Random =
+1.3	kotlin.random	fun	asKotlinRandom	public fun java.util.Random.asKotlinRandom(): Random =
+1.3	kotlin.random	fun	nextInt	public open fun nextInt(): Int = nextBits(32)
+1.3	kotlin.random	fun	nextLong	public open fun nextLong(from: Long, until: Long): Long {
+1.3	kotlin.random	fun	nextUBytes	public fun Random.nextUBytes(array: UByteArray): UByteArray {
+1.3	kotlin.random	class	Random	public abstract class Random {
+1.3	kotlin.random	fun	Random	public fun Random(seed: Int): Random = XorWowRandom(seed, seed.shr(31))
+1.3	kotlin.ranges	fun	contains	public operator fun UIntRange.contains(value: UByte): Boolean {
+1.3	kotlin.ranges	fun	random	public inline fun IntRange.random(): Int {
+1.3	kotlin.ranges	class	UIntProgressionIterator	private class UIntProgressionIterator(first: UInt, last: UInt, step: Int) : Iterator<UInt> {
+1.3	kotlin.ranges	class	ULongProgressionIterator	private class ULongProgressionIterator(first: ULong, last: ULong, step: Long) : Iterator<ULong> {
+1.3	kotlin.reflect	val	Boolean	public val isFun: Boolean
+1.3	kotlin.sequences	fun	associateWith	public inline fun <K, V> Sequence<K>.associateWith(valueSelector: (K) -> V): Map<K, V> {
+1.3	kotlin.sequences	fun	associateWithTo	public inline fun <K, V, M : MutableMap<in K, in V>> Sequence<K>.associateWithTo(destination: M, valueSelector: (K) -> V): M {
+1.3	kotlin.sequences	fun	ifEmpty	public fun <T> Sequence<T>.ifEmpty(defaultValue: () -> Sequence<T>): Sequence<T> = sequence {
+1.3	kotlin.sequences	fun	iterator	public operator fun iterator(): Iterator<T>
+1.3	kotlin.sequences	fun	orEmpty	public inline fun <T> Sequence<T>?.orEmpty(): Sequence<T> = this ?: emptySequence()
+1.3	kotlin.sequences	fun	sequence	public fun <T> sequence(@BuilderInference block: suspend SequenceScope<T>.() -> Unit): Sequence<T> = Sequence { iterator(block) }
+1.3	kotlin.sequences	class	SequenceScope	public abstract class SequenceScope<in T> internal constructor() {
+1.3	kotlin.text	fun	append	public fun append(value: Char): Appendable
+1.3	kotlin.text	fun	associateWith	public inline fun <V> CharSequence.associateWith(valueSelector: (Char) -> V): Map<Char, V> {
+1.3	kotlin.text	fun	associateWithTo	public inline fun <V, M : MutableMap<in Char, in V>> CharSequence.associateWithTo(destination: M, valueSelector: (Char) -> V): M {
+1.3	kotlin.text	fun	capacity	public fun capacity(): Int
+1.3	kotlin.text	fun	clear	public expect fun StringBuilder.clear(): StringBuilder
+1.3	kotlin.text	fun	ifBlank	public inline fun <C, R> C.ifBlank(defaultValue: () -> R): R where C : CharSequence, C : R {
+1.3	kotlin.text	fun	ifEmpty	public inline fun <C, R> C.ifEmpty(defaultValue: () -> R): R where C : CharSequence, C : R {
+1.3	kotlin.text	fun	random	public inline fun CharSequence.random(): Char {
+1.3	kotlin.time	class	AbstractDoubleTimeSource	public abstract class AbstractDoubleTimeSource(protected val unit: DurationUnit) : TimeSource.WithComparableMarks {
+1.3	kotlin.time	fun	convertDurationUnit	internal expect fun convertDurationUnit(value: Long, sourceUnit: DurationUnit, targetUnit: DurationUnit): Long
+1.3	kotlin.time	class	ExperimentalTime	public annotation class ExperimentalTime
+1.3	kotlin.time	object	MonotonicTimeSource	internal expect object MonotonicTimeSource : TimeSource.WithComparableMarks {
+1.3	kotlin.time	fun	shortName	internal fun DurationUnit.shortName(): String = when (this) {
+1.4	kotlin	fun	addSuppressed	public expect fun Throwable.addSuppressed(exception: Throwable)
+1.4	kotlin	fun	countLeadingZeroBits	public expect fun Int.countLeadingZeroBits(): Int
+1.4	kotlin	fun	countOneBits	public expect fun Int.countOneBits(): Int
+1.4	kotlin	fun	countTrailingZeroBits	public expect fun Int.countTrailingZeroBits(): Int
+1.4	kotlin	class	DeprecatedSinceKotlin	public annotation class DeprecatedSinceKotlin(
+1.4	kotlin	fun	getValue	public inline operator fun <V> KProperty0<V>.getValue(thisRef: Any?, property: KProperty<*>): V {
+1.4	kotlin	val	Int	val kind: Int = 1,
+1.4	kotlin	class	KotlinNothingValueException	internal class KotlinNothingValueException : RuntimeException {
+1.4	kotlin	val	List	public expect val Throwable.suppressedExceptions: List<Throwable>
+1.4	kotlin	class	OverloadResolutionByLambdaReturnType	public annotation class OverloadResolutionByLambdaReturnType
+1.4	kotlin	fun	printStackTrace	public expect fun Throwable.printStackTrace(): Unit
+1.4	kotlin	fun	setValue	public inline operator fun <V> KMutableProperty0<V>.setValue(thisRef: Any?, property: KProperty<*>, value: V) {
+1.4	kotlin	fun	stackTraceToString	public expect fun Throwable.stackTraceToString(): String
+1.4	kotlin	fun	takeHighestOneBit	public expect fun Int.takeHighestOneBit(): Int
+1.4	kotlin	fun	takeLowestOneBit	public expect fun Int.takeLowestOneBit(): Int
+1.4	kotlin	class	Throws	public expect annotation class Throws(vararg val exceptionClasses: KClass<out Throwable>)
+1.4	kotlin	typealias	Throws	public actual typealias Throws = kotlin.jvm.Throws
+1.4	kotlin.collections	class	ArrayDeque	public class ArrayDeque<E> : AbstractMutableList<E> {
+1.4	kotlin.collections	fun	associateWith	public inline fun <V> IntArray.associateWith(valueSelector: (Int) -> V): Map<Int, V> {
+1.4	kotlin.collections	fun	associateWithTo	public inline fun <V, M : MutableMap<in Int, in V>> IntArray.associateWithTo(destination: M, valueSelector: (Int) -> V): M {
+1.4	kotlin.collections	fun	contentDeepEquals	public expect infix fun <T> Array<out T>.contentDeepEquals(other: Array<out T>): Boolean
+1.4	kotlin.collections	fun	contentDeepHashCode	public expect fun <T> Array<out T>.contentDeepHashCode(): Int
+1.4	kotlin.collections	fun	contentDeepToString	public expect fun <T> Array<out T>.contentDeepToString(): String
+1.4	kotlin.collections	fun	contentEquals	public infix fun UIntArray?.contentEquals(other: UIntArray?): Boolean {
+1.4	kotlin.collections	fun	contentHashCode	public fun UIntArray?.contentHashCode(): Int {
+1.4	kotlin.collections	fun	contentToString	public fun UIntArray?.contentToString(): String {
+1.4	kotlin.collections	fun	flatMap	public inline fun <R> IntArray.flatMap(transform: (Int) -> Iterable<R>): List<R> {
+1.4	kotlin.collections	fun	flatMapIndexed	public inline fun <R> IntArray.flatMapIndexed(transform: (index: Int, Int) -> Iterable<R>): List<R> {
+1.4	kotlin.collections	fun	flatMapIndexedTo	public inline fun <R, C : MutableCollection<in R>> IntArray.flatMapIndexedTo(destination: C, transform: (index: Int, Int) -> Iterable<R>): C {
+1.4	kotlin.collections	fun	flatMapTo	public inline fun <R, C : MutableCollection<in R>> IntArray.flatMapTo(destination: C, transform: (Int) -> Iterable<R>): C {
+1.4	kotlin.collections	fun	maxByOrNull	public inline fun <R : Comparable<R>> IntArray.maxByOrNull(selector: (Int) -> R): Int? {
+1.4	kotlin.collections	fun	maxOf	public inline fun IntArray.maxOf(selector: (Int) -> Float): Float {
+1.4	kotlin.collections	fun	maxOfOrNull	public inline fun IntArray.maxOfOrNull(selector: (Int) -> Float): Float? {
+1.4	kotlin.collections	fun	maxOfWith	public inline fun <R> IntArray.maxOfWith(comparator: Comparator<in R>, selector: (Int) -> R): R {
+1.4	kotlin.collections	fun	maxOfWithOrNull	public inline fun <R> IntArray.maxOfWithOrNull(comparator: Comparator<in R>, selector: (Int) -> R): R? {
+1.4	kotlin.collections	fun	maxOrNull	public fun IntArray.maxOrNull(): Int? {
+1.4	kotlin.collections	fun	maxWithOrNull	public fun IntArray.maxWithOrNull(comparator: Comparator<in Int>): Int? {
+1.4	kotlin.collections	fun	minByOrNull	public inline fun <R : Comparable<R>> IntArray.minByOrNull(selector: (Int) -> R): Int? {
+1.4	kotlin.collections	fun	minOf	public inline fun IntArray.minOf(selector: (Int) -> Float): Float {
+1.4	kotlin.collections	fun	minOfOrNull	public inline fun IntArray.minOfOrNull(selector: (Int) -> Float): Float? {
+1.4	kotlin.collections	fun	minOfWith	public inline fun <R> IntArray.minOfWith(comparator: Comparator<in R>, selector: (Int) -> R): R {
+1.4	kotlin.collections	fun	minOfWithOrNull	public inline fun <R> IntArray.minOfWithOrNull(comparator: Comparator<in R>, selector: (Int) -> R): R? {
+1.4	kotlin.collections	fun	minOrNull	public fun IntArray.minOrNull(): Int? {
+1.4	kotlin.collections	fun	minWithOrNull	public fun IntArray.minWithOrNull(comparator: Comparator<in Int>): Int? {
+1.4	kotlin.collections	fun	onEach	public inline fun IntArray.onEach(action: (Int) -> Unit): IntArray {
+1.4	kotlin.collections	fun	onEachIndexed	public inline fun IntArray.onEachIndexed(action: (index: Int, Int) -> Unit): IntArray {
+1.4	kotlin.collections	fun	randomOrNull	public inline fun IntArray.randomOrNull(): Int? {
+1.4	kotlin.collections	fun	reduceIndexedOrNull	public inline fun IntArray.reduceIndexedOrNull(operation: (index: Int, acc: Int, Int) -> Int): Int? {
+1.4	kotlin.collections	fun	reduceOrNull	public inline fun IntArray.reduceOrNull(operation: (acc: Int, Int) -> Int): Int? {
+1.4	kotlin.collections	fun	reduceRightIndexedOrNull	public inline fun IntArray.reduceRightIndexedOrNull(operation: (index: Int, Int, acc: Int) -> Int): Int? {
+1.4	kotlin.collections	fun	reduceRightOrNull	public inline fun IntArray.reduceRightOrNull(operation: (Int, acc: Int) -> Int): Int? {
+1.4	kotlin.collections	fun	removeFirst	fun removeFirst(n: Int) {
+1.4	kotlin.collections	fun	removeFirstOrNull	public fun removeFirstOrNull(): E? = if (isEmpty()) null else removeFirst()
+1.4	kotlin.collections	fun	removeLast	public fun removeLast(): E {
+1.4	kotlin.collections	fun	removeLastOrNull	public fun removeLastOrNull(): E? = if (isEmpty()) null else removeLast()
+1.4	kotlin.collections	fun	reverse	public fun IntArray.reverse(): Unit {
+1.4	kotlin.collections	fun	runningFold	public inline fun <R> IntArray.runningFold(initial: R, operation: (acc: R, Int) -> R): List<R> {
+1.4	kotlin.collections	fun	runningFoldIndexed	public inline fun <R> IntArray.runningFoldIndexed(initial: R, operation: (index: Int, acc: R, Int) -> R): List<R> {
+1.4	kotlin.collections	fun	runningReduce	public inline fun IntArray.runningReduce(operation: (acc: Int, Int) -> Int): List<Int> {
+1.4	kotlin.collections	fun	runningReduceIndexed	public inline fun IntArray.runningReduceIndexed(operation: (index: Int, acc: Int, Int) -> Int): List<Int> {
+1.4	kotlin.collections	fun	scan	public inline fun <R> IntArray.scan(initial: R, operation: (acc: R, Int) -> R): List<R> {
+1.4	kotlin.collections	fun	scanIndexed	public inline fun <R> IntArray.scanIndexed(initial: R, operation: (index: Int, acc: R, Int) -> R): List<R> {
+1.4	kotlin.collections	fun	setOfNotNull	public fun <T : Any> setOfNotNull(vararg elements: T?): Set<T> {
+1.4	kotlin.collections	fun	shuffle	public fun IntArray.shuffle(): Unit {
+1.4	kotlin.collections	fun	sort	public fun UIntArray.sort(): Unit {
+1.4	kotlin.collections	fun	sortDescending	public fun IntArray.sortDescending(): Unit {
+1.4	kotlin.collections	fun	sortedMapOf	public fun <K : Comparable<K>, V> sortedMapOf(vararg pairs: Pair<K, V>): SortedMap<K, V> =
+1.4	kotlin.collections	fun	sumOf	public inline fun IntArray.sumOf(selector: (Int) -> Int): Int {
+1.4	kotlin.comparisons	fun	maxOf	public fun maxOf(a: UInt, b: UInt): UInt {
+1.4	kotlin.comparisons	fun	minOf	public fun minOf(a: UInt, b: UInt): UInt {
+1.4	kotlin.coroutines.cancellation	class	CancellationException	public expect open class CancellationException : IllegalStateException {
+1.4	kotlin.coroutines.cancellation	fun	CancellationException	public expect fun CancellationException(cause: Throwable?): CancellationException
+1.4	kotlin.coroutines.cancellation	typealias	CancellationException	public actual typealias CancellationException = java.util.concurrent.CancellationException
+1.4	kotlin.io.path	class	ExperimentalPathApi	public annotation class ExperimentalPathApi
+1.4	kotlin.io.path	val	String	public val Path.name: String
+1.4	kotlin.js	class	ExperimentalJsExport	public annotation class ExperimentalJsExport
+1.4	kotlin.js	class	JsExport	public expect annotation class JsExport() {
+1.4	kotlin.jvm	class	JvmDefaultWithoutCompatibility	public annotation class JvmDefaultWithoutCompatibility
+1.4	kotlin.jvm.internal	val	Double	const val NaN: Double = java.lang.Double.NaN
+1.4	kotlin.jvm.internal	val	Float	const val NaN: Float = java.lang.Float.NaN
+1.4	kotlin.jvm.internal	val	Int	public val arity: Int
+1.4	kotlin.jvm.internal	interface	KTypeBase	public interface KTypeBase : KType {
+1.4	kotlin.jvm.internal	class	TypeParameterReference	public class TypeParameterReference(
+1.4	kotlin.properties	fun	PropertyDelegateProvider	public fun interface PropertyDelegateProvider<in T, out D> {
+1.4	kotlin.ranges	fun	randomOrNull	public inline fun IntRange.randomOrNull(): Int? {
+1.4	kotlin.reflect	val	Boolean	public val isFun: Boolean
+1.4	kotlin.reflect	fun	cast	public fun <T : Any> KClass<T>.cast(value: Any?): T {
+1.4	kotlin.reflect	fun	safeCast	public fun <T : Any> KClass<T>.safeCast(value: Any?): T? {
+1.4	kotlin.reflect	val	Type	private val ownerType: Type?,
+1.4	kotlin.sequences	fun	flatMap	public fun <T, R> Sequence<T>.flatMap(transform: (T) -> Iterable<R>): Sequence<R> {
+1.4	kotlin.sequences	fun	flatMapIndexed	public fun <T, R> Sequence<T>.flatMapIndexed(transform: (index: Int, T) -> Iterable<R>): Sequence<R> {
+1.4	kotlin.sequences	fun	flatMapIndexedTo	public inline fun <T, R, C : MutableCollection<in R>> Sequence<T>.flatMapIndexedTo(destination: C, transform: (index: Int, T) -> Iterable<R>): C {
+1.4	kotlin.sequences	fun	flatMapTo	public inline fun <T, R, C : MutableCollection<in R>> Sequence<T>.flatMapTo(destination: C, transform: (T) -> Iterable<R>): C {
+1.4	kotlin.sequences	fun	maxByOrNull	public inline fun <T, R : Comparable<R>> Sequence<T>.maxByOrNull(selector: (T) -> R): T? {
+1.4	kotlin.sequences	fun	maxOf	public inline fun <T> Sequence<T>.maxOf(selector: (T) -> Float): Float {
+1.4	kotlin.sequences	fun	maxOfOrNull	public inline fun <T> Sequence<T>.maxOfOrNull(selector: (T) -> Float): Float? {
+1.4	kotlin.sequences	fun	maxOfWith	public inline fun <T, R> Sequence<T>.maxOfWith(comparator: Comparator<in R>, selector: (T) -> R): R {
+1.4	kotlin.sequences	fun	maxOfWithOrNull	public inline fun <T, R> Sequence<T>.maxOfWithOrNull(comparator: Comparator<in R>, selector: (T) -> R): R? {
+1.4	kotlin.sequences	fun	maxOrNull	public fun Sequence<Float>.maxOrNull(): Float? {
+1.4	kotlin.sequences	fun	maxWithOrNull	public fun <T> Sequence<T>.maxWithOrNull(comparator: Comparator<in T>): T? {
+1.4	kotlin.sequences	fun	minByOrNull	public inline fun <T, R : Comparable<R>> Sequence<T>.minByOrNull(selector: (T) -> R): T? {
+1.4	kotlin.sequences	fun	minOf	public inline fun <T> Sequence<T>.minOf(selector: (T) -> Float): Float {
+1.4	kotlin.sequences	fun	minOfOrNull	public inline fun <T> Sequence<T>.minOfOrNull(selector: (T) -> Float): Float? {
+1.4	kotlin.sequences	fun	minOfWith	public inline fun <T, R> Sequence<T>.minOfWith(comparator: Comparator<in R>, selector: (T) -> R): R {
+1.4	kotlin.sequences	fun	minOfWithOrNull	public inline fun <T, R> Sequence<T>.minOfWithOrNull(comparator: Comparator<in R>, selector: (T) -> R): R? {
+1.4	kotlin.sequences	fun	minOrNull	public fun Sequence<Float>.minOrNull(): Float? {
+1.4	kotlin.sequences	fun	minWithOrNull	public fun <T> Sequence<T>.minWithOrNull(comparator: Comparator<in T>): T? {
+1.4	kotlin.sequences	fun	onEachIndexed	public fun <T> Sequence<T>.onEachIndexed(action: (index: Int, T) -> Unit): Sequence<T> {
+1.4	kotlin.sequences	fun	reduceIndexedOrNull	public inline fun <S, T : S> Sequence<T>.reduceIndexedOrNull(operation: (index: Int, acc: S, T) -> S): S? {
+1.4	kotlin.sequences	fun	reduceOrNull	public inline fun <S, T : S> Sequence<T>.reduceOrNull(operation: (acc: S, T) -> S): S? {
+1.4	kotlin.sequences	fun	runningFold	public fun <T, R> Sequence<T>.runningFold(initial: R, operation: (acc: R, T) -> R): Sequence<R> {
+1.4	kotlin.sequences	fun	runningFoldIndexed	public fun <T, R> Sequence<T>.runningFoldIndexed(initial: R, operation: (index: Int, acc: R, T) -> R): Sequence<R> {
+1.4	kotlin.sequences	fun	runningReduce	public fun <S, T : S> Sequence<T>.runningReduce(operation: (acc: S, T) -> S): Sequence<S> {
+1.4	kotlin.sequences	fun	runningReduceIndexed	public fun <S, T : S> Sequence<T>.runningReduceIndexed(operation: (index: Int, acc: S, T) -> S): Sequence<S> {
+1.4	kotlin.sequences	fun	scan	public fun <T, R> Sequence<T>.scan(initial: R, operation: (acc: R, T) -> R): Sequence<R> {
+1.4	kotlin.sequences	fun	scanIndexed	public fun <T, R> Sequence<T>.scanIndexed(initial: R, operation: (index: Int, acc: R, T) -> R): Sequence<R> {
+1.4	kotlin.sequences	fun	shuffled	public fun <T> Sequence<T>.shuffled(): Sequence<T> = shuffled(Random)
+1.4	kotlin.sequences	fun	sumOf	public inline fun <T> Sequence<T>.sumOf(selector: (T) -> Int): Int {
+1.4	kotlin.text	fun	append	public fun append(value: Char): Appendable
+1.4	kotlin.text	fun	appendLine	public inline fun Appendable.appendLine(): Appendable = append('\n')
+1.4	kotlin.text	fun	appendRange	public fun <T : Appendable> T.appendRange(value: CharSequence, startIndex: Int, endIndex: Int): T {
+1.4	kotlin.text	fun	capitalize	public expect fun String.capitalize(): String
+1.4	kotlin.text	class	CharacterCodingException	public expect open class CharacterCodingException() : Exception
+1.4	kotlin.text	typealias	CharacterCodingException	public actual typealias CharacterCodingException = java.nio.charset.CharacterCodingException
+1.4	kotlin.text	fun	concatToString	public expect fun CharArray.concatToString(): String
+1.4	kotlin.text	fun	decapitalize	public expect fun String.decapitalize(): String
+1.4	kotlin.text	fun	decodeToString	public expect fun ByteArray.decodeToString(
+1.4	kotlin.text	fun	deleteAt	public expect fun StringBuilder.deleteAt(index: Int): StringBuilder
+1.4	kotlin.text	fun	deleteRange	public expect fun StringBuilder.deleteRange(startIndex: Int, endIndex: Int): StringBuilder
+1.4	kotlin.text	fun	encodeToByteArray	public expect fun String.encodeToByteArray(
+1.4	kotlin.text	fun	ensureCapacity	public fun ensureCapacity(minimumCapacity: Int)
+1.4	kotlin.text	fun	flatMapIndexed	public inline fun <R> CharSequence.flatMapIndexed(transform: (index: Int, Char) -> Iterable<R>): List<R> {
+1.4	kotlin.text	fun	flatMapIndexedTo	public inline fun <R, C : MutableCollection<in R>> CharSequence.flatMapIndexedTo(destination: C, transform: (index: Int, Char) -> Iterable<R>): C {
+1.4	kotlin.text	fun	format	public inline fun String.format(vararg args: Any?): String = java.lang.String.format(this, *args)
+1.4	kotlin.text	fun	indexOf	public fun indexOf(string: String): Int
+1.4	kotlin.text	fun	insert	public fun insert(index: Int, value: Int): StringBuilder
+1.4	kotlin.text	fun	insertRange	public expect fun StringBuilder.insertRange(index: Int, value: CharArray, startIndex: Int, endIndex: Int): StringBuilder
+1.4	kotlin.text	fun	lastIndexOf	public fun lastIndexOf(string: String): Int
+1.4	kotlin.text	fun	maxByOrNull	public inline fun <R : Comparable<R>> CharSequence.maxByOrNull(selector: (Char) -> R): Char? {
+1.4	kotlin.text	fun	maxOf	public inline fun CharSequence.maxOf(selector: (Char) -> Float): Float {
+1.4	kotlin.text	fun	maxOfOrNull	public inline fun CharSequence.maxOfOrNull(selector: (Char) -> Float): Float? {
+1.4	kotlin.text	fun	maxOfWith	public inline fun <R> CharSequence.maxOfWith(comparator: Comparator<in R>, selector: (Char) -> R): R {
+1.4	kotlin.text	fun	maxOfWithOrNull	public inline fun <R> CharSequence.maxOfWithOrNull(comparator: Comparator<in R>, selector: (Char) -> R): R? {
+1.4	kotlin.text	fun	maxOrNull	public fun CharSequence.maxOrNull(): Char? {
+1.4	kotlin.text	fun	maxWithOrNull	public fun CharSequence.maxWithOrNull(comparator: Comparator<in Char>): Char? {
+1.4	kotlin.text	fun	minByOrNull	public inline fun <R : Comparable<R>> CharSequence.minByOrNull(selector: (Char) -> R): Char? {
+1.4	kotlin.text	fun	minOf	public inline fun CharSequence.minOf(selector: (Char) -> Float): Float {
+1.4	kotlin.text	fun	minOfOrNull	public inline fun CharSequence.minOfOrNull(selector: (Char) -> Float): Float? {
+1.4	kotlin.text	fun	minOfWith	public inline fun <R> CharSequence.minOfWith(comparator: Comparator<in R>, selector: (Char) -> R): R {
+1.4	kotlin.text	fun	minOfWithOrNull	public inline fun <R> CharSequence.minOfWithOrNull(comparator: Comparator<in R>, selector: (Char) -> R): R? {
+1.4	kotlin.text	fun	minOrNull	public fun CharSequence.minOrNull(): Char? {
+1.4	kotlin.text	fun	minWithOrNull	public fun CharSequence.minWithOrNull(comparator: Comparator<in Char>): Char? {
+1.4	kotlin.text	fun	onEachIndexed	public inline fun <S : CharSequence> S.onEachIndexed(action: (index: Int, Char) -> Unit): S {
+1.4	kotlin.text	fun	randomOrNull	public inline fun CharSequence.randomOrNull(): Char? {
+1.4	kotlin.text	fun	reduceIndexedOrNull	public inline fun CharSequence.reduceIndexedOrNull(operation: (index: Int, acc: Char, Char) -> Char): Char? {
+1.4	kotlin.text	fun	reduceOrNull	public inline fun CharSequence.reduceOrNull(operation: (acc: Char, Char) -> Char): Char? {
+1.4	kotlin.text	fun	reduceRightIndexedOrNull	public inline fun CharSequence.reduceRightIndexedOrNull(operation: (index: Int, Char, acc: Char) -> Char): Char? {
+1.4	kotlin.text	fun	reduceRightOrNull	public inline fun CharSequence.reduceRightOrNull(operation: (Char, acc: Char) -> Char): Char? {
+1.4	kotlin.text	fun	runningFold	public inline fun <R> CharSequence.runningFold(initial: R, operation: (acc: R, Char) -> R): List<R> {
+1.4	kotlin.text	fun	runningFoldIndexed	public inline fun <R> CharSequence.runningFoldIndexed(initial: R, operation: (index: Int, acc: R, Char) -> R): List<R> {
+1.4	kotlin.text	fun	runningReduce	public inline fun CharSequence.runningReduce(operation: (acc: Char, Char) -> Char): List<Char> {
+1.4	kotlin.text	fun	runningReduceIndexed	public inline fun CharSequence.runningReduceIndexed(operation: (index: Int, acc: Char, Char) -> Char): List<Char> {
+1.4	kotlin.text	fun	scan	public inline fun <R> CharSequence.scan(initial: R, operation: (acc: R, Char) -> R): List<R> {
+1.4	kotlin.text	fun	scanIndexed	public inline fun <R> CharSequence.scanIndexed(initial: R, operation: (index: Int, acc: R, Char) -> R): List<R> {
+1.4	kotlin.text	fun	set	public expect operator fun StringBuilder.set(index: Int, value: Char)
+1.4	kotlin.text	fun	setLength	public fun setLength(newLength: Int)
+1.4	kotlin.text	fun	setRange	public expect fun StringBuilder.setRange(startIndex: Int, endIndex: Int, value: String): StringBuilder
+1.4	kotlin.text	fun	substring	public fun substring(startIndex: Int): String
+1.4	kotlin.text	fun	sumOf	public inline fun CharSequence.sumOf(selector: (Char) -> Int): Int {
+1.4	kotlin.text	fun	toBoolean	public expect fun String?.toBoolean(): Boolean
+1.4	kotlin.text	fun	toCharArray	public expect fun String.toCharArray(
+1.4	kotlin.text	fun	trimToSize	public fun trimToSize()
+1.5	kotlin	fun	Char	public inline fun Char(code: Int): Char {
+1.5	kotlin	fun	countLeadingZeroBits	public expect fun Int.countLeadingZeroBits(): Int
+1.5	kotlin	fun	countOneBits	public expect fun Int.countOneBits(): Int
+1.5	kotlin	fun	countTrailingZeroBits	public expect fun Int.countTrailingZeroBits(): Int
+1.5	kotlin	fun	floorDiv	public inline fun Int.floorDiv(other: Int): Int {
+1.5	kotlin	val	get	public inline val Char.code: Int get() = this.toInt()
+1.5	kotlin	fun	mod	public inline fun Int.mod(other: Int): Int {
+1.5	kotlin	fun	takeHighestOneBit	public expect fun Int.takeHighestOneBit(): Int
+1.5	kotlin	fun	takeLowestOneBit	public expect fun Int.takeLowestOneBit(): Int
+1.5	kotlin	fun	toUByte	public inline fun toUByte(): UByte = this
+1.5	kotlin	fun	toUInt	public inline fun toUInt(): UInt = this
+1.5	kotlin	fun	toULong	public inline fun toULong(): ULong = this
+1.5	kotlin	fun	toUShort	public inline fun toUShort(): UShort = this
+1.5	kotlin	class	UByte	public value class UByte @kotlin.internal.IntrinsicConstEvaluation @PublishedApi internal constructor(@PublishedApi internal val data: Byte) : Comparable<UByte> {
+1.5	kotlin	class	UInt	public value class UInt @kotlin.internal.IntrinsicConstEvaluation @PublishedApi internal constructor(@PublishedApi internal val data: Int) : Comparable<UInt> {
+1.5	kotlin	class	ULong	public value class ULong @kotlin.internal.IntrinsicConstEvaluation @PublishedApi internal constructor(@PublishedApi internal val data: Long) : Comparable<ULong> {
+1.5	kotlin	class	UShort	public value class UShort @kotlin.internal.IntrinsicConstEvaluation @PublishedApi internal constructor(@PublishedApi internal val data: Short) : Comparable<UShort> {
+1.5	kotlin.collections	fun	firstNotNullOf	public inline fun <T, R : Any> Iterable<T>.firstNotNullOf(transform: (T) -> R?): R {
+1.5	kotlin.collections	fun	firstNotNullOfOrNull	public inline fun <T, R : Any> Iterable<T>.firstNotNullOfOrNull(transform: (T) -> R?): R? {
+1.5	kotlin.collections	fun	sum	public fun IntArray.sum(): Int {
+1.5	kotlin.collections	fun	sumOf	public inline fun IntArray.sumOf(selector: (Int) -> Int): Int {
+1.5	kotlin.comparisons	fun	maxOf	public fun maxOf(a: UInt, b: UInt): UInt {
+1.5	kotlin.comparisons	fun	minOf	public fun minOf(a: UInt, b: UInt): UInt {
+1.5	kotlin.io.path	fun	absolute	public inline fun Path.absolute(): Path = toAbsolutePath()
+1.5	kotlin.io.path	fun	absolutePathString	public inline fun Path.absolutePathString(): String = toAbsolutePath().toString()
+1.5	kotlin.io.path	fun	appendBytes	public inline fun Path.appendBytes(array: ByteArray) {
+1.5	kotlin.io.path	fun	appendLines	public inline fun Path.appendLines(lines: Iterable<CharSequence>, charset: Charset = Charsets.UTF_8): Path {
+1.5	kotlin.io.path	fun	appendText	public fun Path.appendText(text: CharSequence, charset: Charset = Charsets.UTF_8) {
+1.5	kotlin.io.path	fun	bufferedReader	public inline fun Path.bufferedReader(
+1.5	kotlin.io.path	fun	bufferedWriter	public inline fun Path.bufferedWriter(
+1.5	kotlin.io.path	fun	copyTo	public inline fun Path.copyTo(target: Path, overwrite: Boolean = false): Path {
+1.5	kotlin.io.path	fun	createDirectories	public inline fun Path.createDirectories(vararg attributes: FileAttribute<*>): Path =
+1.5	kotlin.io.path	fun	createDirectory	public inline fun Path.createDirectory(vararg attributes: FileAttribute<*>): Path =
+1.5	kotlin.io.path	fun	createFile	public inline fun Path.createFile(vararg attributes: FileAttribute<*>): Path =
+1.5	kotlin.io.path	fun	createLinkPointingTo	public inline fun Path.createLinkPointingTo(target: Path): Path =
+1.5	kotlin.io.path	fun	createSymbolicLinkPointingTo	public inline fun Path.createSymbolicLinkPointingTo(target: Path, vararg attributes: FileAttribute<*>): Path =
+1.5	kotlin.io.path	fun	createTempDirectory	public inline fun createTempDirectory(prefix: String? = null, vararg attributes: FileAttribute<*>): Path =
+1.5	kotlin.io.path	fun	createTempFile	public inline fun createTempFile(prefix: String? = null, suffix: String? = null, vararg attributes: FileAttribute<*>): Path =
+1.5	kotlin.io.path	fun	deleteExisting	public inline fun Path.deleteExisting() {
+1.5	kotlin.io.path	fun	deleteIfExists	public inline fun Path.deleteIfExists(): Boolean =
+1.5	kotlin.io.path	fun	div	public inline operator fun Path.div(other: Path): Path =
+1.5	kotlin.io.path	fun	exists	public inline fun Path.exists(vararg options: LinkOption): Boolean = Files.exists(this, *options)
+1.5	kotlin.io.path	fun	fileAttributesView	public inline fun <reified V : FileAttributeView> Path.fileAttributesView(vararg options: LinkOption): V =
+1.5	kotlin.io.path	fun	fileAttributesViewOrNull	public inline fun <reified V : FileAttributeView> Path.fileAttributesViewOrNull(vararg options: LinkOption): V? =
+1.5	kotlin.io.path	fun	fileSize	public inline fun Path.fileSize(): Long =
+1.5	kotlin.io.path	fun	fileStore	public inline fun Path.fileStore(): FileStore =
+1.5	kotlin.io.path	fun	forEachDirectoryEntry	public inline fun Path.forEachDirectoryEntry(glob: String = "*", action: (Path) -> Unit) {
+1.5	kotlin.io.path	fun	forEachLine	public inline fun Path.forEachLine(charset: Charset = Charsets.UTF_8, action: (line: String) -> Unit): Unit {
+1.5	kotlin.io.path	fun	getAttribute	public inline fun Path.getAttribute(attribute: String, vararg options: LinkOption): Any? =
+1.5	kotlin.io.path	fun	getLastModifiedTime	public inline fun Path.getLastModifiedTime(vararg options: LinkOption): FileTime =
+1.5	kotlin.io.path	fun	getOwner	public inline fun Path.getOwner(vararg options: LinkOption): UserPrincipal? =
+1.5	kotlin.io.path	fun	getPosixFilePermissions	public inline fun Path.getPosixFilePermissions(vararg options: LinkOption): Set<PosixFilePermission> =
+1.5	kotlin.io.path	fun	inputStream	public inline fun Path.inputStream(vararg options: OpenOption): InputStream {
+1.5	kotlin.io.path	fun	isDirectory	private fun SecureDirectoryStream<Path>.isDirectory(entryName: Path, vararg options: LinkOption): Boolean {
+1.5	kotlin.io.path	fun	isExecutable	public inline fun Path.isExecutable(): Boolean = Files.isExecutable(this)
+1.5	kotlin.io.path	fun	isHidden	public inline fun Path.isHidden(): Boolean = Files.isHidden(this)
+1.5	kotlin.io.path	fun	isReadable	public inline fun Path.isReadable(): Boolean = Files.isReadable(this)
+1.5	kotlin.io.path	fun	isRegularFile	public inline fun Path.isRegularFile(vararg options: LinkOption): Boolean = Files.isRegularFile(this, *options)
+1.5	kotlin.io.path	fun	isSameFileAs	public inline fun Path.isSameFileAs(other: Path): Boolean = Files.isSameFile(this, other)
+1.5	kotlin.io.path	fun	isSymbolicLink	public inline fun Path.isSymbolicLink(): Boolean = Files.isSymbolicLink(this)
+1.5	kotlin.io.path	fun	isWritable	public inline fun Path.isWritable(): Boolean = Files.isWritable(this)
+1.5	kotlin.io.path	fun	listDirectoryEntries	public fun Path.listDirectoryEntries(glob: String = "*"): List<Path> {
+1.5	kotlin.io.path	fun	moveTo	public inline fun Path.moveTo(target: Path, vararg options: CopyOption): Path =
+1.5	kotlin.io.path	fun	notExists	public inline fun Path.notExists(vararg options: LinkOption): Boolean = Files.notExists(this, *options)
+1.5	kotlin.io.path	fun	outputStream	public inline fun Path.outputStream(vararg options: OpenOption): OutputStream {
+1.5	kotlin.io.path	fun	Path	public inline fun Path(path: String): Path =
+1.5	kotlin.io.path	fun	readAttributes	public inline fun <reified A : BasicFileAttributes> Path.readAttributes(vararg options: LinkOption): A =
+1.5	kotlin.io.path	fun	readBytes	public inline fun Path.readBytes(): ByteArray {
+1.5	kotlin.io.path	fun	reader	public inline fun Path.reader(charset: Charset = Charsets.UTF_8, vararg options: OpenOption): InputStreamReader {
+1.5	kotlin.io.path	fun	readLines	public inline fun Path.readLines(charset: Charset = Charsets.UTF_8): List<String> {
+1.5	kotlin.io.path	fun	readSymbolicLink	public inline fun Path.readSymbolicLink(): Path =
+1.5	kotlin.io.path	fun	readText	public fun Path.readText(charset: Charset = Charsets.UTF_8): String =
+1.5	kotlin.io.path	fun	relativeTo	public fun Path.relativeTo(base: Path): Path = try {
+1.5	kotlin.io.path	fun	relativeToOrNull	public fun Path.relativeToOrNull(base: Path): Path? = try {
+1.5	kotlin.io.path	fun	relativeToOrSelf	public fun Path.relativeToOrSelf(base: Path): Path =
+1.5	kotlin.io.path	fun	setAttribute	public inline fun Path.setAttribute(attribute: String, value: Any?, vararg options: LinkOption): Path =
+1.5	kotlin.io.path	fun	setLastModifiedTime	public inline fun Path.setLastModifiedTime(value: FileTime): Path =
+1.5	kotlin.io.path	fun	setOwner	public inline fun Path.setOwner(value: UserPrincipal): Path =
+1.5	kotlin.io.path	fun	setPosixFilePermissions	public inline fun Path.setPosixFilePermissions(value: Set<PosixFilePermission>): Path =
+1.5	kotlin.io.path	val	String	public val Path.name: String
+1.5	kotlin.io.path	fun	toPath	public inline fun URI.toPath(): Path =
+1.5	kotlin.io.path	fun	useDirectoryEntries	public inline fun <T> Path.useDirectoryEntries(glob: String = "*", block: (Sequence<Path>) -> T): T {
+1.5	kotlin.io.path	fun	useLines	public inline fun <T> Path.useLines(charset: Charset = Charsets.UTF_8, block: (Sequence<String>) -> T): T {
+1.5	kotlin.io.path	fun	writeBytes	public inline fun Path.writeBytes(array: ByteArray, vararg options: OpenOption): Unit {
+1.5	kotlin.io.path	fun	writeLines	public inline fun Path.writeLines(lines: Iterable<CharSequence>, charset: Charset = Charsets.UTF_8, vararg options: OpenOption): Path {
+1.5	kotlin.io.path	fun	writer	public inline fun Path.writer(charset: Charset = Charsets.UTF_8, vararg options: OpenOption): OutputStreamWriter {
+1.5	kotlin.io.path	fun	writeText	public fun Path.writeText(text: CharSequence, charset: Charset = Charsets.UTF_8, vararg options: OpenOption) {
+1.5	kotlin.jvm	class	JvmInline	public actual annotation class JvmInline
+1.5	kotlin.jvm	class	JvmRecord	public actual annotation class JvmRecord
+1.5	kotlin.jvm.internal	fun	error	private fun error(): Nothing = throw KotlinReflectionNotSupportedError()
+1.5	kotlin.math	fun	max	public expect fun max(a: Int, b: Int): Int
+1.5	kotlin.math	fun	min	public expect fun min(a: Int, b: Int): Int
+1.5	kotlin.native	class	CName	public expect annotation class CName(val externName: String = "", val shortName: String = "")
+1.5	kotlin.random	fun	nextUInt	public fun Random.nextUInt(): UInt = nextInt().toUInt()
+1.5	kotlin.random	fun	nextULong	public fun Random.nextULong(): ULong = nextLong().toULong()
+1.5	kotlin.ranges	fun	coerceAtLeast	public fun Int.coerceAtLeast(minimumValue: Int): Int {
+1.5	kotlin.ranges	fun	coerceAtMost	public fun Int.coerceAtMost(maximumValue: Int): Int {
+1.5	kotlin.ranges	fun	coerceIn	public fun Int.coerceIn(range: ClosedRange<Int>): Int {
+1.5	kotlin.ranges	fun	contains	public operator fun UIntRange.contains(value: UByte): Boolean {
+1.5	kotlin.ranges	fun	downTo	public infix fun Int.downTo(to: Int): IntProgression {
+1.5	kotlin.ranges	fun	random	public inline fun IntRange.random(): Int {
+1.5	kotlin.ranges	fun	randomOrNull	public inline fun IntRange.randomOrNull(): Int? {
+1.5	kotlin.ranges	fun	reversed	public fun IntProgression.reversed(): IntProgression {
+1.5	kotlin.ranges	fun	step	public infix fun IntProgression.step(step: Int): IntProgression {
+1.5	kotlin.ranges	class	UIntProgression	public open class UIntProgression
+1.5	kotlin.ranges	class	UIntRange	public class UIntRange(start: UInt, endInclusive: UInt) : UIntProgression(start, endInclusive, 1), ClosedRange<UInt>, OpenEndRange<UInt> {
+1.5	kotlin.ranges	class	ULongProgression	public open class ULongProgression
+1.5	kotlin.ranges	class	ULongRange	public class ULongRange(start: ULong, endInclusive: ULong) : ULongProgression(start, endInclusive, 1), ClosedRange<ULong>, OpenEndRange<ULong> {
+1.5	kotlin.ranges	fun	until	public infix fun Int.until(to: Int): IntRange {
+1.5	kotlin.reflect	val	Boolean	public val isFun: Boolean
+1.5	kotlin.sequences	fun	firstNotNullOf	public inline fun <T, R : Any> Sequence<T>.firstNotNullOf(transform: (T) -> R?): R {
+1.5	kotlin.sequences	fun	firstNotNullOfOrNull	public inline fun <T, R : Any> Sequence<T>.firstNotNullOfOrNull(transform: (T) -> R?): R? {
+1.5	kotlin.sequences	fun	sum	public fun Sequence<Int>.sum(): Int {
+1.5	kotlin.sequences	fun	sumOf	public inline fun <T> Sequence<T>.sumOf(selector: (T) -> Int): Int {
+1.5	kotlin.text	val	CharCategory	public expect val Char.category: CharCategory
+1.5	kotlin.text	class	CharCategory	public expect enum class CharCategory {
+1.5	kotlin.text	fun	contentEquals	public expect infix fun CharSequence?.contentEquals(other: CharSequence?): Boolean
+1.5	kotlin.text	fun	digitToChar	public fun Int.digitToChar(): Char {
+1.5	kotlin.text	fun	digitToInt	public fun Char.digitToInt(): Int {
+1.5	kotlin.text	fun	digitToIntOrNull	public fun Char.digitToIntOrNull(): Int? {
+1.5	kotlin.text	fun	firstNotNullOf	public inline fun <R : Any> CharSequence.firstNotNullOf(transform: (Char) -> R?): R {
+1.5	kotlin.text	fun	firstNotNullOfOrNull	public inline fun <R : Any> CharSequence.firstNotNullOfOrNull(transform: (Char) -> R?): R? {
+1.5	kotlin.text	fun	isDefined	public expect fun Char.isDefined(): Boolean
+1.5	kotlin.text	fun	isDigit	public expect fun Char.isDigit(): Boolean
+1.5	kotlin.text	fun	isISOControl	public expect fun Char.isISOControl(): Boolean
+1.5	kotlin.text	fun	isLetter	public expect fun Char.isLetter(): Boolean
+1.5	kotlin.text	fun	isLetterOrDigit	public expect fun Char.isLetterOrDigit(): Boolean
+1.5	kotlin.text	fun	isLowerCase	public expect fun Char.isLowerCase(): Boolean
+1.5	kotlin.text	fun	isTitleCase	public expect fun Char.isTitleCase(): Boolean
+1.5	kotlin.text	fun	isUpperCase	public expect fun Char.isUpperCase(): Boolean
+1.5	kotlin.text	fun	lowercase	public expect fun Char.lowercase(): String
+1.5	kotlin.text	fun	lowercaseChar	public expect fun Char.lowercaseChar(): Char
+1.5	kotlin.text	fun	replaceFirstChar	public inline fun String.replaceFirstChar(transform: (Char) -> Char): String {
+1.5	kotlin.text	fun	sumOf	public inline fun CharSequence.sumOf(selector: (Char) -> Int): Int {
+1.5	kotlin.text	fun	titlecase	public fun Char.titlecase(locale: Locale): String {
+1.5	kotlin.text	fun	titlecaseChar	public expect fun Char.titlecaseChar(): Char
+1.5	kotlin.text	fun	toBooleanStrict	public fun String.toBooleanStrict(): Boolean = when (this) {
+1.5	kotlin.text	fun	toBooleanStrictOrNull	public fun String.toBooleanStrictOrNull(): Boolean? = when (this) {
+1.5	kotlin.text	fun	toString	public expect fun Int.toString(radix: Int): String
+1.5	kotlin.text	fun	toUByte	public fun String.toUByte(): UByte = toUByteOrNull() ?: numberFormatError(this)
+1.5	kotlin.text	fun	toUByteOrNull	public fun String.toUByteOrNull(radix: Int): UByte? {
+1.5	kotlin.text	fun	toUInt	public fun String.toUInt(): UInt = toUIntOrNull() ?: numberFormatError(this)
+1.5	kotlin.text	fun	toUIntOrNull	public fun String.toUIntOrNull(radix: Int): UInt? {
+1.5	kotlin.text	fun	toULong	public fun String.toULong(): ULong = toULongOrNull() ?: numberFormatError(this)
+1.5	kotlin.text	fun	toULongOrNull	public fun String.toULongOrNull(radix: Int): ULong? {
+1.5	kotlin.text	fun	toUShort	public fun String.toUShort(): UShort = toUShortOrNull() ?: numberFormatError(this)
+1.5	kotlin.text	fun	toUShortOrNull	public fun String.toUShortOrNull(radix: Int): UShort? {
+1.5	kotlin.text	fun	uppercase	public expect fun Char.uppercase(): String
+1.5	kotlin.text	fun	uppercaseChar	public expect fun Char.uppercaseChar(): Char
+1.5	kotlin.time	fun	convertDurationUnit	internal expect fun convertDurationUnit(value: Long, sourceUnit: DurationUnit, targetUnit: DurationUnit): Long
+1.5	kotlin.time	fun	convertDurationUnitOverflow	internal expect fun convertDurationUnitOverflow(value: Long, sourceUnit: DurationUnit, targetUnit: DurationUnit): Long
+1.5	kotlin.time	fun	durationUnitByIsoChar	internal fun durationUnitByIsoChar(isoChar: Char, isTimeComponent: Boolean): DurationUnit =
+1.5	kotlin.time	fun	durationUnitByShortName	internal fun durationUnitByShortName(shortName: String): DurationUnit = when (shortName) {
+1.6	kotlin	fun	compareTo	public operator fun compareTo(other: T): Int
+1.6	kotlin	fun	rotateLeft	public fun Byte.rotateLeft(bitCount: Int): Byte =
+1.6	kotlin	fun	rotateRight	public fun Byte.rotateRight(bitCount: Int): Byte =
+1.6	kotlin.collections	fun	buildList	public inline fun <E> buildList(@BuilderInference builderAction: MutableList<E>.() -> Unit): List<E> {
+1.6	kotlin.collections	fun	buildMap	public inline fun <K, V> buildMap(@BuilderInference builderAction: MutableMap<K, V>.() -> Unit): Map<K, V> {
+1.6	kotlin.collections	fun	buildSet	public inline fun <E> buildSet(@BuilderInference builderAction: MutableSet<E>.() -> Unit): Set<E> {
+1.6	kotlin.io	fun	readln	public expect fun readln(): String
+1.6	kotlin.io	fun	readlnOrNull	public expect fun readlnOrNull(): String?
+1.6	kotlin.jvm	class	JvmDefaultWithCompatibility	public annotation class JvmDefaultWithCompatibility
+1.6	kotlin.jvm	typealias	JvmRepeatable	public typealias JvmRepeatable = java.lang.annotation.Repeatable
+1.6	kotlin.jvm.internal	val	Int	public val arity: Int
+1.6	kotlin.jvm.internal	val	KType	@SinceKotlin("1.6") internal val platformTypeUpperBound: KType?,
+1.6	kotlin.jvm.internal	class	SerializedIr	public annotation class SerializedIr(
+1.6	kotlin.jvm.internal	class	TypeReference	public class TypeReference @SinceKotlin("1.6") constructor(
+1.6	kotlin.reflect	fun	typeOf	public inline fun <reified T> typeOf(): KType =
+1.6	kotlin.text	val	Char	public const val tm: Char = '\u2122'
+1.6	kotlin.text	fun	splitToSequence	public fun splitToSequence(input: CharSequence, limit: Int = 0): Sequence<String>
+1.6	kotlin.time	class	Duration	public value class Duration internal constructor(private val rawValue: Long) : Comparable<Duration> {
+1.6	kotlin.time	class	DurationUnit	public expect enum class DurationUnit {
+1.6	kotlin.time	fun	times	public operator fun times(scale: Int): Duration {
+1.6	kotlin.time	fun	toDuration	public fun Int.toDuration(unit: DurationUnit): Duration {
+1.6	kotlin.time	fun	toJavaDuration	public inline fun Duration.toJavaDuration(): java.time.Duration =
+1.6	kotlin.time	fun	toKotlinDuration	public inline fun java.time.Duration.toKotlinDuration(): Duration =
+1.7	kotlin	class	ContextFunctionTypeParams	public annotation class ContextFunctionTypeParams(val count: Int)
+1.7	kotlin	class	DeepRecursiveFunction	public class DeepRecursiveFunction<T, R>(
+1.7	kotlin	class	DeepRecursiveScope	public sealed class DeepRecursiveScope<T, R> {
+1.7	kotlin	fun	invoke	public operator fun <T, R> DeepRecursiveFunction<T, R>.invoke(value: T): R =
+1.7	kotlin.collections	fun	max	public fun IntArray.max(): Int {
+1.7	kotlin.collections	fun	maxBy	public inline fun <R : Comparable<R>> IntArray.maxBy(selector: (Int) -> R): Int {
+1.7	kotlin.collections	fun	maxWith	public fun IntArray.maxWith(comparator: Comparator<in Int>): Int {
+1.7	kotlin.collections	fun	min	public fun IntArray.min(): Int {
+1.7	kotlin.collections	fun	minBy	public inline fun <R : Comparable<R>> IntArray.minBy(selector: (Int) -> R): Int {
+1.7	kotlin.collections	fun	minWith	public fun IntArray.minWith(comparator: Comparator<in Int>): Int {
+1.7	kotlin.internal	class	IntrinsicConstEvaluation	internal annotation class IntrinsicConstEvaluation
+1.7	kotlin.jvm	val	Class	public val <T> KClass<T>.java: Class<T>
+1.7	kotlin.ranges	fun	first	public fun IntProgression.first(): Int {
+1.7	kotlin.ranges	fun	firstOrNull	public fun IntProgression.firstOrNull(): Int? {
+1.7	kotlin.ranges	fun	last	public fun IntProgression.last(): Int {
+1.7	kotlin.ranges	fun	lastOrNull	public fun IntProgression.lastOrNull(): Int? {
+1.7	kotlin.sequences	fun	max	public fun Sequence<Float>.max(): Float {
+1.7	kotlin.sequences	fun	maxBy	public inline fun <T, R : Comparable<R>> Sequence<T>.maxBy(selector: (T) -> R): T {
+1.7	kotlin.sequences	fun	maxWith	public fun <T> Sequence<T>.maxWith(comparator: Comparator<in T>): T {
+1.7	kotlin.sequences	fun	min	public fun Sequence<Float>.min(): Float {
+1.7	kotlin.sequences	fun	minBy	public inline fun <T, R : Comparable<R>> Sequence<T>.minBy(selector: (T) -> R): T {
+1.7	kotlin.sequences	fun	minWith	public fun <T> Sequence<T>.minWith(comparator: Comparator<in T>): T {
+1.7	kotlin.text	fun	matchAt	public fun matchAt(input: CharSequence, index: Int): MatchResult?
+1.7	kotlin.text	fun	matchesAt	public fun matchesAt(input: CharSequence, index: Int): Boolean
+1.7	kotlin.text	fun	max	public fun CharSequence.max(): Char {
+1.7	kotlin.text	fun	maxBy	public inline fun <R : Comparable<R>> CharSequence.maxBy(selector: (Char) -> R): Char {
+1.7	kotlin.text	fun	maxWith	public fun CharSequence.maxWith(comparator: Comparator<in Char>): Char {
+1.7	kotlin.text	fun	min	public fun CharSequence.min(): Char {
+1.7	kotlin.text	fun	minBy	public inline fun <R : Comparable<R>> CharSequence.minBy(selector: (Char) -> R): Char {
+1.7	kotlin.text	fun	minWith	public fun CharSequence.minWith(comparator: Comparator<in Char>): Char {
+1.8	kotlin	class	ExperimentalSubclassOptIn	public annotation class ExperimentalSubclassOptIn
+1.8	kotlin.enums	fun	enumEntries	public inline fun <reified T : Enum<T>> enumEntries(): EnumEntries<T> = enumEntriesIntrinsic()
+1.8	kotlin.enums	class	EnumEntriesList	private class EnumEntriesList<T : Enum<T>>(private val entries: Array<T>) : EnumEntries<T>, AbstractList<T>(), Serializable {
+1.8	kotlin.experimental	class	ExperimentalObjCName	public annotation class ExperimentalObjCName
+1.8	kotlin.experimental	class	ExperimentalObjCRefinement	public annotation class ExperimentalObjCRefinement
+1.8	kotlin.io.encoding	fun	decodingWith	public fun InputStream.decodingWith(base64: Base64): InputStream {
+1.8	kotlin.io.encoding	fun	encodingWith	public fun OutputStream.encodingWith(base64: Base64): OutputStream {
+1.8	kotlin.io.encoding	class	ExperimentalEncodingApi	public annotation class ExperimentalEncodingApi
+1.8	kotlin.io.encoding	fun	isInMimeAlphabet	internal fun isInMimeAlphabet(symbol: Int): Boolean {
+1.8	kotlin.io.encoding	fun	platformCharsToBytes	internal expect fun Base64.platformCharsToBytes(
+1.8	kotlin.io.encoding	fun	platformEncodeIntoByteArray	internal expect fun Base64.platformEncodeIntoByteArray(
+1.8	kotlin.io.encoding	fun	platformEncodeToByteArray	internal expect fun Base64.platformEncodeToByteArray(
+1.8	kotlin.io.encoding	fun	platformEncodeToString	internal expect fun Base64.platformEncodeToString(
+1.8	kotlin.io.path	interface	CopyActionContext	public interface CopyActionContext {
+1.8	kotlin.io.path	class	CopyActionResult	public enum class CopyActionResult {
+1.8	kotlin.io.path	fun	copyToRecursively	public fun Path.copyToRecursively(
+1.8	kotlin.io.path	fun	deleteRecursively	public fun Path.deleteRecursively(): Unit {
+1.8	kotlin.io.path	class	OnErrorResult	public enum class OnErrorResult {
+1.8	kotlin.js	class	Ignore	public annotation class Ignore()
+1.8	kotlin.jvm	class	JvmSerializableLambda	public actual annotation class JvmSerializableLambda
+1.8	kotlin.jvm.internal	class	SourceDebugExtension	public annotation class SourceDebugExtension(val value: Array<String>)
+1.8	kotlin.jvm.optionals	fun	asSequence	public fun <T : Any> Optional<out T>.asSequence(): Sequence<T> =
+1.8	kotlin.jvm.optionals	fun	getOrDefault	public fun <T> Optional<out T & Any>.getOrDefault(defaultValue: T): T = if (isPresent) get() else defaultValue
+1.8	kotlin.jvm.optionals	fun	getOrElse	public inline fun <T> Optional<out T & Any>.getOrElse(defaultValue: () -> T): T {
+1.8	kotlin.jvm.optionals	fun	getOrNull	public fun <T : Any> Optional<T>.getOrNull(): T? = orElse(null)
+1.8	kotlin.jvm.optionals	fun	toCollection	public fun <T : Any, C : MutableCollection<in T>> Optional<T>.toCollection(destination: C): C {
+1.8	kotlin.jvm.optionals	fun	toList	public fun <T : Any> Optional<out T>.toList(): List<T> =
+1.8	kotlin.jvm.optionals	fun	toSet	public fun <T : Any> Optional<out T>.toSet(): Set<T> =
+1.8	kotlin.math	fun	cbrt	public expect fun cbrt(x: Float): Float
+1.8	kotlin.native	class	HiddenFromObjC	public expect annotation class HiddenFromObjC()
+1.8	kotlin.native	class	HidesFromObjC	public expect annotation class HidesFromObjC()
+1.8	kotlin.native	class	ObjCName	public expect annotation class ObjCName(val name: String = "", val swiftName: String = "", val exact: Boolean = false)
+1.8	kotlin.native	class	RefinesInSwift	public expect annotation class RefinesInSwift()
+1.8	kotlin.native	class	ShouldRefineInSwift	public expect annotation class ShouldRefineInSwift()
+1.8	kotlin.time	fun	toDurationUnit	public fun TimeUnit.toDurationUnit(): DurationUnit = when (this) {
+1.8	kotlin.time	fun	toTimeUnit	public fun DurationUnit.toTimeUnit(): TimeUnit = timeUnit
+1.9	kotlin	class	NoSuchElementException	public expect open class NoSuchElementException : RuntimeException {
+1.9	kotlin	fun	rangeUntil	public operator fun rangeUntil(other: Int): IntRange
+1.9	kotlin.collections	fun	listOf	public expect fun <T> listOf(element: T): List<T>
+1.9	kotlin.collections	fun	mapOf	public inline fun <K, V> mapOf(): Map<K, V> = emptyMap()
+1.9	kotlin.collections	fun	setOf	public expect fun <T> setOf(element: T): Set<T>
+1.9	kotlin.concurrent	class	Volatile	public expect annotation class Volatile()
+1.9	kotlin.concurrent	typealias	Volatile	public actual typealias Volatile = kotlin.jvm.Volatile
+1.9	kotlin.enums	interface	EnumEntries	public sealed interface EnumEntries<E : Enum<E>> : List<E>
+1.9	kotlin.enums	fun	enumEntriesIntrinsic	internal expect fun <T : Enum<T>> enumEntriesIntrinsic(): EnumEntries<T>
+1.9	kotlin.experimental	class	ExperimentalNativeApi	public annotation class ExperimentalNativeApi
+1.9	kotlin.io.path	fun	createParentDirectories	public fun Path.createParentDirectories(vararg attributes: FileAttribute<*>): Path = also {
+1.9	kotlin.js	class	ExperimentalJsFileName	public annotation class ExperimentalJsFileName
+1.9	kotlin.js	class	ExperimentalJsReflectionCreateInstance	public annotation class ExperimentalJsReflectionCreateInstance
+1.9	kotlin.js	class	JsFileName	public expect annotation class JsFileName(val name: String)
+1.9	kotlin.jvm	class	ImplicitlyActualizedByJvmDeclaration	public actual annotation class ImplicitlyActualizedByJvmDeclaration
+1.9	kotlin.ranges	fun	contains	public operator fun UIntRange.contains(value: UByte): Boolean {
+1.9	kotlin.ranges	interface	OpenEndRange	public interface OpenEndRange<T : Comparable<T>> {
+1.9	kotlin.ranges	fun	rangeUntil	public operator fun Float.rangeUntil(that: Float): OpenEndRange<Float> = OpenEndFloatRange(this, that)
+1.9	kotlin.text	fun	append	public fun append(value: Char): Appendable
+1.9	kotlin.text	fun	appendLine	public inline fun Appendable.appendLine(): Appendable = append('\n')
+1.9	kotlin.text	fun	get	public operator fun get(index: Int): MatchGroup?
+1.9	kotlin.text	fun	insert	public fun insert(index: Int, value: Int): StringBuilder
+1.9	kotlin.text	fun	regionMatches	public expect fun String.regionMatches(
+1.9	kotlin.time	class	AbstractLongTimeSource	public abstract class AbstractLongTimeSource(protected val unit: DurationUnit) : TimeSource.WithComparableMarks {
+1.9	kotlin.time	interface	ComparableTimeMark	public interface ComparableTimeMark : TimeMark, Comparable<ComparableTimeMark> {
+1.9	kotlin.time	fun	measureTime	public inline fun measureTime(block: () -> Unit): Duration {
+1.9	kotlin.time	fun	measureTimedValue	public inline fun <T> measureTimedValue(block: () -> T): TimedValue<T> {
+1.9	kotlin.time	class	TestTimeSource	public class TestTimeSource : AbstractLongTimeSource(unit = DurationUnit.NANOSECONDS) {
+1.9	kotlin.time	class	TimedValue	public data class TimedValue<T>(val value: T, val duration: Duration)
+1.9	kotlin.time	interface	TimeMark	public interface TimeMark {
+1.9	kotlin.time	interface	TimeSource	public interface TimeSource {
+1.9	kotlin.time	class	ValueTimeMark	public value class ValueTimeMark internal constructor(internal val reading: ValueTimeMarkReading) : ComparableTimeMark {
+1.9	kotlin.time	interface	WithComparableMarks	public interface WithComparableMarks : TimeSource {
+2.0	kotlin	interface	AutoCloseable	public expect interface AutoCloseable {
+2.0	kotlin	fun	AutoCloseable	public expect inline fun AutoCloseable(crossinline closeAction: () -> Unit): AutoCloseable
+2.0	kotlin	typealias	AutoCloseable	public actual typealias AutoCloseable = java.lang.AutoCloseable
+2.0	kotlin	class	ConsistentCopyVisibility	public annotation class ConsistentCopyVisibility
+2.0	kotlin	class	ExposedCopyVisibility	public annotation class ExposedCopyVisibility
+2.0	kotlin	fun	use	public expect inline fun <T : AutoCloseable?, R> T.use(block: (T) -> R): R {
+2.0	kotlin.collections	var	Int	var sum: Int = 0
+2.0	kotlin.collections	fun	removeRange	protected open fun removeRange(fromIndex: Int, toIndex: Int): Unit
+2.0	kotlin.enums	fun	enumEntries	public inline fun <reified T : Enum<T>> enumEntries(): EnumEntries<T> = enumEntriesIntrinsic()
+2.0	kotlin.io.encoding	class	PaddingOption	public enum class PaddingOption {
+2.0	kotlin.io.encoding	fun	withPadding	public fun withPadding(option: PaddingOption): Base64 {
+2.0	kotlin.js	class	ExperimentalJsCollectionsApi	public annotation class ExperimentalJsCollectionsApi
+2.0	kotlin.js	class	ExperimentalJsStatic	public annotation class ExperimentalJsStatic
+2.0	kotlin.js	class	JsStatic	public expect annotation class JsStatic()
+2.0	kotlin.text	var	Int	var sum: Int = 0
+2.0	kotlin.text	val	Int	val start: Int
+2.0	kotlin.text	fun	toCharArray	public expect fun String.toCharArray(
+2.0	kotlin.uuid	class	ExperimentalUuidApi	public annotation class ExperimentalUuidApi
+2.0	kotlin.uuid	fun	getUuid	public fun ByteBuffer.getUuid(): Uuid {
+2.0	kotlin.uuid	fun	putUuid	public fun ByteBuffer.putUuid(uuid: Uuid): ByteBuffer = uuid.toLongs { msb, lsb ->
+2.0	kotlin.uuid	fun	toJavaUuid	public inline fun Uuid.toJavaUuid(): java.util.UUID = toLongs { mostSignificantBits, leastSignificantBits ->
+2.0	kotlin.uuid	fun	toKotlinUuid	public inline fun java.util.UUID.toKotlinUuid(): Uuid =
+2.0	kotlin.uuid	class	Uuid	public class Uuid private constructor(
+2.1	kotlin	class	SubclassOptInRequired	public annotation class SubclassOptInRequired(
+2.1	kotlin.concurrent.atomics	fun	asJavaAtomic	public fun AtomicLong.asJavaAtomic(): java.util.concurrent.atomic.AtomicLong = this as java.util.concurrent.atomic.AtomicLong
+2.1	kotlin.concurrent.atomics	fun	asJavaAtomicArray	public fun AtomicLongArray.asJavaAtomicArray(): java.util.concurrent.atomic.AtomicLongArray = this as java.util.concurrent.atomic.AtomicLongArray
+2.1	kotlin.concurrent.atomics	fun	asKotlinAtomic	public fun java.util.concurrent.atomic.AtomicLong.asKotlinAtomic(): AtomicLong = this as AtomicLong
+2.1	kotlin.concurrent.atomics	fun	asKotlinAtomicArray	public fun java.util.concurrent.atomic.AtomicLongArray.asKotlinAtomicArray(): AtomicLongArray = this as AtomicLongArray
+2.1	kotlin.concurrent.atomics	class	AtomicArray	public expect class AtomicArray<T> {
+2.1	kotlin.concurrent.atomics	fun	AtomicArray	public inline fun <reified T> AtomicArray(size: Int, init: (Int) -> T): AtomicArray<T> =
+2.1	kotlin.concurrent.atomics	class	AtomicBoolean	public expect class AtomicBoolean public constructor(value: Boolean) {
+2.1	kotlin.concurrent.atomics	class	AtomicInt	public expect class AtomicInt public constructor(value: Int) {
+2.1	kotlin.concurrent.atomics	class	AtomicIntArray	public expect class AtomicIntArray {
+2.1	kotlin.concurrent.atomics	fun	AtomicIntArray	public inline fun AtomicIntArray(size: Int, init: (Int) -> Int): AtomicIntArray =
+2.1	kotlin.concurrent.atomics	class	AtomicLong	public expect class AtomicLong public constructor(value: Long) {
+2.1	kotlin.concurrent.atomics	class	AtomicLongArray	public expect class AtomicLongArray {
+2.1	kotlin.concurrent.atomics	fun	AtomicLongArray	public inline fun AtomicLongArray(size: Int, init: (Int) -> Long): AtomicLongArray =
+2.1	kotlin.concurrent.atomics	class	AtomicReference	public expect class AtomicReference<T> public constructor(value: T) {
+2.1	kotlin.concurrent.atomics	fun	decrementAndFetch	public fun AtomicInt.decrementAndFetch(): Int = this.addAndFetch(-1)
+2.1	kotlin.concurrent.atomics	fun	decrementAndFetchAt	public fun AtomicIntArray.decrementAndFetchAt(index: Int): Int = this.addAndFetchAt(index, -1)
+2.1	kotlin.concurrent.atomics	class	ExperimentalAtomicApi	public annotation class ExperimentalAtomicApi
+2.1	kotlin.concurrent.atomics	fun	fetchAndDecrement	public fun AtomicInt.fetchAndDecrement(): Int = this.fetchAndAdd(-1)
+2.1	kotlin.concurrent.atomics	fun	fetchAndDecrementAt	public fun AtomicIntArray.fetchAndDecrementAt(index: Int): Int = this.fetchAndAddAt(index, -1)
+2.1	kotlin.concurrent.atomics	fun	fetchAndIncrement	public fun AtomicInt.fetchAndIncrement(): Int = this.fetchAndAdd(1)
+2.1	kotlin.concurrent.atomics	fun	fetchAndIncrementAt	public fun AtomicIntArray.fetchAndIncrementAt(index: Int): Int = this.fetchAndAddAt(index, 1)
+2.1	kotlin.concurrent.atomics	fun	incrementAndFetch	public fun AtomicInt.incrementAndFetch(): Int = this.addAndFetch(1)
+2.1	kotlin.concurrent.atomics	fun	incrementAndFetchAt	public fun AtomicIntArray.incrementAndFetchAt(index: Int): Int = this.addAndFetchAt(index, 1)
+2.1	kotlin.concurrent.atomics	fun	minusAssign	public operator fun AtomicInt.minusAssign(delta: Int): Unit { this.addAndFetch(-delta) }
+2.1	kotlin.concurrent.atomics	fun	plusAssign	public operator fun AtomicInt.plusAssign(delta: Int): Unit { this.addAndFetch(delta) }
+2.1	kotlin.concurrent.internal	fun	compareAndExchange	internal fun java.util.concurrent.atomic.AtomicInteger.compareAndExchange(expected: Int, newValue: Int): Int {
+2.1	kotlin.io.path	fun	fileVisitor	public fun fileVisitor(builderAction: FileVisitorBuilder.() -> Unit): FileVisitor<Path> {
+2.1	kotlin.io.path	interface	FileVisitorBuilder	public sealed interface FileVisitorBuilder {
+2.1	kotlin.io.path	class	PathWalkOption	public enum class PathWalkOption {
+2.1	kotlin.io.path	fun	visitFileTree	public fun Path.visitFileTree(
+2.1	kotlin.io.path	fun	walk	public fun Path.walk(vararg options: PathWalkOption): Sequence<Path> = PathTreeWalk(this, options)
+2.1	kotlin.time	val	Boolean	public inline val Instant.isDistantPast: Boolean
+2.1	kotlin.time	interface	Clock	public interface Clock {
+2.1	kotlin.time	class	Instant	public class Instant internal constructor(
+2.1	kotlin.time	fun	toJavaInstant	public fun Instant.toJavaInstant(): java.time.Instant =
+2.1	kotlin.time	fun	toKotlinInstant	public fun java.time.Instant.toKotlinInstant(): Instant =
+2.1	kotlin.uuid	fun	fromUByteArray	public fun fromUByteArray(ubyteArray: UByteArray): Uuid {
+2.1	kotlin.uuid	fun	parseHexDash	public fun parseHexDash(hexDashString: String): Uuid {
+2.1	kotlin.uuid	fun	toHexDashString	public fun toHexDashString(): String {
+2.1	kotlin.uuid	fun	toUByteArray	public fun toUByteArray(): UByteArray {
+2.2	kotlin	fun	context	public inline fun <T, R> context(with: T, block: context(T) () -> R): R {
+2.2	kotlin	fun	contextOf	public inline fun <A> contextOf(): @NoInfer A = context
+2.2	kotlin	class	IgnorableReturnValue	public annotation class IgnorableReturnValue
+2.2	kotlin	class	MustUseReturnValue	public annotation class MustUseReturnValue
+2.2	kotlin.experimental	class	ExpectRefinement	public annotation class ExpectRefinement
+2.2	kotlin.io.encoding	class	Base64	public open class Base64 private constructor(
+2.2	kotlin.sequences	fun	sequenceOf	public fun <T> sequenceOf(element: T): Sequence<T> = Sequence {
+2.2	kotlin.text	class	HexFormat	public class HexFormat internal constructor(
+2.2	kotlin.text	fun	HexFormat	public inline fun HexFormat(builderAction: HexFormat.Builder.() -> Unit): HexFormat {
+2.2	kotlin.text	fun	hexToByte	public fun String.hexToByte(format: HexFormat = HexFormat.Default): Byte = hexToByte(0, length, format)
+2.2	kotlin.text	fun	hexToByteArray	private fun String.hexToByteArray(
+2.2	kotlin.text	fun	hexToInt	public fun String.hexToInt(format: HexFormat = HexFormat.Default): Int = hexToInt(0, length, format)
+2.2	kotlin.text	fun	hexToLong	public fun String.hexToLong(format: HexFormat = HexFormat.Default): Long = hexToLong(0, length, format)
+2.2	kotlin.text	fun	hexToShort	public fun String.hexToShort(format: HexFormat = HexFormat.Default): Short = hexToShort(0, length, format)
+2.2	kotlin.text	fun	hexToUByte	public inline fun String.hexToUByte(format: HexFormat = HexFormat.Default): UByte = hexToByte(format).toUByte()
+2.2	kotlin.text	fun	hexToUByteArray	public inline fun String.hexToUByteArray(format: HexFormat = HexFormat.Default): UByteArray =
+2.2	kotlin.text	fun	hexToUInt	public inline fun String.hexToUInt(format: HexFormat = HexFormat.Default): UInt = hexToInt(format).toUInt()
+2.2	kotlin.text	fun	hexToULong	public inline fun String.hexToULong(format: HexFormat = HexFormat.Default): ULong = hexToLong(format).toULong()
+2.2	kotlin.text	fun	hexToUShort	public inline fun String.hexToUShort(format: HexFormat = HexFormat.Default): UShort = hexToShort(format).toUShort()
+2.2	kotlin.text	fun	toHexString	public fun ByteArray.toHexString(
+2.2	kotlin.time	fun	asClock	public fun TimeSource.asClock(origin: Instant): Clock = object : Clock {
+2.2	kotlin.time	fun	parseOrNull	public fun parseOrNull(value: String): Duration? = try {

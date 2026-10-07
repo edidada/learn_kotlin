@@ -1,0 +1,17 @@
+since	kind	name	receiver	arity	sig	loc
+1.3	fun	intercepted	-	0	public expect fun <T> Continuation<T>.intercepted(): Continuation<T>	commonMain/kotlin/coroutines/CoroutinesIntrinsicsH.kt:75
+1.3	fun	suspendCoroutineUninterceptedOrReturn	-	0	public suspend inline fun <T> suspendCoroutineUninterceptedOrReturn(crossinline block: (Continuation<T>) -> Any?): T {	commonMain/kotlin/coroutines/intrinsics/Intrinsics.kt:41
+1.3	val	get	-	0	public val COROUTINE_SUSPENDED: Any get() = CoroutineSingletons.COROUTINE_SUSPENDED	commonMain/kotlin/coroutines/intrinsics/Intrinsics.kt:57
+1.3	class	CoroutineSingletons	-	2	internal enum class CoroutineSingletons { COROUTINE_SUSPENDED, UNDECIDED, RESUMED }	commonMain/kotlin/coroutines/intrinsics/Intrinsics.kt:64
+-	val	newCompletion	-	0	val newCompletion = createSimpleCoroutineForSuspendFunction(probeCoroutineCreated(completion))	jvmMain/kotlin/coroutines/intrinsics/IntrinsicsJvm.kt:42
+-	val	newCompletion	-	0	val newCompletion = createSimpleCoroutineForSuspendFunction(probeCoroutineCreated(completion))	jvmMain/kotlin/coroutines/intrinsics/IntrinsicsJvm.kt:74
+-	val	newCompletion	-	0	val newCompletion = createSimpleCoroutineForSuspendFunction(probeCoroutineCreated(completion))	jvmMain/kotlin/coroutines/intrinsics/IntrinsicsJvm.kt:95
+-	val	probeCompletion	-	0	val probeCompletion = probeCoroutineCreated(completion)	jvmMain/kotlin/coroutines/intrinsics/IntrinsicsJvm.kt:126
+-	val	probeCompletion	-	0	val probeCompletion = probeCoroutineCreated(completion)	jvmMain/kotlin/coroutines/intrinsics/IntrinsicsJvm.kt:161
+1.3	fun	intercepted	-	0	public actual fun <T> Continuation<T>.intercepted(): Continuation<T> =	jvmMain/kotlin/coroutines/intrinsics/IntrinsicsJvm.kt:181
+1.3	fun	createCoroutineFromSuspendFunction	-	0	private inline fun <T> createCoroutineFromSuspendFunction(	jvmMain/kotlin/coroutines/intrinsics/IntrinsicsJvm.kt:200
+-	val	context	-	0	val context = completion.context	jvmMain/kotlin/coroutines/intrinsics/IntrinsicsJvm.kt:204
+-	var	label	-	0	private var label = 0	jvmMain/kotlin/coroutines/intrinsics/IntrinsicsJvm.kt:208
+-	var	label	-	0	private var label = 0	jvmMain/kotlin/coroutines/intrinsics/IntrinsicsJvm.kt:226
+-	fun	createSimpleCoroutineForSuspendFunction	-	0	private fun <T> createSimpleCoroutineForSuspendFunction(	jvmMain/kotlin/coroutines/intrinsics/IntrinsicsJvm.kt:253
+-	val	context	-	0	val context = completion.context	jvmMain/kotlin/coroutines/intrinsics/IntrinsicsJvm.kt:256

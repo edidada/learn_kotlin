@@ -1,0 +1,18 @@
+since	kind	name	receiver	arity	sig	loc
+1.9	interface	EnumEntries	-	0	public sealed interface EnumEntries<E : Enum<E>> : List<E>	commonMain/kotlin/enums/EnumEntries.kt:27
+2.0	fun	enumEntries	-	0	public inline fun <reified T : Enum<T>> enumEntries(): EnumEntries<T> = enumEntriesIntrinsic()	commonMain/kotlin/enums/EnumEntries.kt:34
+1.9	fun	enumEntriesIntrinsic	-	0	internal expect fun <T : Enum<T>> enumEntriesIntrinsic(): EnumEntries<T>	commonMain/kotlin/enums/EnumEntries.kt:38
+1.8	fun	enumEntries	-	0	internal fun <E : Enum<E>> enumEntries(entriesProvider: () -> Array<E>): EnumEntries<E> = EnumEntriesList(entriesProvider())	commonMain/kotlin/enums/EnumEntries.kt:42
+1.8	fun	enumEntries	-	0	internal fun <E : Enum<E>> enumEntries(entries: Array<E>): EnumEntries<E> = EnumEntriesList(entries)	commonMain/kotlin/enums/EnumEntries.kt:46
+1.8	class	EnumEntriesList	-	2	private class EnumEntriesList<T : Enum<T>>(private val entries: Array<T>) : EnumEntries<T>, AbstractList<T>(), Serializable {	commonMain/kotlin/enums/EnumEntries.kt:49
+-	val	target	-	0	val target = entries.getOrNull(element.ordinal)	commonMain/kotlin/enums/EnumEntries.kt:70
+-	val	ordinal	-	0	val ordinal = element.ordinal	commonMain/kotlin/enums/EnumEntries.kt:78
+-	val	target	-	0	val target = entries.getOrNull(ordinal)	commonMain/kotlin/enums/EnumEntries.kt:79
+-	fun	writeReplace	-	0	private fun writeReplace(): Any {	commonMain/kotlin/enums/EnumEntries.kt:86
+-	fun	readObject	-	0	private fun readObject(@Suppress("UNUSED_PARAMETER") input: ReadObjectParameterType): Unit = throwReadObjectNotSupported()	commonMain/kotlin/enums/EnumEntries.kt:92
+-	class	EnumEntriesSerializationProxy	-	0	internal expect class EnumEntriesSerializationProxy<E : Enum<E>>(entries: Array<E>)	commonMain/kotlin/enums/EnumEntries.kt:95
+1.9	fun	enumEntriesIntrinsic	-	0	internal actual inline fun <T : Enum<T>> enumEntriesIntrinsic(): EnumEntries<T> {	jvmMain/kotlin/enums/EnumEntriesJVM.kt:11
+-	class	EnumEntriesSerializationProxy	-	0	internal actual class EnumEntriesSerializationProxy<E : Enum<E>> actual constructor(entries: Array<E>) : Serializable {	jvmMain/kotlin/enums/EnumEntriesSerializationProxy.kt:11
+-	val	Class	-	0	private val c: Class<E> = entries.javaClass.componentType!! as Class<E>	jvmMain/kotlin/enums/EnumEntriesSerializationProxy.kt:12
+-	val	Long	-	0	private const val serialVersionUID: Long = 0L	jvmMain/kotlin/enums/EnumEntriesSerializationProxy.kt:15
+-	fun	readResolve	-	0	private fun readResolve(): Any {	jvmMain/kotlin/enums/EnumEntriesSerializationProxy.kt:19

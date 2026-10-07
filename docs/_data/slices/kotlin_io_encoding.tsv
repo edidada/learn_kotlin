@@ -1,0 +1,159 @@
+since	kind	name	receiver	arity	sig	loc
+2.2	class	Base64	-	0	public open class Base64 private constructor(	commonMain/kotlin/io/encoding/Base64.kt:57
+-	val	Boolean	-	1	internal val isUrlSafe: Boolean,	commonMain/kotlin/io/encoding/Base64.kt:58
+-	val	Boolean	-	1	internal val isMimeScheme: Boolean,	commonMain/kotlin/io/encoding/Base64.kt:59
+-	val	Int	-	1	internal val mimeLineLength: Int,	commonMain/kotlin/io/encoding/Base64.kt:60
+-	val	PaddingOption	-	0	internal val paddingOption: PaddingOption	commonMain/kotlin/io/encoding/Base64.kt:61
+-	val	Int	-	0	private val mimeGroupsPerLine: Int = mimeLineLength / symbolsPerGroup	commonMain/kotlin/io/encoding/Base64.kt:67
+2.0	class	PaddingOption	-	0	public enum class PaddingOption {	commonMain/kotlin/io/encoding/Base64.kt:90
+2.0	fun	withPadding	-	0	public fun withPadding(option: PaddingOption): Base64 {	commonMain/kotlin/io/encoding/Base64.kt:150
+-	fun	encodeToByteArray	-	2	public fun encodeToByteArray(source: ByteArray, startIndex: Int = 0, endIndex: Int = source.size): ByteArray {	commonMain/kotlin/io/encoding/Base64.kt:176
+-	fun	encodeIntoByteArray	-	0	public fun encodeIntoByteArray(	commonMain/kotlin/io/encoding/Base64.kt:201
+-	fun	encode	-	2	public fun encode(source: ByteArray, startIndex: Int = 0, endIndex: Int = source.size): String {	commonMain/kotlin/io/encoding/Base64.kt:230
+-	fun	encodeToAppendable	-	0	public fun <A : Appendable> encodeToAppendable(	commonMain/kotlin/io/encoding/Base64.kt:252
+-	val	stringResult	-	2	val stringResult = platformEncodeToString(source, startIndex, endIndex)	commonMain/kotlin/io/encoding/Base64.kt:258
+-	fun	decode	-	2	public fun decode(source: ByteArray, startIndex: Int = 0, endIndex: Int = source.size): ByteArray {	commonMain/kotlin/io/encoding/Base64.kt:283
+-	val	decodeSize	-	2	val decodeSize = decodeSize(source, startIndex, endIndex)	commonMain/kotlin/io/encoding/Base64.kt:286
+-	val	destination	-	0	val destination = ByteArray(decodeSize)	commonMain/kotlin/io/encoding/Base64.kt:287
+-	val	bytesWritten	-	4	val bytesWritten = decodeImpl(source, destination, 0, startIndex, endIndex)	commonMain/kotlin/io/encoding/Base64.kt:289
+-	fun	decodeIntoByteArray	-	0	public fun decodeIntoByteArray(	commonMain/kotlin/io/encoding/Base64.kt:320
+-	fun	decode	-	2	public fun decode(source: CharSequence, startIndex: Int = 0, endIndex: Int = source.length): ByteArray {	commonMain/kotlin/io/encoding/Base64.kt:353
+-	val	byteSource	-	2	val byteSource = platformCharsToBytes(source, startIndex, endIndex)	commonMain/kotlin/io/encoding/Base64.kt:354
+-	fun	decodeIntoByteArray	-	0	public fun decodeIntoByteArray(	commonMain/kotlin/io/encoding/Base64.kt:382
+-	val	byteSource	-	2	val byteSource = platformCharsToBytes(source, startIndex, endIndex)	commonMain/kotlin/io/encoding/Base64.kt:389
+-	fun	encodeToByteArrayImpl	-	2	internal fun encodeToByteArrayImpl(source: ByteArray, startIndex: Int, endIndex: Int): ByteArray {	commonMain/kotlin/io/encoding/Base64.kt:395
+-	val	encodeSize	-	0	val encodeSize = encodeSize(endIndex - startIndex)	commonMain/kotlin/io/encoding/Base64.kt:398
+-	val	destination	-	0	val destination = ByteArray(encodeSize)	commonMain/kotlin/io/encoding/Base64.kt:399
+-	fun	encodeIntoByteArrayImpl	-	0	internal fun encodeIntoByteArrayImpl(	commonMain/kotlin/io/encoding/Base64.kt:404
+-	val	encodeMap	-	0	val encodeMap = if (isUrlSafe) base64UrlEncodeMap else base64EncodeMap	commonMain/kotlin/io/encoding/Base64.kt:414
+-	var	sourceIndex	-	0	var sourceIndex = startIndex	commonMain/kotlin/io/encoding/Base64.kt:415
+-	var	destinationIndex	-	0	var destinationIndex = destinationOffset	commonMain/kotlin/io/encoding/Base64.kt:416
+-	val	groupsPerLine	-	0	val groupsPerLine = if (isMimeScheme) mimeGroupsPerLine else Int.MAX_VALUE	commonMain/kotlin/io/encoding/Base64.kt:417
+-	val	groups	-	1	val groups = minOf((endIndex - sourceIndex) / bytesPerGroup, groupsPerLine)	commonMain/kotlin/io/encoding/Base64.kt:420
+-	val	byte1	-	0	val byte1 = source[sourceIndex++].toInt() and 0xFF	commonMain/kotlin/io/encoding/Base64.kt:422
+-	val	byte2	-	0	val byte2 = source[sourceIndex++].toInt() and 0xFF	commonMain/kotlin/io/encoding/Base64.kt:423
+-	val	byte3	-	0	val byte3 = source[sourceIndex++].toInt() and 0xFF	commonMain/kotlin/io/encoding/Base64.kt:424
+-	val	bits	-	0	val bits = (byte1 shl 16) or (byte2 shl 8) or byte3	commonMain/kotlin/io/encoding/Base64.kt:425
+-	val	byte1	-	0	val byte1 = source[sourceIndex++].toInt() and 0xFF	commonMain/kotlin/io/encoding/Base64.kt:439
+-	val	bits	-	0	val bits = byte1 shl 4	commonMain/kotlin/io/encoding/Base64.kt:440
+-	val	byte1	-	0	val byte1 = source[sourceIndex++].toInt() and 0xFF	commonMain/kotlin/io/encoding/Base64.kt:449
+-	val	byte2	-	0	val byte2 = source[sourceIndex++].toInt() and 0xFF	commonMain/kotlin/io/encoding/Base64.kt:450
+-	val	bits	-	0	val bits = (byte1 shl 10) or (byte2 shl 2)	commonMain/kotlin/io/encoding/Base64.kt:451
+-	fun	encodeSize	-	0	internal fun encodeSize(sourceSize: Int): Int {	commonMain/kotlin/io/encoding/Base64.kt:467
+-	val	groups	-	0	val groups = sourceSize / bytesPerGroup	commonMain/kotlin/io/encoding/Base64.kt:469
+-	val	trailingBytes	-	0	val trailingBytes = sourceSize % bytesPerGroup	commonMain/kotlin/io/encoding/Base64.kt:470
+-	var	size	-	0	var size = groups * symbolsPerGroup	commonMain/kotlin/io/encoding/Base64.kt:471
+-	fun	shouldPadOnEncode	-	0	private fun shouldPadOnEncode(): Boolean =	commonMain/kotlin/io/encoding/Base64.kt:487
+-	fun	decodeImpl	-	0	private fun decodeImpl(	commonMain/kotlin/io/encoding/Base64.kt:490
+-	val	decodeMap	-	0	val decodeMap = if (isUrlSafe) base64UrlDecodeMap else base64DecodeMap	commonMain/kotlin/io/encoding/Base64.kt:497
+-	var	payload	-	0	var payload = 0	commonMain/kotlin/io/encoding/Base64.kt:498
+-	var	byteStart	-	0	var byteStart = -bitsPerByte	commonMain/kotlin/io/encoding/Base64.kt:499
+-	var	sourceIndex	-	0	var sourceIndex = startIndex	commonMain/kotlin/io/encoding/Base64.kt:500
+-	var	destinationIndex	-	0	var destinationIndex = destinationOffset	commonMain/kotlin/io/encoding/Base64.kt:501
+-	var	hasPadding	-	0	var hasPadding = false	commonMain/kotlin/io/encoding/Base64.kt:502
+-	val	symbol1	-	0	val symbol1 = decodeMap[source[sourceIndex++].toInt() and 0xFF]	commonMain/kotlin/io/encoding/Base64.kt:506
+-	val	symbol2	-	0	val symbol2 = decodeMap[source[sourceIndex++].toInt() and 0xFF]	commonMain/kotlin/io/encoding/Base64.kt:507
+-	val	symbol3	-	0	val symbol3 = decodeMap[source[sourceIndex++].toInt() and 0xFF]	commonMain/kotlin/io/encoding/Base64.kt:508
+-	val	symbol4	-	0	val symbol4 = decodeMap[source[sourceIndex++].toInt() and 0xFF]	commonMain/kotlin/io/encoding/Base64.kt:509
+-	val	bits	-	0	val bits = (symbol1 shl 18) or (symbol2 shl 12) or (symbol3 shl 6) or symbol4	commonMain/kotlin/io/encoding/Base64.kt:510
+-	val	symbol	-	0	val symbol = source[sourceIndex].toInt() and 0xFF	commonMain/kotlin/io/encoding/Base64.kt:520
+-	val	symbolBits	-	0	val symbolBits = decodeMap[symbol]	commonMain/kotlin/io/encoding/Base64.kt:521
+-	val	symbol	-	0	val symbol = source[sourceIndex].toInt() and 0xFF	commonMain/kotlin/io/encoding/Base64.kt:562
+-	fun	decodeSize	-	2	internal fun decodeSize(source: ByteArray, startIndex: Int, endIndex: Int): Int {	commonMain/kotlin/io/encoding/Base64.kt:570
+-	var	symbols	-	0	var symbols = endIndex - startIndex	commonMain/kotlin/io/encoding/Base64.kt:571
+-	val	symbol	-	0	val symbol = source[index].toInt() and 0xFF	commonMain/kotlin/io/encoding/Base64.kt:580
+-	val	symbolBits	-	0	val symbolBits = base64DecodeMap[symbol]	commonMain/kotlin/io/encoding/Base64.kt:581
+-	fun	charsToBytesImpl	-	2	internal fun charsToBytesImpl(source: CharSequence, startIndex: Int, endIndex: Int): ByteArray {	commonMain/kotlin/io/encoding/Base64.kt:599
+-	val	byteArray	-	0	val byteArray = ByteArray(endIndex - startIndex)	commonMain/kotlin/io/encoding/Base64.kt:602
+-	var	length	-	0	var length = 0	commonMain/kotlin/io/encoding/Base64.kt:603
+-	val	symbol	-	0	val symbol = source[index].code	commonMain/kotlin/io/encoding/Base64.kt:605
+-	fun	bytesToStringImpl	-	0	internal fun bytesToStringImpl(source: ByteArray): String {	commonMain/kotlin/io/encoding/Base64.kt:617
+-	val	stringBuilder	-	0	val stringBuilder = StringBuilder(source.size)	commonMain/kotlin/io/encoding/Base64.kt:618
+-	fun	handlePaddingSymbol	-	3	private fun handlePaddingSymbol(source: ByteArray, padIndex: Int, endIndex: Int, byteStart: Int): Int {	commonMain/kotlin/io/encoding/Base64.kt:625
+-	val	secondPadIndex	-	2	val secondPadIndex = skipIllegalSymbolsIfMime(source, padIndex + 1, endIndex)	commonMain/kotlin/io/encoding/Base64.kt:633
+-	fun	checkPaddingIsAllowed	-	0	private fun checkPaddingIsAllowed(padIndex: Int) {	commonMain/kotlin/io/encoding/Base64.kt:648
+-	fun	skipIllegalSymbolsIfMime	-	2	private fun skipIllegalSymbolsIfMime(source: ByteArray, startIndex: Int, endIndex: Int): Int {	commonMain/kotlin/io/encoding/Base64.kt:656
+-	var	sourceIndex	-	0	var sourceIndex = startIndex	commonMain/kotlin/io/encoding/Base64.kt:660
+-	val	symbol	-	0	val symbol = source[sourceIndex].toInt() and 0xFF	commonMain/kotlin/io/encoding/Base64.kt:662
+-	fun	checkSourceBounds	-	2	internal fun checkSourceBounds(sourceSize: Int, startIndex: Int, endIndex: Int) {	commonMain/kotlin/io/encoding/Base64.kt:671
+-	fun	checkDestinationBounds	-	2	private fun checkDestinationBounds(destinationSize: Int, destinationOffset: Int, capacityNeeded: Int) {	commonMain/kotlin/io/encoding/Base64.kt:675
+-	val	destinationEndIndex	-	0	val destinationEndIndex = destinationOffset + capacityNeeded	commonMain/kotlin/io/encoding/Base64.kt:680
+-	object	Default	-	3	public companion object Default : Base64(isUrlSafe = false, isMimeScheme = false, mimeLineLength = -1, paddingOption = PaddingOption.PRESENT) {	commonMain/kotlin/io/encoding/Base64.kt:706
+-	val	Int	-	0	private const val bitsPerByte: Int = 8	commonMain/kotlin/io/encoding/Base64.kt:708
+-	val	Int	-	0	private const val bitsPerSymbol: Int = 6	commonMain/kotlin/io/encoding/Base64.kt:709
+-	val	Int	-	0	internal const val bytesPerGroup: Int = 3	commonMain/kotlin/io/encoding/Base64.kt:711
+-	val	Int	-	0	internal const val symbolsPerGroup: Int = 4	commonMain/kotlin/io/encoding/Base64.kt:712
+-	val	Byte	-	0	internal const val padSymbol: Byte = 61	commonMain/kotlin/io/encoding/Base64.kt:714
+-	val	Int	-	0	private const val lineLengthMime: Int = 76	commonMain/kotlin/io/encoding/Base64.kt:716
+-	val	Int	-	0	private const val lineLengthPem: Int = 64	commonMain/kotlin/io/encoding/Base64.kt:717
+-	val	ByteArray	-	1	internal val mimeLineSeparatorSymbols: ByteArray = byteArrayOf('\r'.code.toByte(), '\n'.code.toByte())	commonMain/kotlin/io/encoding/Base64.kt:718
+-	val	Base64	-	3	public val UrlSafe: Base64 = Base64(isUrlSafe = true, isMimeScheme = false, mimeLineLength = -1, paddingOption = PaddingOption.PRESENT)	commonMain/kotlin/io/encoding/Base64.kt:735
+-	val	Base64	-	3	public val Mime: Base64 = Base64(isUrlSafe = false, isMimeScheme = true, mimeLineLength = lineLengthMime, paddingOption = PaddingOption.PRESENT)	commonMain/kotlin/io/encoding/Base64.kt:752
+-	val	Base64	-	3	public val Pem: Base64 = Base64(isUrlSafe = false, isMimeScheme = true, mimeLineLength = lineLengthPem, paddingOption = PaddingOption.PRESENT)	commonMain/kotlin/io/encoding/Base64.kt:769
+-	val	base64EncodeMap	-	0	private val base64EncodeMap = byteArrayOf(	commonMain/kotlin/io/encoding/Base64.kt:775
+-	val	base64DecodeMap	-	0	private val base64DecodeMap = IntArray(256).apply {	commonMain/kotlin/io/encoding/Base64.kt:782
+-	val	base64UrlEncodeMap	-	0	private val base64UrlEncodeMap = byteArrayOf(	commonMain/kotlin/io/encoding/Base64.kt:791
+-	val	base64UrlDecodeMap	-	0	private val base64UrlDecodeMap = IntArray(256).apply {	commonMain/kotlin/io/encoding/Base64.kt:798
+1.8	fun	isInMimeAlphabet	-	0	internal fun isInMimeAlphabet(symbol: Int): Boolean {	commonMain/kotlin/io/encoding/Base64.kt:808
+1.8	fun	platformCharsToBytes	Base64	0	internal expect fun Base64.platformCharsToBytes(	commonMain/kotlin/io/encoding/Base64.kt:814
+1.8	fun	platformEncodeToString	Base64	0	internal expect fun Base64.platformEncodeToString(	commonMain/kotlin/io/encoding/Base64.kt:822
+1.8	fun	platformEncodeIntoByteArray	Base64	0	internal expect fun Base64.platformEncodeIntoByteArray(	commonMain/kotlin/io/encoding/Base64.kt:829
+1.8	fun	platformEncodeToByteArray	Base64	0	internal expect fun Base64.platformEncodeToByteArray(	commonMain/kotlin/io/encoding/Base64.kt:838
+1.8	class	ExperimentalEncodingApi	-	0	public annotation class ExperimentalEncodingApi	commonMain/kotlin/io/encoding/ExperimentalEncodingApi.kt:37
+1.8	fun	decodingWith	InputStream	0	public fun InputStream.decodingWith(base64: Base64): InputStream {	jvmMain/kotlin/io/encoding/Base64IOStream.kt:43
+1.8	fun	encodingWith	OutputStream	0	public fun OutputStream.encodingWith(base64: Base64): OutputStream {	jvmMain/kotlin/io/encoding/Base64IOStream.kt:67
+-	class	DecodeInputStream	-	0	private class DecodeInputStream(	jvmMain/kotlin/io/encoding/Base64IOStream.kt:73
+-	val	InputStream	-	1	private val input: InputStream,	jvmMain/kotlin/io/encoding/Base64IOStream.kt:74
+-	val	Base64	-	0	private val base64: Base64	jvmMain/kotlin/io/encoding/Base64IOStream.kt:75
+-	var	isClosed	-	0	private var isClosed = false	jvmMain/kotlin/io/encoding/Base64IOStream.kt:77
+-	var	isEOF	-	0	private var isEOF = false	jvmMain/kotlin/io/encoding/Base64IOStream.kt:78
+-	val	singleByteBuffer	-	0	private val singleByteBuffer = ByteArray(1)	jvmMain/kotlin/io/encoding/Base64IOStream.kt:79
+-	val	symbolBuffer	-	0	private val symbolBuffer = ByteArray(1024)	jvmMain/kotlin/io/encoding/Base64IOStream.kt:81
+-	val	byteBuffer	-	0	private val byteBuffer = ByteArray(1024)	jvmMain/kotlin/io/encoding/Base64IOStream.kt:83
+-	var	byteBufferStartIndex	-	0	private var byteBufferStartIndex = 0	jvmMain/kotlin/io/encoding/Base64IOStream.kt:84
+-	var	byteBufferEndIndex	-	0	private var byteBufferEndIndex = 0	jvmMain/kotlin/io/encoding/Base64IOStream.kt:85
+-	val	Int	-	0	private val byteBufferLength: Int	jvmMain/kotlin/io/encoding/Base64IOStream.kt:86
+-	val	byte	-	0	val byte = byteBuffer[byteBufferStartIndex].toInt() and 0xFF	jvmMain/kotlin/io/encoding/Base64IOStream.kt:91
+-	val	bytesNeeded	-	0	val bytesNeeded = length - byteBufferLength	jvmMain/kotlin/io/encoding/Base64IOStream.kt:122
+-	val	groupsNeeded	-	0	val groupsNeeded = (bytesNeeded + bytesPerGroup - 1) / bytesPerGroup	jvmMain/kotlin/io/encoding/Base64IOStream.kt:123
+-	var	symbolsNeeded	-	0	var symbolsNeeded = groupsNeeded * symbolsPerGroup	jvmMain/kotlin/io/encoding/Base64IOStream.kt:124
+-	var	dstOffset	-	0	var dstOffset = offset	jvmMain/kotlin/io/encoding/Base64IOStream.kt:126
+-	var	symbolBufferLength	-	0	var symbolBufferLength = 0	jvmMain/kotlin/io/encoding/Base64IOStream.kt:129
+-	val	symbolsToRead	-	1	val symbolsToRead = minOf(symbolBuffer.size, symbolsNeeded)	jvmMain/kotlin/io/encoding/Base64IOStream.kt:130
+-	fun	decodeSymbolBufferInto	-	3	private fun decodeSymbolBufferInto(dst: ByteArray, dstOffset: Int, dstEndIndex: Int, symbolBufferLength: Int): Int {	jvmMain/kotlin/io/encoding/Base64IOStream.kt:166
+-	val	bytesToCopy	-	1	val bytesToCopy = minOf(byteBufferLength, dstEndIndex - dstOffset)	jvmMain/kotlin/io/encoding/Base64IOStream.kt:175
+-	fun	copyByteBufferInto	-	2	private fun copyByteBufferInto(dst: ByteArray, dstOffset: Int, length: Int) {	jvmMain/kotlin/io/encoding/Base64IOStream.kt:181
+-	fun	resetByteBufferIfEmpty	-	0	private fun resetByteBufferIfEmpty() {	jvmMain/kotlin/io/encoding/Base64IOStream.kt:192
+-	fun	shiftByteBufferToStartIfNeeded	-	0	private fun shiftByteBufferToStartIfNeeded() {	jvmMain/kotlin/io/encoding/Base64IOStream.kt:199
+-	val	byteBufferCapacity	-	0	val byteBufferCapacity = byteBuffer.size - byteBufferEndIndex	jvmMain/kotlin/io/encoding/Base64IOStream.kt:201
+-	val	symbolBufferCapacity	-	0	val symbolBufferCapacity = symbolBuffer.size / symbolsPerGroup * bytesPerGroup	jvmMain/kotlin/io/encoding/Base64IOStream.kt:202
+-	fun	handlePaddingSymbol	-	0	private fun handlePaddingSymbol(symbolBufferLength: Int): Int {	jvmMain/kotlin/io/encoding/Base64IOStream.kt:210
+-	val	secondPad	-	0	val secondPad = readNextSymbol()	jvmMain/kotlin/io/encoding/Base64IOStream.kt:215
+-	fun	readNextSymbol	-	0	private fun readNextSymbol(): Int {	jvmMain/kotlin/io/encoding/Base64IOStream.kt:226
+-	var	Int	-	0	var read: Int	jvmMain/kotlin/io/encoding/Base64IOStream.kt:231
+-	class	EncodeOutputStream	-	0	private class EncodeOutputStream(	jvmMain/kotlin/io/encoding/Base64IOStream.kt:241
+-	val	OutputStream	-	1	private val output: OutputStream,	jvmMain/kotlin/io/encoding/Base64IOStream.kt:242
+-	val	Base64	-	0	private val base64: Base64	jvmMain/kotlin/io/encoding/Base64IOStream.kt:243
+-	var	isClosed	-	0	private var isClosed = false	jvmMain/kotlin/io/encoding/Base64IOStream.kt:245
+-	var	lineLength	-	0	private var lineLength = if (base64.isMimeScheme) base64.mimeLineLength else -1	jvmMain/kotlin/io/encoding/Base64IOStream.kt:247
+-	val	symbolBuffer	-	0	private val symbolBuffer = ByteArray(1024)	jvmMain/kotlin/io/encoding/Base64IOStream.kt:249
+-	val	byteBuffer	-	0	private val byteBuffer = ByteArray(bytesPerGroup)	jvmMain/kotlin/io/encoding/Base64IOStream.kt:251
+-	var	byteBufferLength	-	0	private var byteBufferLength = 0	jvmMain/kotlin/io/encoding/Base64IOStream.kt:252
+-	var	startIndex	-	0	var startIndex = offset	jvmMain/kotlin/io/encoding/Base64IOStream.kt:273
+-	val	endIndex	-	0	val endIndex = startIndex + length	jvmMain/kotlin/io/encoding/Base64IOStream.kt:274
+-	val	groupCapacity	-	0	val groupCapacity = (if (base64.isMimeScheme) lineLength else symbolBuffer.size) / symbolsPerGroup	jvmMain/kotlin/io/encoding/Base64IOStream.kt:284
+-	val	groupsToEncode	-	1	val groupsToEncode = minOf(groupCapacity, (endIndex - startIndex) / bytesPerGroup)	jvmMain/kotlin/io/encoding/Base64IOStream.kt:285
+-	val	bytesToEncode	-	0	val bytesToEncode = groupsToEncode * bytesPerGroup	jvmMain/kotlin/io/encoding/Base64IOStream.kt:286
+-	val	symbolsEncoded	-	2	val symbolsEncoded = encodeIntoOutput(source, startIndex, startIndex + bytesToEncode)	jvmMain/kotlin/io/encoding/Base64IOStream.kt:288
+-	fun	copyIntoByteBuffer	-	2	private fun copyIntoByteBuffer(source: ByteArray, startIndex: Int, endIndex: Int): Int {	jvmMain/kotlin/io/encoding/Base64IOStream.kt:315
+-	val	bytesToCopy	-	1	val bytesToCopy = minOf(bytesPerGroup - byteBufferLength, endIndex - startIndex)	jvmMain/kotlin/io/encoding/Base64IOStream.kt:316
+-	fun	encodeByteBufferIntoOutput	-	0	private fun encodeByteBufferIntoOutput() {	jvmMain/kotlin/io/encoding/Base64IOStream.kt:325
+-	val	symbolsEncoded	-	2	val symbolsEncoded = encodeIntoOutput(byteBuffer, 0, byteBufferLength)	jvmMain/kotlin/io/encoding/Base64IOStream.kt:326
+-	fun	encodeIntoOutput	-	2	private fun encodeIntoOutput(source: ByteArray, startIndex: Int, endIndex: Int): Int {	jvmMain/kotlin/io/encoding/Base64IOStream.kt:331
+-	val	symbolsEncoded	-	0	val symbolsEncoded = base64.encodeIntoByteArray(	jvmMain/kotlin/io/encoding/Base64IOStream.kt:332
+-	fun	checkOpen	-	0	private fun checkOpen() {	jvmMain/kotlin/io/encoding/Base64IOStream.kt:349
+1.8	fun	platformCharsToBytes	Base64	2	internal actual inline fun Base64.platformCharsToBytes(source: CharSequence, startIndex: Int, endIndex: Int): ByteArray {	jvmMain/kotlin/io/encoding/Base64JVM.kt:10
+1.8	fun	platformEncodeToString	Base64	2	internal actual inline fun Base64.platformEncodeToString(source: ByteArray, startIndex: Int, endIndex: Int): String {	jvmMain/kotlin/io/encoding/Base64JVM.kt:23
+-	val	byteResult	-	2	val byteResult = encodeToByteArrayImpl(source, startIndex, endIndex)	jvmMain/kotlin/io/encoding/Base64JVM.kt:31
+1.8	fun	platformEncodeIntoByteArray	Base64	0	internal actual inline fun Base64.platformEncodeIntoByteArray(	jvmMain/kotlin/io/encoding/Base64JVM.kt:37
+1.8	fun	platformEncodeToByteArray	Base64	0	internal actual inline fun Base64.platformEncodeToByteArray(	jvmMain/kotlin/io/encoding/Base64JVM.kt:56

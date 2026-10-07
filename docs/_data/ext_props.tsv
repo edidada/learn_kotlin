@@ -1,0 +1,89 @@
+since	pkg	kind	name	receiver	sig	loc	flags
+-	kotlin.collections	val	indices	ByteArray	public val ByteArray.indices: IntRange	commonMain\generated\_Arrays.kt:7758
+-	kotlin.collections	val	indices	ShortArray	public val ShortArray.indices: IntRange	commonMain\generated\_Arrays.kt:7764
+-	kotlin.collections	val	indices	IntArray	public val IntArray.indices: IntRange	commonMain\generated\_Arrays.kt:7770
+-	kotlin.collections	val	indices	LongArray	public val LongArray.indices: IntRange	commonMain\generated\_Arrays.kt:7776
+-	kotlin.collections	val	indices	FloatArray	public val FloatArray.indices: IntRange	commonMain\generated\_Arrays.kt:7782
+-	kotlin.collections	val	indices	DoubleArray	public val DoubleArray.indices: IntRange	commonMain\generated\_Arrays.kt:7788
+-	kotlin.collections	val	indices	BooleanArray	public val BooleanArray.indices: IntRange	commonMain\generated\_Arrays.kt:7794
+-	kotlin.collections	val	indices	CharArray	public val CharArray.indices: IntRange	commonMain\generated\_Arrays.kt:7800
+-	kotlin.collections	val	lastIndex	ByteArray	public val ByteArray.lastIndex: Int	commonMain\generated\_Arrays.kt:7956
+-	kotlin.collections	val	lastIndex	ShortArray	public val ShortArray.lastIndex: Int	commonMain\generated\_Arrays.kt:7962
+-	kotlin.collections	val	lastIndex	IntArray	public val IntArray.lastIndex: Int	commonMain\generated\_Arrays.kt:7968
+-	kotlin.collections	val	lastIndex	LongArray	public val LongArray.lastIndex: Int	commonMain\generated\_Arrays.kt:7974
+-	kotlin.collections	val	lastIndex	FloatArray	public val FloatArray.lastIndex: Int	commonMain\generated\_Arrays.kt:7980
+-	kotlin.collections	val	lastIndex	DoubleArray	public val DoubleArray.lastIndex: Int	commonMain\generated\_Arrays.kt:7986
+-	kotlin.collections	val	lastIndex	BooleanArray	public val BooleanArray.lastIndex: Int	commonMain\generated\_Arrays.kt:7992
+-	kotlin.collections	val	lastIndex	CharArray	public val CharArray.lastIndex: Int	commonMain\generated\_Arrays.kt:7998
+1.3	kotlin.collections	val	indices	UIntArray	public inline val UIntArray.indices: IntRange	commonMain\generated\_UArrays.kt:3791
+1.3	kotlin.collections	val	indices	ULongArray	public inline val ULongArray.indices: IntRange	commonMain\generated\_UArrays.kt:3799
+1.3	kotlin.collections	val	indices	UByteArray	public inline val UByteArray.indices: IntRange	commonMain\generated\_UArrays.kt:3807
+1.3	kotlin.collections	val	indices	UShortArray	public inline val UShortArray.indices: IntRange	commonMain\generated\_UArrays.kt:3815
+1.3	kotlin.collections	val	lastIndex	UIntArray	public inline val UIntArray.lastIndex: Int	commonMain\generated\_UArrays.kt:3823
+1.3	kotlin.collections	val	lastIndex	ULongArray	public inline val ULongArray.lastIndex: Int	commonMain\generated\_UArrays.kt:3831
+1.3	kotlin.collections	val	lastIndex	UByteArray	public inline val UByteArray.lastIndex: Int	commonMain\generated\_UArrays.kt:3839
+1.3	kotlin.collections	val	lastIndex	UShortArray	public inline val UShortArray.lastIndex: Int	commonMain\generated\_UArrays.kt:3847
+1.5	kotlin	val	code	Char	public inline val Char.code: Int get() = this.toInt()	commonMain\kotlin\CharCode.kt:46
+1.4	kotlin	val	suppressedExceptions	Throwable	public expect val Throwable.suppressedExceptions: List<Throwable>	commonMain\kotlin\ExceptionsH.kt:162
+1.2	kotlin.math	val	absoluteValue	Double	public expect val Double.absoluteValue: Double	commonMain\kotlin\MathH.kt:406
+1.2	kotlin.math	val	sign	Double	public expect val Double.sign: Double	commonMain\kotlin\MathH.kt:418
+1.2	kotlin.math	val	ulp	Double	public expect val Double.ulp: Double	commonMain\kotlin\MathH.kt:445
+1.2	kotlin.math	val	absoluteValue	Float	public expect val Float.absoluteValue: Float	commonMain\kotlin\MathH.kt:886
+1.2	kotlin.math	val	sign	Float	public expect val Float.sign: Float	commonMain\kotlin\MathH.kt:898
+1.2	kotlin.math	val	absoluteValue	Int	public expect val Int.absoluteValue: Int	commonMain\kotlin\MathH.kt:979
+1.2	kotlin.math	val	sign	Int	public expect val Int.sign: Int	commonMain\kotlin\MathH.kt:988
+1.2	kotlin.math	val	absoluteValue	Long	public expect val Long.absoluteValue: Long	commonMain\kotlin\MathH.kt:1024
+1.2	kotlin.math	val	sign	Long	public expect val Long.sign: Int	commonMain\kotlin\MathH.kt:1033
+1.5	kotlin.text	val	category	Char	public expect val Char.category: CharCategory	commonMain\kotlin\text\Char.kt:242
+-	kotlin.text	val	indices	CharSequence	public val CharSequence.indices: IntRange	commonMain\kotlin\text\Strings.kt:382
+-	kotlin.text	val	lastIndex	CharSequence	public val CharSequence.lastIndex: Int	commonMain\kotlin\text\Strings.kt:388
+1.2	kotlin.text	val	CASE_INSENSITIVE_ORDER	String.Companion	public expect val String.Companion.CASE_INSENSITIVE_ORDER: Comparator<String>	commonMain\kotlin\TextH.kt:465
+-	kotlin.time	val	nanoseconds	Int	public inline val Int.nanoseconds: Duration get() = toDuration(DurationUnit.NANOSECONDS)	commonMain\kotlin\time\Duration.kt:70
+-	kotlin.time	val	nanoseconds	Long	public inline val Long.nanoseconds: Duration get() = toDuration(DurationUnit.NANOSECONDS)	commonMain\kotlin\time\Duration.kt:74
+-	kotlin.time	val	nanoseconds	Double	public inline val Double.nanoseconds: Duration get() = toDuration(DurationUnit.NANOSECONDS)	commonMain\kotlin\time\Duration.kt:84
+-	kotlin.time	val	microseconds	Int	public inline val Int.microseconds: Duration get() = toDuration(DurationUnit.MICROSECONDS)	commonMain\kotlin\time\Duration.kt:89
+-	kotlin.time	val	microseconds	Long	public inline val Long.microseconds: Duration get() = toDuration(DurationUnit.MICROSECONDS)	commonMain\kotlin\time\Duration.kt:93
+-	kotlin.time	val	microseconds	Double	public inline val Double.microseconds: Duration get() = toDuration(DurationUnit.MICROSECONDS)	commonMain\kotlin\time\Duration.kt:103
+-	kotlin.time	val	milliseconds	Int	public inline val Int.milliseconds: Duration get() = toDuration(DurationUnit.MILLISECONDS)	commonMain\kotlin\time\Duration.kt:108
+-	kotlin.time	val	milliseconds	Long	public inline val Long.milliseconds: Duration get() = toDuration(DurationUnit.MILLISECONDS)	commonMain\kotlin\time\Duration.kt:112
+-	kotlin.time	val	milliseconds	Double	public inline val Double.milliseconds: Duration get() = toDuration(DurationUnit.MILLISECONDS)	commonMain\kotlin\time\Duration.kt:122
+-	kotlin.time	val	seconds	Int	public inline val Int.seconds: Duration get() = toDuration(DurationUnit.SECONDS)	commonMain\kotlin\time\Duration.kt:127
+-	kotlin.time	val	seconds	Long	public inline val Long.seconds: Duration get() = toDuration(DurationUnit.SECONDS)	commonMain\kotlin\time\Duration.kt:131
+-	kotlin.time	val	seconds	Double	public inline val Double.seconds: Duration get() = toDuration(DurationUnit.SECONDS)	commonMain\kotlin\time\Duration.kt:141
+-	kotlin.time	val	minutes	Int	public inline val Int.minutes: Duration get() = toDuration(DurationUnit.MINUTES)	commonMain\kotlin\time\Duration.kt:146
+-	kotlin.time	val	minutes	Long	public inline val Long.minutes: Duration get() = toDuration(DurationUnit.MINUTES)	commonMain\kotlin\time\Duration.kt:150
+-	kotlin.time	val	minutes	Double	public inline val Double.minutes: Duration get() = toDuration(DurationUnit.MINUTES)	commonMain\kotlin\time\Duration.kt:160
+-	kotlin.time	val	hours	Int	public inline val Int.hours: Duration get() = toDuration(DurationUnit.HOURS)	commonMain\kotlin\time\Duration.kt:165
+-	kotlin.time	val	hours	Long	public inline val Long.hours: Duration get() = toDuration(DurationUnit.HOURS)	commonMain\kotlin\time\Duration.kt:169
+-	kotlin.time	val	hours	Double	public inline val Double.hours: Duration get() = toDuration(DurationUnit.HOURS)	commonMain\kotlin\time\Duration.kt:179
+-	kotlin.time	val	days	Int	public inline val Int.days: Duration get() = toDuration(DurationUnit.DAYS)	commonMain\kotlin\time\Duration.kt:184
+-	kotlin.time	val	days	Long	public inline val Long.days: Duration get() = toDuration(DurationUnit.DAYS)	commonMain\kotlin\time\Duration.kt:188
+-	kotlin.time	val	days	Double	public inline val Double.days: Duration get() = toDuration(DurationUnit.DAYS)	commonMain\kotlin\time\Duration.kt:198
+2.1	kotlin.time	val	isDistantPast	Instant	public inline val Instant.isDistantPast: Boolean	commonMain\kotlin\time\Instant.kt:436
+2.1	kotlin.time	val	isDistantFuture	Instant	public inline val Instant.isDistantFuture: Boolean	commonMain\kotlin\time\Instant.kt:447
+1.5	kotlin.io.path	val	name	Path	public val Path.name: String	jvmMain\jdk7\kotlin\io\path\PathUtils.kt:27
+1.5	kotlin.io.path	val	nameWithoutExtension	Path	public val Path.nameWithoutExtension: String	jvmMain\jdk7\kotlin\io\path\PathUtils.kt:35
+1.5	kotlin.io.path	val	extension	Path	public val Path.extension: String	jvmMain\jdk7\kotlin\io\path\PathUtils.kt:43
+1.5	kotlin.io.path	val	pathString	Path	public inline val Path.pathString: String	jvmMain\jdk7\kotlin\io\path\PathUtils.kt:56
+1.5	kotlin.io.path	val	invariantSeparatorsPathString	Path	public val Path.invariantSeparatorsPathString: String	jvmMain\jdk7\kotlin\io\path\PathUtils.kt:64
+1.4	kotlin.io.path	val	invariantSeparatorsPath	Path	public inline val Path.invariantSeparatorsPath: String	jvmMain\jdk7\kotlin\io\path\PathUtils.kt:75	Deprecated
+-	kotlin.io	val	isRooted	File	public val File.isRooted: Boolean	jvmMain\kotlin\io\files\FilePathComponents.kt:84
+-	kotlin.io	val	extension	File	public val File.extension: String	jvmMain\kotlin\io\files\Utils.kt:91
+-	kotlin.io	val	invariantSeparatorsPath	File	public val File.invariantSeparatorsPath: String	jvmMain\kotlin\io\files\Utils.kt:98
+-	kotlin.io	val	nameWithoutExtension	File	public val File.nameWithoutExtension: String	jvmMain\kotlin\io\files\Utils.kt:104
+1.4	kotlin.reflect	val	javaType	KType	public val KType.javaType: Type	jvmMain\kotlin\reflect\TypesJVM.kt:26
+-	kotlin.text	val	category	Char	public actual val Char.category: CharCategory	jvmMain\kotlin\text\CharJVM.kt:16
+-	kotlin.text	val	directionality	Char	public val Char.directionality: CharDirectionality get() = CharDirectionality.valueOf(Character.getDirectionality(this).toInt())	jvmMain\kotlin\text\CharJVM.kt:281
+-	kotlin.text	val	CASE_INSENSITIVE_ORDER	String.Companion	public actual val String.Companion.CASE_INSENSITIVE_ORDER: Comparator<String>	jvmMain\kotlin\text\StringsJVM.kt:812
+-	kotlin	val	stackTrace	Throwable	public val Throwable.stackTrace: Array<StackTraceElement>	jvmMain\kotlin\util\Exceptions.kt:41
+1.4	kotlin	val	suppressedExceptions	Throwable	public actual val Throwable.suppressedExceptions: List<Throwable>	jvmMain\kotlin\util\Exceptions.kt:82
+1.2	kotlin.math	val	absoluteValue	Double	public actual inline val Double.absoluteValue: Double get() = nativeMath.abs(this)	jvmMain\kotlin\util\MathJVM.kt:536
+1.2	kotlin.math	val	sign	Double	public actual inline val Double.sign: Double get() = nativeMath.signum(this)	jvmMain\kotlin\util\MathJVM.kt:549
+1.2	kotlin.math	val	ulp	Double	public actual inline val Double.ulp: Double get() = nativeMath.ulp(this)	jvmMain\kotlin\util\MathJVM.kt:579
+1.2	kotlin.math	val	absoluteValue	Float	public actual inline val Float.absoluteValue: Float get() = nativeMath.abs(this)	jvmMain\kotlin\util\MathJVM.kt:1082
+1.2	kotlin.math	val	sign	Float	public actual inline val Float.sign: Float get() = nativeMath.signum(this)	jvmMain\kotlin\util\MathJVM.kt:1095
+1.2	kotlin.math	val	ulp	Float	public inline val Float.ulp: Float get() = nativeMath.ulp(this)	jvmMain\kotlin\util\MathJVM.kt:1125
+1.2	kotlin.math	val	absoluteValue	Int	public actual inline val Int.absoluteValue: Int get() = nativeMath.abs(this)	jvmMain\kotlin\util\MathJVM.kt:1222
+1.2	kotlin.math	val	sign	Int	public actual val Int.sign: Int get() = Integer.signum(this)	jvmMain\kotlin\util\MathJVM.kt:1231
+1.2	kotlin.math	val	absoluteValue	Long	public actual inline val Long.absoluteValue: Long get() = nativeMath.abs(this)	jvmMain\kotlin\util\MathJVM.kt:1271
+1.2	kotlin.math	val	sign	Long	public actual val Long.sign: Int get() = java.lang.Long.signum(this)	jvmMain\kotlin\util\MathJVM.kt:1280

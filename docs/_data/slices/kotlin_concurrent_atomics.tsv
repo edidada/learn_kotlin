@@ -1,0 +1,145 @@
+since	kind	name	receiver	arity	sig	loc
+2.1	class	AtomicIntArray	-	0	public expect class AtomicIntArray {	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:26
+-	val	Int	-	0	public val size: Int	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:47
+-	fun	loadAt	-	0	public fun loadAt(index: Int): Int	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:56
+-	fun	storeAt	-	1	public fun storeAt(index: Int, newValue: Int)	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:65
+-	fun	exchangeAt	-	1	public fun exchangeAt(index: Int, newValue: Int): Int	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:75
+-	fun	compareAndSetAt	-	2	public fun compareAndSetAt(index: Int, expectedValue: Int, newValue: Int): Boolean	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:91
+-	fun	compareAndExchangeAt	-	2	public fun compareAndExchangeAt(index: Int, expectedValue: Int, newValue: Int): Int	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:103
+-	fun	fetchAndAddAt	-	1	public fun fetchAndAddAt(index: Int, delta: Int): Int	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:112
+-	fun	addAndFetchAt	-	1	public fun addAndFetchAt(index: Int, delta: Int): Int	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:121
+2.1	fun	AtomicIntArray	-	1	public inline fun AtomicIntArray(size: Int, init: (Int) -> Int): AtomicIntArray =	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:143
+2.1	fun	fetchAndIncrementAt	AtomicIntArray	1	public fun AtomicIntArray.fetchAndIncrementAt(index: Int): Int = this.fetchAndAddAt(index, 1)	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:155
+2.1	fun	incrementAndFetchAt	AtomicIntArray	1	public fun AtomicIntArray.incrementAndFetchAt(index: Int): Int = this.addAndFetchAt(index, 1)	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:166
+2.1	fun	decrementAndFetchAt	AtomicIntArray	1	public fun AtomicIntArray.decrementAndFetchAt(index: Int): Int = this.addAndFetchAt(index, -1)	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:177
+2.1	fun	fetchAndDecrementAt	AtomicIntArray	1	public fun AtomicIntArray.fetchAndDecrementAt(index: Int): Int = this.fetchAndAddAt(index, -1)	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:188
+2.1	class	AtomicLongArray	-	0	public expect class AtomicLongArray {	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:205
+-	val	Int	-	0	public val size: Int	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:226
+-	fun	loadAt	-	0	public fun loadAt(index: Int): Long	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:235
+-	fun	storeAt	-	1	public fun storeAt(index: Int, newValue: Long)	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:244
+-	fun	exchangeAt	-	1	public fun exchangeAt(index: Int, newValue: Long): Long	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:254
+-	fun	compareAndSetAt	-	2	public fun compareAndSetAt(index: Int, expectedValue: Long, newValue: Long): Boolean	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:270
+-	fun	compareAndExchangeAt	-	2	public fun compareAndExchangeAt(index: Int, expectedValue: Long, newValue: Long): Long	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:282
+-	fun	fetchAndAddAt	-	1	public fun fetchAndAddAt(index: Int, delta: Long): Long	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:291
+-	fun	addAndFetchAt	-	1	public fun addAndFetchAt(index: Int, delta: Long): Long	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:300
+2.1	fun	AtomicLongArray	-	1	public inline fun AtomicLongArray(size: Int, init: (Int) -> Long): AtomicLongArray =	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:322
+2.1	fun	fetchAndIncrementAt	AtomicLongArray	1	public fun AtomicLongArray.fetchAndIncrementAt(index: Int): Long = this.fetchAndAddAt(index, 1)	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:334
+2.1	fun	incrementAndFetchAt	AtomicLongArray	1	public fun AtomicLongArray.incrementAndFetchAt(index: Int): Long = this.addAndFetchAt(index, 1)	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:345
+2.1	fun	decrementAndFetchAt	AtomicLongArray	1	public fun AtomicLongArray.decrementAndFetchAt(index: Int): Long = this.addAndFetchAt(index, -1)	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:356
+2.1	fun	fetchAndDecrementAt	AtomicLongArray	1	public fun AtomicLongArray.fetchAndDecrementAt(index: Int): Long = this.fetchAndAddAt(index, -1)	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:367
+2.1	class	AtomicArray	-	0	public expect class AtomicArray<T> {	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:384
+-	val	Int	-	0	public val size: Int	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:398
+-	fun	loadAt	-	0	public fun loadAt(index: Int): T	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:407
+-	fun	storeAt	-	1	public fun storeAt(index: Int, newValue: T)	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:416
+-	fun	exchangeAt	-	1	public fun exchangeAt(index: Int, newValue: T): T	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:426
+-	fun	compareAndSetAt	-	2	public fun compareAndSetAt(index: Int, expectedValue: T, newValue: T): Boolean	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:442
+-	fun	compareAndExchangeAt	-	2	public fun compareAndExchangeAt(index: Int, expectedValue: T, newValue: T): T	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:454
+2.1	fun	AtomicArray	-	1	public inline fun <reified T> AtomicArray(size: Int, init: (Int) -> T): AtomicArray<T> =	commonMain/kotlin/concurrent/atomics/AtomicArrays.common.kt:477
+2.1	class	AtomicInt	-	0	public expect class AtomicInt public constructor(value: Int) {	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:26
+-	fun	load	-	0	public fun load(): Int	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:32
+-	fun	store	-	0	public fun store(newValue: Int)	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:39
+-	fun	exchange	-	0	public fun exchange(newValue: Int): Int	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:46
+-	fun	compareAndSet	-	1	public fun compareAndSet(expectedValue: Int, newValue: Int): Boolean	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:59
+-	fun	compareAndExchange	-	1	public fun compareAndExchange(expectedValue: Int, newValue: Int): Int	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:69
+-	fun	fetchAndAdd	-	0	public fun fetchAndAdd(delta: Int): Int	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:76
+-	fun	addAndFetch	-	0	public fun addAndFetch(delta: Int): Int	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:83
+2.1	fun	plusAssign	AtomicInt	0	public operator fun AtomicInt.plusAssign(delta: Int): Unit { this.addAndFetch(delta) }	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:100
+2.1	fun	minusAssign	AtomicInt	0	public operator fun AtomicInt.minusAssign(delta: Int): Unit { this.addAndFetch(-delta) }	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:109
+2.1	fun	fetchAndIncrement	AtomicInt	0	public fun AtomicInt.fetchAndIncrement(): Int = this.fetchAndAdd(1)	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:118
+2.1	fun	incrementAndFetch	AtomicInt	0	public fun AtomicInt.incrementAndFetch(): Int = this.addAndFetch(1)	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:127
+2.1	fun	decrementAndFetch	AtomicInt	0	public fun AtomicInt.decrementAndFetch(): Int = this.addAndFetch(-1)	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:136
+2.1	fun	fetchAndDecrement	AtomicInt	0	public fun AtomicInt.fetchAndDecrement(): Int = this.fetchAndAdd(-1)	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:145
+2.1	class	AtomicLong	-	0	public expect class AtomicLong public constructor(value: Long) {	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:162
+-	fun	load	-	0	public fun load(): Long	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:168
+-	fun	store	-	0	public fun store(newValue: Long)	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:175
+-	fun	exchange	-	0	public fun exchange(newValue: Long): Long	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:182
+-	fun	compareAndSet	-	1	public fun compareAndSet(expectedValue: Long, newValue: Long): Boolean	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:195
+-	fun	compareAndExchange	-	1	public fun compareAndExchange(expectedValue: Long, newValue: Long): Long	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:205
+-	fun	fetchAndAdd	-	0	public fun fetchAndAdd(delta: Long): Long	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:212
+-	fun	addAndFetch	-	0	public fun addAndFetch(delta: Long): Long	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:219
+2.1	fun	plusAssign	AtomicLong	0	public operator fun AtomicLong.plusAssign(delta: Long): Unit { this.addAndFetch(delta) }	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:236
+2.1	fun	minusAssign	AtomicLong	0	public operator fun AtomicLong.minusAssign(delta: Long): Unit { this.addAndFetch(-delta) }	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:245
+2.1	fun	fetchAndIncrement	AtomicLong	0	public fun AtomicLong.fetchAndIncrement(): Long = this.fetchAndAdd(1)	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:254
+2.1	fun	incrementAndFetch	AtomicLong	0	public fun AtomicLong.incrementAndFetch(): Long = this.addAndFetch(1)	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:263
+2.1	fun	decrementAndFetch	AtomicLong	0	public fun AtomicLong.decrementAndFetch(): Long = this.addAndFetch(-1)	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:272
+2.1	fun	fetchAndDecrement	AtomicLong	0	public fun AtomicLong.fetchAndDecrement(): Long = this.fetchAndAdd(-1)	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:281
+2.1	class	AtomicBoolean	-	0	public expect class AtomicBoolean public constructor(value: Boolean) {	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:298
+-	fun	load	-	0	public fun load(): Boolean	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:304
+-	fun	store	-	0	public fun store(newValue: Boolean)	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:311
+-	fun	exchange	-	0	public fun exchange(newValue: Boolean): Boolean	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:318
+-	fun	compareAndSet	-	1	public fun compareAndSet(expectedValue: Boolean, newValue: Boolean): Boolean	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:331
+-	fun	compareAndExchange	-	1	public fun compareAndExchange(expectedValue: Boolean, newValue: Boolean): Boolean	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:341
+2.1	class	AtomicReference	-	0	public expect class AtomicReference<T> public constructor(value: T) {	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:364
+-	fun	load	-	0	public fun load(): T	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:370
+-	fun	store	-	0	public fun store(newValue: T)	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:377
+-	fun	exchange	-	0	public fun exchange(newValue: T): T	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:384
+-	fun	compareAndSet	-	1	public fun compareAndSet(expectedValue: T, newValue: T): Boolean	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:397
+-	fun	compareAndExchange	-	1	public fun compareAndExchange(expectedValue: T, newValue: T): T	commonMain/kotlin/concurrent/atomics/Atomics.common.kt:407
+2.1	class	ExperimentalAtomicApi	-	0	public annotation class ExperimentalAtomicApi	commonMain/kotlin/concurrent/atomics/ExperimentalAtomicApi.kt:39
+2.1	class	AtomicIntArray	-	0	public actual class AtomicIntArray {	jvmMain/kotlin/AtomicArrays.kt:19
+-	val	Int	-	0	public actual val size: Int	jvmMain/kotlin/AtomicArrays.kt:35
+-	fun	loadAt	-	0	public actual fun loadAt(index: Int): Int	jvmMain/kotlin/AtomicArrays.kt:44
+-	fun	storeAt	-	1	public actual fun storeAt(index: Int, newValue: Int)	jvmMain/kotlin/AtomicArrays.kt:53
+-	fun	exchangeAt	-	1	public actual fun exchangeAt(index: Int, newValue: Int): Int	jvmMain/kotlin/AtomicArrays.kt:63
+-	fun	compareAndSetAt	-	2	public actual fun compareAndSetAt(index: Int, expectedValue: Int, newValue: Int): Boolean	jvmMain/kotlin/AtomicArrays.kt:76
+-	fun	compareAndExchangeAt	-	2	public actual fun compareAndExchangeAt(index: Int, expectedValue: Int, newValue: Int): Int	jvmMain/kotlin/AtomicArrays.kt:92
+-	fun	fetchAndAddAt	-	1	public actual fun fetchAndAddAt(index: Int, delta: Int): Int	jvmMain/kotlin/AtomicArrays.kt:101
+-	fun	addAndFetchAt	-	1	public actual fun addAndFetchAt(index: Int, delta: Int): Int	jvmMain/kotlin/AtomicArrays.kt:110
+2.1	class	AtomicLongArray	-	0	public actual class AtomicLongArray {	jvmMain/kotlin/AtomicArrays.kt:127
+-	val	Int	-	0	public actual val size: Int	jvmMain/kotlin/AtomicArrays.kt:143
+-	fun	loadAt	-	0	public actual fun loadAt(index: Int): Long	jvmMain/kotlin/AtomicArrays.kt:152
+-	fun	storeAt	-	1	public actual fun storeAt(index: Int, newValue: Long)	jvmMain/kotlin/AtomicArrays.kt:161
+-	fun	exchangeAt	-	1	public actual fun exchangeAt(index: Int, newValue: Long): Long	jvmMain/kotlin/AtomicArrays.kt:171
+-	fun	compareAndSetAt	-	2	public actual fun compareAndSetAt(index: Int, expectedValue: Long, newValue: Long): Boolean	jvmMain/kotlin/AtomicArrays.kt:184
+-	fun	compareAndExchangeAt	-	2	public actual fun compareAndExchangeAt(index: Int, expectedValue: Long, newValue: Long): Long	jvmMain/kotlin/AtomicArrays.kt:200
+-	fun	fetchAndAddAt	-	1	public actual fun fetchAndAddAt(index: Int, delta: Long): Long	jvmMain/kotlin/AtomicArrays.kt:209
+-	fun	addAndFetchAt	-	1	public actual fun addAndFetchAt(index: Int, delta: Long): Long	jvmMain/kotlin/AtomicArrays.kt:218
+2.1	class	AtomicArray	-	0	public actual class AtomicArray<T> {	jvmMain/kotlin/AtomicArrays.kt:235
+-	val	Int	-	0	public actual val size: Int	jvmMain/kotlin/AtomicArrays.kt:244
+-	fun	loadAt	-	0	public actual fun loadAt(index: Int): T	jvmMain/kotlin/AtomicArrays.kt:253
+-	fun	storeAt	-	1	public actual fun storeAt(index: Int, newValue: T)	jvmMain/kotlin/AtomicArrays.kt:262
+-	fun	exchangeAt	-	1	public actual fun exchangeAt(index: Int, newValue: T): T	jvmMain/kotlin/AtomicArrays.kt:272
+-	fun	compareAndSetAt	-	2	public actual fun compareAndSetAt(index: Int, expectedValue: T, newValue: T): Boolean	jvmMain/kotlin/AtomicArrays.kt:285
+-	fun	compareAndExchangeAt	-	2	public actual fun compareAndExchangeAt(index: Int, expectedValue: T, newValue: T): T	jvmMain/kotlin/AtomicArrays.kt:301
+2.1	class	AtomicInt	-	0	public actual class AtomicInt actual constructor(value: Int) {	jvmMain/kotlin/Atomics.kt:21
+-	fun	load	-	0	public actual fun load(): Int	jvmMain/kotlin/Atomics.kt:27
+-	fun	store	-	0	public actual fun store(newValue: Int)	jvmMain/kotlin/Atomics.kt:34
+-	fun	exchange	-	0	public actual fun exchange(newValue: Int): Int	jvmMain/kotlin/Atomics.kt:41
+-	fun	compareAndSet	-	1	public actual fun compareAndSet(expectedValue: Int, newValue: Int): Boolean	jvmMain/kotlin/Atomics.kt:51
+-	fun	compareAndExchange	-	1	public actual fun compareAndExchange(expectedValue: Int, newValue: Int): Int	jvmMain/kotlin/Atomics.kt:65
+-	fun	fetchAndAdd	-	0	public actual fun fetchAndAdd(delta: Int): Int	jvmMain/kotlin/Atomics.kt:72
+-	fun	addAndFetch	-	0	public actual fun addAndFetch(delta: Int): Int	jvmMain/kotlin/Atomics.kt:79
+2.1	class	AtomicLong	-	0	public actual class AtomicLong actual constructor(value: Long) {	jvmMain/kotlin/Atomics.kt:96
+-	fun	load	-	0	public actual fun load(): Long	jvmMain/kotlin/Atomics.kt:102
+-	fun	store	-	0	public actual fun store(newValue: Long)	jvmMain/kotlin/Atomics.kt:109
+-	fun	exchange	-	0	public actual fun exchange(newValue: Long): Long	jvmMain/kotlin/Atomics.kt:116
+-	fun	compareAndSet	-	1	public actual fun compareAndSet(expectedValue: Long, newValue: Long): Boolean	jvmMain/kotlin/Atomics.kt:126
+-	fun	compareAndExchange	-	1	public actual fun compareAndExchange(expectedValue: Long, newValue: Long): Long	jvmMain/kotlin/Atomics.kt:140
+-	fun	fetchAndAdd	-	0	public actual fun fetchAndAdd(delta: Long): Long	jvmMain/kotlin/Atomics.kt:147
+-	fun	addAndFetch	-	0	public actual fun addAndFetch(delta: Long): Long	jvmMain/kotlin/Atomics.kt:154
+2.1	class	AtomicBoolean	-	0	public actual class AtomicBoolean actual constructor(value: Boolean) {	jvmMain/kotlin/Atomics.kt:171
+-	fun	load	-	0	public actual fun load(): Boolean	jvmMain/kotlin/Atomics.kt:177
+-	fun	store	-	0	public actual fun store(newValue: Boolean)	jvmMain/kotlin/Atomics.kt:184
+-	fun	exchange	-	0	public actual fun exchange(newValue: Boolean): Boolean	jvmMain/kotlin/Atomics.kt:191
+-	fun	compareAndSet	-	1	public actual fun compareAndSet(expectedValue: Boolean, newValue: Boolean): Boolean	jvmMain/kotlin/Atomics.kt:201
+-	fun	compareAndExchange	-	1	public actual fun compareAndExchange(expectedValue: Boolean, newValue: Boolean): Boolean	jvmMain/kotlin/Atomics.kt:215
+2.1	class	AtomicReference	-	0	public actual class AtomicReference<T> actual constructor(value: T) {	jvmMain/kotlin/Atomics.kt:232
+-	fun	load	-	0	public actual fun load(): T	jvmMain/kotlin/Atomics.kt:238
+-	fun	store	-	0	public actual fun store(newValue: T)	jvmMain/kotlin/Atomics.kt:245
+-	fun	exchange	-	0	public actual fun exchange(newValue: T): T	jvmMain/kotlin/Atomics.kt:252
+-	fun	compareAndSet	-	1	public actual fun compareAndSet(expectedValue: T, newValue: T): Boolean	jvmMain/kotlin/Atomics.kt:262
+-	fun	compareAndExchange	-	1	public actual fun compareAndExchange(expectedValue: T, newValue: T): T	jvmMain/kotlin/Atomics.kt:276
+2.1	fun	asJavaAtomicArray	AtomicIntArray	0	public fun AtomicIntArray.asJavaAtomicArray(): java.util.concurrent.atomic.AtomicIntegerArray = this as java.util.concurrent.atomic.AtomicIntegerArray	jvmMain/kotlin/concurrent/atomics/AtomicArrays.jvm.kt:18
+2.1	fun	asKotlinAtomicArray	java.util.concurrent.atomic.AtomicIntegerArray	0	public fun java.util.concurrent.atomic.AtomicIntegerArray.asKotlinAtomicArray(): AtomicIntArray = this as AtomicIntArray	jvmMain/kotlin/concurrent/atomics/AtomicArrays.jvm.kt:26
+2.1	fun	asJavaAtomicArray	AtomicLongArray	0	public fun AtomicLongArray.asJavaAtomicArray(): java.util.concurrent.atomic.AtomicLongArray = this as java.util.concurrent.atomic.AtomicLongArray	jvmMain/kotlin/concurrent/atomics/AtomicArrays.jvm.kt:34
+2.1	fun	asKotlinAtomicArray	java.util.concurrent.atomic.AtomicLongArray	0	public fun java.util.concurrent.atomic.AtomicLongArray.asKotlinAtomicArray(): AtomicLongArray = this as AtomicLongArray	jvmMain/kotlin/concurrent/atomics/AtomicArrays.jvm.kt:42
+2.1	fun	asJavaAtomicArray	-	0	public fun <T> AtomicArray<T>.asJavaAtomicArray(): java.util.concurrent.atomic.AtomicReferenceArray<T> = this as java.util.concurrent.atomic.AtomicReferenceArray<T>	jvmMain/kotlin/concurrent/atomics/AtomicArrays.jvm.kt:50
+2.1	fun	asKotlinAtomicArray	-	0	public fun <T> java.util.concurrent.atomic.AtomicReferenceArray<T>.asKotlinAtomicArray(): AtomicArray<T> = this as AtomicArray<T>	jvmMain/kotlin/concurrent/atomics/AtomicArrays.jvm.kt:58
+2.1	fun	asJavaAtomic	AtomicInt	0	public fun AtomicInt.asJavaAtomic(): java.util.concurrent.atomic.AtomicInteger = this as java.util.concurrent.atomic.AtomicInteger	jvmMain/kotlin/concurrent/atomics/Atomics.jvm.kt:18
+2.1	fun	asKotlinAtomic	java.util.concurrent.atomic.AtomicInteger	0	public fun java.util.concurrent.atomic.AtomicInteger.asKotlinAtomic(): AtomicInt = this as AtomicInt	jvmMain/kotlin/concurrent/atomics/Atomics.jvm.kt:26
+2.1	fun	asJavaAtomic	AtomicLong	0	public fun AtomicLong.asJavaAtomic(): java.util.concurrent.atomic.AtomicLong = this as java.util.concurrent.atomic.AtomicLong	jvmMain/kotlin/concurrent/atomics/Atomics.jvm.kt:34
+2.1	fun	asKotlinAtomic	java.util.concurrent.atomic.AtomicLong	0	public fun java.util.concurrent.atomic.AtomicLong.asKotlinAtomic(): AtomicLong = this as AtomicLong	jvmMain/kotlin/concurrent/atomics/Atomics.jvm.kt:42
+2.1	fun	asJavaAtomic	AtomicBoolean	0	public fun AtomicBoolean.asJavaAtomic(): java.util.concurrent.atomic.AtomicBoolean = this as java.util.concurrent.atomic.AtomicBoolean	jvmMain/kotlin/concurrent/atomics/Atomics.jvm.kt:50
+2.1	fun	asKotlinAtomic	java.util.concurrent.atomic.AtomicBoolean	0	public fun java.util.concurrent.atomic.AtomicBoolean.asKotlinAtomic(): AtomicBoolean = this as AtomicBoolean	jvmMain/kotlin/concurrent/atomics/Atomics.jvm.kt:58
+2.1	fun	asJavaAtomic	-	0	public fun <T> AtomicReference<T>.asJavaAtomic(): java.util.concurrent.atomic.AtomicReference<T> = this as java.util.concurrent.atomic.AtomicReference<T>	jvmMain/kotlin/concurrent/atomics/Atomics.jvm.kt:66
+2.1	fun	asKotlinAtomic	-	0	public fun <T> java.util.concurrent.atomic.AtomicReference<T>.asKotlinAtomic(): AtomicReference<T> = this as AtomicReference<T>	jvmMain/kotlin/concurrent/atomics/Atomics.jvm.kt:74

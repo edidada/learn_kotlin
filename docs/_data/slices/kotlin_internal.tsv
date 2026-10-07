@@ -1,0 +1,59 @@
+since	kind	name	receiver	arity	sig	loc
+-	class	NoInfer	-	0	internal annotation class NoInfer	commonMain/kotlin/internal/Annotations.kt:13
+-	class	Exact	-	0	internal annotation class Exact	commonMain/kotlin/internal/Annotations.kt:20
+-	class	LowPriorityInOverloadResolution	-	0	internal annotation class LowPriorityInOverloadResolution	commonMain/kotlin/internal/Annotations.kt:27
+-	class	HidesMembers	-	0	internal annotation class HidesMembers	commonMain/kotlin/internal/Annotations.kt:35
+-	class	OnlyInputTypes	-	0	internal annotation class OnlyInputTypes	commonMain/kotlin/internal/Annotations.kt:42
+-	class	InlineOnly	-	0	internal annotation class InlineOnly	commonMain/kotlin/internal/Annotations.kt:49
+-	class	DynamicExtension	-	0	internal annotation class DynamicExtension	commonMain/kotlin/internal/Annotations.kt:56
+1.2	class	AccessibleLateinitPropertyLiteral	-	0	internal annotation class AccessibleLateinitPropertyLiteral	commonMain/kotlin/internal/Annotations.kt:65
+1.2	class	RequireKotlin	-	0	internal annotation class RequireKotlin(	commonMain/kotlin/internal/Annotations.kt:89
+-	val	String	-	1	val version: String,	commonMain/kotlin/internal/Annotations.kt:90
+-	val	String	-	1	val message: String = "",	commonMain/kotlin/internal/Annotations.kt:91
+-	val	DeprecationLevel	-	1	val level: DeprecationLevel = DeprecationLevel.ERROR,	commonMain/kotlin/internal/Annotations.kt:92
+-	val	RequireKotlinVersionKind	-	1	val versionKind: RequireKotlinVersionKind = RequireKotlinVersionKind.LANGUAGE_VERSION,	commonMain/kotlin/internal/Annotations.kt:93
+-	val	Int	-	0	val errorCode: Int = -1	commonMain/kotlin/internal/Annotations.kt:94
+1.2	class	RequireKotlinVersionKind	-	0	internal enum class RequireKotlinVersionKind {	commonMain/kotlin/internal/Annotations.kt:101
+1.2	class	ContractsDsl	-	0	internal annotation class ContractsDsl	commonMain/kotlin/internal/Annotations.kt:112
+-	class	ActualizeByJvmBuiltinProvider	-	0	internal expect annotation class ActualizeByJvmBuiltinProvider()	commonMain/kotlin/internal/Annotations.kt:118
+-	class	JvmBuiltin	-	0	internal annotation class JvmBuiltin	commonMain/kotlin/internal/Annotations.kt:125
+-	class	SuppressBytecodeGeneration	-	0	internal annotation class SuppressBytecodeGeneration	commonMain/kotlin/internal/Annotations.kt:132
+-	class	PureReifiable	-	0	internal annotation class PureReifiable	commonMain/kotlin/internal/AnnotationsBuiltin.kt:16
+-	class	PlatformDependent	-	0	internal annotation class PlatformDependent	commonMain/kotlin/internal/AnnotationsBuiltin.kt:26
+1.7	class	IntrinsicConstEvaluation	-	0	internal annotation class IntrinsicConstEvaluation	commonMain/kotlin/internal/AnnotationsBuiltin.kt:35
+-	fun	mod	-	1	private fun mod(a: Int, b: Int): Int {	commonMain/kotlin/internal/progressionUtil.kt:9
+-	val	mod	-	0	val mod = a % b	commonMain/kotlin/internal/progressionUtil.kt:10
+-	fun	mod	-	1	private fun mod(a: Long, b: Long): Long {	commonMain/kotlin/internal/progressionUtil.kt:14
+-	val	mod	-	0	val mod = a % b	commonMain/kotlin/internal/progressionUtil.kt:15
+-	fun	differenceModulo	-	2	private fun differenceModulo(a: Int, b: Int, c: Int): Int {	commonMain/kotlin/internal/progressionUtil.kt:20
+-	fun	differenceModulo	-	2	private fun differenceModulo(a: Long, b: Long, c: Long): Long {	commonMain/kotlin/internal/progressionUtil.kt:24
+-	fun	getProgressionLastElement	-	2	internal fun getProgressionLastElement(start: Int, end: Int, step: Int): Int = when {	commonMain/kotlin/internal/progressionUtil.kt:45
+-	fun	getProgressionLastElement	-	2	internal fun getProgressionLastElement(start: Long, end: Long, step: Long): Long = when {	commonMain/kotlin/internal/progressionUtil.kt:68
+-	fun	throwReadObjectNotSupported	-	0	internal expect inline fun throwReadObjectNotSupported(): Nothing	commonMain/kotlin/internal/serializationUtil.kt:12
+-	class	ReadObjectParameterType	-	0	internal expect class ReadObjectParameterType	commonMain/kotlin/internal/serializationUtil.kt:19
+-	fun	differenceModulo	-	2	private fun differenceModulo(a: UInt, b: UInt, c: UInt): UInt {	commonMain/kotlin/UProgressionUtil.kt:9
+-	val	ac	-	0	val ac = a % c	commonMain/kotlin/UProgressionUtil.kt:10
+-	val	bc	-	0	val bc = b % c	commonMain/kotlin/UProgressionUtil.kt:11
+-	fun	differenceModulo	-	2	private fun differenceModulo(a: ULong, b: ULong, c: ULong): ULong {	commonMain/kotlin/UProgressionUtil.kt:15
+-	val	ac	-	0	val ac = a % c	commonMain/kotlin/UProgressionUtil.kt:16
+-	val	bc	-	0	val bc = b % c	commonMain/kotlin/UProgressionUtil.kt:17
+1.3	fun	getProgressionLastElement	-	2	internal fun getProgressionLastElement(start: UInt, end: UInt, step: Int): UInt = when {	commonMain/kotlin/UProgressionUtil.kt:39
+1.3	fun	getProgressionLastElement	-	2	internal fun getProgressionLastElement(start: ULong, end: ULong, step: Long): ULong = when {	commonMain/kotlin/UProgressionUtil.kt:63
+-	class	PlatformImplementations	-	0	internal open class PlatformImplementations {	jvmMain/kotlin/internal/PlatformImplementations.kt:15
+-	object	ReflectThrowable	-	0	private object ReflectThrowable {	jvmMain/kotlin/internal/PlatformImplementations.kt:17
+-	val	Method	-	0	public val addSuppressed: Method?	jvmMain/kotlin/internal/PlatformImplementations.kt:19
+-	val	Method	-	0	public val getSuppressed: Method?	jvmMain/kotlin/internal/PlatformImplementations.kt:21
+-	val	throwableClass	-	0	val throwableClass = Throwable::class.java	jvmMain/kotlin/internal/PlatformImplementations.kt:24
+-	val	throwableMethods	-	0	val throwableMethods = throwableClass.methods	jvmMain/kotlin/internal/PlatformImplementations.kt:25
+-	fun	addSuppressed	-	1	public open fun addSuppressed(cause: Throwable, exception: Throwable) {	jvmMain/kotlin/internal/PlatformImplementations.kt:33
+-	fun	getSuppressed	-	0	public open fun getSuppressed(exception: Throwable): List<Throwable> {	jvmMain/kotlin/internal/PlatformImplementations.kt:37
+-	fun	getMatchResultNamedGroup	-	1	public open fun getMatchResultNamedGroup(matchResult: MatchResult, name: String): MatchGroup? {	jvmMain/kotlin/internal/PlatformImplementations.kt:43
+-	fun	defaultPlatformRandom	-	0	public open fun defaultPlatformRandom(): Random = FallbackThreadLocalRandom()	jvmMain/kotlin/internal/PlatformImplementations.kt:47
+-	fun	getSystemClock	-	0	public open fun getSystemClock(): Clock {	jvmMain/kotlin/internal/PlatformImplementations.kt:50
+-	val	PlatformImplementations	-	0	internal val IMPLEMENTATIONS: PlatformImplementations =	jvmMain/kotlin/internal/PlatformImplementations.kt:57
+-	fun	castToBaseType	-	0	private inline fun <reified T : Any> castToBaseType(instance: Any): T {	jvmMain/kotlin/internal/PlatformImplementations.kt:61
+-	val	instanceCL	-	0	val instanceCL = instance.javaClass.classLoader	jvmMain/kotlin/internal/PlatformImplementations.kt:65
+-	val	baseTypeCL	-	0	val baseTypeCL = T::class.java.classLoader	jvmMain/kotlin/internal/PlatformImplementations.kt:66
+1.2	fun	apiVersionIsAtLeast	-	2	internal fun apiVersionIsAtLeast(major: Int, minor: Int, patch: Int): Boolean =	jvmMain/kotlin/internal/PlatformImplementations.kt:84
+-	fun	throwReadObjectNotSupported	-	0	internal actual inline fun throwReadObjectNotSupported(): Nothing {	jvmMain/kotlin/internal/serializationUtil.kt:11
+-	typealias	ReadObjectParameterType	-	0	internal actual typealias ReadObjectParameterType = java.io.ObjectInputStream	jvmMain/kotlin/internal/serializationUtil.kt:15

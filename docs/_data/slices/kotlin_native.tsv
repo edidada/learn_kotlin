@@ -1,0 +1,8 @@
+since	kind	name	receiver	arity	sig	loc
+1.5	class	CName	-	1	public expect annotation class CName(val externName: String = "", val shortName: String = "")	commonMain/kotlin/annotations/NativeAnnotations.kt:23
+-	class	FreezingIsDeprecated	-	0	public expect annotation class FreezingIsDeprecated	commonMain/kotlin/annotations/NativeAnnotations.kt:54
+1.8	class	ObjCName	-	2	public expect annotation class ObjCName(val name: String = "", val swiftName: String = "", val exact: Boolean = false)	commonMain/kotlin/annotations/NativeAnnotations.kt:72
+1.8	class	HidesFromObjC	-	0	public expect annotation class HidesFromObjC()	commonMain/kotlin/annotations/NativeAnnotations.kt:88
+1.8	class	HiddenFromObjC	-	0	public expect annotation class HiddenFromObjC()	commonMain/kotlin/annotations/NativeAnnotations.kt:100
+1.8	class	RefinesInSwift	-	0	public expect annotation class RefinesInSwift()	commonMain/kotlin/annotations/NativeAnnotations.kt:120
+1.8	class	ShouldRefineInSwift	-	0	public expect annotation class ShouldRefineInSwift()	commonMain/kotlin/annotations/NativeAnnotations.kt:135

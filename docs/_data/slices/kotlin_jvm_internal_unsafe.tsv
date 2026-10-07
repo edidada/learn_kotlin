@@ -1,0 +1,3 @@
+since	kind	name	receiver	arity	sig	loc
+-	fun	monitorEnter	-	0	private fun monitorEnter(@Suppress("UNUSED_PARAMETER") monitor: Any): Unit =	jvmMain/kotlin/jvm/internal/unsafe/monitor.kt:8
+-	fun	monitorExit	-	0	private fun monitorExit(@Suppress("UNUSED_PARAMETER") monitor: Any): Unit =	jvmMain/kotlin/jvm/internal/unsafe/monitor.kt:11

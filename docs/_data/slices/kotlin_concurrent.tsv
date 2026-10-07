@@ -1,0 +1,35 @@
+since	kind	name	receiver	arity	sig	loc
+1.9	class	Volatile	-	0	public expect annotation class Volatile()	commonMain/kotlin/concurrent/Volatile.kt:29
+-	fun	withLock	Lock	0	public inline fun <T> Lock.withLock(action: () -> T): T {	jvmMain/kotlin/concurrent/Locks.kt:18
+-	fun	read	ReentrantReadWriteLock	0	public inline fun <T> ReentrantReadWriteLock.read(action: () -> T): T {	jvmMain/kotlin/concurrent/Locks.kt:33
+-	val	rl	-	0	val rl = readLock()	jvmMain/kotlin/concurrent/Locks.kt:35
+-	fun	write	ReentrantReadWriteLock	0	public inline fun <T> ReentrantReadWriteLock.write(action: () -> T): T {	jvmMain/kotlin/concurrent/Locks.kt:58
+-	val	rl	-	0	val rl = readLock()	jvmMain/kotlin/concurrent/Locks.kt:60
+-	val	readCount	-	0	val readCount = if (writeHoldCount == 0) readHoldCount else 0	jvmMain/kotlin/concurrent/Locks.kt:62
+-	val	wl	-	0	val wl = writeLock()	jvmMain/kotlin/concurrent/Locks.kt:65
+-	fun	thread	-	0	public fun thread(	jvmMain/kotlin/concurrent/Thread.kt:20
+-	val	thread	-	0	val thread = object : Thread() {	jvmMain/kotlin/concurrent/Thread.kt:28
+-	fun	getOrSet	-	0	public inline fun <T : Any> ThreadLocal<T>.getOrSet(default: () -> T): T {	jvmMain/kotlin/concurrent/Thread.kt:58
+-	fun	schedule	Timer	1	public inline fun Timer.schedule(delay: Long, crossinline action: TimerTask.() -> Unit): TimerTask {	jvmMain/kotlin/concurrent/Timer.kt:17
+-	val	task	-	0	val task = timerTask(action)	jvmMain/kotlin/concurrent/Timer.kt:18
+-	fun	schedule	Timer	1	public inline fun Timer.schedule(time: Date, crossinline action: TimerTask.() -> Unit): TimerTask {	jvmMain/kotlin/concurrent/Timer.kt:27
+-	val	task	-	0	val task = timerTask(action)	jvmMain/kotlin/concurrent/Timer.kt:28
+-	fun	schedule	Timer	2	public inline fun Timer.schedule(delay: Long, period: Long, crossinline action: TimerTask.() -> Unit): TimerTask {	jvmMain/kotlin/concurrent/Timer.kt:39
+-	val	task	-	0	val task = timerTask(action)	jvmMain/kotlin/concurrent/Timer.kt:40
+-	fun	schedule	Timer	2	public inline fun Timer.schedule(time: Date, period: Long, crossinline action: TimerTask.() -> Unit): TimerTask {	jvmMain/kotlin/concurrent/Timer.kt:50
+-	val	task	-	0	val task = timerTask(action)	jvmMain/kotlin/concurrent/Timer.kt:51
+-	fun	scheduleAtFixedRate	Timer	2	public inline fun Timer.scheduleAtFixedRate(delay: Long, period: Long, crossinline action: TimerTask.() -> Unit): TimerTask {	jvmMain/kotlin/concurrent/Timer.kt:62
+-	val	task	-	0	val task = timerTask(action)	jvmMain/kotlin/concurrent/Timer.kt:63
+-	fun	scheduleAtFixedRate	Timer	2	public inline fun Timer.scheduleAtFixedRate(time: Date, period: Long, crossinline action: TimerTask.() -> Unit): TimerTask {	jvmMain/kotlin/concurrent/Timer.kt:73
+-	val	task	-	0	val task = timerTask(action)	jvmMain/kotlin/concurrent/Timer.kt:74
+-	fun	timer	-	2	internal fun timer(name: String?, daemon: Boolean): Timer = if (name == null) Timer(daemon) else Timer(name, daemon)	jvmMain/kotlin/concurrent/Timer.kt:82
+-	fun	timer	-	4	public inline fun timer(name: String? = null, daemon: Boolean = false, initialDelay: Long = 0.toLong(), period: Long, crossinline action: TimerTask.() -> Unit): Timer {	jvmMain/kotlin/concurrent/Timer.kt:93
+-	val	timer	-	1	val timer = timer(name, daemon)	jvmMain/kotlin/concurrent/Timer.kt:94
+-	fun	timer	-	4	public inline fun timer(name: String? = null, daemon: Boolean = false, startAt: Date, period: Long, crossinline action: TimerTask.() -> Unit): Timer {	jvmMain/kotlin/concurrent/Timer.kt:107
+-	val	timer	-	1	val timer = timer(name, daemon)	jvmMain/kotlin/concurrent/Timer.kt:108
+-	fun	fixedRateTimer	-	4	public inline fun fixedRateTimer(name: String? = null, daemon: Boolean = false, initialDelay: Long = 0.toLong(), period: Long, crossinline action: TimerTask.() -> Unit): Timer {	jvmMain/kotlin/concurrent/Timer.kt:122
+-	val	timer	-	1	val timer = timer(name, daemon)	jvmMain/kotlin/concurrent/Timer.kt:123
+-	fun	fixedRateTimer	-	4	public inline fun fixedRateTimer(name: String? = null, daemon: Boolean = false, startAt: Date, period: Long, crossinline action: TimerTask.() -> Unit): Timer {	jvmMain/kotlin/concurrent/Timer.kt:136
+-	val	timer	-	1	val timer = timer(name, daemon)	jvmMain/kotlin/concurrent/Timer.kt:137
+-	fun	timerTask	-	0	public inline fun timerTask(crossinline action: TimerTask.() -> Unit): TimerTask = object : TimerTask() {	jvmMain/kotlin/concurrent/Timer.kt:146
+1.9	typealias	Volatile	-	0	public actual typealias Volatile = kotlin.jvm.Volatile	jvmMain/kotlin/concurrent/Volatile.kt:18

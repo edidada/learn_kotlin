@@ -1,0 +1,8 @@
+since	kind	name	receiver	arity	sig	loc
+1.8	fun	getOrNull	-	0	public fun <T : Any> Optional<T>.getOrNull(): T? = orElse(null)	jvmMain/jdk8/kotlin/jvm/optionals/Optionals.kt:18
+1.8	fun	getOrDefault	-	0	public fun <T> Optional<out T & Any>.getOrDefault(defaultValue: T): T = if (isPresent) get() else defaultValue	jvmMain/jdk8/kotlin/jvm/optionals/Optionals.kt:27
+1.8	fun	getOrElse	-	0	public inline fun <T> Optional<out T & Any>.getOrElse(defaultValue: () -> T): T {	jvmMain/jdk8/kotlin/jvm/optionals/Optionals.kt:36
+1.8	fun	toCollection	-	1	public fun <T : Any, C : MutableCollection<in T>> Optional<T>.toCollection(destination: C): C {	jvmMain/jdk8/kotlin/jvm/optionals/Optionals.kt:50
+1.8	fun	toList	-	0	public fun <T : Any> Optional<out T>.toList(): List<T> =	jvmMain/jdk8/kotlin/jvm/optionals/Optionals.kt:65
+1.8	fun	toSet	-	0	public fun <T : Any> Optional<out T>.toSet(): Set<T> =	jvmMain/jdk8/kotlin/jvm/optionals/Optionals.kt:76
+1.8	fun	asSequence	-	0	public fun <T : Any> Optional<out T>.asSequence(): Sequence<T> =	jvmMain/jdk8/kotlin/jvm/optionals/Optionals.kt:86

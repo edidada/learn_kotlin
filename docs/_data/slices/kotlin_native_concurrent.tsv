@@ -1,0 +1,3 @@
+since	kind	name	receiver	arity	sig	loc
+-	class	ThreadLocal	-	0	public expect annotation class ThreadLocal()	commonMain/kotlin/annotations/NativeConcurrentAnnotations.kt:21
+-	class	SharedImmutable	-	0	public expect annotation class SharedImmutable()	commonMain/kotlin/annotations/NativeConcurrentAnnotations.kt:33

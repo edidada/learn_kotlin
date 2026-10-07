@@ -1,0 +1,574 @@
+since	kind	name	receiver	arity	sig	loc
+-	fun	contains	-	0	public operator fun <@kotlin.internal.OnlyInputTypes T> Sequence<T>.contains(element: T): Boolean {	commonMain/generated/_Sequences.kt:24
+-	fun	elementAt	-	0	public fun <T> Sequence<T>.elementAt(index: Int): T {	commonMain/generated/_Sequences.kt:35
+-	fun	elementAtOrElse	-	1	public fun <T> Sequence<T>.elementAtOrElse(index: Int, defaultValue: (Int) -> T): T {	commonMain/generated/_Sequences.kt:46
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:52
+-	var	count	-	0	var count = 0	commonMain/generated/_Sequences.kt:53
+-	val	element	-	0	val element = iterator.next()	commonMain/generated/_Sequences.kt:55
+-	fun	elementAtOrNull	-	0	public fun <T> Sequence<T>.elementAtOrNull(index: Int): T? {	commonMain/generated/_Sequences.kt:69
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:72
+-	var	count	-	0	var count = 0	commonMain/generated/_Sequences.kt:73
+-	val	element	-	0	val element = iterator.next()	commonMain/generated/_Sequences.kt:75
+-	fun	find	-	0	public inline fun <T> Sequence<T>.find(predicate: (T) -> Boolean): T? {	commonMain/generated/_Sequences.kt:90
+-	fun	findLast	-	0	public inline fun <T> Sequence<T>.findLast(predicate: (T) -> Boolean): T? {	commonMain/generated/_Sequences.kt:102
+-	fun	first	-	0	public fun <T> Sequence<T>.first(): T {	commonMain/generated/_Sequences.kt:113
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:114
+-	fun	first	-	0	public inline fun <T> Sequence<T>.first(predicate: (T) -> Boolean): T {	commonMain/generated/_Sequences.kt:126
+1.5	fun	firstNotNullOf	-	1	public inline fun <T, R : Any> Sequence<T>.firstNotNullOf(transform: (T) -> R?): R {	commonMain/generated/_Sequences.kt:141
+1.5	fun	firstNotNullOfOrNull	-	1	public inline fun <T, R : Any> Sequence<T>.firstNotNullOfOrNull(transform: (T) -> R?): R? {	commonMain/generated/_Sequences.kt:155
+-	val	result	-	0	val result = transform(element)	commonMain/generated/_Sequences.kt:157
+-	fun	firstOrNull	-	0	public fun <T> Sequence<T>.firstOrNull(): T? {	commonMain/generated/_Sequences.kt:170
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:171
+-	fun	firstOrNull	-	0	public inline fun <T> Sequence<T>.firstOrNull(predicate: (T) -> Boolean): T? {	commonMain/generated/_Sequences.kt:182
+-	fun	indexOf	-	0	public fun <@kotlin.internal.OnlyInputTypes T> Sequence<T>.indexOf(element: T): Int {	commonMain/generated/_Sequences.kt:192
+-	var	index	-	0	var index = 0	commonMain/generated/_Sequences.kt:193
+-	fun	indexOfFirst	-	0	public inline fun <T> Sequence<T>.indexOfFirst(predicate: (T) -> Boolean): Int {	commonMain/generated/_Sequences.kt:208
+-	var	index	-	0	var index = 0	commonMain/generated/_Sequences.kt:209
+-	fun	indexOfLast	-	0	public inline fun <T> Sequence<T>.indexOfLast(predicate: (T) -> Boolean): Int {	commonMain/generated/_Sequences.kt:224
+-	var	lastIndex	-	0	var lastIndex = -1	commonMain/generated/_Sequences.kt:225
+-	var	index	-	0	var index = 0	commonMain/generated/_Sequences.kt:226
+-	fun	last	-	0	public fun <T> Sequence<T>.last(): T {	commonMain/generated/_Sequences.kt:245
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:246
+-	var	last	-	0	var last = iterator.next()	commonMain/generated/_Sequences.kt:249
+-	fun	last	-	0	public inline fun <T> Sequence<T>.last(predicate: (T) -> Boolean): T {	commonMain/generated/_Sequences.kt:264
+-	var	T	-	0	var last: T? = null	commonMain/generated/_Sequences.kt:265
+-	var	found	-	0	var found = false	commonMain/generated/_Sequences.kt:266
+-	fun	lastIndexOf	-	0	public fun <@kotlin.internal.OnlyInputTypes T> Sequence<T>.lastIndexOf(element: T): Int {	commonMain/generated/_Sequences.kt:283
+-	var	lastIndex	-	0	var lastIndex = -1	commonMain/generated/_Sequences.kt:284
+-	var	index	-	0	var index = 0	commonMain/generated/_Sequences.kt:285
+-	fun	lastOrNull	-	0	public fun <T> Sequence<T>.lastOrNull(): T? {	commonMain/generated/_Sequences.kt:302
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:303
+-	var	last	-	0	var last = iterator.next()	commonMain/generated/_Sequences.kt:306
+-	fun	lastOrNull	-	0	public inline fun <T> Sequence<T>.lastOrNull(predicate: (T) -> Boolean): T? {	commonMain/generated/_Sequences.kt:319
+-	var	T	-	0	var last: T? = null	commonMain/generated/_Sequences.kt:320
+-	fun	single	-	0	public fun <T> Sequence<T>.single(): T {	commonMain/generated/_Sequences.kt:334
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:335
+-	val	single	-	0	val single = iterator.next()	commonMain/generated/_Sequences.kt:338
+-	fun	single	-	0	public inline fun <T> Sequence<T>.single(predicate: (T) -> Boolean): T {	commonMain/generated/_Sequences.kt:349
+-	var	T	-	0	var single: T? = null	commonMain/generated/_Sequences.kt:350
+-	var	found	-	0	var found = false	commonMain/generated/_Sequences.kt:351
+-	fun	singleOrNull	-	0	public fun <T> Sequence<T>.singleOrNull(): T? {	commonMain/generated/_Sequences.kt:369
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:370
+-	val	single	-	0	val single = iterator.next()	commonMain/generated/_Sequences.kt:373
+-	fun	singleOrNull	-	0	public inline fun <T> Sequence<T>.singleOrNull(predicate: (T) -> Boolean): T? {	commonMain/generated/_Sequences.kt:384
+-	var	T	-	0	var single: T? = null	commonMain/generated/_Sequences.kt:385
+-	var	found	-	0	var found = false	commonMain/generated/_Sequences.kt:386
+-	fun	drop	-	0	public fun <T> Sequence<T>.drop(n: Int): Sequence<T> {	commonMain/generated/_Sequences.kt:407
+-	fun	dropWhile	-	0	public fun <T> Sequence<T>.dropWhile(predicate: (T) -> Boolean): Sequence<T> {	commonMain/generated/_Sequences.kt:423
+-	fun	filter	-	0	public fun <T> Sequence<T>.filter(predicate: (T) -> Boolean): Sequence<T> {	commonMain/generated/_Sequences.kt:434
+-	fun	filterIndexed	-	1	public fun <T> Sequence<T>.filterIndexed(predicate: (index: Int, T) -> Boolean): Sequence<T> {	commonMain/generated/_Sequences.kt:447
+-	fun	filterIndexedTo	-	3	public inline fun <T, C : MutableCollection<in T>> Sequence<T>.filterIndexedTo(destination: C, predicate: (index: Int, T) -> Boolean): C {	commonMain/generated/_Sequences.kt:461
+-	fun	filterIsInstance	-	0	public inline fun <reified R> Sequence<*>.filterIsInstance(): Sequence<@kotlin.internal.NoInfer R> {	commonMain/generated/_Sequences.kt:475
+-	fun	filterIsInstanceTo	-	1	public inline fun <reified R, C : MutableCollection<in R>> Sequence<*>.filterIsInstanceTo(destination: C): C {	commonMain/generated/_Sequences.kt:487
+-	fun	filterNot	-	0	public fun <T> Sequence<T>.filterNot(predicate: (T) -> Boolean): Sequence<T> {	commonMain/generated/_Sequences.kt:499
+-	fun	filterNotNull	-	0	public fun <T : Any> Sequence<T?>.filterNotNull(): Sequence<T> {	commonMain/generated/_Sequences.kt:510
+-	fun	filterNotNullTo	-	1	public fun <C : MutableCollection<in T>, T : Any> Sequence<T?>.filterNotNullTo(destination: C): C {	commonMain/generated/_Sequences.kt:522
+-	fun	filterNotTo	-	2	public inline fun <T, C : MutableCollection<in T>> Sequence<T>.filterNotTo(destination: C, predicate: (T) -> Boolean): C {	commonMain/generated/_Sequences.kt:534
+-	fun	filterTo	-	2	public inline fun <T, C : MutableCollection<in T>> Sequence<T>.filterTo(destination: C, predicate: (T) -> Boolean): C {	commonMain/generated/_Sequences.kt:546
+-	fun	take	-	0	public fun <T> Sequence<T>.take(n: Int): Sequence<T> {	commonMain/generated/_Sequences.kt:560
+-	fun	takeWhile	-	0	public fun <T> Sequence<T>.takeWhile(predicate: (T) -> Boolean): Sequence<T> {	commonMain/generated/_Sequences.kt:576
+-	fun	sorted	-	0	public fun <T : Comparable<T>> Sequence<T>.sorted(): Sequence<T> {	commonMain/generated/_Sequences.kt:587
+-	val	sortedList	-	0	val sortedList = this@sorted.toMutableList()	commonMain/generated/_Sequences.kt:590
+-	fun	sortedBy	-	1	public inline fun <T, R : Comparable<R>> Sequence<T>.sortedBy(crossinline selector: (T) -> R?): Sequence<T> {	commonMain/generated/_Sequences.kt:607
+-	fun	sortedByDescending	-	1	public inline fun <T, R : Comparable<R>> Sequence<T>.sortedByDescending(crossinline selector: (T) -> R?): Sequence<T> {	commonMain/generated/_Sequences.kt:621
+-	fun	sortedDescending	-	0	public fun <T : Comparable<T>> Sequence<T>.sortedDescending(): Sequence<T> {	commonMain/generated/_Sequences.kt:632
+-	fun	sortedWith	-	0	public fun <T> Sequence<T>.sortedWith(comparator: Comparator<in T>): Sequence<T> {	commonMain/generated/_Sequences.kt:643
+-	val	sortedList	-	0	val sortedList = this@sortedWith.toMutableList()	commonMain/generated/_Sequences.kt:646
+-	fun	associate	-	4	public inline fun <T, K, V> Sequence<T>.associate(transform: (T) -> Pair<K, V>): Map<K, V> {	commonMain/generated/_Sequences.kt:665
+-	fun	associateBy	-	2	public inline fun <T, K> Sequence<T>.associateBy(keySelector: (T) -> K): Map<K, T> {	commonMain/generated/_Sequences.kt:681
+-	fun	associateBy	-	4	public inline fun <T, K, V> Sequence<T>.associateBy(keySelector: (T) -> K, valueTransform: (T) -> V): Map<K, V> {	commonMain/generated/_Sequences.kt:696
+-	fun	associateByTo	-	4	public inline fun <T, K, M : MutableMap<in K, in T>> Sequence<T>.associateByTo(destination: M, keySelector: (T) -> K): M {	commonMain/generated/_Sequences.kt:711
+-	fun	associateByTo	-	6	public inline fun <T, K, V, M : MutableMap<in K, in V>> Sequence<T>.associateByTo(destination: M, keySelector: (T) -> K, valueTransform: (T) -> V): M {	commonMain/generated/_Sequences.kt:729
+-	fun	associateTo	-	6	public inline fun <T, K, V, M : MutableMap<in K, in V>> Sequence<T>.associateTo(destination: M, transform: (T) -> Pair<K, V>): M {	commonMain/generated/_Sequences.kt:746
+1.3	fun	associateWith	-	2	public inline fun <K, V> Sequence<K>.associateWith(valueSelector: (K) -> V): Map<K, V> {	commonMain/generated/_Sequences.kt:766
+-	val	result	-	1	val result = LinkedHashMap<K, V>()	commonMain/generated/_Sequences.kt:767
+1.3	fun	associateWithTo	-	4	public inline fun <K, V, M : MutableMap<in K, in V>> Sequence<K>.associateWithTo(destination: M, valueSelector: (K) -> V): M {	commonMain/generated/_Sequences.kt:782
+-	fun	toCollection	-	1	public fun <T, C : MutableCollection<in T>> Sequence<T>.toCollection(destination: C): C {	commonMain/generated/_Sequences.kt:794
+-	fun	toHashSet	-	0	public fun <T> Sequence<T>.toHashSet(): HashSet<T> {	commonMain/generated/_Sequences.kt:806
+-	fun	toList	-	0	public fun <T> Sequence<T>.toList(): List<T> {	commonMain/generated/_Sequences.kt:815
+-	val	it	-	0	val it = iterator()	commonMain/generated/_Sequences.kt:816
+-	val	element	-	0	val element = it.next()	commonMain/generated/_Sequences.kt:819
+-	val	dst	-	0	val dst = ArrayList<T>()	commonMain/generated/_Sequences.kt:822
+-	fun	toMutableList	-	0	public fun <T> Sequence<T>.toMutableList(): MutableList<T> {	commonMain/generated/_Sequences.kt:833
+-	fun	toSet	-	0	public fun <T> Sequence<T>.toSet(): Set<T> {	commonMain/generated/_Sequences.kt:844
+-	val	it	-	0	val it = iterator()	commonMain/generated/_Sequences.kt:845
+-	val	element	-	0	val element = it.next()	commonMain/generated/_Sequences.kt:848
+-	val	dst	-	0	val dst = LinkedHashSet<T>()	commonMain/generated/_Sequences.kt:851
+1.4	fun	flatMap	-	1	public fun <T, R> Sequence<T>.flatMap(transform: (T) -> Iterable<R>): Sequence<R> {	commonMain/generated/_Sequences.kt:868
+-	fun	flatMap	-	1	public fun <T, R> Sequence<T>.flatMap(transform: (T) -> Sequence<R>): Sequence<R> {	commonMain/generated/_Sequences.kt:879
+1.4	fun	flatMapIndexed	-	2	public fun <T, R> Sequence<T>.flatMapIndexed(transform: (index: Int, T) -> Iterable<R>): Sequence<R> {	commonMain/generated/_Sequences.kt:895
+1.4	fun	flatMapIndexed	-	2	public fun <T, R> Sequence<T>.flatMapIndexed(transform: (index: Int, T) -> Sequence<R>): Sequence<R> {	commonMain/generated/_Sequences.kt:911
+1.4	fun	flatMapIndexedTo	-	4	public inline fun <T, R, C : MutableCollection<in R>> Sequence<T>.flatMapIndexedTo(destination: C, transform: (index: Int, T) -> Iterable<R>): C {	commonMain/generated/_Sequences.kt:926
+-	var	index	-	0	var index = 0	commonMain/generated/_Sequences.kt:927
+-	val	list	-	1	val list = transform(checkIndexOverflow(index++), element)	commonMain/generated/_Sequences.kt:929
+1.4	fun	flatMapIndexedTo	-	4	public inline fun <T, R, C : MutableCollection<in R>> Sequence<T>.flatMapIndexedTo(destination: C, transform: (index: Int, T) -> Sequence<R>): C {	commonMain/generated/_Sequences.kt:946
+-	var	index	-	0	var index = 0	commonMain/generated/_Sequences.kt:947
+-	val	list	-	1	val list = transform(checkIndexOverflow(index++), element)	commonMain/generated/_Sequences.kt:949
+1.4	fun	flatMapTo	-	3	public inline fun <T, R, C : MutableCollection<in R>> Sequence<T>.flatMapTo(destination: C, transform: (T) -> Iterable<R>): C {	commonMain/generated/_Sequences.kt:964
+-	val	list	-	0	val list = transform(element)	commonMain/generated/_Sequences.kt:966
+-	fun	flatMapTo	-	3	public inline fun <T, R, C : MutableCollection<in R>> Sequence<T>.flatMapTo(destination: C, transform: (T) -> Sequence<R>): C {	commonMain/generated/_Sequences.kt:977
+-	val	list	-	0	val list = transform(element)	commonMain/generated/_Sequences.kt:979
+-	fun	groupBy	-	2	public inline fun <T, K> Sequence<T>.groupBy(keySelector: (T) -> K): Map<K, List<T>> {	commonMain/generated/_Sequences.kt:995
+-	fun	groupBy	-	4	public inline fun <T, K, V> Sequence<T>.groupBy(keySelector: (T) -> K, valueTransform: (T) -> V): Map<K, List<V>> {	commonMain/generated/_Sequences.kt:1010
+-	fun	groupByTo	-	4	public inline fun <T, K, M : MutableMap<in K, MutableList<T>>> Sequence<T>.groupByTo(destination: M, keySelector: (T) -> K): M {	commonMain/generated/_Sequences.kt:1024
+-	val	key	-	0	val key = keySelector(element)	commonMain/generated/_Sequences.kt:1026
+-	val	list	-	0	val list = destination.getOrPut(key) { ArrayList<T>() }	commonMain/generated/_Sequences.kt:1027
+-	fun	groupByTo	-	6	public inline fun <T, K, V, M : MutableMap<in K, MutableList<V>>> Sequence<T>.groupByTo(destination: M, keySelector: (T) -> K, valueTransform: (T) -> V): M {	commonMain/generated/_Sequences.kt:1044
+-	val	key	-	0	val key = keySelector(element)	commonMain/generated/_Sequences.kt:1046
+-	val	list	-	0	val list = destination.getOrPut(key) { ArrayList<V>() }	commonMain/generated/_Sequences.kt:1047
+1.1	fun	groupingBy	-	2	public inline fun <T, K> Sequence<T>.groupingBy(crossinline keySelector: (T) -> K): Grouping<T, K> {	commonMain/generated/_Sequences.kt:1062
+-	fun	map	-	1	public fun <T, R> Sequence<T>.map(transform: (T) -> R): Sequence<R> {	commonMain/generated/_Sequences.kt:1077
+-	fun	mapIndexed	-	2	public fun <T, R> Sequence<T>.mapIndexed(transform: (index: Int, T) -> R): Sequence<R> {	commonMain/generated/_Sequences.kt:1089
+-	fun	mapIndexedNotNull	-	2	public fun <T, R : Any> Sequence<T>.mapIndexedNotNull(transform: (index: Int, T) -> R?): Sequence<R> {	commonMain/generated/_Sequences.kt:1101
+-	fun	mapIndexedNotNullTo	-	4	public inline fun <T, R : Any, C : MutableCollection<in R>> Sequence<T>.mapIndexedNotNullTo(destination: C, transform: (index: Int, T) -> R?): C {	commonMain/generated/_Sequences.kt:1113
+-	fun	mapIndexedTo	-	4	public inline fun <T, R, C : MutableCollection<in R>> Sequence<T>.mapIndexedTo(destination: C, transform: (index: Int, T) -> R): C {	commonMain/generated/_Sequences.kt:1126
+-	var	index	-	0	var index = 0	commonMain/generated/_Sequences.kt:1127
+-	fun	mapNotNull	-	1	public fun <T, R : Any> Sequence<T>.mapNotNull(transform: (T) -> R?): Sequence<R> {	commonMain/generated/_Sequences.kt:1141
+-	fun	mapNotNullTo	-	3	public inline fun <T, R : Any, C : MutableCollection<in R>> Sequence<T>.mapNotNullTo(destination: C, transform: (T) -> R?): C {	commonMain/generated/_Sequences.kt:1151
+-	fun	mapTo	-	3	public inline fun <T, R, C : MutableCollection<in R>> Sequence<T>.mapTo(destination: C, transform: (T) -> R): C {	commonMain/generated/_Sequences.kt:1162
+-	fun	withIndex	-	0	public fun <T> Sequence<T>.withIndex(): Sequence<IndexedValue<T>> {	commonMain/generated/_Sequences.kt:1174
+-	fun	distinct	-	0	public fun <T> Sequence<T>.distinct(): Sequence<T> {	commonMain/generated/_Sequences.kt:1188
+-	fun	distinctBy	-	1	public fun <T, K> Sequence<T>.distinctBy(selector: (T) -> K): Sequence<T> {	commonMain/generated/_Sequences.kt:1203
+-	fun	toMutableSet	-	0	public fun <T> Sequence<T>.toMutableSet(): MutableSet<T> {	commonMain/generated/_Sequences.kt:1214
+-	val	set	-	0	val set = LinkedHashSet<T>()	commonMain/generated/_Sequences.kt:1215
+-	fun	all	-	0	public inline fun <T> Sequence<T>.all(predicate: (T) -> Boolean): Boolean {	commonMain/generated/_Sequences.kt:1231
+-	fun	any	-	0	public fun <T> Sequence<T>.any(): Boolean {	commonMain/generated/_Sequences.kt:1243
+-	fun	any	-	0	public inline fun <T> Sequence<T>.any(predicate: (T) -> Boolean): Boolean {	commonMain/generated/_Sequences.kt:1254
+-	fun	count	-	0	public fun <T> Sequence<T>.count(): Int {	commonMain/generated/_Sequences.kt:1264
+-	var	count	-	0	var count = 0	commonMain/generated/_Sequences.kt:1265
+-	fun	count	-	0	public inline fun <T> Sequence<T>.count(predicate: (T) -> Boolean): Int {	commonMain/generated/_Sequences.kt:1275
+-	var	count	-	0	var count = 0	commonMain/generated/_Sequences.kt:1276
+-	fun	fold	-	3	public inline fun <T, R> Sequence<T>.fold(initial: R, operation: (acc: R, T) -> R): R {	commonMain/generated/_Sequences.kt:1291
+-	var	accumulator	-	0	var accumulator = initial	commonMain/generated/_Sequences.kt:1292
+-	fun	foldIndexed	-	4	public inline fun <T, R> Sequence<T>.foldIndexed(initial: R, operation: (index: Int, acc: R, T) -> R): R {	commonMain/generated/_Sequences.kt:1308
+-	var	index	-	0	var index = 0	commonMain/generated/_Sequences.kt:1309
+-	var	accumulator	-	0	var accumulator = initial	commonMain/generated/_Sequences.kt:1310
+-	fun	forEach	-	0	public inline fun <T> Sequence<T>.forEach(action: (T) -> Unit): Unit {	commonMain/generated/_Sequences.kt:1320
+-	fun	forEachIndexed	-	1	public inline fun <T> Sequence<T>.forEachIndexed(action: (index: Int, T) -> Unit): Unit {	commonMain/generated/_Sequences.kt:1331
+-	var	index	-	0	var index = 0	commonMain/generated/_Sequences.kt:1332
+1.7	fun	max	-	0	public fun Sequence<Double>.max(): Double {	commonMain/generated/_Sequences.kt:1350
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1351
+-	var	max	-	0	var max = iterator.next()	commonMain/generated/_Sequences.kt:1353
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:1355
+1.7	fun	max	-	0	public fun Sequence<Float>.max(): Float {	commonMain/generated/_Sequences.kt:1375
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1376
+-	var	max	-	0	var max = iterator.next()	commonMain/generated/_Sequences.kt:1378
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:1380
+1.7	fun	max	-	0	public fun <T : Comparable<T>> Sequence<T>.max(): T {	commonMain/generated/_Sequences.kt:1400
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1401
+-	var	max	-	0	var max = iterator.next()	commonMain/generated/_Sequences.kt:1403
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:1405
+1.7	fun	maxBy	-	1	public inline fun <T, R : Comparable<R>> Sequence<T>.maxBy(selector: (T) -> R): T {	commonMain/generated/_Sequences.kt:1430
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1431
+-	var	maxElem	-	0	var maxElem = iterator.next()	commonMain/generated/_Sequences.kt:1433
+-	var	maxValue	-	0	var maxValue = selector(maxElem)	commonMain/generated/_Sequences.kt:1435
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:1437
+-	val	v	-	0	val v = selector(e)	commonMain/generated/_Sequences.kt:1438
+1.4	fun	maxByOrNull	-	1	public inline fun <T, R : Comparable<R>> Sequence<T>.maxByOrNull(selector: (T) -> R): T? {	commonMain/generated/_Sequences.kt:1462
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1463
+-	var	maxElem	-	0	var maxElem = iterator.next()	commonMain/generated/_Sequences.kt:1465
+-	var	maxValue	-	0	var maxValue = selector(maxElem)	commonMain/generated/_Sequences.kt:1467
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:1469
+-	val	v	-	0	val v = selector(e)	commonMain/generated/_Sequences.kt:1470
+1.4	fun	maxOf	-	0	public inline fun <T> Sequence<T>.maxOf(selector: (T) -> Double): Double {	commonMain/generated/_Sequences.kt:1495
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1496
+-	var	maxValue	-	0	var maxValue = selector(iterator.next())	commonMain/generated/_Sequences.kt:1498
+-	val	v	-	0	val v = selector(iterator.next())	commonMain/generated/_Sequences.kt:1500
+1.4	fun	maxOf	-	0	public inline fun <T> Sequence<T>.maxOf(selector: (T) -> Float): Float {	commonMain/generated/_Sequences.kt:1522
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1523
+-	var	maxValue	-	0	var maxValue = selector(iterator.next())	commonMain/generated/_Sequences.kt:1525
+-	val	v	-	0	val v = selector(iterator.next())	commonMain/generated/_Sequences.kt:1527
+1.4	fun	maxOf	-	1	public inline fun <T, R : Comparable<R>> Sequence<T>.maxOf(selector: (T) -> R): R {	commonMain/generated/_Sequences.kt:1549
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1550
+-	var	maxValue	-	0	var maxValue = selector(iterator.next())	commonMain/generated/_Sequences.kt:1552
+-	val	v	-	0	val v = selector(iterator.next())	commonMain/generated/_Sequences.kt:1554
+1.4	fun	maxOfOrNull	-	0	public inline fun <T> Sequence<T>.maxOfOrNull(selector: (T) -> Double): Double? {	commonMain/generated/_Sequences.kt:1576
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1577
+-	var	maxValue	-	0	var maxValue = selector(iterator.next())	commonMain/generated/_Sequences.kt:1579
+-	val	v	-	0	val v = selector(iterator.next())	commonMain/generated/_Sequences.kt:1581
+1.4	fun	maxOfOrNull	-	0	public inline fun <T> Sequence<T>.maxOfOrNull(selector: (T) -> Float): Float? {	commonMain/generated/_Sequences.kt:1601
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1602
+-	var	maxValue	-	0	var maxValue = selector(iterator.next())	commonMain/generated/_Sequences.kt:1604
+-	val	v	-	0	val v = selector(iterator.next())	commonMain/generated/_Sequences.kt:1606
+1.4	fun	maxOfOrNull	-	1	public inline fun <T, R : Comparable<R>> Sequence<T>.maxOfOrNull(selector: (T) -> R): R? {	commonMain/generated/_Sequences.kt:1626
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1627
+-	var	maxValue	-	0	var maxValue = selector(iterator.next())	commonMain/generated/_Sequences.kt:1629
+-	val	v	-	0	val v = selector(iterator.next())	commonMain/generated/_Sequences.kt:1631
+1.4	fun	maxOfWith	-	2	public inline fun <T, R> Sequence<T>.maxOfWith(comparator: Comparator<in R>, selector: (T) -> R): R {	commonMain/generated/_Sequences.kt:1655
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1656
+-	var	maxValue	-	0	var maxValue = selector(iterator.next())	commonMain/generated/_Sequences.kt:1658
+-	val	v	-	0	val v = selector(iterator.next())	commonMain/generated/_Sequences.kt:1660
+1.4	fun	maxOfWithOrNull	-	2	public inline fun <T, R> Sequence<T>.maxOfWithOrNull(comparator: Comparator<in R>, selector: (T) -> R): R? {	commonMain/generated/_Sequences.kt:1682
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1683
+-	var	maxValue	-	0	var maxValue = selector(iterator.next())	commonMain/generated/_Sequences.kt:1685
+-	val	v	-	0	val v = selector(iterator.next())	commonMain/generated/_Sequences.kt:1687
+1.4	fun	maxOrNull	-	0	public fun Sequence<Double>.maxOrNull(): Double? {	commonMain/generated/_Sequences.kt:1705
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1706
+-	var	max	-	0	var max = iterator.next()	commonMain/generated/_Sequences.kt:1708
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:1710
+1.4	fun	maxOrNull	-	0	public fun Sequence<Float>.maxOrNull(): Float? {	commonMain/generated/_Sequences.kt:1726
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1727
+-	var	max	-	0	var max = iterator.next()	commonMain/generated/_Sequences.kt:1729
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:1731
+1.4	fun	maxOrNull	-	0	public fun <T : Comparable<T>> Sequence<T>.maxOrNull(): T? {	commonMain/generated/_Sequences.kt:1747
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1748
+-	var	max	-	0	var max = iterator.next()	commonMain/generated/_Sequences.kt:1750
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:1752
+1.7	fun	maxWith	-	0	public fun <T> Sequence<T>.maxWith(comparator: Comparator<in T>): T {	commonMain/generated/_Sequences.kt:1768
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1769
+-	var	max	-	0	var max = iterator.next()	commonMain/generated/_Sequences.kt:1771
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:1773
+1.4	fun	maxWithOrNull	-	0	public fun <T> Sequence<T>.maxWithOrNull(comparator: Comparator<in T>): T? {	commonMain/generated/_Sequences.kt:1785
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1786
+-	var	max	-	0	var max = iterator.next()	commonMain/generated/_Sequences.kt:1788
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:1790
+1.7	fun	min	-	0	public fun Sequence<Double>.min(): Double {	commonMain/generated/_Sequences.kt:1810
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1811
+-	var	min	-	0	var min = iterator.next()	commonMain/generated/_Sequences.kt:1813
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:1815
+1.7	fun	min	-	0	public fun Sequence<Float>.min(): Float {	commonMain/generated/_Sequences.kt:1835
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1836
+-	var	min	-	0	var min = iterator.next()	commonMain/generated/_Sequences.kt:1838
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:1840
+1.7	fun	min	-	0	public fun <T : Comparable<T>> Sequence<T>.min(): T {	commonMain/generated/_Sequences.kt:1860
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1861
+-	var	min	-	0	var min = iterator.next()	commonMain/generated/_Sequences.kt:1863
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:1865
+1.7	fun	minBy	-	1	public inline fun <T, R : Comparable<R>> Sequence<T>.minBy(selector: (T) -> R): T {	commonMain/generated/_Sequences.kt:1890
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1891
+-	var	minElem	-	0	var minElem = iterator.next()	commonMain/generated/_Sequences.kt:1893
+-	var	minValue	-	0	var minValue = selector(minElem)	commonMain/generated/_Sequences.kt:1895
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:1897
+-	val	v	-	0	val v = selector(e)	commonMain/generated/_Sequences.kt:1898
+1.4	fun	minByOrNull	-	1	public inline fun <T, R : Comparable<R>> Sequence<T>.minByOrNull(selector: (T) -> R): T? {	commonMain/generated/_Sequences.kt:1922
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1923
+-	var	minElem	-	0	var minElem = iterator.next()	commonMain/generated/_Sequences.kt:1925
+-	var	minValue	-	0	var minValue = selector(minElem)	commonMain/generated/_Sequences.kt:1927
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:1929
+-	val	v	-	0	val v = selector(e)	commonMain/generated/_Sequences.kt:1930
+1.4	fun	minOf	-	0	public inline fun <T> Sequence<T>.minOf(selector: (T) -> Double): Double {	commonMain/generated/_Sequences.kt:1955
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1956
+-	var	minValue	-	0	var minValue = selector(iterator.next())	commonMain/generated/_Sequences.kt:1958
+-	val	v	-	0	val v = selector(iterator.next())	commonMain/generated/_Sequences.kt:1960
+1.4	fun	minOf	-	0	public inline fun <T> Sequence<T>.minOf(selector: (T) -> Float): Float {	commonMain/generated/_Sequences.kt:1982
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:1983
+-	var	minValue	-	0	var minValue = selector(iterator.next())	commonMain/generated/_Sequences.kt:1985
+-	val	v	-	0	val v = selector(iterator.next())	commonMain/generated/_Sequences.kt:1987
+1.4	fun	minOf	-	1	public inline fun <T, R : Comparable<R>> Sequence<T>.minOf(selector: (T) -> R): R {	commonMain/generated/_Sequences.kt:2009
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:2010
+-	var	minValue	-	0	var minValue = selector(iterator.next())	commonMain/generated/_Sequences.kt:2012
+-	val	v	-	0	val v = selector(iterator.next())	commonMain/generated/_Sequences.kt:2014
+1.4	fun	minOfOrNull	-	0	public inline fun <T> Sequence<T>.minOfOrNull(selector: (T) -> Double): Double? {	commonMain/generated/_Sequences.kt:2036
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:2037
+-	var	minValue	-	0	var minValue = selector(iterator.next())	commonMain/generated/_Sequences.kt:2039
+-	val	v	-	0	val v = selector(iterator.next())	commonMain/generated/_Sequences.kt:2041
+1.4	fun	minOfOrNull	-	0	public inline fun <T> Sequence<T>.minOfOrNull(selector: (T) -> Float): Float? {	commonMain/generated/_Sequences.kt:2061
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:2062
+-	var	minValue	-	0	var minValue = selector(iterator.next())	commonMain/generated/_Sequences.kt:2064
+-	val	v	-	0	val v = selector(iterator.next())	commonMain/generated/_Sequences.kt:2066
+1.4	fun	minOfOrNull	-	1	public inline fun <T, R : Comparable<R>> Sequence<T>.minOfOrNull(selector: (T) -> R): R? {	commonMain/generated/_Sequences.kt:2086
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:2087
+-	var	minValue	-	0	var minValue = selector(iterator.next())	commonMain/generated/_Sequences.kt:2089
+-	val	v	-	0	val v = selector(iterator.next())	commonMain/generated/_Sequences.kt:2091
+1.4	fun	minOfWith	-	2	public inline fun <T, R> Sequence<T>.minOfWith(comparator: Comparator<in R>, selector: (T) -> R): R {	commonMain/generated/_Sequences.kt:2115
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:2116
+-	var	minValue	-	0	var minValue = selector(iterator.next())	commonMain/generated/_Sequences.kt:2118
+-	val	v	-	0	val v = selector(iterator.next())	commonMain/generated/_Sequences.kt:2120
+1.4	fun	minOfWithOrNull	-	2	public inline fun <T, R> Sequence<T>.minOfWithOrNull(comparator: Comparator<in R>, selector: (T) -> R): R? {	commonMain/generated/_Sequences.kt:2142
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:2143
+-	var	minValue	-	0	var minValue = selector(iterator.next())	commonMain/generated/_Sequences.kt:2145
+-	val	v	-	0	val v = selector(iterator.next())	commonMain/generated/_Sequences.kt:2147
+1.4	fun	minOrNull	-	0	public fun Sequence<Double>.minOrNull(): Double? {	commonMain/generated/_Sequences.kt:2165
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:2166
+-	var	min	-	0	var min = iterator.next()	commonMain/generated/_Sequences.kt:2168
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:2170
+1.4	fun	minOrNull	-	0	public fun Sequence<Float>.minOrNull(): Float? {	commonMain/generated/_Sequences.kt:2186
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:2187
+-	var	min	-	0	var min = iterator.next()	commonMain/generated/_Sequences.kt:2189
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:2191
+1.4	fun	minOrNull	-	0	public fun <T : Comparable<T>> Sequence<T>.minOrNull(): T? {	commonMain/generated/_Sequences.kt:2207
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:2208
+-	var	min	-	0	var min = iterator.next()	commonMain/generated/_Sequences.kt:2210
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:2212
+1.7	fun	minWith	-	0	public fun <T> Sequence<T>.minWith(comparator: Comparator<in T>): T {	commonMain/generated/_Sequences.kt:2228
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:2229
+-	var	min	-	0	var min = iterator.next()	commonMain/generated/_Sequences.kt:2231
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:2233
+1.4	fun	minWithOrNull	-	0	public fun <T> Sequence<T>.minWithOrNull(comparator: Comparator<in T>): T? {	commonMain/generated/_Sequences.kt:2245
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:2246
+-	var	min	-	0	var min = iterator.next()	commonMain/generated/_Sequences.kt:2248
+-	val	e	-	0	val e = iterator.next()	commonMain/generated/_Sequences.kt:2250
+-	fun	none	-	0	public fun <T> Sequence<T>.none(): Boolean {	commonMain/generated/_Sequences.kt:2263
+-	fun	none	-	0	public inline fun <T> Sequence<T>.none(predicate: (T) -> Boolean): Boolean {	commonMain/generated/_Sequences.kt:2274
+1.1	fun	onEach	-	0	public fun <T> Sequence<T>.onEach(action: (T) -> Unit): Sequence<T> {	commonMain/generated/_Sequences.kt:2285
+1.4	fun	onEachIndexed	-	1	public fun <T> Sequence<T>.onEachIndexed(action: (index: Int, T) -> Unit): Sequence<T> {	commonMain/generated/_Sequences.kt:2300
+-	fun	reduce	-	2	public inline fun <S, T : S> Sequence<T>.reduce(operation: (acc: S, T) -> S): S {	commonMain/generated/_Sequences.kt:2321
+-	val	iterator	-	0	val iterator = this.iterator()	commonMain/generated/_Sequences.kt:2322
+-	var	S	-	0	var accumulator: S = iterator.next()	commonMain/generated/_Sequences.kt:2324
+-	fun	reduceIndexed	-	3	public inline fun <S, T : S> Sequence<T>.reduceIndexed(operation: (index: Int, acc: S, T) -> S): S {	commonMain/generated/_Sequences.kt:2345
+-	val	iterator	-	0	val iterator = this.iterator()	commonMain/generated/_Sequences.kt:2346
+-	var	index	-	0	var index = 1	commonMain/generated/_Sequences.kt:2348
+-	var	S	-	0	var accumulator: S = iterator.next()	commonMain/generated/_Sequences.kt:2349
+1.4	fun	reduceIndexedOrNull	-	3	public inline fun <S, T : S> Sequence<T>.reduceIndexedOrNull(operation: (index: Int, acc: S, T) -> S): S? {	commonMain/generated/_Sequences.kt:2370
+-	val	iterator	-	0	val iterator = this.iterator()	commonMain/generated/_Sequences.kt:2371
+-	var	index	-	0	var index = 1	commonMain/generated/_Sequences.kt:2373
+-	var	S	-	0	var accumulator: S = iterator.next()	commonMain/generated/_Sequences.kt:2374
+1.4	fun	reduceOrNull	-	2	public inline fun <S, T : S> Sequence<T>.reduceOrNull(operation: (acc: S, T) -> S): S? {	commonMain/generated/_Sequences.kt:2395
+-	val	iterator	-	0	val iterator = this.iterator()	commonMain/generated/_Sequences.kt:2396
+-	var	S	-	0	var accumulator: S = iterator.next()	commonMain/generated/_Sequences.kt:2398
+1.4	fun	runningFold	-	3	public fun <T, R> Sequence<T>.runningFold(initial: R, operation: (acc: R, T) -> R): Sequence<R> {	commonMain/generated/_Sequences.kt:2421
+-	var	accumulator	-	0	var accumulator = initial	commonMain/generated/_Sequences.kt:2424
+1.4	fun	runningFoldIndexed	-	4	public fun <T, R> Sequence<T>.runningFoldIndexed(initial: R, operation: (index: Int, acc: R, T) -> R): Sequence<R> {	commonMain/generated/_Sequences.kt:2449
+-	var	index	-	0	var index = 0	commonMain/generated/_Sequences.kt:2452
+-	var	accumulator	-	0	var accumulator = initial	commonMain/generated/_Sequences.kt:2453
+1.4	fun	runningReduce	-	2	public fun <S, T : S> Sequence<T>.runningReduce(operation: (acc: S, T) -> S): Sequence<S> {	commonMain/generated/_Sequences.kt:2475
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:2477
+-	var	S	-	0	var accumulator: S = iterator.next()	commonMain/generated/_Sequences.kt:2479
+1.4	fun	runningReduceIndexed	-	3	public fun <S, T : S> Sequence<T>.runningReduceIndexed(operation: (index: Int, acc: S, T) -> S): Sequence<S> {	commonMain/generated/_Sequences.kt:2504
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:2506
+-	var	S	-	0	var accumulator: S = iterator.next()	commonMain/generated/_Sequences.kt:2508
+-	var	index	-	0	var index = 1	commonMain/generated/_Sequences.kt:2510
+1.4	fun	scan	-	3	public fun <T, R> Sequence<T>.scan(initial: R, operation: (acc: R, T) -> R): Sequence<R> {	commonMain/generated/_Sequences.kt:2535
+1.4	fun	scanIndexed	-	4	public fun <T, R> Sequence<T>.scanIndexed(initial: R, operation: (index: Int, acc: R, T) -> R): Sequence<R> {	commonMain/generated/_Sequences.kt:2556
+-	fun	sumBy	-	0	public inline fun <T> Sequence<T>.sumBy(selector: (T) -> Int): Int {	commonMain/generated/_Sequences.kt:2567
+-	var	Int	-	0	var sum: Int = 0	commonMain/generated/_Sequences.kt:2568
+-	fun	sumByDouble	-	0	public inline fun <T> Sequence<T>.sumByDouble(selector: (T) -> Double): Double {	commonMain/generated/_Sequences.kt:2582
+-	var	Double	-	0	var sum: Double = 0.0	commonMain/generated/_Sequences.kt:2583
+1.4	fun	sumOf	-	0	public inline fun <T> Sequence<T>.sumOf(selector: (T) -> Double): Double {	commonMain/generated/_Sequences.kt:2600
+-	var	Double	-	0	var sum: Double = 0.toDouble()	commonMain/generated/_Sequences.kt:2601
+1.4	fun	sumOf	-	0	public inline fun <T> Sequence<T>.sumOf(selector: (T) -> Int): Int {	commonMain/generated/_Sequences.kt:2616
+-	var	Int	-	0	var sum: Int = 0.toInt()	commonMain/generated/_Sequences.kt:2617
+1.4	fun	sumOf	-	0	public inline fun <T> Sequence<T>.sumOf(selector: (T) -> Long): Long {	commonMain/generated/_Sequences.kt:2634
+-	var	Long	-	0	var sum: Long = 0.toLong()	commonMain/generated/_Sequences.kt:2635
+1.5	fun	sumOf	-	0	public inline fun <T> Sequence<T>.sumOf(selector: (T) -> UInt): UInt {	commonMain/generated/_Sequences.kt:2650
+-	var	UInt	-	0	var sum: UInt = 0.toUInt()	commonMain/generated/_Sequences.kt:2651
+1.5	fun	sumOf	-	0	public inline fun <T> Sequence<T>.sumOf(selector: (T) -> ULong): ULong {	commonMain/generated/_Sequences.kt:2668
+-	var	ULong	-	0	var sum: ULong = 0.toULong()	commonMain/generated/_Sequences.kt:2669
+-	fun	requireNoNulls	-	0	public fun <T : Any> Sequence<T?>.requireNoNulls(): Sequence<T> {	commonMain/generated/_Sequences.kt:2681
+1.2	fun	chunked	-	0	public fun <T> Sequence<T>.chunked(size: Int): Sequence<List<T>> {	commonMain/generated/_Sequences.kt:2697
+1.2	fun	chunked	-	2	public fun <T, R> Sequence<T>.chunked(size: Int, transform: (List<T>) -> R): Sequence<R> {	commonMain/generated/_Sequences.kt:2718
+-	fun	minus	-	0	public operator fun <T> Sequence<T>.minus(element: T): Sequence<T> {	commonMain/generated/_Sequences.kt:2727
+-	var	removed	-	0	var removed = false	commonMain/generated/_Sequences.kt:2730
+-	fun	minus	-	0	public operator fun <T> Sequence<T>.minus(elements: Array<out T>): Sequence<T> {	commonMain/generated/_Sequences.kt:2744
+-	fun	minus	-	0	public operator fun <T> Sequence<T>.minus(elements: Iterable<T>): Sequence<T> {	commonMain/generated/_Sequences.kt:2761
+-	val	other	-	0	val other = elements.convertToListIfNotCollection()	commonMain/generated/_Sequences.kt:2764
+-	fun	minus	-	0	public operator fun <T> Sequence<T>.minus(elements: Sequence<T>): Sequence<T> {	commonMain/generated/_Sequences.kt:2781
+-	val	other	-	0	val other = elements.toList()	commonMain/generated/_Sequences.kt:2784
+-	fun	minusElement	-	0	public inline fun <T> Sequence<T>.minusElement(element: T): Sequence<T> {	commonMain/generated/_Sequences.kt:2799
+-	fun	partition	-	1	public inline fun <T> Sequence<T>.partition(predicate: (T) -> Boolean): Pair<List<T>, List<T>> {	commonMain/generated/_Sequences.kt:2812
+-	val	first	-	0	val first = ArrayList<T>()	commonMain/generated/_Sequences.kt:2813
+-	val	second	-	0	val second = ArrayList<T>()	commonMain/generated/_Sequences.kt:2814
+-	fun	plus	-	0	public operator fun <T> Sequence<T>.plus(element: T): Sequence<T> {	commonMain/generated/_Sequences.kt:2830
+-	fun	plus	-	0	public operator fun <T> Sequence<T>.plus(elements: Array<out T>): Sequence<T> {	commonMain/generated/_Sequences.kt:2842
+-	fun	plus	-	0	public operator fun <T> Sequence<T>.plus(elements: Iterable<T>): Sequence<T> {	commonMain/generated/_Sequences.kt:2854
+-	fun	plus	-	0	public operator fun <T> Sequence<T>.plus(elements: Sequence<T>): Sequence<T> {	commonMain/generated/_Sequences.kt:2866
+-	fun	plusElement	-	0	public inline fun <T> Sequence<T>.plusElement(element: T): Sequence<T> {	commonMain/generated/_Sequences.kt:2876
+1.2	fun	windowed	-	2	public fun <T> Sequence<T>.windowed(size: Int, step: Int = 1, partialWindows: Boolean = false): Sequence<List<T>> {	commonMain/generated/_Sequences.kt:2896
+1.2	fun	windowed	-	4	public fun <T, R> Sequence<T>.windowed(size: Int, step: Int = 1, partialWindows: Boolean = false, transform: (List<T>) -> R): Sequence<R> {	commonMain/generated/_Sequences.kt:2918
+-	fun	zip	-	2	public infix fun <T, R> Sequence<T>.zip(other: Sequence<R>): Sequence<Pair<T, R>> {	commonMain/generated/_Sequences.kt:2930
+-	fun	zip	-	4	public fun <T, R, V> Sequence<T>.zip(other: Sequence<R>, transform: (a: T, b: R) -> V): Sequence<V> {	commonMain/generated/_Sequences.kt:2943
+1.2	fun	zipWithNext	-	1	public fun <T> Sequence<T>.zipWithNext(): Sequence<Pair<T, T>> {	commonMain/generated/_Sequences.kt:2957
+1.2	fun	zipWithNext	-	2	public fun <T, R> Sequence<T>.zipWithNext(transform: (a: T, b: T) -> R): Sequence<R> {	commonMain/generated/_Sequences.kt:2972
+-	val	iterator	-	0	val iterator = iterator()	commonMain/generated/_Sequences.kt:2974
+-	var	current	-	0	var current = iterator.next()	commonMain/generated/_Sequences.kt:2976
+-	val	next	-	0	val next = iterator.next()	commonMain/generated/_Sequences.kt:2978
+-	fun	joinTo	-	8	public fun <T, A : Appendable> Sequence<T>.joinTo(buffer: A, separator: CharSequence = ", ", prefix: CharSequence = "", postfix: CharSequence = "", limit: Int = -1, truncated: CharSequence = "...", transform: ((T) -> CharSequence)? = null): A {	commonMain/generated/_Sequences.kt:2995
+-	var	count	-	0	var count = 0	commonMain/generated/_Sequences.kt:2997
+-	fun	joinToString	-	6	public fun <T> Sequence<T>.joinToString(separator: CharSequence = ", ", prefix: CharSequence = "", postfix: CharSequence = "", limit: Int = -1, truncated: CharSequence = "...", transform: ((T) -> CharSequence)? = null): String {	commonMain/generated/_Sequences.kt:3019
+-	fun	asIterable	-	0	public fun <T> Sequence<T>.asIterable(): Iterable<T> {	commonMain/generated/_Sequences.kt:3026
+-	fun	asSequence	-	0	public inline fun <T> Sequence<T>.asSequence(): Sequence<T> {	commonMain/generated/_Sequences.kt:3034
+-	fun	average	-	0	public fun Sequence<Byte>.average(): Double {	commonMain/generated/_Sequences.kt:3044
+-	var	Double	-	0	var sum: Double = 0.0	commonMain/generated/_Sequences.kt:3045
+-	var	Int	-	0	var count: Int = 0	commonMain/generated/_Sequences.kt:3046
+-	fun	average	-	0	public fun Sequence<Short>.average(): Double {	commonMain/generated/_Sequences.kt:3060
+-	var	Double	-	0	var sum: Double = 0.0	commonMain/generated/_Sequences.kt:3061
+-	var	Int	-	0	var count: Int = 0	commonMain/generated/_Sequences.kt:3062
+-	fun	average	-	0	public fun Sequence<Int>.average(): Double {	commonMain/generated/_Sequences.kt:3076
+-	var	Double	-	0	var sum: Double = 0.0	commonMain/generated/_Sequences.kt:3077
+-	var	Int	-	0	var count: Int = 0	commonMain/generated/_Sequences.kt:3078
+-	fun	average	-	0	public fun Sequence<Long>.average(): Double {	commonMain/generated/_Sequences.kt:3092
+-	var	Double	-	0	var sum: Double = 0.0	commonMain/generated/_Sequences.kt:3093
+-	var	Int	-	0	var count: Int = 0	commonMain/generated/_Sequences.kt:3094
+-	fun	average	-	0	public fun Sequence<Float>.average(): Double {	commonMain/generated/_Sequences.kt:3108
+-	var	Double	-	0	var sum: Double = 0.0	commonMain/generated/_Sequences.kt:3109
+-	var	Int	-	0	var count: Int = 0	commonMain/generated/_Sequences.kt:3110
+-	fun	average	-	0	public fun Sequence<Double>.average(): Double {	commonMain/generated/_Sequences.kt:3124
+-	var	Double	-	0	var sum: Double = 0.0	commonMain/generated/_Sequences.kt:3125
+-	var	Int	-	0	var count: Int = 0	commonMain/generated/_Sequences.kt:3126
+-	fun	sum	-	0	public fun Sequence<Byte>.sum(): Int {	commonMain/generated/_Sequences.kt:3140
+-	var	Int	-	0	var sum: Int = 0	commonMain/generated/_Sequences.kt:3141
+-	fun	sum	-	0	public fun Sequence<Short>.sum(): Int {	commonMain/generated/_Sequences.kt:3154
+-	var	Int	-	0	var sum: Int = 0	commonMain/generated/_Sequences.kt:3155
+-	fun	sum	-	0	public fun Sequence<Int>.sum(): Int {	commonMain/generated/_Sequences.kt:3168
+-	var	Int	-	0	var sum: Int = 0	commonMain/generated/_Sequences.kt:3169
+-	fun	sum	-	0	public fun Sequence<Long>.sum(): Long {	commonMain/generated/_Sequences.kt:3182
+-	var	Long	-	0	var sum: Long = 0L	commonMain/generated/_Sequences.kt:3183
+-	fun	sum	-	0	public fun Sequence<Float>.sum(): Float {	commonMain/generated/_Sequences.kt:3196
+-	var	Float	-	0	var sum: Float = 0.0f	commonMain/generated/_Sequences.kt:3197
+-	fun	sum	-	0	public fun Sequence<Double>.sum(): Double {	commonMain/generated/_Sequences.kt:3210
+-	var	Double	-	0	var sum: Double = 0.0	commonMain/generated/_Sequences.kt:3211
+1.5	fun	sum	-	0	public fun Sequence<UInt>.sum(): UInt {	commonMain/generated/_USequences.kt:26
+-	var	UInt	-	0	var sum: UInt = 0u	commonMain/generated/_USequences.kt:27
+1.5	fun	sum	-	0	public fun Sequence<ULong>.sum(): ULong {	commonMain/generated/_USequences.kt:41
+-	var	ULong	-	0	var sum: ULong = 0uL	commonMain/generated/_USequences.kt:42
+1.5	fun	sum	-	0	public fun Sequence<UByte>.sum(): UInt {	commonMain/generated/_USequences.kt:56
+-	var	UInt	-	0	var sum: UInt = 0u	commonMain/generated/_USequences.kt:57
+1.5	fun	sum	-	0	public fun Sequence<UShort>.sum(): UInt {	commonMain/generated/_USequences.kt:71
+-	var	UInt	-	0	var sum: UInt = 0u	commonMain/generated/_USequences.kt:72
+-	interface	Sequence	-	0	public interface Sequence<out T> {	commonMain/kotlin/collections/Sequence.kt:21
+-	fun	iterator	-	0	public operator fun iterator(): Iterator<T>	commonMain/kotlin/collections/Sequence.kt:27
+1.3	fun	sequence	-	0	public fun <T> sequence(@BuilderInference block: suspend SequenceScope<T>.() -> Unit): Sequence<T> = Sequence { iterator(block) }	commonMain/kotlin/collections/SequenceBuilder.kt:26
+1.3	fun	iterator	-	0	public fun <T> iterator(@BuilderInference block: suspend SequenceScope<T>.() -> Unit): Iterator<T> {	commonMain/kotlin/collections/SequenceBuilder.kt:36
+-	val	iterator	-	0	val iterator = SequenceBuilderIterator<T>()	commonMain/kotlin/collections/SequenceBuilder.kt:37
+1.3	class	SequenceScope	-	0	public abstract class SequenceScope<in T> internal constructor() {	commonMain/kotlin/collections/SequenceBuilder.kt:53
+-	fun	yield	-	0	public abstract suspend fun yield(value: T)	commonMain/kotlin/collections/SequenceBuilder.kt:61
+-	fun	yieldAll	-	0	public abstract suspend fun yieldAll(iterator: Iterator<T>)	commonMain/kotlin/collections/SequenceBuilder.kt:71
+-	fun	yieldAll	-	0	public suspend fun yieldAll(elements: Iterable<T>) {	commonMain/kotlin/collections/SequenceBuilder.kt:79
+-	fun	yieldAll	-	0	public suspend fun yieldAll(sequence: Sequence<T>): Unit = yieldAll(sequence.iterator())	commonMain/kotlin/collections/SequenceBuilder.kt:92
+-	typealias	State	-	0	private typealias State = Int	commonMain/kotlin/collections/SequenceBuilder.kt:95
+-	val	State	-	0	private const val State_NotReady: State = 0	commonMain/kotlin/collections/SequenceBuilder.kt:97
+-	val	State	-	0	private const val State_ManyNotReady: State = 1	commonMain/kotlin/collections/SequenceBuilder.kt:98
+-	val	State	-	0	private const val State_ManyReady: State = 2	commonMain/kotlin/collections/SequenceBuilder.kt:99
+-	val	State	-	0	private const val State_Ready: State = 3	commonMain/kotlin/collections/SequenceBuilder.kt:100
+-	val	State	-	0	private const val State_Done: State = 4	commonMain/kotlin/collections/SequenceBuilder.kt:101
+-	val	State	-	0	private const val State_Failed: State = 5	commonMain/kotlin/collections/SequenceBuilder.kt:102
+-	class	SequenceBuilderIterator	-	2	private class SequenceBuilderIterator<T> : SequenceScope<T>(), Iterator<T>, Continuation<Unit> {	commonMain/kotlin/collections/SequenceBuilder.kt:104
+-	var	state	-	0	private var state = State_NotReady	commonMain/kotlin/collections/SequenceBuilder.kt:105
+-	var	T	-	0	private var nextValue: T? = null	commonMain/kotlin/collections/SequenceBuilder.kt:106
+-	val	step	-	0	val step = nextStep!!	commonMain/kotlin/collections/SequenceBuilder.kt:127
+-	val	result	-	0	val result = nextValue as T	commonMain/kotlin/collections/SequenceBuilder.kt:143
+-	fun	nextNotReady	-	0	private fun nextNotReady(): T {	commonMain/kotlin/collections/SequenceBuilder.kt:151
+-	fun	exceptionalState	-	0	private fun exceptionalState(): Throwable = when (state) {	commonMain/kotlin/collections/SequenceBuilder.kt:155
+-	fun	Sequence	-	0	public inline fun <T> Sequence(crossinline iterator: () -> Iterator<T>): Sequence<T> = object : Sequence<T> {	commonMain/kotlin/collections/Sequences.kt:22
+-	fun	asSequence	-	0	public fun <T> Iterator<T>.asSequence(): Sequence<T> = Sequence { this }.constrainOnce()	commonMain/kotlin/collections/Sequences.kt:31
+-	fun	sequenceOf	-	0	public fun <T> sequenceOf(vararg elements: T): Sequence<T> = elements.asSequence()	commonMain/kotlin/collections/Sequences.kt:38
+2.2	fun	sequenceOf	-	0	public fun <T> sequenceOf(element: T): Sequence<T> = Sequence {	commonMain/kotlin/collections/Sequences.kt:48
+-	var	Boolean	-	0	private var _hasNext: Boolean = true	commonMain/kotlin/collections/Sequences.kt:50
+2.2	fun	sequenceOf	-	0	public inline fun <T> sequenceOf(): Sequence<T> = emptySequence()	commonMain/kotlin/collections/Sequences.kt:70
+-	fun	emptySequence	-	0	public fun <T> emptySequence(): Sequence<T> = EmptySequence	commonMain/kotlin/collections/Sequences.kt:75
+-	object	EmptySequence	-	1	private object EmptySequence : Sequence<Nothing>, DropTakeSequence<Nothing> {	commonMain/kotlin/collections/Sequences.kt:77
+1.3	fun	orEmpty	-	0	public inline fun <T> Sequence<T>?.orEmpty(): Sequence<T> = this ?: emptySequence()	commonMain/kotlin/collections/Sequences.kt:89
+1.3	fun	ifEmpty	-	0	public fun <T> Sequence<T>.ifEmpty(defaultValue: () -> Sequence<T>): Sequence<T> = sequence {	commonMain/kotlin/collections/Sequences.kt:99
+-	val	iterator	-	0	val iterator = this@ifEmpty.iterator()	commonMain/kotlin/collections/Sequences.kt:100
+-	fun	flatten	-	0	public fun <T> Sequence<Sequence<T>>.flatten(): Sequence<T> = flatten { it.iterator() }	commonMain/kotlin/collections/Sequences.kt:115
+-	fun	flatten	-	0	public fun <T> Sequence<Iterable<T>>.flatten(): Sequence<T> = flatten { it.iterator() }	commonMain/kotlin/collections/Sequences.kt:125
+-	fun	flatten	-	1	private fun <T, R> Sequence<T>.flatten(iterator: (T) -> Iterator<R>): Sequence<R> {	commonMain/kotlin/collections/Sequences.kt:127
+-	fun	unzip	-	3	public fun <T, R> Sequence<Pair<T, R>>.unzip(): Pair<List<T>, List<R>> {	commonMain/kotlin/collections/Sequences.kt:143
+-	val	listT	-	0	val listT = ArrayList<T>()	commonMain/kotlin/collections/Sequences.kt:144
+-	val	listR	-	0	val listR = ArrayList<R>()	commonMain/kotlin/collections/Sequences.kt:145
+1.4	fun	shuffled	-	0	public fun <T> Sequence<T>.shuffled(): Sequence<T> = shuffled(Random)	commonMain/kotlin/collections/Sequences.kt:161
+1.4	fun	shuffled	-	0	public fun <T> Sequence<T>.shuffled(random: Random): Sequence<T> = sequence<T> {	commonMain/kotlin/collections/Sequences.kt:172
+-	val	buffer	-	0	val buffer = toMutableList()	commonMain/kotlin/collections/Sequences.kt:173
+-	val	j	-	0	val j = random.nextInt(buffer.size)	commonMain/kotlin/collections/Sequences.kt:175
+-	val	last	-	0	val last = buffer.removeLast()	commonMain/kotlin/collections/Sequences.kt:176
+-	val	value	-	1	val value = if (j < buffer.size) buffer.set(j, last) else last	commonMain/kotlin/collections/Sequences.kt:177
+-	class	FilteringSequence	-	0	internal class FilteringSequence<T>(	commonMain/kotlin/collections/Sequences.kt:190
+-	val	Boolean	-	1	private val sendWhen: Boolean = true,	commonMain/kotlin/collections/Sequences.kt:192
+-	val	Boolean	-	0	private val predicate: (T) -> Boolean	commonMain/kotlin/collections/Sequences.kt:193
+-	val	iterator	-	0	val iterator = sequence.iterator()	commonMain/kotlin/collections/Sequences.kt:197
+-	var	Int	-	0	var nextState: Int = -1	commonMain/kotlin/collections/Sequences.kt:198
+-	var	T	-	0	var nextItem: T? = null	commonMain/kotlin/collections/Sequences.kt:199
+-	fun	calcNext	-	0	private fun calcNext() {	commonMain/kotlin/collections/Sequences.kt:201
+-	val	item	-	0	val item = iterator.next()	commonMain/kotlin/collections/Sequences.kt:203
+-	val	result	-	0	val result = nextItem	commonMain/kotlin/collections/Sequences.kt:218
+-	class	TransformingSequence	-	1	internal class TransformingSequence<T, R>	commonMain/kotlin/collections/Sequences.kt:238
+-	val	iterator	-	0	val iterator = sequence.iterator()	commonMain/kotlin/collections/Sequences.kt:241
+-	fun	flatten	-	0	internal fun <E> flatten(iterator: (R) -> Iterator<E>): Sequence<E> {	commonMain/kotlin/collections/Sequences.kt:251
+-	class	TransformingIndexedSequence	-	1	internal class TransformingIndexedSequence<T, R>	commonMain/kotlin/collections/Sequences.kt:261
+-	val	iterator	-	0	val iterator = sequence.iterator()	commonMain/kotlin/collections/Sequences.kt:264
+-	var	index	-	0	var index = 0	commonMain/kotlin/collections/Sequences.kt:265
+-	class	IndexingSequence	-	0	internal class IndexingSequence<T>	commonMain/kotlin/collections/Sequences.kt:280
+-	val	iterator	-	0	val iterator = sequence.iterator()	commonMain/kotlin/collections/Sequences.kt:283
+-	var	index	-	0	var index = 0	commonMain/kotlin/collections/Sequences.kt:284
+-	class	MergingSequence	-	2	internal class MergingSequence<T1, T2, V>	commonMain/kotlin/collections/Sequences.kt:300
+-	val	V	-	1	private val transform: (T1, T2) -> V	commonMain/kotlin/collections/Sequences.kt:304
+-	val	iterator1	-	0	val iterator1 = sequence1.iterator()	commonMain/kotlin/collections/Sequences.kt:307
+-	val	iterator2	-	0	val iterator2 = sequence2.iterator()	commonMain/kotlin/collections/Sequences.kt:308
+-	class	FlatteningSequence	-	2	internal class FlatteningSequence<T, R, E>	commonMain/kotlin/collections/Sequences.kt:319
+-	val	R	-	1	private val transformer: (T) -> R,	commonMain/kotlin/collections/Sequences.kt:322
+-	val	Iterator	-	0	private val iterator: (R) -> Iterator<E>	commonMain/kotlin/collections/Sequences.kt:323
+-	object	State	-	0	private object State {	commonMain/kotlin/collections/Sequences.kt:325
+-	val	UNDEFINED	-	0	const val UNDEFINED = 0	commonMain/kotlin/collections/Sequences.kt:326
+-	val	READY	-	0	const val READY = 1	commonMain/kotlin/collections/Sequences.kt:327
+-	val	DONE	-	0	const val DONE = 2	commonMain/kotlin/collections/Sequences.kt:328
+-	val	iterator	-	0	val iterator = sequence.iterator()	commonMain/kotlin/collections/Sequences.kt:332
+-	var	state	-	0	var state = State.UNDEFINED	commonMain/kotlin/collections/Sequences.kt:337
+-	fun	ensureItemIterator	-	0	private fun ensureItemIterator(): Boolean {	commonMain/kotlin/collections/Sequences.kt:354
+-	val	itemIterator	-	0	val itemIterator = itemIterator	commonMain/kotlin/collections/Sequences.kt:355
+-	val	element	-	0	val element = iterator.next()	commonMain/kotlin/collections/Sequences.kt:362
+-	val	nextItemIterator	-	0	val nextItemIterator = iterator(transformer(element))	commonMain/kotlin/collections/Sequences.kt:363
+-	fun	flatMapIndexed	-	5	internal fun <T, C, R> flatMapIndexed(source: Sequence<T>, transform: (Int, T) -> C, iterator: (C) -> Iterator<R>): Sequence<R> =	commonMain/kotlin/collections/Sequences.kt:378
+-	var	index	-	0	var index = 0	commonMain/kotlin/collections/Sequences.kt:380
+-	val	result	-	1	val result = transform(checkIndexOverflow(index++), element)	commonMain/kotlin/collections/Sequences.kt:382
+-	interface	DropTakeSequence	-	0	internal interface DropTakeSequence<T> : Sequence<T> {	commonMain/kotlin/collections/Sequences.kt:390
+-	fun	drop	-	0	fun drop(n: Int): Sequence<T>	commonMain/kotlin/collections/Sequences.kt:391
+-	fun	take	-	0	fun take(n: Int): Sequence<T>	commonMain/kotlin/collections/Sequences.kt:392
+-	class	SubSequence	-	0	internal class SubSequence<T>(	commonMain/kotlin/collections/Sequences.kt:399
+-	val	Int	-	1	private val startIndex: Int,	commonMain/kotlin/collections/Sequences.kt:401
+-	val	Int	-	0	private val endIndex: Int	commonMain/kotlin/collections/Sequences.kt:402
+-	val	get	-	0	private val count: Int get() = endIndex - startIndex	commonMain/kotlin/collections/Sequences.kt:411
+-	val	iterator	-	0	val iterator = sequence.iterator()	commonMain/kotlin/collections/Sequences.kt:418
+-	var	position	-	0	var position = 0	commonMain/kotlin/collections/Sequences.kt:419
+-	fun	drop	-	0	private fun drop() {	commonMain/kotlin/collections/Sequences.kt:422
+-	class	TakeSequence	-	0	internal class TakeSequence<T>(	commonMain/kotlin/collections/Sequences.kt:448
+-	val	Int	-	0	private val count: Int	commonMain/kotlin/collections/Sequences.kt:450
+-	var	left	-	0	var left = count	commonMain/kotlin/collections/Sequences.kt:461
+-	val	iterator	-	0	val iterator = sequence.iterator()	commonMain/kotlin/collections/Sequences.kt:462
+-	class	TakeWhileSequence	-	0	internal class TakeWhileSequence<T>	commonMain/kotlin/collections/Sequences.kt:481
+-	val	Boolean	-	0	private val predicate: (T) -> Boolean	commonMain/kotlin/collections/Sequences.kt:484
+-	val	iterator	-	0	val iterator = sequence.iterator()	commonMain/kotlin/collections/Sequences.kt:487
+-	var	Int	-	0	var nextState: Int = -1	commonMain/kotlin/collections/Sequences.kt:488
+-	var	T	-	0	var nextItem: T? = null	commonMain/kotlin/collections/Sequences.kt:489
+-	fun	calcNext	-	0	private fun calcNext() {	commonMain/kotlin/collections/Sequences.kt:491
+-	val	item	-	0	val item = iterator.next()	commonMain/kotlin/collections/Sequences.kt:493
+-	val	result	-	0	val result = nextItem as T	commonMain/kotlin/collections/Sequences.kt:509
+-	class	DropSequence	-	0	internal class DropSequence<T>(	commonMain/kotlin/collections/Sequences.kt:529
+-	val	Int	-	0	private val count: Int	commonMain/kotlin/collections/Sequences.kt:531
+-	val	iterator	-	0	val iterator = sequence.iterator()	commonMain/kotlin/collections/Sequences.kt:541
+-	var	left	-	0	var left = count	commonMain/kotlin/collections/Sequences.kt:542
+-	fun	drop	-	0	private fun drop() {	commonMain/kotlin/collections/Sequences.kt:545
+-	class	DropWhileSequence	-	0	internal class DropWhileSequence<T>	commonMain/kotlin/collections/Sequences.kt:568
+-	val	Boolean	-	0	private val predicate: (T) -> Boolean	commonMain/kotlin/collections/Sequences.kt:571
+-	val	iterator	-	0	val iterator = sequence.iterator()	commonMain/kotlin/collections/Sequences.kt:575
+-	var	Int	-	0	var dropState: Int = -1	commonMain/kotlin/collections/Sequences.kt:576
+-	var	T	-	0	var nextItem: T? = null	commonMain/kotlin/collections/Sequences.kt:577
+-	fun	drop	-	0	private fun drop() {	commonMain/kotlin/collections/Sequences.kt:579
+-	val	item	-	0	val item = iterator.next()	commonMain/kotlin/collections/Sequences.kt:581
+-	val	result	-	0	val result = nextItem as T	commonMain/kotlin/collections/Sequences.kt:597
+-	class	DistinctSequence	-	2	internal class DistinctSequence<T, K>(private val source: Sequence<T>, private val keySelector: (T) -> K) : Sequence<T> {	commonMain/kotlin/collections/Sequences.kt:613
+-	class	DistinctIterator	-	2	private class DistinctIterator<T, K>(private val source: Iterator<T>, private val keySelector: (T) -> K) : AbstractIterator<T>() {	commonMain/kotlin/collections/Sequences.kt:617
+-	val	observed	-	0	private val observed = HashSet<K>()	commonMain/kotlin/collections/Sequences.kt:618
+-	val	next	-	0	val next = source.next()	commonMain/kotlin/collections/Sequences.kt:622
+-	val	key	-	0	val key = keySelector(next)	commonMain/kotlin/collections/Sequences.kt:623
+-	class	GeneratorSequence	-	1	private class GeneratorSequence<T : Any>(private val getInitialValue: () -> T?, private val getNextValue: (T) -> T?) : Sequence<T> {	commonMain/kotlin/collections/Sequences.kt:636
+-	var	T	-	0	var nextItem: T? = null	commonMain/kotlin/collections/Sequences.kt:638
+-	var	Int	-	0	var nextState: Int = -2	commonMain/kotlin/collections/Sequences.kt:639
+-	fun	calcNext	-	0	private fun calcNext() {	commonMain/kotlin/collections/Sequences.kt:641
+-	val	result	-	0	val result = nextItem as T	commonMain/kotlin/collections/Sequences.kt:652
+-	fun	constrainOnce	-	0	public fun <T> Sequence<T>.constrainOnce(): Sequence<T> {	commonMain/kotlin/collections/Sequences.kt:674
+-	fun	generateSequence	-	0	public fun <T : Any> generateSequence(nextFunction: () -> T?): Sequence<T> {	commonMain/kotlin/collections/Sequences.kt:691
+-	fun	generateSequence	-	1	public fun <T : Any> generateSequence(seed: T?, nextFunction: (T) -> T?): Sequence<T> =	commonMain/kotlin/collections/Sequences.kt:709
+-	fun	generateSequence	-	1	public fun <T : Any> generateSequence(seedFunction: () -> T?, nextFunction: (T) -> T?): Sequence<T> =	commonMain/kotlin/collections/Sequences.kt:728
+-	class	ConstrainedOnceSequence	-	0	internal expect class ConstrainedOnceSequence<T> : Sequence<T> {	commonMain/kotlin/SequencesH.kt:8
+-	fun	filterIsInstance	-	0	public fun <R> Sequence<*>.filterIsInstance(klass: Class<R>): Sequence<R> {	jvmMain/generated/_SequencesJvm.kt:24
+-	fun	filterIsInstanceTo	-	2	public fun <C : MutableCollection<in R>, R> Sequence<*>.filterIsInstanceTo(destination: C, klass: Class<R>): C {	jvmMain/generated/_SequencesJvm.kt:36
+-	fun	toSortedSet	-	0	public fun <T : Comparable<T>> Sequence<T>.toSortedSet(): java.util.SortedSet<T> {	jvmMain/generated/_SequencesJvm.kt:47
+-	fun	toSortedSet	-	0	public fun <T> Sequence<T>.toSortedSet(comparator: Comparator<in T>): java.util.SortedSet<T> {	jvmMain/generated/_SequencesJvm.kt:58
+1.1	fun	max	-	0	public fun Sequence<Double>.max(): Double? {	jvmMain/generated/_SequencesJvm.kt:66
+1.1	fun	max	-	0	public fun Sequence<Float>.max(): Float? {	jvmMain/generated/_SequencesJvm.kt:74
+-	fun	max	-	0	public fun <T : Comparable<T>> Sequence<T>.max(): T? {	jvmMain/generated/_SequencesJvm.kt:81
+-	fun	maxBy	-	1	public inline fun <T, R : Comparable<R>> Sequence<T>.maxBy(selector: (T) -> R): T? {	jvmMain/generated/_SequencesJvm.kt:88
+-	fun	maxWith	-	0	public fun <T> Sequence<T>.maxWith(comparator: Comparator<in T>): T? {	jvmMain/generated/_SequencesJvm.kt:95
+1.1	fun	min	-	0	public fun Sequence<Double>.min(): Double? {	jvmMain/generated/_SequencesJvm.kt:103
+1.1	fun	min	-	0	public fun Sequence<Float>.min(): Float? {	jvmMain/generated/_SequencesJvm.kt:111
+-	fun	min	-	0	public fun <T : Comparable<T>> Sequence<T>.min(): T? {	jvmMain/generated/_SequencesJvm.kt:118
+-	fun	minBy	-	1	public inline fun <T, R : Comparable<R>> Sequence<T>.minBy(selector: (T) -> R): T? {	jvmMain/generated/_SequencesJvm.kt:125
+-	fun	minWith	-	0	public fun <T> Sequence<T>.minWith(comparator: Comparator<in T>): T? {	jvmMain/generated/_SequencesJvm.kt:132
+1.4	fun	sumOf	-	0	public inline fun <T> Sequence<T>.sumOf(selector: (T) -> java.math.BigDecimal): java.math.BigDecimal {	jvmMain/generated/_SequencesJvm.kt:146
+-	var	BigDecimal	java.math	0	var sum: java.math.BigDecimal = 0.toBigDecimal()	jvmMain/generated/_SequencesJvm.kt:147
+1.4	fun	sumOf	-	0	public inline fun <T> Sequence<T>.sumOf(selector: (T) -> java.math.BigInteger): java.math.BigInteger {	jvmMain/generated/_SequencesJvm.kt:164
+-	var	BigInteger	java.math	0	var sum: java.math.BigInteger = 0.toBigInteger()	jvmMain/generated/_SequencesJvm.kt:165
+-	fun	asSequence	-	0	public inline fun <T> java.util.Enumeration<T>.asSequence(): Sequence<T> = this.iterator().asSequence()	jvmMain/kotlin/collections/SequencesJVM.kt:16
+-	class	ConstrainedOnceSequence	-	0	internal actual class ConstrainedOnceSequence<T> actual constructor(sequence: Sequence<T>) : Sequence<T> {	jvmMain/kotlin/collections/SequencesJVM.kt:19
+-	val	sequenceRef	-	0	private val sequenceRef = java.util.concurrent.atomic.AtomicReference(sequence)	jvmMain/kotlin/collections/SequencesJVM.kt:20
+-	val	sequence	-	0	val sequence = sequenceRef.getAndSet(null) ?: throw IllegalStateException("This sequence can be consumed only once.")	jvmMain/kotlin/collections/SequencesJVM.kt:23

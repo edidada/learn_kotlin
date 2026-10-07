@@ -1,0 +1,245 @@
+since	kind	name	receiver	arity	sig	loc
+-	fun	println	-	0	public expect fun println()	commonMain/kotlin/ioH.kt:10
+-	fun	println	-	0	public expect fun println(message: Any?)	commonMain/kotlin/ioH.kt:13
+-	fun	print	-	0	public expect fun print(message: Any?)	commonMain/kotlin/ioH.kt:16
+1.6	fun	readln	-	0	public expect fun readln(): String	commonMain/kotlin/ioH.kt:27
+1.6	fun	readlnOrNull	-	0	public expect fun readlnOrNull(): String?	commonMain/kotlin/ioH.kt:38
+-	class	ReadAfterEOFException	-	0	internal class ReadAfterEOFException(message: String?) : RuntimeException(message)	commonMain/kotlin/ioH.kt:40
+-	interface	Serializable	-	0	internal expect interface Serializable	commonMain/kotlin/ioH.kt:43
+-	fun	use	T	1	public inline fun <T : Closeable?, R> T.use(block: (T) -> R): R {	jvmMain/kotlin/io/Closeable.kt:21
+-	var	Throwable	-	0	var exception: Throwable? = null	jvmMain/kotlin/io/Closeable.kt:25
+1.1	fun	closeFinally	Closeable	0	internal fun Closeable?.closeFinally(cause: Throwable?): Unit = when {	jvmMain/kotlin/io/Closeable.kt:44
+-	fun	print	-	0	public actual inline fun print(message: Any?) {	jvmMain/kotlin/io/Console.kt:19
+-	fun	print	-	0	public inline fun print(message: Int) {	jvmMain/kotlin/io/Console.kt:25
+-	fun	print	-	0	public inline fun print(message: Long) {	jvmMain/kotlin/io/Console.kt:31
+-	fun	print	-	0	public inline fun print(message: Byte) {	jvmMain/kotlin/io/Console.kt:37
+-	fun	print	-	0	public inline fun print(message: Short) {	jvmMain/kotlin/io/Console.kt:43
+-	fun	print	-	0	public inline fun print(message: Char) {	jvmMain/kotlin/io/Console.kt:49
+-	fun	print	-	0	public inline fun print(message: Boolean) {	jvmMain/kotlin/io/Console.kt:55
+-	fun	print	-	0	public inline fun print(message: Float) {	jvmMain/kotlin/io/Console.kt:61
+-	fun	print	-	0	public inline fun print(message: Double) {	jvmMain/kotlin/io/Console.kt:67
+-	fun	print	-	0	public inline fun print(message: CharArray) {	jvmMain/kotlin/io/Console.kt:73
+-	fun	println	-	0	public actual inline fun println(message: Any?) {	jvmMain/kotlin/io/Console.kt:79
+-	fun	println	-	0	public inline fun println(message: Int) {	jvmMain/kotlin/io/Console.kt:85
+-	fun	println	-	0	public inline fun println(message: Long) {	jvmMain/kotlin/io/Console.kt:91
+-	fun	println	-	0	public inline fun println(message: Byte) {	jvmMain/kotlin/io/Console.kt:97
+-	fun	println	-	0	public inline fun println(message: Short) {	jvmMain/kotlin/io/Console.kt:103
+-	fun	println	-	0	public inline fun println(message: Char) {	jvmMain/kotlin/io/Console.kt:109
+-	fun	println	-	0	public inline fun println(message: Boolean) {	jvmMain/kotlin/io/Console.kt:115
+-	fun	println	-	0	public inline fun println(message: Float) {	jvmMain/kotlin/io/Console.kt:121
+-	fun	println	-	0	public inline fun println(message: Double) {	jvmMain/kotlin/io/Console.kt:127
+-	fun	println	-	0	public inline fun println(message: CharArray) {	jvmMain/kotlin/io/Console.kt:133
+-	fun	println	-	0	public actual inline fun println() {	jvmMain/kotlin/io/Console.kt:139
+1.6	fun	readln	-	0	public actual fun readln(): String = readlnOrNull() ?: throw ReadAfterEOFException("EOF has already been reached")	jvmMain/kotlin/io/Console.kt:152
+1.6	fun	readlnOrNull	-	0	public actual fun readlnOrNull(): String? = readLine()	jvmMain/kotlin/io/Console.kt:163
+-	fun	readLine	-	1	public fun readLine(): String? = LineReader.readLine(System.`in`, Charset.defaultCharset())	jvmMain/kotlin/io/Console.kt:173
+-	object	LineReader	-	0	internal object LineReader {	jvmMain/kotlin/io/Console.kt:176
+-	val	Int	-	0	private const val BUFFER_SIZE: Int = 32	jvmMain/kotlin/io/Console.kt:177
+-	var	directEOL	-	0	private var directEOL = false	jvmMain/kotlin/io/Console.kt:179
+-	val	bytes	-	0	private val bytes = ByteArray(BUFFER_SIZE)	jvmMain/kotlin/io/Console.kt:180
+-	val	chars	-	0	private val chars = CharArray(BUFFER_SIZE)	jvmMain/kotlin/io/Console.kt:181
+-	val	ByteBuffer	-	0	private val byteBuf: ByteBuffer = ByteBuffer.wrap(bytes)	jvmMain/kotlin/io/Console.kt:182
+-	val	CharBuffer	-	0	private val charBuf: CharBuffer = CharBuffer.wrap(chars)	jvmMain/kotlin/io/Console.kt:183
+-	val	sb	-	0	private val sb = StringBuilder()	jvmMain/kotlin/io/Console.kt:184
+-	fun	readLine	-	1	fun readLine(inputStream: InputStream, charset: Charset): String? {	jvmMain/kotlin/io/Console.kt:193
+-	var	nBytes	-	0	var nBytes = 0	jvmMain/kotlin/io/Console.kt:195
+-	var	nChars	-	0	var nChars = 0	jvmMain/kotlin/io/Console.kt:196
+-	val	readByte	-	0	val readByte = inputStream.read()	jvmMain/kotlin/io/Console.kt:198
+-	val	result	-	0	val result = sb.toString()	jvmMain/kotlin/io/Console.kt:235
+-	fun	decode	-	0	private fun decode(endOfInput: Boolean): Int {	jvmMain/kotlin/io/Console.kt:242
+-	val	CoderResult	-	2	val coderResult: CoderResult = decoder.decode(byteBuf, charBuf, endOfInput)	jvmMain/kotlin/io/Console.kt:244
+-	val	nChars	-	0	val nChars = charBuf.position()	jvmMain/kotlin/io/Console.kt:249
+-	fun	compactBytes	-	0	private fun compactBytes(): Int = with(byteBuf) {	jvmMain/kotlin/io/Console.kt:260
+-	fun	decodeEndOfInput	-	1	private fun decodeEndOfInput(nBytes: Int, nChars: Int): Int {	jvmMain/kotlin/io/Console.kt:266
+-	fun	updateCharset	-	0	private fun updateCharset(charset: Charset) {	jvmMain/kotlin/io/Console.kt:277
+-	fun	resetAll	-	0	private fun resetAll() {	jvmMain/kotlin/io/Console.kt:290
+-	fun	trimStringBuilder	-	0	private fun trimStringBuilder() {	jvmMain/kotlin/io/Console.kt:297
+-	val	Int	-	0	public const val DEFAULT_BUFFER_SIZE: Int = 8 * 1024	jvmMain/kotlin/io/Constants.kt:13
+-	val	Int	-	0	internal const val DEFAULT_BLOCK_SIZE: Int = 4096	jvmMain/kotlin/io/Constants.kt:18
+-	val	Int	-	0	internal const val MINIMUM_BLOCK_SIZE: Int = 512	jvmMain/kotlin/io/Constants.kt:22
+-	fun	constructMessage	-	2	private fun constructMessage(file: File, other: File?, reason: String?): String {	jvmMain/kotlin/io/Exceptions.kt:11
+-	val	sb	-	0	val sb = StringBuilder(file.toString())	jvmMain/kotlin/io/Exceptions.kt:12
+-	class	FileSystemException	-	0	open public class FileSystemException(	jvmMain/kotlin/io/Exceptions.kt:28
+-	val	File	-	1	public val file: File,	jvmMain/kotlin/io/Exceptions.kt:29
+-	val	File	-	1	public val other: File? = null,	jvmMain/kotlin/io/Exceptions.kt:30
+-	val	String	-	0	public val reason: String? = null	jvmMain/kotlin/io/Exceptions.kt:31
+-	class	FileAlreadyExistsException	-	0	public class FileAlreadyExistsException(	jvmMain/kotlin/io/Exceptions.kt:37
+-	class	AccessDeniedException	-	0	public class AccessDeniedException(	jvmMain/kotlin/io/Exceptions.kt:46
+-	class	NoSuchFileException	-	0	public class NoSuchFileException(	jvmMain/kotlin/io/Exceptions.kt:55
+-	fun	reader	File	0	public inline fun File.reader(charset: Charset = Charsets.UTF_8): InputStreamReader =	jvmMain/kotlin/io/FileReadWrite.kt:27
+-	fun	bufferedReader	File	1	public inline fun File.bufferedReader(charset: Charset = Charsets.UTF_8, bufferSize: Int = DEFAULT_BUFFER_SIZE): BufferedReader =	jvmMain/kotlin/io/FileReadWrite.kt:36
+-	fun	writer	File	0	public inline fun File.writer(charset: Charset = Charsets.UTF_8): OutputStreamWriter =	jvmMain/kotlin/io/FileReadWrite.kt:43
+-	fun	bufferedWriter	File	1	public inline fun File.bufferedWriter(charset: Charset = Charsets.UTF_8, bufferSize: Int = DEFAULT_BUFFER_SIZE): BufferedWriter =	jvmMain/kotlin/io/FileReadWrite.kt:52
+-	fun	printWriter	File	0	public inline fun File.printWriter(charset: Charset = Charsets.UTF_8): PrintWriter =	jvmMain/kotlin/io/FileReadWrite.kt:59
+-	fun	readBytes	File	0	public fun File.readBytes(): ByteArray = inputStream().use { input ->	jvmMain/kotlin/io/FileReadWrite.kt:69
+-	var	offset	-	0	var offset = 0	jvmMain/kotlin/io/FileReadWrite.kt:70
+-	var	remaining	-	0	var remaining = this.length().also { length ->	jvmMain/kotlin/io/FileReadWrite.kt:71
+-	val	result	-	0	val result = ByteArray(remaining)	jvmMain/kotlin/io/FileReadWrite.kt:74
+-	val	read	-	2	val read = input.read(result, offset, remaining)	jvmMain/kotlin/io/FileReadWrite.kt:76
+-	val	extraByte	-	0	val extraByte = input.read()	jvmMain/kotlin/io/FileReadWrite.kt:83
+-	val	extra	-	0	val extra = ExposingBufferByteArrayOutputStream(DEFAULT_BUFFER_SIZE + 1)	jvmMain/kotlin/io/FileReadWrite.kt:90
+-	val	resultingSize	-	0	val resultingSize = result.size + extra.size()	jvmMain/kotlin/io/FileReadWrite.kt:94
+-	class	ExposingBufferByteArrayOutputStream	-	0	private class ExposingBufferByteArrayOutputStream(size: Int) : ByteArrayOutputStream(size) {	jvmMain/kotlin/io/FileReadWrite.kt:104
+-	val	get	-	0	val buffer: ByteArray get() = buf	jvmMain/kotlin/io/FileReadWrite.kt:105
+-	fun	writeBytes	File	0	public fun File.writeBytes(array: ByteArray): Unit = FileOutputStream(this).use { it.write(array) }	jvmMain/kotlin/io/FileReadWrite.kt:114
+-	fun	appendBytes	File	1	public fun File.appendBytes(array: ByteArray): Unit = FileOutputStream(this, true).use { it.write(array) }	jvmMain/kotlin/io/FileReadWrite.kt:121
+-	fun	readText	File	0	public fun File.readText(charset: Charset = Charsets.UTF_8): String = reader(charset).use { it.readText() }	jvmMain/kotlin/io/FileReadWrite.kt:131
+-	fun	writeText	File	1	public fun File.writeText(text: String, charset: Charset = Charsets.UTF_8): Unit =	jvmMain/kotlin/io/FileReadWrite.kt:140
+-	fun	appendText	File	1	public fun File.appendText(text: String, charset: Charset = Charsets.UTF_8): Unit =	jvmMain/kotlin/io/FileReadWrite.kt:149
+-	fun	writeTextImpl	OutputStream	1	internal fun OutputStream.writeTextImpl(text: String, charset: Charset) {	jvmMain/kotlin/io/FileReadWrite.kt:152
+-	val	chunkSize	-	0	val chunkSize = DEFAULT_BUFFER_SIZE	jvmMain/kotlin/io/FileReadWrite.kt:153
+-	val	encoder	-	0	val encoder = charset.newReplaceEncoder()	jvmMain/kotlin/io/FileReadWrite.kt:160
+-	val	charBuffer	-	0	val charBuffer = CharBuffer.allocate(chunkSize)	jvmMain/kotlin/io/FileReadWrite.kt:161
+-	val	byteBuffer	-	1	val byteBuffer = byteBufferForEncoding(chunkSize, encoder)	jvmMain/kotlin/io/FileReadWrite.kt:162
+-	var	startIndex	-	0	var startIndex = 0	jvmMain/kotlin/io/FileReadWrite.kt:164
+-	var	leftover	-	0	var leftover = 0	jvmMain/kotlin/io/FileReadWrite.kt:165
+-	val	copyLength	-	1	val copyLength = minOf(chunkSize - leftover, text.length - startIndex)	jvmMain/kotlin/io/FileReadWrite.kt:168
+-	val	endIndex	-	0	val endIndex = startIndex + copyLength	jvmMain/kotlin/io/FileReadWrite.kt:169
+-	fun	newReplaceEncoder	Charset	0	internal fun Charset.newReplaceEncoder() = newEncoder()	jvmMain/kotlin/io/FileReadWrite.kt:189
+-	fun	byteBufferForEncoding	-	1	internal fun byteBufferForEncoding(chunkSize: Int, encoder: CharsetEncoder): ByteBuffer {	jvmMain/kotlin/io/FileReadWrite.kt:193
+-	val	maxBytesPerChar	-	0	val maxBytesPerChar = ceil(encoder.maxBytesPerChar()).toInt()	jvmMain/kotlin/io/FileReadWrite.kt:194
+-	fun	forEachBlock	File	2	public fun File.forEachBlock(action: (buffer: ByteArray, bytesRead: Int) -> Unit): Unit = forEachBlock(DEFAULT_BLOCK_SIZE, action)	jvmMain/kotlin/io/FileReadWrite.kt:207
+-	fun	forEachBlock	File	2	public fun File.forEachBlock(blockSize: Int, action: (buffer: ByteArray, bytesRead: Int) -> Unit): Unit {	jvmMain/kotlin/io/FileReadWrite.kt:218
+-	val	arr	-	0	val arr = ByteArray(blockSize.coerceAtLeast(MINIMUM_BLOCK_SIZE))	jvmMain/kotlin/io/FileReadWrite.kt:219
+-	val	size	-	0	val size = input.read(arr)	jvmMain/kotlin/io/FileReadWrite.kt:223
+-	fun	forEachLine	File	1	public fun File.forEachLine(charset: Charset = Charsets.UTF_8, action: (line: String) -> Unit): Unit {	jvmMain/kotlin/io/FileReadWrite.kt:242
+-	fun	inputStream	File	0	public inline fun File.inputStream(): FileInputStream {	jvmMain/kotlin/io/FileReadWrite.kt:251
+-	fun	outputStream	File	0	public inline fun File.outputStream(): FileOutputStream {	jvmMain/kotlin/io/FileReadWrite.kt:259
+-	fun	readLines	File	0	public fun File.readLines(charset: Charset = Charsets.UTF_8): List<String> {	jvmMain/kotlin/io/FileReadWrite.kt:271
+-	val	result	-	0	val result = ArrayList<String>()	jvmMain/kotlin/io/FileReadWrite.kt:272
+-	fun	useLines	File	1	public inline fun <T> File.useLines(charset: Charset = Charsets.UTF_8, block: (Sequence<String>) -> T): T {	jvmMain/kotlin/io/FileReadWrite.kt:284
+-	fun	getRootLength	String	0	private fun String.getRootLength(): Int {	jvmMain/kotlin/io/files/FilePathComponents.kt:26
+-	var	first	-	1	var first = indexOf(File.separatorChar, 0)	jvmMain/kotlin/io/files/FilePathComponents.kt:28
+-	val	String	-	0	internal val File.rootName: String	jvmMain/kotlin/io/files/FilePathComponents.kt:69
+-	val	File	-	0	internal val File.root: File	jvmMain/kotlin/io/files/FilePathComponents.kt:76
+-	val	Boolean	-	0	public val File.isRooted: Boolean	jvmMain/kotlin/io/files/FilePathComponents.kt:84
+-	class	FilePathComponents	-	0	internal data class FilePathComponents	jvmMain/kotlin/io/files/FilePathComponents.kt:95
+-	val	get	-	0	public val rootName: String get() = root.path	jvmMain/kotlin/io/files/FilePathComponents.kt:101
+-	val	get	-	0	public val isRooted: Boolean get() = root.path.isNotEmpty()	jvmMain/kotlin/io/files/FilePathComponents.kt:106
+-	val	get	-	0	public val size: Int get() = segments.size	jvmMain/kotlin/io/files/FilePathComponents.kt:111
+-	fun	subPath	-	1	public fun subPath(beginIndex: Int, endIndex: Int): File {	jvmMain/kotlin/io/files/FilePathComponents.kt:117
+-	fun	toComponents	File	0	internal fun File.toComponents(): FilePathComponents {	jvmMain/kotlin/io/files/FilePathComponents.kt:129
+-	val	path	-	0	val path = path	jvmMain/kotlin/io/files/FilePathComponents.kt:130
+-	val	rootLength	-	0	val rootLength = path.getRootLength()	jvmMain/kotlin/io/files/FilePathComponents.kt:131
+-	val	rootName	-	1	val rootName = path.substring(0, rootLength)	jvmMain/kotlin/io/files/FilePathComponents.kt:132
+-	val	subPath	-	0	val subPath = path.substring(rootLength)	jvmMain/kotlin/io/files/FilePathComponents.kt:133
+-	val	list	-	0	val list = if (subPath.isEmpty()) listOf() else subPath.split(File.separatorChar).map(::File)	jvmMain/kotlin/io/files/FilePathComponents.kt:134
+-	fun	subPath	File	2	internal fun File.subPath(beginIndex: Int, endIndex: Int): File = toComponents().subPath(beginIndex, endIndex)	jvmMain/kotlin/io/files/FilePathComponents.kt:148
+-	class	FileWalkDirection	-	0	public enum class FileWalkDirection {	jvmMain/kotlin/io/files/FileTreeWalk.kt:20
+-	class	FileTreeWalk	-	0	public class FileTreeWalk private constructor(	jvmMain/kotlin/io/files/FileTreeWalk.kt:37
+-	val	File	-	1	private val start: File,	jvmMain/kotlin/io/files/FileTreeWalk.kt:38
+-	val	FileWalkDirection	-	1	private val direction: FileWalkDirection = FileWalkDirection.TOP_DOWN,	jvmMain/kotlin/io/files/FileTreeWalk.kt:39
+-	val	Int	-	0	private val maxDepth: Int = Int.MAX_VALUE	jvmMain/kotlin/io/files/FileTreeWalk.kt:43
+-	class	WalkState	-	0	private abstract class WalkState(val root: File) {	jvmMain/kotlin/io/files/FileTreeWalk.kt:53
+-	fun	step	-	0	public abstract fun step(): File?	jvmMain/kotlin/io/files/FileTreeWalk.kt:55
+-	class	DirectoryState	-	0	private abstract class DirectoryState(rootDir: File) : WalkState(rootDir) {	jvmMain/kotlin/io/files/FileTreeWalk.kt:59
+-	val	state	-	0	private val state = ArrayDeque<WalkState>()	jvmMain/kotlin/io/files/FileTreeWalk.kt:69
+-	val	nextFile	-	0	val nextFile = gotoNext()	jvmMain/kotlin/io/files/FileTreeWalk.kt:80
+-	fun	directoryState	-	0	private fun directoryState(root: File): DirectoryState {	jvmMain/kotlin/io/files/FileTreeWalk.kt:88
+-	fun	gotoNext	-	0	private tailrec fun gotoNext(): File? {	jvmMain/kotlin/io/files/FileTreeWalk.kt:95
+-	val	topState	-	0	val topState = state.peek() ?: return null	jvmMain/kotlin/io/files/FileTreeWalk.kt:97
+-	val	file	-	0	val file = topState.step()	jvmMain/kotlin/io/files/FileTreeWalk.kt:98
+-	var	rootVisited	-	0	private var rootVisited = false	jvmMain/kotlin/io/files/FileTreeWalk.kt:119
+-	var	fileIndex	-	0	private var fileIndex = 0	jvmMain/kotlin/io/files/FileTreeWalk.kt:123
+-	var	failed	-	0	private var failed = false	jvmMain/kotlin/io/files/FileTreeWalk.kt:125
+-	var	rootVisited	-	0	private var rootVisited = false	jvmMain/kotlin/io/files/FileTreeWalk.kt:158
+-	var	fileIndex	-	0	private var fileIndex = 0	jvmMain/kotlin/io/files/FileTreeWalk.kt:162
+-	var	Boolean	-	0	private var visited: Boolean = false	jvmMain/kotlin/io/files/FileTreeWalk.kt:197
+-	fun	onEnter	-	0	public fun onEnter(function: (File) -> Boolean): FileTreeWalk {	jvmMain/kotlin/io/files/FileTreeWalk.kt:219
+-	fun	onLeave	-	0	public fun onLeave(function: (File) -> Unit): FileTreeWalk {	jvmMain/kotlin/io/files/FileTreeWalk.kt:226
+-	fun	onFail	-	1	public fun onFail(function: (File, IOException) -> Unit): FileTreeWalk {	jvmMain/kotlin/io/files/FileTreeWalk.kt:235
+-	fun	maxDepth	-	0	public fun maxDepth(depth: Int): FileTreeWalk {	jvmMain/kotlin/io/files/FileTreeWalk.kt:247
+-	fun	walk	File	0	public fun File.walk(direction: FileWalkDirection = FileWalkDirection.TOP_DOWN): FileTreeWalk =	jvmMain/kotlin/io/files/FileTreeWalk.kt:259
+-	fun	walkTopDown	File	0	public fun File.walkTopDown(): FileTreeWalk = walk(FileWalkDirection.TOP_DOWN)	jvmMain/kotlin/io/files/FileTreeWalk.kt:266
+-	fun	walkBottomUp	File	0	public fun File.walkBottomUp(): FileTreeWalk = walk(FileWalkDirection.BOTTOM_UP)	jvmMain/kotlin/io/files/FileTreeWalk.kt:272
+-	fun	createTempDir	-	2	public fun createTempDir(prefix: String = "tmp", suffix: String? = null, directory: File? = null): File {	jvmMain/kotlin/io/files/Utils.kt:44
+-	val	dir	-	2	val dir = File.createTempFile(prefix, suffix, directory)	jvmMain/kotlin/io/files/Utils.kt:45
+-	fun	createTempFile	-	2	public fun createTempFile(prefix: String = "tmp", suffix: String? = null, directory: File? = null): File {	jvmMain/kotlin/io/files/Utils.kt:84
+-	val	String	-	0	public val File.extension: String	jvmMain/kotlin/io/files/Utils.kt:91
+-	val	String	-	0	public val File.invariantSeparatorsPath: String	jvmMain/kotlin/io/files/Utils.kt:98
+-	val	String	-	0	public val File.nameWithoutExtension: String	jvmMain/kotlin/io/files/Utils.kt:104
+-	fun	toRelativeString	File	0	public fun File.toRelativeString(base: File): String =	jvmMain/kotlin/io/files/Utils.kt:116
+-	fun	relativeTo	File	0	public fun File.relativeTo(base: File): File = File(this.toRelativeString(base))	jvmMain/kotlin/io/files/Utils.kt:128
+-	fun	relativeToOrSelf	File	0	public fun File.relativeToOrSelf(base: File): File =	jvmMain/kotlin/io/files/Utils.kt:137
+-	fun	relativeToOrNull	File	0	public fun File.relativeToOrNull(base: File): File? =	jvmMain/kotlin/io/files/Utils.kt:147
+-	fun	toRelativeStringOrNull	File	0	private fun File.toRelativeStringOrNull(base: File): String? {	jvmMain/kotlin/io/files/Utils.kt:151
+-	val	thisComponents	-	0	val thisComponents = this.toComponents().normalize()	jvmMain/kotlin/io/files/Utils.kt:153
+-	val	baseComponents	-	0	val baseComponents = base.toComponents().normalize()	jvmMain/kotlin/io/files/Utils.kt:154
+-	val	baseCount	-	0	val baseCount = baseComponents.size	jvmMain/kotlin/io/files/Utils.kt:159
+-	val	thisCount	-	0	val thisCount = thisComponents.size	jvmMain/kotlin/io/files/Utils.kt:160
+-	val	sameCount	-	0	val sameCount = run countSame@{	jvmMain/kotlin/io/files/Utils.kt:162
+-	var	i	-	0	var i = 0	jvmMain/kotlin/io/files/Utils.kt:163
+-	val	maxSameCount	-	1	val maxSameCount = minOf(thisCount, baseCount)	jvmMain/kotlin/io/files/Utils.kt:164
+-	val	res	-	0	val res = StringBuilder()	jvmMain/kotlin/io/files/Utils.kt:171
+-	fun	copyTo	File	2	public fun File.copyTo(target: File, overwrite: Boolean = false, bufferSize: Int = DEFAULT_BUFFER_SIZE): File {	jvmMain/kotlin/io/files/Utils.kt:217
+-	class	OnErrorAction	-	0	public enum class OnErrorAction {	jvmMain/kotlin/io/files/Utils.kt:249
+-	class	TerminateException	-	0	private class TerminateException(file: File) : FileSystemException(file) {}	jvmMain/kotlin/io/files/Utils.kt:258
+-	fun	copyRecursively	File	0	public fun File.copyRecursively(	jvmMain/kotlin/io/files/Utils.kt:288
+-	val	relPath	-	0	val relPath = src.toRelativeString(this)	jvmMain/kotlin/io/files/Utils.kt:305
+-	val	dstFile	-	1	val dstFile = File(target, relPath)	jvmMain/kotlin/io/files/Utils.kt:306
+-	val	stillExists	-	0	val stillExists = if (!overwrite) true else {	jvmMain/kotlin/io/files/Utils.kt:308
+-	fun	deleteRecursively	File	2	public fun File.deleteRecursively(): Boolean = walkBottomUp().fold(true, { res, it -> (it.delete() || !it.exists()) && res })	jvmMain/kotlin/io/files/Utils.kt:347
+-	fun	startsWith	File	0	public fun File.startsWith(other: File): Boolean {	jvmMain/kotlin/io/files/Utils.kt:356
+-	val	components	-	0	val components = toComponents()	jvmMain/kotlin/io/files/Utils.kt:357
+-	val	otherComponents	-	0	val otherComponents = other.toComponents()	jvmMain/kotlin/io/files/Utils.kt:358
+-	fun	startsWith	File	0	public fun File.startsWith(other: String): Boolean = startsWith(File(other))	jvmMain/kotlin/io/files/Utils.kt:372
+-	fun	endsWith	File	0	public fun File.endsWith(other: File): Boolean {	jvmMain/kotlin/io/files/Utils.kt:383
+-	val	components	-	0	val components = toComponents()	jvmMain/kotlin/io/files/Utils.kt:384
+-	val	otherComponents	-	0	val otherComponents = other.toComponents()	jvmMain/kotlin/io/files/Utils.kt:385
+-	val	shift	-	0	val shift = components.size - otherComponents.size	jvmMain/kotlin/io/files/Utils.kt:388
+-	fun	endsWith	File	0	public fun File.endsWith(other: String): Boolean = endsWith(File(other))	jvmMain/kotlin/io/files/Utils.kt:401
+-	fun	normalize	File	0	public fun File.normalize(): File =	jvmMain/kotlin/io/files/Utils.kt:409
+-	fun	normalize	FilePathComponents	0	private fun FilePathComponents.normalize(): FilePathComponents =	jvmMain/kotlin/io/files/Utils.kt:412
+-	fun	normalize	-	0	private fun List<File>.normalize(): List<File> {	jvmMain/kotlin/io/files/Utils.kt:415
+-	val	MutableList	-	0	val list: MutableList<File> = ArrayList(this.size)	jvmMain/kotlin/io/files/Utils.kt:416
+-	fun	resolve	File	0	public fun File.resolve(relative: File): File {	jvmMain/kotlin/io/files/Utils.kt:436
+-	val	baseName	-	0	val baseName = this.toString()	jvmMain/kotlin/io/files/Utils.kt:439
+-	fun	resolve	File	0	public fun File.resolve(relative: String): File = resolve(File(relative))	jvmMain/kotlin/io/files/Utils.kt:450
+-	fun	resolveSibling	File	0	public fun File.resolveSibling(relative: File): File {	jvmMain/kotlin/io/files/Utils.kt:459
+-	val	components	-	0	val components = this.toComponents()	jvmMain/kotlin/io/files/Utils.kt:460
+-	val	parentSubPath	-	1	val parentSubPath = if (components.size == 0) File("..") else components.subPath(0, components.size - 1)	jvmMain/kotlin/io/files/Utils.kt:461
+-	fun	resolveSibling	File	0	public fun File.resolveSibling(relative: String): File = resolveSibling(File(relative))	jvmMain/kotlin/io/files/Utils.kt:472
+-	fun	iterator	BufferedInputStream	0	public operator fun BufferedInputStream.iterator(): ByteIterator =	jvmMain/kotlin/io/IOStreams.kt:15
+-	var	nextByte	-	0	var nextByte = -1	jvmMain/kotlin/io/IOStreams.kt:18
+-	var	nextPrepared	-	0	var nextPrepared = false	jvmMain/kotlin/io/IOStreams.kt:20
+-	var	finished	-	0	var finished = false	jvmMain/kotlin/io/IOStreams.kt:22
+-	fun	prepareNext	-	0	private fun prepareNext() {	jvmMain/kotlin/io/IOStreams.kt:24
+-	val	res	-	0	val res = nextByte.toByte()	jvmMain/kotlin/io/IOStreams.kt:41
+-	fun	byteInputStream	String	0	public inline fun String.byteInputStream(charset: Charset = Charsets.UTF_8): ByteArrayInputStream = ByteArrayInputStream(toByteArray(charset))	jvmMain/kotlin/io/IOStreams.kt:50
+-	fun	inputStream	ByteArray	0	public inline fun ByteArray.inputStream(): ByteArrayInputStream = ByteArrayInputStream(this)	jvmMain/kotlin/io/IOStreams.kt:56
+-	fun	inputStream	ByteArray	3	public inline fun ByteArray.inputStream(offset: Int, length: Int): ByteArrayInputStream = ByteArrayInputStream(this, offset, length)	jvmMain/kotlin/io/IOStreams.kt:64
+-	fun	buffered	InputStream	0	public inline fun InputStream.buffered(bufferSize: Int = DEFAULT_BUFFER_SIZE): BufferedInputStream =	jvmMain/kotlin/io/IOStreams.kt:71
+-	fun	reader	InputStream	1	public inline fun InputStream.reader(charset: Charset = Charsets.UTF_8): InputStreamReader = InputStreamReader(this, charset)	jvmMain/kotlin/io/IOStreams.kt:76
+-	fun	bufferedReader	InputStream	0	public inline fun InputStream.bufferedReader(charset: Charset = Charsets.UTF_8): BufferedReader = reader(charset).buffered()	jvmMain/kotlin/io/IOStreams.kt:80
+-	fun	buffered	OutputStream	0	public inline fun OutputStream.buffered(bufferSize: Int = DEFAULT_BUFFER_SIZE): BufferedOutputStream =	jvmMain/kotlin/io/IOStreams.kt:87
+-	fun	writer	OutputStream	1	public inline fun OutputStream.writer(charset: Charset = Charsets.UTF_8): OutputStreamWriter = OutputStreamWriter(this, charset)	jvmMain/kotlin/io/IOStreams.kt:92
+-	fun	bufferedWriter	OutputStream	0	public inline fun OutputStream.bufferedWriter(charset: Charset = Charsets.UTF_8): BufferedWriter = writer(charset).buffered()	jvmMain/kotlin/io/IOStreams.kt:96
+-	fun	copyTo	InputStream	1	public fun InputStream.copyTo(out: OutputStream, bufferSize: Int = DEFAULT_BUFFER_SIZE): Long {	jvmMain/kotlin/io/IOStreams.kt:103
+-	var	Long	-	0	var bytesCopied: Long = 0	jvmMain/kotlin/io/IOStreams.kt:104
+-	val	buffer	-	0	val buffer = ByteArray(bufferSize)	jvmMain/kotlin/io/IOStreams.kt:105
+-	var	bytes	-	0	var bytes = read(buffer)	jvmMain/kotlin/io/IOStreams.kt:106
+-	fun	readBytes	InputStream	0	public fun InputStream.readBytes(estimatedSize: Int = DEFAULT_BUFFER_SIZE): ByteArray {	jvmMain/kotlin/io/IOStreams.kt:122
+-	val	buffer	-	1	val buffer = ByteArrayOutputStream(maxOf(estimatedSize, this.available()))	jvmMain/kotlin/io/IOStreams.kt:123
+1.3	fun	readBytes	InputStream	0	public fun InputStream.readBytes(): ByteArray {	jvmMain/kotlin/io/IOStreams.kt:134
+-	val	buffer	-	1	val buffer = ByteArrayOutputStream(maxOf(DEFAULT_BUFFER_SIZE, this.available()))	jvmMain/kotlin/io/IOStreams.kt:135
+-	fun	buffered	Reader	0	public inline fun Reader.buffered(bufferSize: Int = DEFAULT_BUFFER_SIZE): BufferedReader =	jvmMain/kotlin/io/ReadWrite.kt:21
+-	fun	buffered	Writer	0	public inline fun Writer.buffered(bufferSize: Int = DEFAULT_BUFFER_SIZE): BufferedWriter =	jvmMain/kotlin/io/ReadWrite.kt:26
+-	fun	forEachLine	Reader	0	public fun Reader.forEachLine(action: (String) -> Unit): Unit = useLines { it.forEach(action) }	jvmMain/kotlin/io/ReadWrite.kt:35
+-	fun	readLines	Reader	0	public fun Reader.readLines(): List<String> {	jvmMain/kotlin/io/ReadWrite.kt:42
+-	val	result	-	0	val result = arrayListOf<String>()	jvmMain/kotlin/io/ReadWrite.kt:43
+-	fun	useLines	Reader	0	public inline fun <T> Reader.useLines(block: (Sequence<String>) -> T): T {	jvmMain/kotlin/io/ReadWrite.kt:53
+-	fun	reader	String	0	public inline fun String.reader(): StringReader = StringReader(this)	jvmMain/kotlin/io/ReadWrite.kt:62
+-	fun	lineSequence	BufferedReader	0	public fun BufferedReader.lineSequence(): Sequence<String> = LinesSequence(this).constrainOnce()	jvmMain/kotlin/io/ReadWrite.kt:75
+-	class	LinesSequence	-	0	private class LinesSequence(private val reader: BufferedReader) : Sequence<String> {	jvmMain/kotlin/io/ReadWrite.kt:77
+-	var	String	-	0	private var nextValue: String? = null	jvmMain/kotlin/io/ReadWrite.kt:80
+-	var	done	-	0	private var done = false	jvmMain/kotlin/io/ReadWrite.kt:81
+-	val	answer	-	0	val answer = nextValue	jvmMain/kotlin/io/ReadWrite.kt:95
+-	fun	readText	Reader	0	public fun Reader.readText(): String {	jvmMain/kotlin/io/ReadWrite.kt:110
+-	val	buffer	-	0	val buffer = StringWriter()	jvmMain/kotlin/io/ReadWrite.kt:111
+-	fun	copyTo	Reader	1	public fun Reader.copyTo(out: Writer, bufferSize: Int = DEFAULT_BUFFER_SIZE): Long {	jvmMain/kotlin/io/ReadWrite.kt:125
+-	var	Long	-	0	var charsCopied: Long = 0	jvmMain/kotlin/io/ReadWrite.kt:126
+-	val	buffer	-	0	val buffer = CharArray(bufferSize)	jvmMain/kotlin/io/ReadWrite.kt:127
+-	var	chars	-	0	var chars = read(buffer)	jvmMain/kotlin/io/ReadWrite.kt:128
+-	fun	readText	URL	0	public inline fun URL.readText(charset: Charset = Charsets.UTF_8): String = readBytes().toString(charset)	jvmMain/kotlin/io/ReadWrite.kt:146
+-	fun	readBytes	URL	0	public fun URL.readBytes(): ByteArray = openStream().use { it.readBytes() }	jvmMain/kotlin/io/ReadWrite.kt:155
+-	typealias	Serializable	-	0	internal actual typealias Serializable = java.io.Serializable	jvmMain/kotlin/io/Serializable.kt:9

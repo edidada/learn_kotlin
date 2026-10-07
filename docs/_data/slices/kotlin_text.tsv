@@ -1,0 +1,1383 @@
+since	kind	name	receiver	arity	sig	loc
+-	fun	titlecaseImpl	Char	0	internal fun Char.titlecaseImpl(): String {	commonMain/generated/_OneToManyTitlecaseMappings.kt:14
+-	val	uppercase	-	0	val uppercase = uppercase()	commonMain/generated/_OneToManyTitlecaseMappings.kt:15
+-	fun	elementAt	CharSequence	0	public expect fun CharSequence.elementAt(index: Int): Char	commonMain/generated/_Strings.kt:24
+-	fun	elementAtOrElse	CharSequence	1	public inline fun CharSequence.elementAtOrElse(index: Int, defaultValue: (Int) -> Char): Char {	commonMain/generated/_Strings.kt:32
+-	fun	elementAtOrNull	CharSequence	0	public inline fun CharSequence.elementAtOrNull(index: Int): Char? {	commonMain/generated/_Strings.kt:45
+-	fun	find	CharSequence	0	public inline fun CharSequence.find(predicate: (Char) -> Boolean): Char? {	commonMain/generated/_Strings.kt:55
+-	fun	findLast	CharSequence	0	public inline fun CharSequence.findLast(predicate: (Char) -> Boolean): Char? {	commonMain/generated/_Strings.kt:65
+-	fun	first	CharSequence	0	public fun CharSequence.first(): Char {	commonMain/generated/_Strings.kt:74
+-	fun	first	CharSequence	0	public inline fun CharSequence.first(predicate: (Char) -> Boolean): Char {	commonMain/generated/_Strings.kt:84
+1.5	fun	firstNotNullOf	CharSequence	0	public inline fun <R : Any> CharSequence.firstNotNullOf(transform: (Char) -> R?): R {	commonMain/generated/_Strings.kt:97
+1.5	fun	firstNotNullOfOrNull	CharSequence	0	public inline fun <R : Any> CharSequence.firstNotNullOfOrNull(transform: (Char) -> R?): R? {	commonMain/generated/_Strings.kt:109
+-	val	result	-	0	val result = transform(element)	commonMain/generated/_Strings.kt:111
+-	fun	firstOrNull	CharSequence	0	public fun CharSequence.firstOrNull(): Char? {	commonMain/generated/_Strings.kt:122
+-	fun	firstOrNull	CharSequence	0	public inline fun CharSequence.firstOrNull(predicate: (Char) -> Boolean): Char? {	commonMain/generated/_Strings.kt:129
+-	fun	getOrElse	CharSequence	1	public inline fun CharSequence.getOrElse(index: Int, defaultValue: (Int) -> Char): Char {	commonMain/generated/_Strings.kt:138
+-	fun	getOrNull	CharSequence	0	public fun CharSequence.getOrNull(index: Int): Char? {	commonMain/generated/_Strings.kt:150
+-	fun	indexOfFirst	CharSequence	0	public inline fun CharSequence.indexOfFirst(predicate: (Char) -> Boolean): Int {	commonMain/generated/_Strings.kt:157
+-	fun	indexOfLast	CharSequence	0	public inline fun CharSequence.indexOfLast(predicate: (Char) -> Boolean): Int {	commonMain/generated/_Strings.kt:169
+-	fun	last	CharSequence	0	public fun CharSequence.last(): Char {	commonMain/generated/_Strings.kt:185
+-	fun	last	CharSequence	0	public inline fun CharSequence.last(predicate: (Char) -> Boolean): Char {	commonMain/generated/_Strings.kt:198
+-	val	element	-	0	val element = this[index]	commonMain/generated/_Strings.kt:200
+-	fun	lastOrNull	CharSequence	0	public fun CharSequence.lastOrNull(): Char? {	commonMain/generated/_Strings.kt:211
+-	fun	lastOrNull	CharSequence	0	public inline fun CharSequence.lastOrNull(predicate: (Char) -> Boolean): Char? {	commonMain/generated/_Strings.kt:220
+-	val	element	-	0	val element = this[index]	commonMain/generated/_Strings.kt:222
+1.3	fun	random	CharSequence	0	public inline fun CharSequence.random(): Char {	commonMain/generated/_Strings.kt:235
+1.3	fun	random	CharSequence	0	public fun CharSequence.random(random: Random): Char {	commonMain/generated/_Strings.kt:245
+1.4	fun	randomOrNull	CharSequence	0	public inline fun CharSequence.randomOrNull(): Char? {	commonMain/generated/_Strings.kt:256
+1.4	fun	randomOrNull	CharSequence	0	public fun CharSequence.randomOrNull(random: Random): Char? {	commonMain/generated/_Strings.kt:264
+-	fun	single	CharSequence	0	public fun CharSequence.single(): Char {	commonMain/generated/_Strings.kt:273
+-	fun	single	CharSequence	0	public inline fun CharSequence.single(predicate: (Char) -> Boolean): Char {	commonMain/generated/_Strings.kt:284
+-	var	Char	-	0	var single: Char? = null	commonMain/generated/_Strings.kt:285
+-	var	found	-	0	var found = false	commonMain/generated/_Strings.kt:286
+-	fun	singleOrNull	CharSequence	0	public fun CharSequence.singleOrNull(): Char? {	commonMain/generated/_Strings.kt:302
+-	fun	singleOrNull	CharSequence	0	public inline fun CharSequence.singleOrNull(predicate: (Char) -> Boolean): Char? {	commonMain/generated/_Strings.kt:309
+-	var	Char	-	0	var single: Char? = null	commonMain/generated/_Strings.kt:310
+-	var	found	-	0	var found = false	commonMain/generated/_Strings.kt:311
+-	fun	drop	CharSequence	0	public fun CharSequence.drop(n: Int): CharSequence {	commonMain/generated/_Strings.kt:330
+-	fun	drop	String	0	public fun String.drop(n: Int): String {	commonMain/generated/_Strings.kt:342
+-	fun	dropLast	CharSequence	0	public fun CharSequence.dropLast(n: Int): CharSequence {	commonMain/generated/_Strings.kt:354
+-	fun	dropLast	String	0	public fun String.dropLast(n: Int): String {	commonMain/generated/_Strings.kt:366
+-	fun	dropLastWhile	CharSequence	0	public inline fun CharSequence.dropLastWhile(predicate: (Char) -> Boolean): CharSequence {	commonMain/generated/_Strings.kt:376
+-	fun	dropLastWhile	String	0	public inline fun String.dropLastWhile(predicate: (Char) -> Boolean): String {	commonMain/generated/_Strings.kt:388
+-	fun	dropWhile	CharSequence	0	public inline fun CharSequence.dropWhile(predicate: (Char) -> Boolean): CharSequence {	commonMain/generated/_Strings.kt:400
+-	fun	dropWhile	String	0	public inline fun String.dropWhile(predicate: (Char) -> Boolean): String {	commonMain/generated/_Strings.kt:412
+-	fun	filter	CharSequence	0	public inline fun CharSequence.filter(predicate: (Char) -> Boolean): CharSequence {	commonMain/generated/_Strings.kt:424
+-	fun	filter	String	0	public inline fun String.filter(predicate: (Char) -> Boolean): String {	commonMain/generated/_Strings.kt:433
+-	fun	filterIndexed	CharSequence	1	public inline fun CharSequence.filterIndexed(predicate: (index: Int, Char) -> Boolean): CharSequence {	commonMain/generated/_Strings.kt:444
+-	fun	filterIndexed	String	1	public inline fun String.filterIndexed(predicate: (index: Int, Char) -> Boolean): String {	commonMain/generated/_Strings.kt:455
+-	fun	filterIndexedTo	CharSequence	2	public inline fun <C : Appendable> CharSequence.filterIndexedTo(destination: C, predicate: (index: Int, Char) -> Boolean): C {	commonMain/generated/_Strings.kt:466
+-	fun	filterNot	CharSequence	0	public inline fun CharSequence.filterNot(predicate: (Char) -> Boolean): CharSequence {	commonMain/generated/_Strings.kt:478
+-	fun	filterNot	String	0	public inline fun String.filterNot(predicate: (Char) -> Boolean): String {	commonMain/generated/_Strings.kt:487
+-	fun	filterNotTo	CharSequence	1	public inline fun <C : Appendable> CharSequence.filterNotTo(destination: C, predicate: (Char) -> Boolean): C {	commonMain/generated/_Strings.kt:496
+-	fun	filterTo	CharSequence	1	public inline fun <C : Appendable> CharSequence.filterTo(destination: C, predicate: (Char) -> Boolean): C {	commonMain/generated/_Strings.kt:506
+-	val	element	-	0	val element = get(index)	commonMain/generated/_Strings.kt:508
+-	fun	slice	CharSequence	0	public fun CharSequence.slice(indices: IntRange): CharSequence {	commonMain/generated/_Strings.kt:517
+-	fun	slice	String	0	public fun String.slice(indices: IntRange): String {	commonMain/generated/_Strings.kt:525
+-	fun	slice	CharSequence	0	public fun CharSequence.slice(indices: Iterable<Int>): CharSequence {	commonMain/generated/_Strings.kt:533
+-	val	size	-	0	val size = indices.collectionSizeOrDefault(10)	commonMain/generated/_Strings.kt:534
+-	val	result	-	0	val result = StringBuilder(size)	commonMain/generated/_Strings.kt:536
+-	fun	slice	String	0	public inline fun String.slice(indices: Iterable<Int>): String {	commonMain/generated/_Strings.kt:547
+-	fun	take	CharSequence	0	public fun CharSequence.take(n: Int): CharSequence {	commonMain/generated/_Strings.kt:558
+-	fun	take	String	0	public fun String.take(n: Int): String {	commonMain/generated/_Strings.kt:570
+-	fun	takeLast	CharSequence	0	public fun CharSequence.takeLast(n: Int): CharSequence {	commonMain/generated/_Strings.kt:582
+-	val	length	-	0	val length = length	commonMain/generated/_Strings.kt:584
+-	fun	takeLast	String	0	public fun String.takeLast(n: Int): String {	commonMain/generated/_Strings.kt:595
+-	val	length	-	0	val length = length	commonMain/generated/_Strings.kt:597
+-	fun	takeLastWhile	CharSequence	0	public inline fun CharSequence.takeLastWhile(predicate: (Char) -> Boolean): CharSequence {	commonMain/generated/_Strings.kt:606
+-	fun	takeLastWhile	String	0	public inline fun String.takeLastWhile(predicate: (Char) -> Boolean): String {	commonMain/generated/_Strings.kt:620
+-	fun	takeWhile	CharSequence	0	public inline fun CharSequence.takeWhile(predicate: (Char) -> Boolean): CharSequence {	commonMain/generated/_Strings.kt:634
+-	fun	takeWhile	String	0	public inline fun String.takeWhile(predicate: (Char) -> Boolean): String {	commonMain/generated/_Strings.kt:647
+-	fun	reversed	CharSequence	0	public fun CharSequence.reversed(): CharSequence {	commonMain/generated/_Strings.kt:658
+-	fun	reversed	String	0	public inline fun String.reversed(): String {	commonMain/generated/_Strings.kt:666
+-	fun	associate	CharSequence	3	public inline fun <K, V> CharSequence.associate(transform: (Char) -> Pair<K, V>): Map<K, V> {	commonMain/generated/_Strings.kt:680
+-	val	capacity	-	0	val capacity = mapCapacity(length).coerceAtLeast(16)	commonMain/generated/_Strings.kt:681
+-	fun	associateBy	CharSequence	1	public inline fun <K> CharSequence.associateBy(keySelector: (Char) -> K): Map<K, Char> {	commonMain/generated/_Strings.kt:695
+-	val	capacity	-	0	val capacity = mapCapacity(length).coerceAtLeast(16)	commonMain/generated/_Strings.kt:696
+-	fun	associateBy	CharSequence	3	public inline fun <K, V> CharSequence.associateBy(keySelector: (Char) -> K, valueTransform: (Char) -> V): Map<K, V> {	commonMain/generated/_Strings.kt:709
+-	val	capacity	-	0	val capacity = mapCapacity(length).coerceAtLeast(16)	commonMain/generated/_Strings.kt:710
+-	fun	associateByTo	CharSequence	3	public inline fun <K, M : MutableMap<in K, in Char>> CharSequence.associateByTo(destination: M, keySelector: (Char) -> K): M {	commonMain/generated/_Strings.kt:723
+-	fun	associateByTo	CharSequence	5	public inline fun <K, V, M : MutableMap<in K, in V>> CharSequence.associateByTo(destination: M, keySelector: (Char) -> K, valueTransform: (Char) -> V): M {	commonMain/generated/_Strings.kt:739
+-	fun	associateTo	CharSequence	5	public inline fun <K, V, M : MutableMap<in K, in V>> CharSequence.associateTo(destination: M, transform: (Char) -> Pair<K, V>): M {	commonMain/generated/_Strings.kt:754
+1.3	fun	associateWith	CharSequence	1	public inline fun <V> CharSequence.associateWith(valueSelector: (Char) -> V): Map<Char, V> {	commonMain/generated/_Strings.kt:772
+-	val	result	-	1	val result = LinkedHashMap<Char, V>(mapCapacity(length.coerceAtMost(128)).coerceAtLeast(16))	commonMain/generated/_Strings.kt:773
+1.3	fun	associateWithTo	CharSequence	3	public inline fun <V, M : MutableMap<in Char, in V>> CharSequence.associateWithTo(destination: M, valueSelector: (Char) -> V): M {	commonMain/generated/_Strings.kt:786
+-	fun	toCollection	CharSequence	0	public fun <C : MutableCollection<in Char>> CharSequence.toCollection(destination: C): C {	commonMain/generated/_Strings.kt:796
+-	fun	toHashSet	CharSequence	0	public fun CharSequence.toHashSet(): HashSet<Char> {	commonMain/generated/_Strings.kt:806
+-	fun	toList	CharSequence	0	public fun CharSequence.toList(): List<Char> {	commonMain/generated/_Strings.kt:813
+-	fun	toMutableList	CharSequence	0	public fun CharSequence.toMutableList(): MutableList<Char> {	commonMain/generated/_Strings.kt:824
+-	fun	toSet	CharSequence	0	public fun CharSequence.toSet(): Set<Char> {	commonMain/generated/_Strings.kt:833
+-	fun	flatMap	CharSequence	0	public inline fun <R> CharSequence.flatMap(transform: (Char) -> Iterable<R>): List<R> {	commonMain/generated/_Strings.kt:846
+1.4	fun	flatMapIndexed	CharSequence	1	public inline fun <R> CharSequence.flatMapIndexed(transform: (index: Int, Char) -> Iterable<R>): List<R> {	commonMain/generated/_Strings.kt:861
+1.4	fun	flatMapIndexedTo	CharSequence	3	public inline fun <R, C : MutableCollection<in R>> CharSequence.flatMapIndexedTo(destination: C, transform: (index: Int, Char) -> Iterable<R>): C {	commonMain/generated/_Strings.kt:874
+-	var	index	-	0	var index = 0	commonMain/generated/_Strings.kt:875
+-	val	list	-	1	val list = transform(index++, element)	commonMain/generated/_Strings.kt:877
+-	fun	flatMapTo	CharSequence	2	public inline fun <R, C : MutableCollection<in R>> CharSequence.flatMapTo(destination: C, transform: (Char) -> Iterable<R>): C {	commonMain/generated/_Strings.kt:886
+-	val	list	-	0	val list = transform(element)	commonMain/generated/_Strings.kt:888
+-	fun	groupBy	CharSequence	1	public inline fun <K> CharSequence.groupBy(keySelector: (Char) -> K): Map<K, List<Char>> {	commonMain/generated/_Strings.kt:902
+-	fun	groupBy	CharSequence	3	public inline fun <K, V> CharSequence.groupBy(keySelector: (Char) -> K, valueTransform: (Char) -> V): Map<K, List<V>> {	commonMain/generated/_Strings.kt:915
+-	fun	groupByTo	CharSequence	3	public inline fun <K, M : MutableMap<in K, MutableList<Char>>> CharSequence.groupByTo(destination: M, keySelector: (Char) -> K): M {	commonMain/generated/_Strings.kt:927
+-	val	key	-	0	val key = keySelector(element)	commonMain/generated/_Strings.kt:929
+-	val	list	-	0	val list = destination.getOrPut(key) { ArrayList<Char>() }	commonMain/generated/_Strings.kt:930
+-	fun	groupByTo	CharSequence	5	public inline fun <K, V, M : MutableMap<in K, MutableList<V>>> CharSequence.groupByTo(destination: M, keySelector: (Char) -> K, valueTransform: (Char) -> V): M {	commonMain/generated/_Strings.kt:945
+-	val	key	-	0	val key = keySelector(element)	commonMain/generated/_Strings.kt:947
+-	val	list	-	0	val list = destination.getOrPut(key) { ArrayList<V>() }	commonMain/generated/_Strings.kt:948
+1.1	fun	groupingBy	CharSequence	1	public inline fun <K> CharSequence.groupingBy(crossinline keySelector: (Char) -> K): Grouping<Char, K> {	commonMain/generated/_Strings.kt:961
+-	fun	map	CharSequence	0	public inline fun <R> CharSequence.map(transform: (Char) -> R): List<R> {	commonMain/generated/_Strings.kt:974
+-	fun	mapIndexed	CharSequence	1	public inline fun <R> CharSequence.mapIndexed(transform: (index: Int, Char) -> R): List<R> {	commonMain/generated/_Strings.kt:984
+-	fun	mapIndexedNotNull	CharSequence	1	public inline fun <R : Any> CharSequence.mapIndexedNotNull(transform: (index: Int, Char) -> R?): List<R> {	commonMain/generated/_Strings.kt:994
+-	fun	mapIndexedNotNullTo	CharSequence	3	public inline fun <R : Any, C : MutableCollection<in R>> CharSequence.mapIndexedNotNullTo(destination: C, transform: (index: Int, Char) -> R?): C {	commonMain/generated/_Strings.kt:1004
+-	fun	mapIndexedTo	CharSequence	3	public inline fun <R, C : MutableCollection<in R>> CharSequence.mapIndexedTo(destination: C, transform: (index: Int, Char) -> R): C {	commonMain/generated/_Strings.kt:1015
+-	var	index	-	0	var index = 0	commonMain/generated/_Strings.kt:1016
+-	fun	mapNotNull	CharSequence	0	public inline fun <R : Any> CharSequence.mapNotNull(transform: (Char) -> R?): List<R> {	commonMain/generated/_Strings.kt:1028
+-	fun	mapNotNullTo	CharSequence	2	public inline fun <R : Any, C : MutableCollection<in R>> CharSequence.mapNotNullTo(destination: C, transform: (Char) -> R?): C {	commonMain/generated/_Strings.kt:1036
+-	fun	mapTo	CharSequence	2	public inline fun <R, C : MutableCollection<in R>> CharSequence.mapTo(destination: C, transform: (Char) -> R): C {	commonMain/generated/_Strings.kt:1045
+-	fun	withIndex	CharSequence	0	public fun CharSequence.withIndex(): Iterable<IndexedValue<Char>> {	commonMain/generated/_Strings.kt:1055
+-	fun	all	CharSequence	0	public inline fun CharSequence.all(predicate: (Char) -> Boolean): Boolean {	commonMain/generated/_Strings.kt:1068
+-	fun	any	CharSequence	0	public fun CharSequence.any(): Boolean {	commonMain/generated/_Strings.kt:1078
+-	fun	any	CharSequence	0	public inline fun CharSequence.any(predicate: (Char) -> Boolean): Boolean {	commonMain/generated/_Strings.kt:1087
+-	fun	count	CharSequence	0	public inline fun CharSequence.count(): Int {	commonMain/generated/_Strings.kt:1096
+-	fun	count	CharSequence	0	public inline fun CharSequence.count(predicate: (Char) -> Boolean): Int {	commonMain/generated/_Strings.kt:1103
+-	var	count	-	0	var count = 0	commonMain/generated/_Strings.kt:1104
+-	fun	fold	CharSequence	2	public inline fun <R> CharSequence.fold(initial: R, operation: (acc: R, Char) -> R): R {	commonMain/generated/_Strings.kt:1117
+-	var	accumulator	-	0	var accumulator = initial	commonMain/generated/_Strings.kt:1118
+-	fun	foldIndexed	CharSequence	3	public inline fun <R> CharSequence.foldIndexed(initial: R, operation: (index: Int, acc: R, Char) -> R): R {	commonMain/generated/_Strings.kt:1132
+-	var	index	-	0	var index = 0	commonMain/generated/_Strings.kt:1133
+-	var	accumulator	-	0	var accumulator = initial	commonMain/generated/_Strings.kt:1134
+-	fun	foldRight	CharSequence	2	public inline fun <R> CharSequence.foldRight(initial: R, operation: (Char, acc: R) -> R): R {	commonMain/generated/_Strings.kt:1147
+-	var	index	-	0	var index = lastIndex	commonMain/generated/_Strings.kt:1148
+-	var	accumulator	-	0	var accumulator = initial	commonMain/generated/_Strings.kt:1149
+-	fun	foldRightIndexed	CharSequence	3	public inline fun <R> CharSequence.foldRightIndexed(initial: R, operation: (index: Int, Char, acc: R) -> R): R {	commonMain/generated/_Strings.kt:1165
+-	var	index	-	0	var index = lastIndex	commonMain/generated/_Strings.kt:1166
+-	var	accumulator	-	0	var accumulator = initial	commonMain/generated/_Strings.kt:1167
+-	fun	forEach	CharSequence	0	public inline fun CharSequence.forEach(action: (Char) -> Unit): Unit {	commonMain/generated/_Strings.kt:1178
+-	fun	forEachIndexed	CharSequence	1	public inline fun CharSequence.forEachIndexed(action: (index: Int, Char) -> Unit): Unit {	commonMain/generated/_Strings.kt:1187
+-	var	index	-	0	var index = 0	commonMain/generated/_Strings.kt:1188
+1.7	fun	max	CharSequence	0	public fun CharSequence.max(): Char {	commonMain/generated/_Strings.kt:1202
+-	var	max	-	0	var max = this[0]	commonMain/generated/_Strings.kt:1204
+-	val	e	-	0	val e = this[i]	commonMain/generated/_Strings.kt:1206
+1.7	fun	maxBy	CharSequence	0	public inline fun <R : Comparable<R>> CharSequence.maxBy(selector: (Char) -> R): Char {	commonMain/generated/_Strings.kt:1229
+-	var	maxElem	-	0	var maxElem = this[0]	commonMain/generated/_Strings.kt:1231
+-	val	lastIndex	-	0	val lastIndex = this.lastIndex	commonMain/generated/_Strings.kt:1232
+-	var	maxValue	-	0	var maxValue = selector(maxElem)	commonMain/generated/_Strings.kt:1234
+-	val	e	-	0	val e = this[i]	commonMain/generated/_Strings.kt:1236
+-	val	v	-	0	val v = selector(e)	commonMain/generated/_Strings.kt:1237
+1.4	fun	maxByOrNull	CharSequence	0	public inline fun <R : Comparable<R>> CharSequence.maxByOrNull(selector: (Char) -> R): Char? {	commonMain/generated/_Strings.kt:1259
+-	var	maxElem	-	0	var maxElem = this[0]	commonMain/generated/_Strings.kt:1261
+-	val	lastIndex	-	0	val lastIndex = this.lastIndex	commonMain/generated/_Strings.kt:1262
+-	var	maxValue	-	0	var maxValue = selector(maxElem)	commonMain/generated/_Strings.kt:1264
+-	val	e	-	0	val e = this[i]	commonMain/generated/_Strings.kt:1266
+-	val	v	-	0	val v = selector(e)	commonMain/generated/_Strings.kt:1267
+1.4	fun	maxOf	CharSequence	0	public inline fun CharSequence.maxOf(selector: (Char) -> Double): Double {	commonMain/generated/_Strings.kt:1290
+-	var	maxValue	-	0	var maxValue = selector(this[0])	commonMain/generated/_Strings.kt:1292
+-	val	v	-	0	val v = selector(this[i])	commonMain/generated/_Strings.kt:1294
+1.4	fun	maxOf	CharSequence	0	public inline fun CharSequence.maxOf(selector: (Char) -> Float): Float {	commonMain/generated/_Strings.kt:1314
+-	var	maxValue	-	0	var maxValue = selector(this[0])	commonMain/generated/_Strings.kt:1316
+-	val	v	-	0	val v = selector(this[i])	commonMain/generated/_Strings.kt:1318
+1.4	fun	maxOf	CharSequence	0	public inline fun <R : Comparable<R>> CharSequence.maxOf(selector: (Char) -> R): R {	commonMain/generated/_Strings.kt:1338
+-	var	maxValue	-	0	var maxValue = selector(this[0])	commonMain/generated/_Strings.kt:1340
+-	val	v	-	0	val v = selector(this[i])	commonMain/generated/_Strings.kt:1342
+1.4	fun	maxOfOrNull	CharSequence	0	public inline fun CharSequence.maxOfOrNull(selector: (Char) -> Double): Double? {	commonMain/generated/_Strings.kt:1362
+-	var	maxValue	-	0	var maxValue = selector(this[0])	commonMain/generated/_Strings.kt:1364
+-	val	v	-	0	val v = selector(this[i])	commonMain/generated/_Strings.kt:1366
+1.4	fun	maxOfOrNull	CharSequence	0	public inline fun CharSequence.maxOfOrNull(selector: (Char) -> Float): Float? {	commonMain/generated/_Strings.kt:1384
+-	var	maxValue	-	0	var maxValue = selector(this[0])	commonMain/generated/_Strings.kt:1386
+-	val	v	-	0	val v = selector(this[i])	commonMain/generated/_Strings.kt:1388
+1.4	fun	maxOfOrNull	CharSequence	0	public inline fun <R : Comparable<R>> CharSequence.maxOfOrNull(selector: (Char) -> R): R? {	commonMain/generated/_Strings.kt:1406
+-	var	maxValue	-	0	var maxValue = selector(this[0])	commonMain/generated/_Strings.kt:1408
+-	val	v	-	0	val v = selector(this[i])	commonMain/generated/_Strings.kt:1410
+1.4	fun	maxOfWith	CharSequence	1	public inline fun <R> CharSequence.maxOfWith(comparator: Comparator<in R>, selector: (Char) -> R): R {	commonMain/generated/_Strings.kt:1432
+-	var	maxValue	-	0	var maxValue = selector(this[0])	commonMain/generated/_Strings.kt:1434
+-	val	v	-	0	val v = selector(this[i])	commonMain/generated/_Strings.kt:1436
+1.4	fun	maxOfWithOrNull	CharSequence	1	public inline fun <R> CharSequence.maxOfWithOrNull(comparator: Comparator<in R>, selector: (Char) -> R): R? {	commonMain/generated/_Strings.kt:1456
+-	var	maxValue	-	0	var maxValue = selector(this[0])	commonMain/generated/_Strings.kt:1458
+-	val	v	-	0	val v = selector(this[i])	commonMain/generated/_Strings.kt:1460
+1.4	fun	maxOrNull	CharSequence	0	public fun CharSequence.maxOrNull(): Char? {	commonMain/generated/_Strings.kt:1474
+-	var	max	-	0	var max = this[0]	commonMain/generated/_Strings.kt:1476
+-	val	e	-	0	val e = this[i]	commonMain/generated/_Strings.kt:1478
+1.7	fun	maxWith	CharSequence	0	public fun CharSequence.maxWith(comparator: Comparator<in Char>): Char {	commonMain/generated/_Strings.kt:1492
+-	var	max	-	0	var max = this[0]	commonMain/generated/_Strings.kt:1494
+-	val	e	-	0	val e = this[i]	commonMain/generated/_Strings.kt:1496
+1.4	fun	maxWithOrNull	CharSequence	0	public fun CharSequence.maxWithOrNull(comparator: Comparator<in Char>): Char? {	commonMain/generated/_Strings.kt:1506
+-	var	max	-	0	var max = this[0]	commonMain/generated/_Strings.kt:1508
+-	val	e	-	0	val e = this[i]	commonMain/generated/_Strings.kt:1510
+1.7	fun	min	CharSequence	0	public fun CharSequence.min(): Char {	commonMain/generated/_Strings.kt:1526
+-	var	min	-	0	var min = this[0]	commonMain/generated/_Strings.kt:1528
+-	val	e	-	0	val e = this[i]	commonMain/generated/_Strings.kt:1530
+1.7	fun	minBy	CharSequence	0	public inline fun <R : Comparable<R>> CharSequence.minBy(selector: (Char) -> R): Char {	commonMain/generated/_Strings.kt:1553
+-	var	minElem	-	0	var minElem = this[0]	commonMain/generated/_Strings.kt:1555
+-	val	lastIndex	-	0	val lastIndex = this.lastIndex	commonMain/generated/_Strings.kt:1556
+-	var	minValue	-	0	var minValue = selector(minElem)	commonMain/generated/_Strings.kt:1558
+-	val	e	-	0	val e = this[i]	commonMain/generated/_Strings.kt:1560
+-	val	v	-	0	val v = selector(e)	commonMain/generated/_Strings.kt:1561
+1.4	fun	minByOrNull	CharSequence	0	public inline fun <R : Comparable<R>> CharSequence.minByOrNull(selector: (Char) -> R): Char? {	commonMain/generated/_Strings.kt:1583
+-	var	minElem	-	0	var minElem = this[0]	commonMain/generated/_Strings.kt:1585
+-	val	lastIndex	-	0	val lastIndex = this.lastIndex	commonMain/generated/_Strings.kt:1586
+-	var	minValue	-	0	var minValue = selector(minElem)	commonMain/generated/_Strings.kt:1588
+-	val	e	-	0	val e = this[i]	commonMain/generated/_Strings.kt:1590
+-	val	v	-	0	val v = selector(e)	commonMain/generated/_Strings.kt:1591
+1.4	fun	minOf	CharSequence	0	public inline fun CharSequence.minOf(selector: (Char) -> Double): Double {	commonMain/generated/_Strings.kt:1614
+-	var	minValue	-	0	var minValue = selector(this[0])	commonMain/generated/_Strings.kt:1616
+-	val	v	-	0	val v = selector(this[i])	commonMain/generated/_Strings.kt:1618
+1.4	fun	minOf	CharSequence	0	public inline fun CharSequence.minOf(selector: (Char) -> Float): Float {	commonMain/generated/_Strings.kt:1638
+-	var	minValue	-	0	var minValue = selector(this[0])	commonMain/generated/_Strings.kt:1640
+-	val	v	-	0	val v = selector(this[i])	commonMain/generated/_Strings.kt:1642
+1.4	fun	minOf	CharSequence	0	public inline fun <R : Comparable<R>> CharSequence.minOf(selector: (Char) -> R): R {	commonMain/generated/_Strings.kt:1662
+-	var	minValue	-	0	var minValue = selector(this[0])	commonMain/generated/_Strings.kt:1664
+-	val	v	-	0	val v = selector(this[i])	commonMain/generated/_Strings.kt:1666
+1.4	fun	minOfOrNull	CharSequence	0	public inline fun CharSequence.minOfOrNull(selector: (Char) -> Double): Double? {	commonMain/generated/_Strings.kt:1686
+-	var	minValue	-	0	var minValue = selector(this[0])	commonMain/generated/_Strings.kt:1688
+-	val	v	-	0	val v = selector(this[i])	commonMain/generated/_Strings.kt:1690
+1.4	fun	minOfOrNull	CharSequence	0	public inline fun CharSequence.minOfOrNull(selector: (Char) -> Float): Float? {	commonMain/generated/_Strings.kt:1708
+-	var	minValue	-	0	var minValue = selector(this[0])	commonMain/generated/_Strings.kt:1710
+-	val	v	-	0	val v = selector(this[i])	commonMain/generated/_Strings.kt:1712
+1.4	fun	minOfOrNull	CharSequence	0	public inline fun <R : Comparable<R>> CharSequence.minOfOrNull(selector: (Char) -> R): R? {	commonMain/generated/_Strings.kt:1730
+-	var	minValue	-	0	var minValue = selector(this[0])	commonMain/generated/_Strings.kt:1732
+-	val	v	-	0	val v = selector(this[i])	commonMain/generated/_Strings.kt:1734
+1.4	fun	minOfWith	CharSequence	1	public inline fun <R> CharSequence.minOfWith(comparator: Comparator<in R>, selector: (Char) -> R): R {	commonMain/generated/_Strings.kt:1756
+-	var	minValue	-	0	var minValue = selector(this[0])	commonMain/generated/_Strings.kt:1758
+-	val	v	-	0	val v = selector(this[i])	commonMain/generated/_Strings.kt:1760
+1.4	fun	minOfWithOrNull	CharSequence	1	public inline fun <R> CharSequence.minOfWithOrNull(comparator: Comparator<in R>, selector: (Char) -> R): R? {	commonMain/generated/_Strings.kt:1780
+-	var	minValue	-	0	var minValue = selector(this[0])	commonMain/generated/_Strings.kt:1782
+-	val	v	-	0	val v = selector(this[i])	commonMain/generated/_Strings.kt:1784
+1.4	fun	minOrNull	CharSequence	0	public fun CharSequence.minOrNull(): Char? {	commonMain/generated/_Strings.kt:1798
+-	var	min	-	0	var min = this[0]	commonMain/generated/_Strings.kt:1800
+-	val	e	-	0	val e = this[i]	commonMain/generated/_Strings.kt:1802
+1.7	fun	minWith	CharSequence	0	public fun CharSequence.minWith(comparator: Comparator<in Char>): Char {	commonMain/generated/_Strings.kt:1816
+-	var	min	-	0	var min = this[0]	commonMain/generated/_Strings.kt:1818
+-	val	e	-	0	val e = this[i]	commonMain/generated/_Strings.kt:1820
+1.4	fun	minWithOrNull	CharSequence	0	public fun CharSequence.minWithOrNull(comparator: Comparator<in Char>): Char? {	commonMain/generated/_Strings.kt:1830
+-	var	min	-	0	var min = this[0]	commonMain/generated/_Strings.kt:1832
+-	val	e	-	0	val e = this[i]	commonMain/generated/_Strings.kt:1834
+-	fun	none	CharSequence	0	public fun CharSequence.none(): Boolean {	commonMain/generated/_Strings.kt:1845
+-	fun	none	CharSequence	0	public inline fun CharSequence.none(predicate: (Char) -> Boolean): Boolean {	commonMain/generated/_Strings.kt:1854
+1.1	fun	onEach	S	0	public inline fun <S : CharSequence> S.onEach(action: (Char) -> Unit): S {	commonMain/generated/_Strings.kt:1863
+1.4	fun	onEachIndexed	S	1	public inline fun <S : CharSequence> S.onEachIndexed(action: (index: Int, Char) -> Unit): S {	commonMain/generated/_Strings.kt:1874
+-	fun	reduce	CharSequence	1	public inline fun CharSequence.reduce(operation: (acc: Char, Char) -> Char): Char {	commonMain/generated/_Strings.kt:1890
+-	var	accumulator	-	0	var accumulator = this[0]	commonMain/generated/_Strings.kt:1893
+-	fun	reduceIndexed	CharSequence	2	public inline fun CharSequence.reduceIndexed(operation: (index: Int, acc: Char, Char) -> Char): Char {	commonMain/generated/_Strings.kt:1912
+-	var	accumulator	-	0	var accumulator = this[0]	commonMain/generated/_Strings.kt:1915
+1.4	fun	reduceIndexedOrNull	CharSequence	2	public inline fun CharSequence.reduceIndexedOrNull(operation: (index: Int, acc: Char, Char) -> Char): Char? {	commonMain/generated/_Strings.kt:1934
+-	var	accumulator	-	0	var accumulator = this[0]	commonMain/generated/_Strings.kt:1937
+1.4	fun	reduceOrNull	CharSequence	1	public inline fun CharSequence.reduceOrNull(operation: (acc: Char, Char) -> Char): Char? {	commonMain/generated/_Strings.kt:1956
+-	var	accumulator	-	0	var accumulator = this[0]	commonMain/generated/_Strings.kt:1959
+-	fun	reduceRight	CharSequence	1	public inline fun CharSequence.reduceRight(operation: (Char, acc: Char) -> Char): Char {	commonMain/generated/_Strings.kt:1978
+-	var	index	-	0	var index = lastIndex	commonMain/generated/_Strings.kt:1979
+-	var	accumulator	-	0	var accumulator = get(index--)	commonMain/generated/_Strings.kt:1981
+-	fun	reduceRightIndexed	CharSequence	2	public inline fun CharSequence.reduceRightIndexed(operation: (index: Int, Char, acc: Char) -> Char): Char {	commonMain/generated/_Strings.kt:2000
+-	var	index	-	0	var index = lastIndex	commonMain/generated/_Strings.kt:2001
+-	var	accumulator	-	0	var accumulator = get(index--)	commonMain/generated/_Strings.kt:2003
+1.4	fun	reduceRightIndexedOrNull	CharSequence	2	public inline fun CharSequence.reduceRightIndexedOrNull(operation: (index: Int, Char, acc: Char) -> Char): Char? {	commonMain/generated/_Strings.kt:2023
+-	var	index	-	0	var index = lastIndex	commonMain/generated/_Strings.kt:2024
+-	var	accumulator	-	0	var accumulator = get(index--)	commonMain/generated/_Strings.kt:2026
+1.4	fun	reduceRightOrNull	CharSequence	1	public inline fun CharSequence.reduceRightOrNull(operation: (Char, acc: Char) -> Char): Char? {	commonMain/generated/_Strings.kt:2046
+-	var	index	-	0	var index = lastIndex	commonMain/generated/_Strings.kt:2047
+-	var	accumulator	-	0	var accumulator = get(index--)	commonMain/generated/_Strings.kt:2049
+1.4	fun	runningFold	CharSequence	2	public inline fun <R> CharSequence.runningFold(initial: R, operation: (acc: R, Char) -> R): List<R> {	commonMain/generated/_Strings.kt:2068
+-	val	result	-	0	val result = ArrayList<R>(length + 1).apply { add(initial) }	commonMain/generated/_Strings.kt:2070
+-	var	accumulator	-	0	var accumulator = initial	commonMain/generated/_Strings.kt:2071
+1.4	fun	runningFoldIndexed	CharSequence	3	public inline fun <R> CharSequence.runningFoldIndexed(initial: R, operation: (index: Int, acc: R, Char) -> R): List<R> {	commonMain/generated/_Strings.kt:2092
+-	val	result	-	0	val result = ArrayList<R>(length + 1).apply { add(initial) }	commonMain/generated/_Strings.kt:2094
+-	var	accumulator	-	0	var accumulator = initial	commonMain/generated/_Strings.kt:2095
+1.4	fun	runningReduce	CharSequence	1	public inline fun CharSequence.runningReduce(operation: (acc: Char, Char) -> Char): List<Char> {	commonMain/generated/_Strings.kt:2115
+-	var	accumulator	-	0	var accumulator = this[0]	commonMain/generated/_Strings.kt:2117
+-	val	result	-	0	val result = ArrayList<Char>(length).apply { add(accumulator) }	commonMain/generated/_Strings.kt:2118
+1.4	fun	runningReduceIndexed	CharSequence	2	public inline fun CharSequence.runningReduceIndexed(operation: (index: Int, acc: Char, Char) -> Char): List<Char> {	commonMain/generated/_Strings.kt:2139
+-	var	accumulator	-	0	var accumulator = this[0]	commonMain/generated/_Strings.kt:2141
+-	val	result	-	0	val result = ArrayList<Char>(length).apply { add(accumulator) }	commonMain/generated/_Strings.kt:2142
+1.4	fun	scan	CharSequence	2	public inline fun <R> CharSequence.scan(initial: R, operation: (acc: R, Char) -> R): List<R> {	commonMain/generated/_Strings.kt:2162
+1.4	fun	scanIndexed	CharSequence	3	public inline fun <R> CharSequence.scanIndexed(initial: R, operation: (index: Int, acc: R, Char) -> R): List<R> {	commonMain/generated/_Strings.kt:2179
+-	fun	sumBy	CharSequence	0	public inline fun CharSequence.sumBy(selector: (Char) -> Int): Int {	commonMain/generated/_Strings.kt:2188
+-	var	Int	-	0	var sum: Int = 0	commonMain/generated/_Strings.kt:2189
+-	fun	sumByDouble	CharSequence	0	public inline fun CharSequence.sumByDouble(selector: (Char) -> Double): Double {	commonMain/generated/_Strings.kt:2201
+-	var	Double	-	0	var sum: Double = 0.0	commonMain/generated/_Strings.kt:2202
+1.4	fun	sumOf	CharSequence	0	public inline fun CharSequence.sumOf(selector: (Char) -> Double): Double {	commonMain/generated/_Strings.kt:2217
+-	var	Double	-	0	var sum: Double = 0.toDouble()	commonMain/generated/_Strings.kt:2218
+1.4	fun	sumOf	CharSequence	0	public inline fun CharSequence.sumOf(selector: (Char) -> Int): Int {	commonMain/generated/_Strings.kt:2231
+-	var	Int	-	0	var sum: Int = 0.toInt()	commonMain/generated/_Strings.kt:2232
+1.4	fun	sumOf	CharSequence	0	public inline fun CharSequence.sumOf(selector: (Char) -> Long): Long {	commonMain/generated/_Strings.kt:2247
+-	var	Long	-	0	var sum: Long = 0.toLong()	commonMain/generated/_Strings.kt:2248
+1.5	fun	sumOf	CharSequence	0	public inline fun CharSequence.sumOf(selector: (Char) -> UInt): UInt {	commonMain/generated/_Strings.kt:2261
+-	var	UInt	-	0	var sum: UInt = 0.toUInt()	commonMain/generated/_Strings.kt:2262
+1.5	fun	sumOf	CharSequence	0	public inline fun CharSequence.sumOf(selector: (Char) -> ULong): ULong {	commonMain/generated/_Strings.kt:2277
+-	var	ULong	-	0	var sum: ULong = 0.toULong()	commonMain/generated/_Strings.kt:2278
+1.2	fun	chunked	CharSequence	0	public fun CharSequence.chunked(size: Int): List<String> {	commonMain/generated/_Strings.kt:2295
+1.2	fun	chunked	CharSequence	1	public fun <R> CharSequence.chunked(size: Int, transform: (CharSequence) -> R): List<R> {	commonMain/generated/_Strings.kt:2314
+1.2	fun	chunkedSequence	CharSequence	0	public fun CharSequence.chunkedSequence(size: Int): Sequence<String> {	commonMain/generated/_Strings.kt:2328
+1.2	fun	chunkedSequence	CharSequence	1	public fun <R> CharSequence.chunkedSequence(size: Int, transform: (CharSequence) -> R): Sequence<R> {	commonMain/generated/_Strings.kt:2347
+-	fun	partition	CharSequence	1	public inline fun CharSequence.partition(predicate: (Char) -> Boolean): Pair<CharSequence, CharSequence> {	commonMain/generated/_Strings.kt:2358
+-	val	first	-	0	val first = StringBuilder()	commonMain/generated/_Strings.kt:2359
+-	val	second	-	0	val second = StringBuilder()	commonMain/generated/_Strings.kt:2360
+-	fun	partition	String	1	public inline fun String.partition(predicate: (Char) -> Boolean): Pair<String, String> {	commonMain/generated/_Strings.kt:2378
+-	val	first	-	0	val first = StringBuilder()	commonMain/generated/_Strings.kt:2379
+-	val	second	-	0	val second = StringBuilder()	commonMain/generated/_Strings.kt:2380
+1.2	fun	windowed	CharSequence	2	public fun CharSequence.windowed(size: Int, step: Int = 1, partialWindows: Boolean = false): List<String> {	commonMain/generated/_Strings.kt:2407
+1.2	fun	windowed	CharSequence	3	public fun <R> CharSequence.windowed(size: Int, step: Int = 1, partialWindows: Boolean = false, transform: (CharSequence) -> R): List<R> {	commonMain/generated/_Strings.kt:2429
+-	val	thisSize	-	0	val thisSize = this.length	commonMain/generated/_Strings.kt:2431
+-	val	resultCapacity	-	0	val resultCapacity = thisSize / step + if (thisSize % step == 0) 0 else 1	commonMain/generated/_Strings.kt:2432
+-	val	result	-	0	val result = ArrayList<R>(resultCapacity)	commonMain/generated/_Strings.kt:2433
+-	var	index	-	0	var index = 0	commonMain/generated/_Strings.kt:2434
+-	val	end	-	0	val end = index + size	commonMain/generated/_Strings.kt:2436
+-	val	coercedEnd	-	0	val coercedEnd = if (end < 0 || end > thisSize) { if (partialWindows) thisSize else break } else end	commonMain/generated/_Strings.kt:2437
+1.2	fun	windowedSequence	CharSequence	2	public fun CharSequence.windowedSequence(size: Int, step: Int = 1, partialWindows: Boolean = false): Sequence<String> {	commonMain/generated/_Strings.kt:2460
+1.2	fun	windowedSequence	CharSequence	3	public fun <R> CharSequence.windowedSequence(size: Int, step: Int = 1, partialWindows: Boolean = false, transform: (CharSequence) -> R): Sequence<R> {	commonMain/generated/_Strings.kt:2482
+-	val	windows	-	0	val windows = (if (partialWindows) indices else 0 until length - size + 1) step step	commonMain/generated/_Strings.kt:2484
+-	val	end	-	0	val end = index + size	commonMain/generated/_Strings.kt:2486
+-	val	coercedEnd	-	0	val coercedEnd = if (end < 0 || end > length) length else end	commonMain/generated/_Strings.kt:2487
+-	fun	zip	CharSequence	1	public infix fun CharSequence.zip(other: CharSequence): List<Pair<Char, Char>> {	commonMain/generated/_Strings.kt:2498
+-	fun	zip	CharSequence	2	public inline fun <V> CharSequence.zip(other: CharSequence, transform: (a: Char, b: Char) -> V): List<V> {	commonMain/generated/_Strings.kt:2509
+-	val	length	-	1	val length = minOf(this.length, other.length)	commonMain/generated/_Strings.kt:2510
+-	val	list	-	0	val list = ArrayList<V>(length)	commonMain/generated/_Strings.kt:2511
+1.2	fun	zipWithNext	CharSequence	1	public fun CharSequence.zipWithNext(): List<Pair<Char, Char>> {	commonMain/generated/_Strings.kt:2526
+1.2	fun	zipWithNext	CharSequence	1	public inline fun <R> CharSequence.zipWithNext(transform: (a: Char, b: Char) -> R): List<R> {	commonMain/generated/_Strings.kt:2539
+-	val	size	-	0	val size = length - 1	commonMain/generated/_Strings.kt:2540
+-	val	result	-	0	val result = ArrayList<R>(size)	commonMain/generated/_Strings.kt:2542
+-	fun	asIterable	CharSequence	0	public fun CharSequence.asIterable(): Iterable<Char> {	commonMain/generated/_Strings.kt:2552
+-	fun	asSequence	CharSequence	0	public fun CharSequence.asSequence(): Sequence<Char> {	commonMain/generated/_Strings.kt:2560
+-	interface	Appendable	-	0	public expect interface Appendable {	commonMain/kotlin/text/Appendable.kt:14
+-	fun	append	-	0	public fun append(value: Char): Appendable	commonMain/kotlin/text/Appendable.kt:20
+-	fun	append	-	0	public fun append(value: CharSequence?): Appendable	commonMain/kotlin/text/Appendable.kt:27
+-	fun	append	-	2	public fun append(value: CharSequence?, startIndex: Int, endIndex: Int): Appendable	commonMain/kotlin/text/Appendable.kt:39
+1.4	fun	appendRange	T	2	public fun <T : Appendable> T.appendRange(value: CharSequence, startIndex: Int, endIndex: Int): T {	commonMain/kotlin/text/Appendable.kt:52
+-	fun	append	T	0	public fun <T : Appendable> T.append(vararg value: CharSequence?): T {	commonMain/kotlin/text/Appendable.kt:60
+1.4	fun	appendLine	Appendable	0	public inline fun Appendable.appendLine(): Appendable = append('\n')	commonMain/kotlin/text/Appendable.kt:69
+1.4	fun	appendLine	Appendable	0	public inline fun Appendable.appendLine(value: CharSequence?): Appendable = append(value).appendLine()	commonMain/kotlin/text/Appendable.kt:74
+1.4	fun	appendLine	Appendable	0	public inline fun Appendable.appendLine(value: Char): Appendable = append(value).appendLine()	commonMain/kotlin/text/Appendable.kt:79
+-	fun	appendElement	Appendable	1	internal fun <T> Appendable.appendElement(element: T, transform: ((T) -> CharSequence)?) {	commonMain/kotlin/text/Appendable.kt:82
+1.5	fun	digitToInt	Char	0	public fun Char.digitToInt(): Int {	commonMain/kotlin/text/Char.kt:21
+1.5	fun	digitToInt	Char	0	public fun Char.digitToInt(radix: Int): Int {	commonMain/kotlin/text/Char.kt:41
+1.5	fun	digitToIntOrNull	Char	0	public fun Char.digitToIntOrNull(): Int? {	commonMain/kotlin/text/Char.kt:55
+1.5	fun	digitToIntOrNull	Char	0	public fun Char.digitToIntOrNull(radix: Int): Int? {	commonMain/kotlin/text/Char.kt:73
+1.5	fun	digitToChar	Int	0	public fun Int.digitToChar(): Char {	commonMain/kotlin/text/Char.kt:87
+1.5	fun	digitToChar	Int	0	public fun Int.digitToChar(radix: Int): Char {	commonMain/kotlin/text/Char.kt:104
+-	fun	toLowerCase	Char	0	public expect fun Char.toLowerCase(): Char	commonMain/kotlin/text/Char.kt:123
+1.5	fun	lowercaseChar	Char	0	public expect fun Char.lowercaseChar(): Char	commonMain/kotlin/text/Char.kt:135
+1.5	fun	lowercase	Char	0	public expect fun Char.lowercase(): String	commonMain/kotlin/text/Char.kt:148
+-	fun	toUpperCase	Char	0	public expect fun Char.toUpperCase(): Char	commonMain/kotlin/text/Char.kt:155
+1.5	fun	uppercaseChar	Char	0	public expect fun Char.uppercaseChar(): Char	commonMain/kotlin/text/Char.kt:167
+1.5	fun	uppercase	Char	0	public expect fun Char.uppercase(): String	commonMain/kotlin/text/Char.kt:180
+1.5	fun	titlecaseChar	Char	0	public expect fun Char.titlecaseChar(): Char	commonMain/kotlin/text/Char.kt:192
+1.5	fun	titlecase	Char	0	public fun Char.titlecase(): String = titlecaseImpl()	commonMain/kotlin/text/Char.kt:205
+-	fun	plus	Char	0	public inline operator fun Char.plus(other: String): String = this.toString() + other	commonMain/kotlin/text/Char.kt:213
+-	fun	equals	Char	1	public fun Char.equals(other: Char, ignoreCase: Boolean = false): Boolean {	commonMain/kotlin/text/Char.kt:223
+-	val	thisUpper	-	0	val thisUpper = this.uppercaseChar()	commonMain/kotlin/text/Char.kt:227
+-	val	otherUpper	-	0	val otherUpper = other.uppercaseChar()	commonMain/kotlin/text/Char.kt:228
+-	fun	isSurrogate	Char	0	public fun Char.isSurrogate(): Boolean = this in Char.MIN_SURROGATE..Char.MAX_SURROGATE	commonMain/kotlin/text/Char.kt:236
+1.5	val	CharCategory	-	0	public expect val Char.category: CharCategory	commonMain/kotlin/text/Char.kt:242
+1.5	fun	isDefined	Char	0	public expect fun Char.isDefined(): Boolean	commonMain/kotlin/text/Char.kt:250
+1.5	fun	isLetter	Char	0	public expect fun Char.isLetter(): Boolean	commonMain/kotlin/text/Char.kt:261
+1.5	fun	isLetterOrDigit	Char	0	public expect fun Char.isLetterOrDigit(): Boolean	commonMain/kotlin/text/Char.kt:272
+1.5	fun	isDigit	Char	0	public expect fun Char.isDigit(): Boolean	commonMain/kotlin/text/Char.kt:282
+1.5	fun	isUpperCase	Char	0	public expect fun Char.isUpperCase(): Boolean	commonMain/kotlin/text/Char.kt:293
+1.5	fun	isLowerCase	Char	0	public expect fun Char.isLowerCase(): Boolean	commonMain/kotlin/text/Char.kt:304
+1.5	fun	isTitleCase	Char	0	public expect fun Char.isTitleCase(): Boolean	commonMain/kotlin/text/Char.kt:314
+1.5	fun	isISOControl	Char	0	public expect fun Char.isISOControl(): Boolean	commonMain/kotlin/text/Char.kt:325
+-	fun	isWhitespace	Char	0	public expect fun Char.isWhitespace(): Boolean	commonMain/kotlin/text/Char.kt:338
+1.4	class	CharacterCodingException	-	0	public expect open class CharacterCodingException() : Exception	commonMain/kotlin/text/CharacterCodingException.kt:12
+1.5	class	CharCategory	-	0	public expect enum class CharCategory {	commonMain/kotlin/text/CharCategory.kt:12
+-	val	String	-	0	public val code: String	commonMain/kotlin/text/CharCategory.kt:166
+-	fun	contains	-	0	public operator fun contains(char: Char): Boolean	commonMain/kotlin/text/CharCategory.kt:171
+-	val	LOWER_CASE_HEX_DIGITS	-	0	private const val LOWER_CASE_HEX_DIGITS = "0123456789abcdef"	commonMain/kotlin/text/HexExtensions.kt:10
+-	val	UPPER_CASE_HEX_DIGITS	-	0	private const val UPPER_CASE_HEX_DIGITS = "0123456789ABCDEF"	commonMain/kotlin/text/HexExtensions.kt:11
+-	val	BYTE_TO_LOWER_CASE_HEX_DIGITS	-	0	internal val BYTE_TO_LOWER_CASE_HEX_DIGITS = IntArray(256) {	commonMain/kotlin/text/HexExtensions.kt:20
+-	val	BYTE_TO_UPPER_CASE_HEX_DIGITS	-	0	private val BYTE_TO_UPPER_CASE_HEX_DIGITS = IntArray(256) {	commonMain/kotlin/text/HexExtensions.kt:29
+-	val	HEX_DIGITS_TO_DECIMAL	-	0	private val HEX_DIGITS_TO_DECIMAL = IntArray(256) { -1 }.apply {	commonMain/kotlin/text/HexExtensions.kt:41
+-	val	HEX_DIGITS_TO_LONG_DECIMAL	-	0	private val HEX_DIGITS_TO_LONG_DECIMAL = LongArray(256) { -1 }.apply {	commonMain/kotlin/text/HexExtensions.kt:53
+2.2	fun	toHexString	ByteArray	2	public fun ByteArray.toHexString(format: HexFormat = HexFormat.Default): String = toHexString(0, size, format)	commonMain/kotlin/text/HexExtensions.kt:83
+2.2	fun	toHexString	ByteArray	0	public fun ByteArray.toHexString(	commonMain/kotlin/text/HexExtensions.kt:112
+-	val	byteToDigits	-	0	val byteToDigits = if (format.upperCase) BYTE_TO_UPPER_CASE_HEX_DIGITS else BYTE_TO_LOWER_CASE_HEX_DIGITS	commonMain/kotlin/text/HexExtensions.kt:123
+-	val	bytesFormat	-	0	val bytesFormat = format.bytes	commonMain/kotlin/text/HexExtensions.kt:124
+-	fun	toHexStringNoLineAndGroupSeparator	ByteArray	0	private fun ByteArray.toHexStringNoLineAndGroupSeparator(	commonMain/kotlin/text/HexExtensions.kt:134
+-	fun	toHexStringShortByteSeparatorNoPrefixAndSuffix	ByteArray	0	private fun ByteArray.toHexStringShortByteSeparatorNoPrefixAndSuffix(	commonMain/kotlin/text/HexExtensions.kt:148
+-	val	byteSeparatorLength	-	0	val byteSeparatorLength = bytesFormat.byteSeparator.length	commonMain/kotlin/text/HexExtensions.kt:154
+-	val	numberOfBytes	-	0	val numberOfBytes = endIndex - startIndex	commonMain/kotlin/text/HexExtensions.kt:157
+-	var	charIndex	-	0	var charIndex = 0	commonMain/kotlin/text/HexExtensions.kt:158
+-	val	charArray	-	0	val charArray = CharArray(checkFormatLength(2L * numberOfBytes))	commonMain/kotlin/text/HexExtensions.kt:161
+-	val	charArray	-	0	val charArray = CharArray(checkFormatLength(3L * numberOfBytes - 1))	commonMain/kotlin/text/HexExtensions.kt:167
+-	val	byteSeparatorChar	-	0	val byteSeparatorChar = bytesFormat.byteSeparator[0]	commonMain/kotlin/text/HexExtensions.kt:168
+-	fun	toHexStringNoLineAndGroupSeparatorSlowPath	ByteArray	0	private fun ByteArray.toHexStringNoLineAndGroupSeparatorSlowPath(	commonMain/kotlin/text/HexExtensions.kt:180
+-	val	bytePrefix	-	0	val bytePrefix = bytesFormat.bytePrefix	commonMain/kotlin/text/HexExtensions.kt:186
+-	val	byteSuffix	-	0	val byteSuffix = bytesFormat.byteSuffix	commonMain/kotlin/text/HexExtensions.kt:187
+-	val	byteSeparator	-	0	val byteSeparator = bytesFormat.byteSeparator	commonMain/kotlin/text/HexExtensions.kt:188
+-	val	formatLength	-	0	val formatLength = formattedStringLength(	commonMain/kotlin/text/HexExtensions.kt:190
+-	val	charArray	-	0	val charArray = CharArray(formatLength)	commonMain/kotlin/text/HexExtensions.kt:196
+-	var	charIndex	-	0	var charIndex = 0	commonMain/kotlin/text/HexExtensions.kt:197
+-	fun	toHexStringSlowPath	ByteArray	0	private fun ByteArray.toHexStringSlowPath(	commonMain/kotlin/text/HexExtensions.kt:208
+-	val	bytesPerLine	-	0	val bytesPerLine = bytesFormat.bytesPerLine	commonMain/kotlin/text/HexExtensions.kt:214
+-	val	bytesPerGroup	-	0	val bytesPerGroup = bytesFormat.bytesPerGroup	commonMain/kotlin/text/HexExtensions.kt:215
+-	val	bytePrefix	-	0	val bytePrefix = bytesFormat.bytePrefix	commonMain/kotlin/text/HexExtensions.kt:216
+-	val	byteSuffix	-	0	val byteSuffix = bytesFormat.byteSuffix	commonMain/kotlin/text/HexExtensions.kt:217
+-	val	byteSeparator	-	0	val byteSeparator = bytesFormat.byteSeparator	commonMain/kotlin/text/HexExtensions.kt:218
+-	val	groupSeparator	-	0	val groupSeparator = bytesFormat.groupSeparator	commonMain/kotlin/text/HexExtensions.kt:219
+-	val	formatLength	-	0	val formatLength = formattedStringLength(	commonMain/kotlin/text/HexExtensions.kt:221
+-	val	charArray	-	0	val charArray = CharArray(formatLength)	commonMain/kotlin/text/HexExtensions.kt:230
+-	var	charIndex	-	0	var charIndex = 0	commonMain/kotlin/text/HexExtensions.kt:231
+-	var	indexInLine	-	0	var indexInLine = 0	commonMain/kotlin/text/HexExtensions.kt:233
+-	var	indexInGroup	-	0	var indexInGroup = 0	commonMain/kotlin/text/HexExtensions.kt:234
+-	fun	formatByteAt	ByteArray	0	private fun ByteArray.formatByteAt(	commonMain/kotlin/text/HexExtensions.kt:259
+-	var	offset	-	1	var offset = bytePrefix.toCharArrayIfNotEmpty(destination, destinationOffset)	commonMain/kotlin/text/HexExtensions.kt:267
+-	fun	formatByteAt	ByteArray	0	private fun ByteArray.formatByteAt(	commonMain/kotlin/text/HexExtensions.kt:272
+-	val	byte	-	0	val byte = this[index].toInt() and 0xFF	commonMain/kotlin/text/HexExtensions.kt:278
+-	val	byteDigits	-	0	val byteDigits = byteToDigits[byte]	commonMain/kotlin/text/HexExtensions.kt:279
+-	fun	formattedStringLength	-	0	private fun formattedStringLength(	commonMain/kotlin/text/HexExtensions.kt:285
+-	val	charsPerByte	-	0	val charsPerByte = 2L + bytePrefixLength + byteSuffixLength + byteSeparatorLength	commonMain/kotlin/text/HexExtensions.kt:293
+-	val	formatLength	-	0	val formatLength = numberOfBytes * charsPerByte - byteSeparatorLength	commonMain/kotlin/text/HexExtensions.kt:294
+-	fun	formattedStringLength	-	0	internal fun formattedStringLength(	commonMain/kotlin/text/HexExtensions.kt:299
+-	val	lineSeparators	-	0	val lineSeparators = (numberOfBytes - 1) / bytesPerLine	commonMain/kotlin/text/HexExtensions.kt:311
+-	val	groupSeparators	-	0	val groupSeparators = run {	commonMain/kotlin/text/HexExtensions.kt:312
+-	val	groupSeparatorsPerLine	-	0	val groupSeparatorsPerLine = (bytesPerLine - 1) / bytesPerGroup	commonMain/kotlin/text/HexExtensions.kt:313
+-	val	bytesInLastLine	-	0	val bytesInLastLine = (numberOfBytes % bytesPerLine).let { if (it == 0) bytesPerLine else it }	commonMain/kotlin/text/HexExtensions.kt:314
+-	val	groupSeparatorsInLastLine	-	0	val groupSeparatorsInLastLine = (bytesInLastLine - 1) / bytesPerGroup	commonMain/kotlin/text/HexExtensions.kt:315
+-	val	byteSeparators	-	0	val byteSeparators = numberOfBytes - 1 - lineSeparators - groupSeparators	commonMain/kotlin/text/HexExtensions.kt:318
+-	val	Long	-	0	val formatLength: Long = lineSeparators.toLong() /* * lineSeparator.length = 1 */ +	commonMain/kotlin/text/HexExtensions.kt:325
+-	fun	checkFormatLength	-	0	private fun checkFormatLength(formatLength: Long): Int {	commonMain/kotlin/text/HexExtensions.kt:333
+2.2	fun	hexToByteArray	String	2	public fun String.hexToByteArray(format: HexFormat = HexFormat.Default): ByteArray = hexToByteArray(0, length, format)	commonMain/kotlin/text/HexExtensions.kt:362
+-	fun	hexToByteArray	String	0	private fun String.hexToByteArray(	commonMain/kotlin/text/HexExtensions.kt:387
+-	val	bytesFormat	-	0	val bytesFormat = format.bytes	commonMain/kotlin/text/HexExtensions.kt:398
+-	fun	hexToByteArrayNoLineAndGroupSeparator	String	0	private fun String.hexToByteArrayNoLineAndGroupSeparator(	commonMain/kotlin/text/HexExtensions.kt:408
+-	fun	hexToByteArrayShortByteSeparatorNoPrefixAndSuffix	String	0	private fun String.hexToByteArrayShortByteSeparatorNoPrefixAndSuffix(	commonMain/kotlin/text/HexExtensions.kt:421
+-	val	byteSeparatorLength	-	0	val byteSeparatorLength = bytesFormat.byteSeparator.length	commonMain/kotlin/text/HexExtensions.kt:426
+-	val	numberOfChars	-	0	val numberOfChars = endIndex - startIndex	commonMain/kotlin/text/HexExtensions.kt:429
+-	var	charIndex	-	0	var charIndex = 0	commonMain/kotlin/text/HexExtensions.kt:430
+-	val	numberOfBytes	-	0	val numberOfBytes = numberOfChars shr 1	commonMain/kotlin/text/HexExtensions.kt:434
+-	val	byteArray	-	0	val byteArray = ByteArray(numberOfBytes)	commonMain/kotlin/text/HexExtensions.kt:435
+-	val	numberOfBytes	-	0	val numberOfBytes = numberOfChars / 3 + 1	commonMain/kotlin/text/HexExtensions.kt:443
+-	val	byteArray	-	0	val byteArray = ByteArray(numberOfBytes)	commonMain/kotlin/text/HexExtensions.kt:444
+-	val	byteSeparatorChar	-	0	val byteSeparatorChar = bytesFormat.byteSeparator[0]	commonMain/kotlin/text/HexExtensions.kt:445
+-	fun	hexToByteArrayNoLineAndGroupSeparatorSlowPath	String	0	private fun String.hexToByteArrayNoLineAndGroupSeparatorSlowPath(	commonMain/kotlin/text/HexExtensions.kt:459
+-	val	bytePrefix	-	0	val bytePrefix = bytesFormat.bytePrefix	commonMain/kotlin/text/HexExtensions.kt:464
+-	val	byteSuffix	-	0	val byteSuffix = bytesFormat.byteSuffix	commonMain/kotlin/text/HexExtensions.kt:465
+-	val	byteSeparator	-	0	val byteSeparator = bytesFormat.byteSeparator	commonMain/kotlin/text/HexExtensions.kt:466
+-	val	byteSeparatorLength	-	0	val byteSeparatorLength = byteSeparator.length	commonMain/kotlin/text/HexExtensions.kt:467
+-	val	charsPerByte	-	0	val charsPerByte = 2L + bytePrefix.length + byteSuffix.length + byteSeparatorLength	commonMain/kotlin/text/HexExtensions.kt:468
+-	val	numberOfChars	-	0	val numberOfChars = (endIndex - startIndex).toLong()	commonMain/kotlin/text/HexExtensions.kt:469
+-	val	numberOfBytes	-	0	val numberOfBytes = ((numberOfChars + byteSeparatorLength) / charsPerByte).toInt()	commonMain/kotlin/text/HexExtensions.kt:470
+-	val	ignoreCase	-	0	val ignoreCase = bytesFormat.ignoreCase	commonMain/kotlin/text/HexExtensions.kt:477
+-	val	byteArray	-	0	val byteArray = ByteArray(numberOfBytes)	commonMain/kotlin/text/HexExtensions.kt:479
+-	var	charIndex	-	0	var charIndex = startIndex	commonMain/kotlin/text/HexExtensions.kt:480
+-	val	between	-	0	val between = byteSuffix + byteSeparator + bytePrefix	commonMain/kotlin/text/HexExtensions.kt:483
+-	fun	hexToByteArraySlowPath	String	0	private fun String.hexToByteArraySlowPath(	commonMain/kotlin/text/HexExtensions.kt:494
+-	val	bytesPerLine	-	0	val bytesPerLine = bytesFormat.bytesPerLine	commonMain/kotlin/text/HexExtensions.kt:499
+-	val	bytesPerGroup	-	0	val bytesPerGroup = bytesFormat.bytesPerGroup	commonMain/kotlin/text/HexExtensions.kt:500
+-	val	bytePrefix	-	0	val bytePrefix = bytesFormat.bytePrefix	commonMain/kotlin/text/HexExtensions.kt:501
+-	val	byteSuffix	-	0	val byteSuffix = bytesFormat.byteSuffix	commonMain/kotlin/text/HexExtensions.kt:502
+-	val	byteSeparator	-	0	val byteSeparator = bytesFormat.byteSeparator	commonMain/kotlin/text/HexExtensions.kt:503
+-	val	groupSeparator	-	0	val groupSeparator = bytesFormat.groupSeparator	commonMain/kotlin/text/HexExtensions.kt:504
+-	val	ignoreCase	-	0	val ignoreCase = bytesFormat.ignoreCase	commonMain/kotlin/text/HexExtensions.kt:505
+-	val	parseMaxSize	-	0	val parseMaxSize = parsedByteArrayMaxSize(	commonMain/kotlin/text/HexExtensions.kt:507
+-	val	byteArray	-	0	val byteArray = ByteArray(parseMaxSize)	commonMain/kotlin/text/HexExtensions.kt:516
+-	var	charIndex	-	0	var charIndex = startIndex	commonMain/kotlin/text/HexExtensions.kt:518
+-	var	byteIndex	-	0	var byteIndex = 0	commonMain/kotlin/text/HexExtensions.kt:519
+-	var	indexInLine	-	0	var indexInLine = 0	commonMain/kotlin/text/HexExtensions.kt:520
+-	var	indexInGroup	-	0	var indexInGroup = 0	commonMain/kotlin/text/HexExtensions.kt:521
+-	fun	parseByteAt	String	0	private fun String.parseByteAt(index: Int): Byte {	commonMain/kotlin/text/HexExtensions.kt:548
+-	val	high	-	0	val high = decimalFromHexDigitAt(index)	commonMain/kotlin/text/HexExtensions.kt:549
+-	val	low	-	0	val low = decimalFromHexDigitAt(index + 1)	commonMain/kotlin/text/HexExtensions.kt:550
+-	fun	parsedByteArrayMaxSize	-	0	internal fun parsedByteArrayMaxSize(	commonMain/kotlin/text/HexExtensions.kt:555
+-	val	charsPerByte	-	0	val charsPerByte = bytePrefixLength + 2L + byteSuffixLength	commonMain/kotlin/text/HexExtensions.kt:572
+-	val	charsPerGroup	-	2	val charsPerGroup = charsPerSet(charsPerByte, bytesPerGroup, byteSeparatorLength)	commonMain/kotlin/text/HexExtensions.kt:574
+-	val	charsPerLine	-	0	val charsPerLine = if (bytesPerLine <= bytesPerGroup) {	commonMain/kotlin/text/HexExtensions.kt:576
+-	val	groupsPerLine	-	0	val groupsPerLine = bytesPerLine / bytesPerGroup	commonMain/kotlin/text/HexExtensions.kt:579
+-	var	result	-	2	var result = charsPerSet(charsPerGroup, groupsPerLine, groupSeparatorLength)	commonMain/kotlin/text/HexExtensions.kt:580
+-	val	bytesPerLastGroupInLine	-	0	val bytesPerLastGroupInLine = bytesPerLine % bytesPerGroup	commonMain/kotlin/text/HexExtensions.kt:581
+-	var	numberOfChars	-	0	var numberOfChars = stringLength.toLong()	commonMain/kotlin/text/HexExtensions.kt:589
+-	val	wholeLines	-	2	val wholeLines = wholeElementsPerSet(numberOfChars, charsPerLine, 1)	commonMain/kotlin/text/HexExtensions.kt:592
+-	val	wholeGroupsInLastLine	-	2	val wholeGroupsInLastLine = wholeElementsPerSet(numberOfChars, charsPerGroup, groupSeparatorLength)	commonMain/kotlin/text/HexExtensions.kt:595
+-	val	wholeBytesInLastGroup	-	2	val wholeBytesInLastGroup = wholeElementsPerSet(numberOfChars, charsPerByte, byteSeparatorLength)	commonMain/kotlin/text/HexExtensions.kt:598
+-	val	spare	-	0	val spare = if (numberOfChars > 0L) 1 else 0	commonMain/kotlin/text/HexExtensions.kt:606
+-	fun	charsPerSet	-	2	private fun charsPerSet(charsPerElement: Long, elementsPerSet: Int, elementSeparatorLength: Int): Long {	commonMain/kotlin/text/HexExtensions.kt:612
+-	fun	wholeElementsPerSet	-	2	private fun wholeElementsPerSet(charsPerSet: Long, charsPerElement: Long, elementSeparatorLength: Int): Long {	commonMain/kotlin/text/HexExtensions.kt:617
+-	fun	checkNewLineAt	String	1	private fun String.checkNewLineAt(index: Int, endIndex: Int): Int {	commonMain/kotlin/text/HexExtensions.kt:622
+2.2	fun	toHexString	Byte	0	public fun Byte.toHexString(format: HexFormat = HexFormat.Default): String {	commonMain/kotlin/text/HexExtensions.kt:656
+-	val	digits	-	0	val digits = if (format.upperCase) UPPER_CASE_HEX_DIGITS else LOWER_CASE_HEX_DIGITS	commonMain/kotlin/text/HexExtensions.kt:657
+-	val	numberFormat	-	0	val numberFormat = format.number	commonMain/kotlin/text/HexExtensions.kt:658
+-	val	charArray	-	0	val charArray = CharArray(2)	commonMain/kotlin/text/HexExtensions.kt:662
+-	val	value	-	0	val value = this.toInt()	commonMain/kotlin/text/HexExtensions.kt:663
+2.2	fun	hexToByte	String	2	public fun String.hexToByte(format: HexFormat = HexFormat.Default): Byte = hexToByte(0, length, format)	commonMain/kotlin/text/HexExtensions.kt:699
+-	fun	hexToByte	String	2	private fun String.hexToByte(startIndex: Int = 0, endIndex: Int = length, format: HexFormat = HexFormat.Default): Byte =	commonMain/kotlin/text/HexExtensions.kt:727
+2.2	fun	toHexString	Short	0	public fun Short.toHexString(format: HexFormat = HexFormat.Default): String {	commonMain/kotlin/text/HexExtensions.kt:754
+-	val	digits	-	0	val digits = if (format.upperCase) UPPER_CASE_HEX_DIGITS else LOWER_CASE_HEX_DIGITS	commonMain/kotlin/text/HexExtensions.kt:755
+-	val	numberFormat	-	0	val numberFormat = format.number	commonMain/kotlin/text/HexExtensions.kt:756
+-	val	charArray	-	0	val charArray = CharArray(4)	commonMain/kotlin/text/HexExtensions.kt:760
+-	val	value	-	0	val value = this.toInt()	commonMain/kotlin/text/HexExtensions.kt:761
+2.2	fun	hexToShort	String	2	public fun String.hexToShort(format: HexFormat = HexFormat.Default): Short = hexToShort(0, length, format)	commonMain/kotlin/text/HexExtensions.kt:799
+-	fun	hexToShort	String	2	private fun String.hexToShort(startIndex: Int = 0, endIndex: Int = length, format: HexFormat = HexFormat.Default): Short =	commonMain/kotlin/text/HexExtensions.kt:827
+2.2	fun	toHexString	Int	0	public fun Int.toHexString(format: HexFormat = HexFormat.Default): String {	commonMain/kotlin/text/HexExtensions.kt:854
+-	val	digits	-	0	val digits = if (format.upperCase) UPPER_CASE_HEX_DIGITS else LOWER_CASE_HEX_DIGITS	commonMain/kotlin/text/HexExtensions.kt:855
+-	val	numberFormat	-	0	val numberFormat = format.number	commonMain/kotlin/text/HexExtensions.kt:856
+-	val	charArray	-	0	val charArray = CharArray(8)	commonMain/kotlin/text/HexExtensions.kt:860
+-	val	value	-	0	val value = this	commonMain/kotlin/text/HexExtensions.kt:861
+2.2	fun	hexToInt	String	2	public fun String.hexToInt(format: HexFormat = HexFormat.Default): Int = hexToInt(0, length, format)	commonMain/kotlin/text/HexExtensions.kt:903
+-	fun	hexToInt	String	2	internal fun String.hexToInt(startIndex: Int = 0, endIndex: Int = length, format: HexFormat = HexFormat.Default): Int =	commonMain/kotlin/text/HexExtensions.kt:931
+2.2	fun	toHexString	Long	0	public fun Long.toHexString(format: HexFormat = HexFormat.Default): String {	commonMain/kotlin/text/HexExtensions.kt:958
+-	val	digits	-	0	val digits = if (format.upperCase) UPPER_CASE_HEX_DIGITS else LOWER_CASE_HEX_DIGITS	commonMain/kotlin/text/HexExtensions.kt:959
+-	val	numberFormat	-	0	val numberFormat = format.number	commonMain/kotlin/text/HexExtensions.kt:960
+-	val	charArray	-	0	val charArray = CharArray(16)	commonMain/kotlin/text/HexExtensions.kt:964
+-	val	value	-	0	val value = this	commonMain/kotlin/text/HexExtensions.kt:965
+2.2	fun	hexToLong	String	2	public fun String.hexToLong(format: HexFormat = HexFormat.Default): Long = hexToLong(0, length, format)	commonMain/kotlin/text/HexExtensions.kt:1015
+-	fun	hexToLong	String	2	internal fun String.hexToLong(startIndex: Int = 0, endIndex: Int = length, format: HexFormat = HexFormat.Default): Long =	commonMain/kotlin/text/HexExtensions.kt:1043
+-	fun	toHexStringImpl	Long	2	private fun Long.toHexStringImpl(numberFormat: HexFormat.NumberHexFormat, digits: String, bits: Int): String {	commonMain/kotlin/text/HexExtensions.kt:1048
+-	val	value	-	0	val value = this	commonMain/kotlin/text/HexExtensions.kt:1051
+-	val	typeHexLength	-	0	val typeHexLength = bits shr 2	commonMain/kotlin/text/HexExtensions.kt:1052
+-	val	minLength	-	0	val minLength = numberFormat.minLength	commonMain/kotlin/text/HexExtensions.kt:1053
+-	val	pads	-	0	val pads = (minLength - typeHexLength).coerceAtLeast(0)	commonMain/kotlin/text/HexExtensions.kt:1054
+-	val	prefix	-	0	val prefix = numberFormat.prefix	commonMain/kotlin/text/HexExtensions.kt:1056
+-	val	suffix	-	0	val suffix = numberFormat.suffix	commonMain/kotlin/text/HexExtensions.kt:1057
+-	var	removeZeros	-	0	var removeZeros = numberFormat.removeLeadingZeros	commonMain/kotlin/text/HexExtensions.kt:1058
+-	val	formatLength	-	0	val formatLength = prefix.length.toLong() + pads + typeHexLength + suffix.length	commonMain/kotlin/text/HexExtensions.kt:1060
+-	val	charArray	-	0	val charArray = CharArray(checkFormatLength(formatLength))	commonMain/kotlin/text/HexExtensions.kt:1061
+-	var	charIndex	-	1	var charIndex = prefix.toCharArrayIfNotEmpty(charArray, 0)	commonMain/kotlin/text/HexExtensions.kt:1063
+-	var	shift	-	0	var shift = bits	commonMain/kotlin/text/HexExtensions.kt:1070
+-	val	decimal	-	0	val decimal = ((value shr shift) and 0xF).toInt()	commonMain/kotlin/text/HexExtensions.kt:1073
+-	fun	toCharArrayIfNotEmpty	String	1	private fun String.toCharArrayIfNotEmpty(destination: CharArray, destinationOffset: Int): Int {	commonMain/kotlin/text/HexExtensions.kt:1086
+-	fun	hexToIntImpl	String	3	private fun String.hexToIntImpl(startIndex: Int, endIndex: Int, format: HexFormat, typeHexLength: Int): Int {	commonMain/kotlin/text/HexExtensions.kt:1095
+-	val	numberFormat	-	0	val numberFormat = format.number	commonMain/kotlin/text/HexExtensions.kt:1098
+-	val	prefix	-	0	val prefix = numberFormat.prefix	commonMain/kotlin/text/HexExtensions.kt:1106
+-	val	suffix	-	0	val suffix = numberFormat.suffix	commonMain/kotlin/text/HexExtensions.kt:1107
+-	fun	hexToLongImpl	String	3	private fun String.hexToLongImpl(startIndex: Int, endIndex: Int, format: HexFormat, typeHexLength: Int): Long {	commonMain/kotlin/text/HexExtensions.kt:1112
+-	val	numberFormat	-	0	val numberFormat = format.number	commonMain/kotlin/text/HexExtensions.kt:1115
+-	val	prefix	-	0	val prefix = numberFormat.prefix	commonMain/kotlin/text/HexExtensions.kt:1123
+-	val	suffix	-	0	val suffix = numberFormat.suffix	commonMain/kotlin/text/HexExtensions.kt:1124
+-	fun	checkPrefixSuffixNumberOfDigits	String	0	private fun String.checkPrefixSuffixNumberOfDigits(	commonMain/kotlin/text/HexExtensions.kt:1129
+-	val	digitsStartIndex	-	4	val digitsStartIndex = checkContainsAt(startIndex, endIndex, prefix, ignoreCase, "prefix")	commonMain/kotlin/text/HexExtensions.kt:1141
+-	val	digitsEndIndex	-	0	val digitsEndIndex = endIndex - suffix.length	commonMain/kotlin/text/HexExtensions.kt:1142
+-	fun	checkNumberOfDigits	String	2	private fun String.checkNumberOfDigits(startIndex: Int, endIndex: Int, typeHexLength: Int) {	commonMain/kotlin/text/HexExtensions.kt:1148
+-	val	digits	-	0	val digits = endIndex - startIndex	commonMain/kotlin/text/HexExtensions.kt:1149
+-	fun	checkZeroDigits	String	1	private fun String.checkZeroDigits(startIndex: Int, endIndex: Int) {	commonMain/kotlin/text/HexExtensions.kt:1157
+-	fun	parseInt	String	1	private fun String.parseInt(startIndex: Int, endIndex: Int): Int {	commonMain/kotlin/text/HexExtensions.kt:1168
+-	var	result	-	0	var result = 0	commonMain/kotlin/text/HexExtensions.kt:1169
+-	fun	parseLong	String	1	private fun String.parseLong(startIndex: Int, endIndex: Int): Long {	commonMain/kotlin/text/HexExtensions.kt:1176
+-	var	result	-	0	var result = 0L	commonMain/kotlin/text/HexExtensions.kt:1177
+-	fun	checkContainsAt	String	4	private inline fun String.checkContainsAt(index: Int, endIndex: Int, part: String, ignoreCase: Boolean, partName: String): Int {	commonMain/kotlin/text/HexExtensions.kt:1185
+-	fun	decimalFromHexDigitAt	String	0	private inline fun String.decimalFromHexDigitAt(index: Int): Int {	commonMain/kotlin/text/HexExtensions.kt:1196
+-	val	code	-	0	val code = this[index].code	commonMain/kotlin/text/HexExtensions.kt:1197
+-	fun	longDecimalFromHexDigitAt	String	0	private inline fun String.longDecimalFromHexDigitAt(index: Int): Long {	commonMain/kotlin/text/HexExtensions.kt:1205
+-	val	code	-	0	val code = this[index].code	commonMain/kotlin/text/HexExtensions.kt:1206
+-	fun	throwInvalidNumberOfDigits	String	3	private fun String.throwInvalidNumberOfDigits(startIndex: Int, endIndex: Int, specifier: String, expected: Int) {	commonMain/kotlin/text/HexExtensions.kt:1213
+-	val	substring	-	1	val substring = substring(startIndex, endIndex)	commonMain/kotlin/text/HexExtensions.kt:1214
+-	fun	throwNotContainedAt	String	3	private fun String.throwNotContainedAt(index: Int, endIndex: Int, part: String, partName: String) {	commonMain/kotlin/text/HexExtensions.kt:1220
+-	val	substring	-	1	val substring = substring(index, (index + part.length).coerceAtMost(endIndex))	commonMain/kotlin/text/HexExtensions.kt:1221
+-	fun	throwInvalidPrefixSuffix	String	3	private fun String.throwInvalidPrefixSuffix(startIndex: Int, endIndex: Int, prefix: String, suffix: String) {	commonMain/kotlin/text/HexExtensions.kt:1227
+-	val	substring	-	1	val substring = substring(startIndex, endIndex)	commonMain/kotlin/text/HexExtensions.kt:1228
+-	fun	throwInvalidDigitAt	String	0	private fun String.throwInvalidDigitAt(index: Int): Nothing {	commonMain/kotlin/text/HexExtensions.kt:1234
+2.2	class	HexFormat	-	0	public class HexFormat internal constructor(	commonMain/kotlin/text/HexFormat.kt:37
+-	val	Boolean	-	1	public val upperCase: Boolean,	commonMain/kotlin/text/HexFormat.kt:53
+-	val	BytesHexFormat	-	1	public val bytes: BytesHexFormat,	commonMain/kotlin/text/HexFormat.kt:65
+-	val	NumberHexFormat	-	0	public val number: NumberHexFormat	commonMain/kotlin/text/HexFormat.kt:77
+-	class	BytesHexFormat	-	0	public class BytesHexFormat internal constructor(	commonMain/kotlin/text/HexFormat.kt:152
+-	val	Int	-	1	public val bytesPerLine: Int,	commonMain/kotlin/text/HexFormat.kt:167
+-	val	Int	-	1	public val bytesPerGroup: Int,	commonMain/kotlin/text/HexFormat.kt:185
+-	val	String	-	1	public val groupSeparator: String,	commonMain/kotlin/text/HexFormat.kt:200
+-	val	String	-	1	public val byteSeparator: String,	commonMain/kotlin/text/HexFormat.kt:214
+-	val	String	-	1	public val bytePrefix: String,	commonMain/kotlin/text/HexFormat.kt:226
+-	val	String	-	0	public val byteSuffix: String	commonMain/kotlin/text/HexFormat.kt:238
+-	val	Boolean	-	0	internal val noLineAndGroupSeparator: Boolean =	commonMain/kotlin/text/HexFormat.kt:241
+-	val	Boolean	-	0	internal val shortByteSeparatorNoPrefixAndSuffix: Boolean =	commonMain/kotlin/text/HexFormat.kt:244
+-	val	Boolean	-	0	internal val ignoreCase: Boolean =	commonMain/kotlin/text/HexFormat.kt:251
+-	fun	appendOptionsTo	-	1	internal fun appendOptionsTo(sb: StringBuilder, indent: String): StringBuilder {	commonMain/kotlin/text/HexFormat.kt:263
+-	class	Builder	-	0	public class Builder internal constructor() {	commonMain/kotlin/text/HexFormat.kt:283
+-	var	Int	-	0	public var bytesPerLine: Int = Default.bytesPerLine	commonMain/kotlin/text/HexFormat.kt:296
+-	var	Int	-	0	public var bytesPerGroup: Int = Default.bytesPerGroup	commonMain/kotlin/text/HexFormat.kt:315
+-	var	String	-	0	public var groupSeparator: String = Default.groupSeparator	commonMain/kotlin/text/HexFormat.kt:330
+-	var	String	-	0	public var byteSeparator: String = Default.byteSeparator	commonMain/kotlin/text/HexFormat.kt:344
+-	var	String	-	0	public var bytePrefix: String = Default.bytePrefix	commonMain/kotlin/text/HexFormat.kt:363
+-	var	String	-	0	public var byteSuffix: String = Default.byteSuffix	commonMain/kotlin/text/HexFormat.kt:382
+-	fun	build	-	0	internal fun build(): BytesHexFormat {	commonMain/kotlin/text/HexFormat.kt:389
+-	val	Default	-	0	internal val Default = BytesHexFormat(	commonMain/kotlin/text/HexFormat.kt:395
+-	class	NumberHexFormat	-	0	public class NumberHexFormat internal constructor(	commonMain/kotlin/text/HexFormat.kt:445
+-	val	String	-	1	public val prefix: String,	commonMain/kotlin/text/HexFormat.kt:456
+-	val	String	-	1	public val suffix: String,	commonMain/kotlin/text/HexFormat.kt:468
+-	val	Boolean	-	1	public val removeLeadingZeros: Boolean,	commonMain/kotlin/text/HexFormat.kt:485
+2.0	val	Int	-	0	public val minLength: Int	commonMain/kotlin/text/HexFormat.kt:509
+-	val	Boolean	-	0	internal val isDigitsOnly: Boolean = prefix.isEmpty() && suffix.isEmpty()	commonMain/kotlin/text/HexFormat.kt:512
+-	val	Boolean	-	0	internal val isDigitsOnlyAndNoPadding: Boolean = isDigitsOnly && minLength == 1	commonMain/kotlin/text/HexFormat.kt:514
+-	val	Boolean	-	0	internal val ignoreCase: Boolean = prefix.isCaseSensitive() || suffix.isCaseSensitive()	commonMain/kotlin/text/HexFormat.kt:520
+-	fun	appendOptionsTo	-	1	internal fun appendOptionsTo(sb: StringBuilder, indent: String): StringBuilder {	commonMain/kotlin/text/HexFormat.kt:528
+-	class	Builder	-	0	public class Builder internal constructor() {	commonMain/kotlin/text/HexFormat.kt:548
+-	var	String	-	0	public var prefix: String = Default.prefix	commonMain/kotlin/text/HexFormat.kt:561
+-	var	String	-	0	public var suffix: String = Default.suffix	commonMain/kotlin/text/HexFormat.kt:580
+-	var	Boolean	-	0	public var removeLeadingZeros: Boolean = Default.removeLeadingZeros	commonMain/kotlin/text/HexFormat.kt:595
+2.0	var	Int	-	0	public var minLength: Int = Default.minLength	commonMain/kotlin/text/HexFormat.kt:610
+-	fun	build	-	0	internal fun build(): NumberHexFormat {	commonMain/kotlin/text/HexFormat.kt:616
+-	val	Default	-	0	internal val Default = NumberHexFormat(	commonMain/kotlin/text/HexFormat.kt:622
+-	class	Builder	-	0	public class Builder @PublishedApi internal constructor() {	commonMain/kotlin/text/HexFormat.kt:645
+-	var	Boolean	-	0	public var upperCase: Boolean = Default.upperCase	commonMain/kotlin/text/HexFormat.kt:653
+-	val	Builder	BytesHexFormat	0	public val bytes: BytesHexFormat.Builder	commonMain/kotlin/text/HexFormat.kt:661
+-	var	Builder	BytesHexFormat	0	private var _bytes: BytesHexFormat.Builder? = null	commonMain/kotlin/text/HexFormat.kt:669
+-	val	Builder	NumberHexFormat	0	public val number: NumberHexFormat.Builder	commonMain/kotlin/text/HexFormat.kt:677
+-	var	Builder	NumberHexFormat	0	private var _number: NumberHexFormat.Builder? = null	commonMain/kotlin/text/HexFormat.kt:685
+-	fun	bytes	-	0	public inline fun bytes(builderAction: BytesHexFormat.Builder.() -> Unit) {	commonMain/kotlin/text/HexFormat.kt:718
+-	fun	number	-	0	public inline fun number(builderAction: NumberHexFormat.Builder.() -> Unit) {	commonMain/kotlin/text/HexFormat.kt:753
+-	fun	build	-	0	internal fun build(): HexFormat {	commonMain/kotlin/text/HexFormat.kt:758
+-	val	HexFormat	-	0	public val Default: HexFormat = HexFormat(	commonMain/kotlin/text/HexFormat.kt:789
+-	val	HexFormat	-	0	public val UpperCase: HexFormat = HexFormat(	commonMain/kotlin/text/HexFormat.kt:804
+2.2	fun	HexFormat	-	0	public inline fun HexFormat(builderAction: HexFormat.Builder.() -> Unit): HexFormat {	commonMain/kotlin/text/HexFormat.kt:836
+-	fun	isCaseSensitive	String	0	private fun String.isCaseSensitive(): Boolean {	commonMain/kotlin/text/HexFormat.kt:842
+-	fun	trimMargin	String	0	public fun String.trimMargin(marginPrefix: String = "|"): String =	commonMain/kotlin/text/Indent.kt:27
+-	fun	replaceIndentByMargin	String	1	public fun String.replaceIndentByMargin(newIndent: String = "", marginPrefix: String = "|"): String {	commonMain/kotlin/text/Indent.kt:38
+-	val	lines	-	0	val lines = lines()	commonMain/kotlin/text/Indent.kt:40
+-	val	firstNonWhitespaceIndex	-	0	val firstNonWhitespaceIndex = line.indexOfFirst { !it.isWhitespace() }	commonMain/kotlin/text/Indent.kt:43
+-	fun	trimIndent	String	0	public fun String.trimIndent(): String = replaceIndent("")	commonMain/kotlin/text/Indent.kt:70
+-	fun	replaceIndent	String	0	public fun String.replaceIndent(newIndent: String = ""): String {	commonMain/kotlin/text/Indent.kt:75
+-	val	lines	-	0	val lines = lines()	commonMain/kotlin/text/Indent.kt:76
+-	val	minCommonIndent	-	0	val minCommonIndent = lines	commonMain/kotlin/text/Indent.kt:78
+-	fun	prependIndent	String	0	public fun String.prependIndent(indent: String = " "): String =	commonMain/kotlin/text/Indent.kt:92
+-	fun	indentWidth	String	0	private fun String.indentWidth(): Int = indexOfFirst { !it.isWhitespace() }.let { if (it == -1) length else it }	commonMain/kotlin/text/Indent.kt:107
+-	fun	getIndentFunction	-	0	private fun getIndentFunction(indent: String) = when {	commonMain/kotlin/text/Indent.kt:109
+-	fun	reindent	-	0	private inline fun List<String>.reindent(	commonMain/kotlin/text/Indent.kt:114
+-	val	lastIndex	-	0	val lastIndex = lastIndex	commonMain/kotlin/text/Indent.kt:119
+-	interface	MatchGroupCollection	-	0	public interface MatchGroupCollection : Collection<MatchGroup?> {	commonMain/kotlin/text/regex/MatchResult.kt:18
+-	fun	get	-	0	public operator fun get(index: Int): MatchGroup?	commonMain/kotlin/text/regex/MatchResult.kt:27
+1.1	interface	MatchNamedGroupCollection	-	0	public interface MatchNamedGroupCollection : MatchGroupCollection {	commonMain/kotlin/text/regex/MatchResult.kt:34
+-	fun	get	-	0	public operator fun get(name: String): MatchGroup?	commonMain/kotlin/text/regex/MatchResult.kt:42
+-	interface	MatchResult	-	0	public interface MatchResult {	commonMain/kotlin/text/regex/MatchResult.kt:48
+-	val	IntRange	-	0	public val range: IntRange	commonMain/kotlin/text/regex/MatchResult.kt:50
+-	val	String	-	0	public val value: String	commonMain/kotlin/text/regex/MatchResult.kt:52
+-	val	MatchGroupCollection	-	0	public val groups: MatchGroupCollection	commonMain/kotlin/text/regex/MatchResult.kt:59
+-	val	List	-	0	public val groupValues: List<String>	commonMain/kotlin/text/regex/MatchResult.kt:71
+-	val	get	-	0	public val destructured: Destructured get() = Destructured(this)	commonMain/kotlin/text/regex/MatchResult.kt:80
+-	fun	next	-	0	public fun next(): MatchResult?	commonMain/kotlin/text/regex/MatchResult.kt:85
+-	class	Destructured	-	0	public class Destructured internal constructor(public val match: MatchResult) {	commonMain/kotlin/text/regex/MatchResult.kt:97
+-	fun	component1	-	0	public operator inline fun component1(): String = match.groupValues[1]	commonMain/kotlin/text/regex/MatchResult.kt:99
+-	fun	component2	-	0	public operator inline fun component2(): String = match.groupValues[2]	commonMain/kotlin/text/regex/MatchResult.kt:101
+-	fun	component3	-	0	public operator inline fun component3(): String = match.groupValues[3]	commonMain/kotlin/text/regex/MatchResult.kt:103
+-	fun	component4	-	0	public operator inline fun component4(): String = match.groupValues[4]	commonMain/kotlin/text/regex/MatchResult.kt:105
+-	fun	component5	-	0	public operator inline fun component5(): String = match.groupValues[5]	commonMain/kotlin/text/regex/MatchResult.kt:107
+-	fun	component6	-	0	public operator inline fun component6(): String = match.groupValues[6]	commonMain/kotlin/text/regex/MatchResult.kt:109
+-	fun	component7	-	0	public operator inline fun component7(): String = match.groupValues[7]	commonMain/kotlin/text/regex/MatchResult.kt:111
+-	fun	component8	-	0	public operator inline fun component8(): String = match.groupValues[8]	commonMain/kotlin/text/regex/MatchResult.kt:113
+-	fun	component9	-	0	public operator inline fun component9(): String = match.groupValues[9]	commonMain/kotlin/text/regex/MatchResult.kt:115
+-	fun	component10	-	0	public operator inline fun component10(): String = match.groupValues[10]	commonMain/kotlin/text/regex/MatchResult.kt:117
+-	fun	toList	-	1	public fun toList(): List<String> = match.groupValues.subList(1, match.groupValues.size)	commonMain/kotlin/text/regex/MatchResult.kt:125
+-	fun	toRegex	String	0	public inline fun String.toRegex(): Regex = Regex(this)	commonMain/kotlin/text/regex/RegexExtensions.kt:15
+-	fun	toRegex	String	1	public inline fun String.toRegex(option: RegexOption): Regex = Regex(this, option)	commonMain/kotlin/text/regex/RegexExtensions.kt:21
+-	fun	toRegex	String	1	public inline fun String.toRegex(options: Set<RegexOption>): Regex = Regex(this, options)	commonMain/kotlin/text/regex/RegexExtensions.kt:27
+1.9	fun	get	MatchGroupCollection	0	public expect operator fun MatchGroupCollection.get(name: String): MatchGroup?	commonMain/kotlin/text/regex/RegexExtensions.kt:38
+-	class	StringBuilder	-	1	public expect class StringBuilder : Appendable, CharSequence {	commonMain/kotlin/text/StringBuilder.kt:19
+-	fun	reverse	-	0	public fun reverse(): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:53
+-	fun	append	-	0	public fun append(value: Any?): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:61
+1.3	fun	append	-	0	public fun append(value: Boolean): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:70
+1.9	fun	append	-	0	public fun append(value: Int): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:79
+1.9	fun	append	-	0	public fun append(value: Long): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:88
+1.9	fun	append	-	0	public fun append(value: Float): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:97
+1.9	fun	append	-	0	public fun append(value: Double): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:106
+1.4	fun	append	-	0	public fun append(value: CharArray): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:114
+1.3	fun	append	-	0	public fun append(value: String?): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:122
+1.3	fun	capacity	-	0	public fun capacity(): Int	commonMain/kotlin/text/StringBuilder.kt:132
+1.4	fun	ensureCapacity	-	0	public fun ensureCapacity(minimumCapacity: Int)	commonMain/kotlin/text/StringBuilder.kt:141
+1.4	fun	indexOf	-	0	public fun indexOf(string: String): Int	commonMain/kotlin/text/StringBuilder.kt:149
+1.4	fun	indexOf	-	1	public fun indexOf(string: String, startIndex: Int): Int	commonMain/kotlin/text/StringBuilder.kt:158
+1.4	fun	lastIndexOf	-	0	public fun lastIndexOf(string: String): Int	commonMain/kotlin/text/StringBuilder.kt:167
+1.4	fun	lastIndexOf	-	1	public fun lastIndexOf(string: String, startIndex: Int): Int	commonMain/kotlin/text/StringBuilder.kt:176
+1.4	fun	insert	-	1	public fun insert(index: Int, value: Boolean): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:187
+1.9	fun	insert	-	1	public fun insert(index: Int, value: Int): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:198
+1.9	fun	insert	-	1	public fun insert(index: Int, value: Long): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:209
+1.9	fun	insert	-	1	public fun insert(index: Int, value: Float): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:220
+1.9	fun	insert	-	1	public fun insert(index: Int, value: Double): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:231
+1.4	fun	insert	-	1	public fun insert(index: Int, value: Char): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:239
+1.4	fun	insert	-	1	public fun insert(index: Int, value: CharArray): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:249
+1.4	fun	insert	-	1	public fun insert(index: Int, value: CharSequence?): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:262
+1.4	fun	insert	-	1	public fun insert(index: Int, value: Any?): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:273
+1.4	fun	insert	-	1	public fun insert(index: Int, value: String?): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:283
+1.4	fun	setLength	-	0	public fun setLength(newLength: Int)	commonMain/kotlin/text/StringBuilder.kt:297
+1.4	fun	substring	-	0	public fun substring(startIndex: Int): String	commonMain/kotlin/text/StringBuilder.kt:305
+1.4	fun	substring	-	1	public fun substring(startIndex: Int, endIndex: Int): String	commonMain/kotlin/text/StringBuilder.kt:313
+1.4	fun	trimToSize	-	0	public fun trimToSize()	commonMain/kotlin/text/StringBuilder.kt:323
+1.9	fun	append	StringBuilder	0	public expect fun StringBuilder.append(value: Byte): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:334
+1.9	fun	append	StringBuilder	0	public expect fun StringBuilder.append(value: Short): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:343
+1.9	fun	insert	StringBuilder	1	public expect fun StringBuilder.insert(index: Int, value: Byte): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:354
+1.9	fun	insert	StringBuilder	1	public expect fun StringBuilder.insert(index: Int, value: Short): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:365
+1.3	fun	clear	StringBuilder	0	public expect fun StringBuilder.clear(): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:373
+1.4	fun	set	StringBuilder	1	public expect operator fun StringBuilder.set(index: Int, value: Char)	commonMain/kotlin/text/StringBuilder.kt:381
+1.4	fun	setRange	StringBuilder	2	public expect fun StringBuilder.setRange(startIndex: Int, endIndex: Int, value: String): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:393
+1.4	fun	deleteAt	StringBuilder	0	public expect fun StringBuilder.deleteAt(index: Int): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:405
+1.4	fun	deleteRange	StringBuilder	1	public expect fun StringBuilder.deleteRange(startIndex: Int, endIndex: Int): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:416
+1.4	fun	toCharArray	StringBuilder	3	public expect fun StringBuilder.toCharArray(destination: CharArray, destinationOffset: Int = 0, startIndex: Int = 0, endIndex: Int = this.length)	commonMain/kotlin/text/StringBuilder.kt:431
+1.4	fun	appendRange	StringBuilder	2	public expect fun StringBuilder.appendRange(value: CharArray, startIndex: Int, endIndex: Int): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:445
+1.4	fun	appendRange	StringBuilder	2	public expect fun StringBuilder.appendRange(value: CharSequence, startIndex: Int, endIndex: Int): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:457
+1.4	fun	insertRange	StringBuilder	3	public expect fun StringBuilder.insertRange(index: Int, value: CharArray, startIndex: Int, endIndex: Int): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:473
+1.4	fun	insertRange	StringBuilder	3	public expect fun StringBuilder.insertRange(index: Int, value: CharSequence, startIndex: Int, endIndex: Int): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:489
+-	fun	append	StringBuilder	0	public inline fun StringBuilder.append(obj: Any?): StringBuilder = this.append(obj)	commonMain/kotlin/text/StringBuilder.kt:494
+-	fun	buildString	-	0	public inline fun buildString(builderAction: StringBuilder.() -> Unit): String {	commonMain/kotlin/text/StringBuilder.kt:501
+1.1	fun	buildString	-	1	public inline fun buildString(capacity: Int, builderAction: StringBuilder.() -> Unit): String {	commonMain/kotlin/text/StringBuilder.kt:512
+-	fun	append	StringBuilder	0	public fun StringBuilder.append(vararg value: String?): StringBuilder {	commonMain/kotlin/text/StringBuilder.kt:520
+-	fun	append	StringBuilder	0	public fun StringBuilder.append(vararg value: Any?): StringBuilder {	commonMain/kotlin/text/StringBuilder.kt:529
+-	fun	append	StringBuilder	2	public inline fun StringBuilder.append(str: CharArray, offset: Int, len: Int): StringBuilder = throw NotImplementedError()	commonMain/kotlin/text/StringBuilder.kt:539
+1.4	fun	appendLine	StringBuilder	0	public inline fun StringBuilder.appendLine(): StringBuilder = append('\n')	commonMain/kotlin/text/StringBuilder.kt:544
+1.4	fun	appendLine	StringBuilder	0	public inline fun StringBuilder.appendLine(value: CharSequence?): StringBuilder = append(value).appendLine()	commonMain/kotlin/text/StringBuilder.kt:549
+1.4	fun	appendLine	StringBuilder	0	public inline fun StringBuilder.appendLine(value: String?): StringBuilder = append(value).appendLine()	commonMain/kotlin/text/StringBuilder.kt:554
+1.4	fun	appendLine	StringBuilder	0	public inline fun StringBuilder.appendLine(value: Any?): StringBuilder = append(value).appendLine()	commonMain/kotlin/text/StringBuilder.kt:559
+1.4	fun	appendLine	StringBuilder	0	public inline fun StringBuilder.appendLine(value: CharArray): StringBuilder = append(value).appendLine()	commonMain/kotlin/text/StringBuilder.kt:564
+1.4	fun	appendLine	StringBuilder	0	public inline fun StringBuilder.appendLine(value: Char): StringBuilder = append(value).appendLine()	commonMain/kotlin/text/StringBuilder.kt:569
+1.4	fun	appendLine	StringBuilder	0	public inline fun StringBuilder.appendLine(value: Boolean): StringBuilder = append(value).appendLine()	commonMain/kotlin/text/StringBuilder.kt:574
+1.9	fun	appendLine	StringBuilder	0	public expect fun StringBuilder.appendLine(value: Byte): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:578
+1.9	fun	appendLine	StringBuilder	0	public expect fun StringBuilder.appendLine(value: Short): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:582
+1.9	fun	appendLine	StringBuilder	0	public expect fun StringBuilder.appendLine(value: Int): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:586
+1.9	fun	appendLine	StringBuilder	0	public expect fun StringBuilder.appendLine(value: Long): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:590
+1.9	fun	appendLine	StringBuilder	0	public expect fun StringBuilder.appendLine(value: Float): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:594
+1.9	fun	appendLine	StringBuilder	0	public expect fun StringBuilder.appendLine(value: Double): StringBuilder	commonMain/kotlin/text/StringBuilder.kt:598
+1.1	fun	toByteOrNull	String	0	public fun String.toByteOrNull(): Byte? = toByteOrNull(radix = 10)	commonMain/kotlin/text/StringNumberConversions.kt:22
+1.1	fun	toByteOrNull	String	0	public fun String.toByteOrNull(radix: Int): Byte? {	commonMain/kotlin/text/StringNumberConversions.kt:31
+-	val	int	-	0	val int = this.toIntOrNull(radix) ?: return null	commonMain/kotlin/text/StringNumberConversions.kt:32
+1.1	fun	toShortOrNull	String	0	public fun String.toShortOrNull(): Short? = toShortOrNull(radix = 10)	commonMain/kotlin/text/StringNumberConversions.kt:47
+1.1	fun	toShortOrNull	String	0	public fun String.toShortOrNull(radix: Int): Short? {	commonMain/kotlin/text/StringNumberConversions.kt:56
+-	val	int	-	0	val int = this.toIntOrNull(radix) ?: return null	commonMain/kotlin/text/StringNumberConversions.kt:57
+1.1	fun	toIntOrNull	String	0	public fun String.toIntOrNull(): Int? = toIntOrNull(radix = 10)	commonMain/kotlin/text/StringNumberConversions.kt:72
+1.1	fun	toIntOrNull	String	0	public fun String.toIntOrNull(radix: Int): Int? {	commonMain/kotlin/text/StringNumberConversions.kt:81
+-	val	length	-	0	val length = this.length	commonMain/kotlin/text/StringNumberConversions.kt:84
+-	val	Int	-	0	val start: Int	commonMain/kotlin/text/StringNumberConversions.kt:87
+-	val	Boolean	-	0	val isNegative: Boolean	commonMain/kotlin/text/StringNumberConversions.kt:88
+-	val	Int	-	0	val limit: Int	commonMain/kotlin/text/StringNumberConversions.kt:89
+-	val	firstChar	-	0	val firstChar = this[0]	commonMain/kotlin/text/StringNumberConversions.kt:91
+-	val	limitForMaxRadix	-	0	val limitForMaxRadix = (-Int.MAX_VALUE) / 36	commonMain/kotlin/text/StringNumberConversions.kt:112
+-	var	limitBeforeMul	-	0	var limitBeforeMul = limitForMaxRadix	commonMain/kotlin/text/StringNumberConversions.kt:114
+-	var	result	-	0	var result = 0	commonMain/kotlin/text/StringNumberConversions.kt:115
+-	val	digit	-	1	val digit = digitOf(this[i], radix)	commonMain/kotlin/text/StringNumberConversions.kt:117
+1.1	fun	toLongOrNull	String	0	public fun String.toLongOrNull(): Long? = toLongOrNull(radix = 10)	commonMain/kotlin/text/StringNumberConversions.kt:152
+1.1	fun	toLongOrNull	String	0	public fun String.toLongOrNull(radix: Int): Long? {	commonMain/kotlin/text/StringNumberConversions.kt:161
+-	val	length	-	0	val length = this.length	commonMain/kotlin/text/StringNumberConversions.kt:164
+-	val	Int	-	0	val start: Int	commonMain/kotlin/text/StringNumberConversions.kt:167
+-	val	Boolean	-	0	val isNegative: Boolean	commonMain/kotlin/text/StringNumberConversions.kt:168
+-	val	Long	-	0	val limit: Long	commonMain/kotlin/text/StringNumberConversions.kt:169
+-	val	firstChar	-	0	val firstChar = this[0]	commonMain/kotlin/text/StringNumberConversions.kt:171
+-	val	limitForMaxRadix	-	0	val limitForMaxRadix = (-Long.MAX_VALUE) / 36	commonMain/kotlin/text/StringNumberConversions.kt:192
+-	var	limitBeforeMul	-	0	var limitBeforeMul = limitForMaxRadix	commonMain/kotlin/text/StringNumberConversions.kt:194
+-	var	result	-	0	var result = 0L	commonMain/kotlin/text/StringNumberConversions.kt:195
+-	val	digit	-	1	val digit = digitOf(this[i], radix)	commonMain/kotlin/text/StringNumberConversions.kt:197
+-	fun	numberFormatError	-	0	internal fun numberFormatError(input: String): Nothing = throw NumberFormatException("Invalid number format: '$input'")	commonMain/kotlin/text/StringNumberConversions.kt:223
+-	fun	toUpperCase	String	0	public expect fun String.toUpperCase(): String	commonMain/kotlin/text/Strings.kt:20
+1.5	fun	uppercase	String	0	public expect fun String.uppercase(): String	commonMain/kotlin/text/Strings.kt:31
+-	fun	toLowerCase	String	0	public expect fun String.toLowerCase(): String	commonMain/kotlin/text/Strings.kt:38
+1.5	fun	lowercase	String	0	public expect fun String.lowercase(): String	commonMain/kotlin/text/Strings.kt:49
+-	fun	capitalize	String	0	public expect fun String.capitalize(): String	commonMain/kotlin/text/Strings.kt:62
+-	fun	decapitalize	String	0	public expect fun String.decapitalize(): String	commonMain/kotlin/text/Strings.kt:72
+-	fun	trim	CharSequence	0	public inline fun CharSequence.trim(predicate: (Char) -> Boolean): CharSequence {	commonMain/kotlin/text/Strings.kt:77
+-	var	startIndex	-	0	var startIndex = 0	commonMain/kotlin/text/Strings.kt:78
+-	var	endIndex	-	0	var endIndex = length - 1	commonMain/kotlin/text/Strings.kt:79
+-	var	startFound	-	0	var startFound = false	commonMain/kotlin/text/Strings.kt:80
+-	val	index	-	0	val index = if (!startFound) startIndex else endIndex	commonMain/kotlin/text/Strings.kt:83
+-	val	match	-	0	val match = predicate(this[index])	commonMain/kotlin/text/Strings.kt:84
+-	fun	trim	String	0	public inline fun String.trim(predicate: (Char) -> Boolean): String =	commonMain/kotlin/text/Strings.kt:105
+-	fun	trimStart	CharSequence	0	public inline fun CharSequence.trimStart(predicate: (Char) -> Boolean): CharSequence {	commonMain/kotlin/text/Strings.kt:111
+-	fun	trimStart	String	0	public inline fun String.trimStart(predicate: (Char) -> Boolean): String =	commonMain/kotlin/text/Strings.kt:122
+-	fun	trimEnd	CharSequence	0	public inline fun CharSequence.trimEnd(predicate: (Char) -> Boolean): CharSequence {	commonMain/kotlin/text/Strings.kt:128
+-	fun	trimEnd	String	0	public inline fun String.trimEnd(predicate: (Char) -> Boolean): String =	commonMain/kotlin/text/Strings.kt:139
+-	fun	trim	CharSequence	0	public fun CharSequence.trim(vararg chars: Char): CharSequence = trim { it in chars }	commonMain/kotlin/text/Strings.kt:145
+-	fun	trim	String	0	public fun String.trim(vararg chars: Char): String = trim { it in chars }	commonMain/kotlin/text/Strings.kt:150
+-	fun	trimStart	CharSequence	0	public fun CharSequence.trimStart(vararg chars: Char): CharSequence = trimStart { it in chars }	commonMain/kotlin/text/Strings.kt:155
+-	fun	trimStart	String	0	public fun String.trimStart(vararg chars: Char): String = trimStart { it in chars }	commonMain/kotlin/text/Strings.kt:160
+-	fun	trimEnd	CharSequence	0	public fun CharSequence.trimEnd(vararg chars: Char): CharSequence = trimEnd { it in chars }	commonMain/kotlin/text/Strings.kt:165
+-	fun	trimEnd	String	0	public fun String.trimEnd(vararg chars: Char): String = trimEnd { it in chars }	commonMain/kotlin/text/Strings.kt:170
+-	fun	trim	CharSequence	0	public fun CharSequence.trim(): CharSequence = trim(Char::isWhitespace)	commonMain/kotlin/text/Strings.kt:175
+-	fun	trim	String	0	public inline fun String.trim(): String = (this as CharSequence).trim().toString()	commonMain/kotlin/text/Strings.kt:181
+-	fun	trimStart	CharSequence	0	public fun CharSequence.trimStart(): CharSequence = trimStart(Char::isWhitespace)	commonMain/kotlin/text/Strings.kt:186
+-	fun	trimStart	String	0	public inline fun String.trimStart(): String = (this as CharSequence).trimStart().toString()	commonMain/kotlin/text/Strings.kt:192
+-	fun	trimEnd	CharSequence	0	public fun CharSequence.trimEnd(): CharSequence = trimEnd(Char::isWhitespace)	commonMain/kotlin/text/Strings.kt:197
+-	fun	trimEnd	String	0	public inline fun String.trimEnd(): String = (this as CharSequence).trimEnd().toString()	commonMain/kotlin/text/Strings.kt:203
+-	fun	padStart	CharSequence	1	public fun CharSequence.padStart(length: Int, padChar: Char = ' '): CharSequence {	commonMain/kotlin/text/Strings.kt:215
+-	val	sb	-	0	val sb = StringBuilder(length)	commonMain/kotlin/text/Strings.kt:221
+-	fun	padStart	String	1	public fun String.padStart(length: Int, padChar: Char = ' '): String =	commonMain/kotlin/text/Strings.kt:237
+-	fun	padEnd	CharSequence	1	public fun CharSequence.padEnd(length: Int, padChar: Char = ' '): CharSequence {	commonMain/kotlin/text/Strings.kt:250
+-	val	sb	-	0	val sb = StringBuilder(length)	commonMain/kotlin/text/Strings.kt:256
+-	fun	padEnd	String	1	public fun String.padEnd(length: Int, padChar: Char = ' '): String =	commonMain/kotlin/text/Strings.kt:272
+-	fun	isNullOrEmpty	CharSequence	0	public inline fun CharSequence?.isNullOrEmpty(): Boolean {	commonMain/kotlin/text/Strings.kt:281
+-	fun	isEmpty	CharSequence	0	public inline fun CharSequence.isEmpty(): Boolean = length == 0	commonMain/kotlin/text/Strings.kt:295
+-	fun	isNotEmpty	CharSequence	0	public inline fun CharSequence.isNotEmpty(): Boolean = length > 0	commonMain/kotlin/text/Strings.kt:303
+-	fun	isBlank	CharSequence	0	public fun CharSequence.isBlank(): Boolean = all { it.isWhitespace() }	commonMain/kotlin/text/Strings.kt:310
+-	fun	isNotBlank	CharSequence	0	public inline fun CharSequence.isNotBlank(): Boolean = !isBlank()	commonMain/kotlin/text/Strings.kt:318
+-	fun	isNullOrBlank	CharSequence	0	public inline fun CharSequence?.isNullOrBlank(): Boolean {	commonMain/kotlin/text/Strings.kt:326
+-	fun	iterator	CharSequence	0	public operator fun CharSequence.iterator(): CharIterator = object : CharIterator() {	commonMain/kotlin/text/Strings.kt:337
+-	var	index	-	0	private var index = 0	commonMain/kotlin/text/Strings.kt:338
+-	fun	orEmpty	String	0	public inline fun String?.orEmpty(): String = this ?: ""	commonMain/kotlin/text/Strings.kt:347
+1.3	fun	ifEmpty	C	2	public inline fun <C, R> C.ifEmpty(defaultValue: () -> R): R where C : CharSequence, C : R {	commonMain/kotlin/text/Strings.kt:357
+1.3	fun	ifBlank	C	2	public inline fun <C, R> C.ifBlank(defaultValue: () -> R): R where C : CharSequence, C : R {	commonMain/kotlin/text/Strings.kt:372
+-	val	IntRange	-	0	public val CharSequence.indices: IntRange	commonMain/kotlin/text/Strings.kt:382
+-	val	Int	-	0	public val CharSequence.lastIndex: Int	commonMain/kotlin/text/Strings.kt:388
+-	fun	hasSurrogatePairAt	CharSequence	0	public fun CharSequence.hasSurrogatePairAt(index: Int): Boolean {	commonMain/kotlin/text/Strings.kt:394
+-	fun	substring	String	1	public fun String.substring(range: IntRange): String = substring(range.start, range.endInclusive + 1)	commonMain/kotlin/text/Strings.kt:403
+-	fun	subSequence	CharSequence	1	public fun CharSequence.subSequence(range: IntRange): CharSequence = subSequence(range.start, range.endInclusive + 1)	commonMain/kotlin/text/Strings.kt:408
+-	fun	subSequence	String	2	public inline fun String.subSequence(start: Int, end: Int): CharSequence = subSequence(start, end)	commonMain/kotlin/text/Strings.kt:419
+-	fun	substring	CharSequence	2	public inline fun CharSequence.substring(startIndex: Int, endIndex: Int = length): String = subSequence(startIndex, endIndex).toString()	commonMain/kotlin/text/Strings.kt:428
+-	fun	substring	CharSequence	1	public fun CharSequence.substring(range: IntRange): String = subSequence(range.start, range.endInclusive + 1).toString()	commonMain/kotlin/text/Strings.kt:433
+-	fun	substringBefore	String	1	public fun String.substringBefore(delimiter: Char, missingDelimiterValue: String = this): String {	commonMain/kotlin/text/Strings.kt:439
+-	val	index	-	0	val index = indexOf(delimiter)	commonMain/kotlin/text/Strings.kt:440
+-	fun	substringBefore	String	1	public fun String.substringBefore(delimiter: String, missingDelimiterValue: String = this): String {	commonMain/kotlin/text/Strings.kt:448
+-	val	index	-	0	val index = indexOf(delimiter)	commonMain/kotlin/text/Strings.kt:449
+-	fun	substringAfter	String	1	public fun String.substringAfter(delimiter: Char, missingDelimiterValue: String = this): String {	commonMain/kotlin/text/Strings.kt:457
+-	val	index	-	0	val index = indexOf(delimiter)	commonMain/kotlin/text/Strings.kt:458
+-	fun	substringAfter	String	1	public fun String.substringAfter(delimiter: String, missingDelimiterValue: String = this): String {	commonMain/kotlin/text/Strings.kt:466
+-	val	index	-	0	val index = indexOf(delimiter)	commonMain/kotlin/text/Strings.kt:467
+-	fun	substringBeforeLast	String	1	public fun String.substringBeforeLast(delimiter: Char, missingDelimiterValue: String = this): String {	commonMain/kotlin/text/Strings.kt:475
+-	val	index	-	0	val index = lastIndexOf(delimiter)	commonMain/kotlin/text/Strings.kt:476
+-	fun	substringBeforeLast	String	1	public fun String.substringBeforeLast(delimiter: String, missingDelimiterValue: String = this): String {	commonMain/kotlin/text/Strings.kt:484
+-	val	index	-	0	val index = lastIndexOf(delimiter)	commonMain/kotlin/text/Strings.kt:485
+-	fun	substringAfterLast	String	1	public fun String.substringAfterLast(delimiter: Char, missingDelimiterValue: String = this): String {	commonMain/kotlin/text/Strings.kt:493
+-	val	index	-	0	val index = lastIndexOf(delimiter)	commonMain/kotlin/text/Strings.kt:494
+-	fun	substringAfterLast	String	1	public fun String.substringAfterLast(delimiter: String, missingDelimiterValue: String = this): String {	commonMain/kotlin/text/Strings.kt:502
+-	val	index	-	0	val index = lastIndexOf(delimiter)	commonMain/kotlin/text/Strings.kt:503
+-	fun	replaceRange	CharSequence	2	public fun CharSequence.replaceRange(startIndex: Int, endIndex: Int, replacement: CharSequence): CharSequence {	commonMain/kotlin/text/Strings.kt:513
+-	val	sb	-	0	val sb = StringBuilder()	commonMain/kotlin/text/Strings.kt:516
+-	fun	replaceRange	String	2	public inline fun String.replaceRange(startIndex: Int, endIndex: Int, replacement: CharSequence): String =	commonMain/kotlin/text/Strings.kt:529
+-	fun	replaceRange	CharSequence	1	public fun CharSequence.replaceRange(range: IntRange, replacement: CharSequence): CharSequence =	commonMain/kotlin/text/Strings.kt:538
+-	fun	replaceRange	String	1	public inline fun String.replaceRange(range: IntRange, replacement: CharSequence): String =	commonMain/kotlin/text/Strings.kt:547
+-	fun	removeRange	CharSequence	1	public fun CharSequence.removeRange(startIndex: Int, endIndex: Int): CharSequence {	commonMain/kotlin/text/Strings.kt:561
+-	val	sb	-	0	val sb = StringBuilder(length - (endIndex - startIndex))	commonMain/kotlin/text/Strings.kt:568
+-	fun	removeRange	String	1	public inline fun String.removeRange(startIndex: Int, endIndex: Int): String =	commonMain/kotlin/text/Strings.kt:586
+-	fun	removeRange	CharSequence	1	public fun CharSequence.removeRange(range: IntRange): CharSequence = removeRange(range.start, range.endInclusive + 1)	commonMain/kotlin/text/Strings.kt:597
+-	fun	removeRange	String	0	public inline fun String.removeRange(range: IntRange): String =	commonMain/kotlin/text/Strings.kt:608
+-	fun	removePrefix	CharSequence	0	public fun CharSequence.removePrefix(prefix: CharSequence): CharSequence {	commonMain/kotlin/text/Strings.kt:615
+-	fun	removePrefix	String	0	public fun String.removePrefix(prefix: CharSequence): String {	commonMain/kotlin/text/Strings.kt:626
+-	fun	removeSuffix	CharSequence	0	public fun CharSequence.removeSuffix(suffix: CharSequence): CharSequence {	commonMain/kotlin/text/Strings.kt:637
+-	fun	removeSuffix	String	0	public fun String.removeSuffix(suffix: CharSequence): String {	commonMain/kotlin/text/Strings.kt:648
+-	fun	removeSurrounding	CharSequence	1	public fun CharSequence.removeSurrounding(prefix: CharSequence, suffix: CharSequence): CharSequence {	commonMain/kotlin/text/Strings.kt:660
+-	fun	removeSurrounding	String	1	public fun String.removeSurrounding(prefix: CharSequence, suffix: CharSequence): String {	commonMain/kotlin/text/Strings.kt:672
+-	fun	removeSurrounding	CharSequence	1	public fun CharSequence.removeSurrounding(delimiter: CharSequence): CharSequence = removeSurrounding(delimiter, delimiter)	commonMain/kotlin/text/Strings.kt:684
+-	fun	removeSurrounding	String	1	public fun String.removeSurrounding(delimiter: CharSequence): String = removeSurrounding(delimiter, delimiter)	commonMain/kotlin/text/Strings.kt:691
+-	fun	replaceBefore	String	2	public fun String.replaceBefore(delimiter: Char, replacement: String, missingDelimiterValue: String = this): String {	commonMain/kotlin/text/Strings.kt:697
+-	val	index	-	0	val index = indexOf(delimiter)	commonMain/kotlin/text/Strings.kt:698
+-	fun	replaceBefore	String	2	public fun String.replaceBefore(delimiter: String, replacement: String, missingDelimiterValue: String = this): String {	commonMain/kotlin/text/Strings.kt:706
+-	val	index	-	0	val index = indexOf(delimiter)	commonMain/kotlin/text/Strings.kt:707
+-	fun	replaceAfter	String	2	public fun String.replaceAfter(delimiter: Char, replacement: String, missingDelimiterValue: String = this): String {	commonMain/kotlin/text/Strings.kt:715
+-	val	index	-	0	val index = indexOf(delimiter)	commonMain/kotlin/text/Strings.kt:716
+-	fun	replaceAfter	String	2	public fun String.replaceAfter(delimiter: String, replacement: String, missingDelimiterValue: String = this): String {	commonMain/kotlin/text/Strings.kt:724
+-	val	index	-	0	val index = indexOf(delimiter)	commonMain/kotlin/text/Strings.kt:725
+-	fun	replaceAfterLast	String	2	public fun String.replaceAfterLast(delimiter: String, replacement: String, missingDelimiterValue: String = this): String {	commonMain/kotlin/text/Strings.kt:733
+-	val	index	-	0	val index = lastIndexOf(delimiter)	commonMain/kotlin/text/Strings.kt:734
+-	fun	replaceAfterLast	String	2	public fun String.replaceAfterLast(delimiter: Char, replacement: String, missingDelimiterValue: String = this): String {	commonMain/kotlin/text/Strings.kt:742
+-	val	index	-	0	val index = lastIndexOf(delimiter)	commonMain/kotlin/text/Strings.kt:743
+-	fun	replaceBeforeLast	String	2	public fun String.replaceBeforeLast(delimiter: Char, replacement: String, missingDelimiterValue: String = this): String {	commonMain/kotlin/text/Strings.kt:751
+-	val	index	-	0	val index = lastIndexOf(delimiter)	commonMain/kotlin/text/Strings.kt:752
+-	fun	replaceBeforeLast	String	2	public fun String.replaceBeforeLast(delimiter: String, replacement: String, missingDelimiterValue: String = this): String {	commonMain/kotlin/text/Strings.kt:760
+-	val	index	-	0	val index = lastIndexOf(delimiter)	commonMain/kotlin/text/Strings.kt:761
+-	fun	replace	CharSequence	2	public inline fun CharSequence.replace(regex: Regex, replacement: String): String = regex.replace(this, replacement)	commonMain/kotlin/text/Strings.kt:779
+-	fun	replace	CharSequence	1	public inline fun CharSequence.replace(regex: Regex, noinline transform: (MatchResult) -> CharSequence): String =	commonMain/kotlin/text/Strings.kt:787
+-	fun	replaceFirst	CharSequence	2	public inline fun CharSequence.replaceFirst(regex: Regex, replacement: String): String = regex.replaceFirst(this, replacement)	commonMain/kotlin/text/Strings.kt:800
+1.5	fun	replaceFirstChar	String	0	public inline fun String.replaceFirstChar(transform: (Char) -> Char): String {	commonMain/kotlin/text/Strings.kt:815
+1.5	fun	replaceFirstChar	String	0	public inline fun String.replaceFirstChar(transform: (Char) -> CharSequence): String {	commonMain/kotlin/text/Strings.kt:832
+-	fun	matches	CharSequence	0	public inline infix fun CharSequence.matches(regex: Regex): Boolean = regex.matches(this)	commonMain/kotlin/text/Strings.kt:841
+-	fun	regionMatchesImpl	CharSequence	4	internal fun CharSequence.regionMatchesImpl(thisOffset: Int, other: CharSequence, otherOffset: Int, length: Int, ignoreCase: Boolean): Boolean {	commonMain/kotlin/text/Strings.kt:847
+-	fun	startsWith	CharSequence	1	public fun CharSequence.startsWith(char: Char, ignoreCase: Boolean = false): Boolean =	commonMain/kotlin/text/Strings.kt:862
+-	fun	endsWith	CharSequence	1	public fun CharSequence.endsWith(char: Char, ignoreCase: Boolean = false): Boolean =	commonMain/kotlin/text/Strings.kt:868
+-	fun	startsWith	CharSequence	1	public fun CharSequence.startsWith(prefix: CharSequence, ignoreCase: Boolean = false): Boolean {	commonMain/kotlin/text/Strings.kt:874
+-	fun	startsWith	CharSequence	2	public fun CharSequence.startsWith(prefix: CharSequence, startIndex: Int, ignoreCase: Boolean = false): Boolean {	commonMain/kotlin/text/Strings.kt:884
+-	fun	endsWith	CharSequence	1	public fun CharSequence.endsWith(suffix: CharSequence, ignoreCase: Boolean = false): Boolean {	commonMain/kotlin/text/Strings.kt:894
+-	fun	commonPrefixWith	CharSequence	1	public fun CharSequence.commonPrefixWith(other: CharSequence, ignoreCase: Boolean = false): String {	commonMain/kotlin/text/Strings.kt:912
+-	val	shortestLength	-	1	val shortestLength = minOf(this.length, other.length)	commonMain/kotlin/text/Strings.kt:913
+-	var	i	-	0	var i = 0	commonMain/kotlin/text/Strings.kt:915
+-	fun	commonSuffixWith	CharSequence	1	public fun CharSequence.commonSuffixWith(other: CharSequence, ignoreCase: Boolean = false): String {	commonMain/kotlin/text/Strings.kt:933
+-	val	thisLength	-	0	val thisLength = this.length	commonMain/kotlin/text/Strings.kt:934
+-	val	otherLength	-	0	val otherLength = other.length	commonMain/kotlin/text/Strings.kt:935
+-	val	shortestLength	-	1	val shortestLength = minOf(thisLength, otherLength)	commonMain/kotlin/text/Strings.kt:936
+-	var	i	-	0	var i = 0	commonMain/kotlin/text/Strings.kt:938
+-	fun	indexOfAny	CharSequence	2	public fun CharSequence.indexOfAny(chars: CharArray, startIndex: Int = 0, ignoreCase: Boolean = false): Int {	commonMain/kotlin/text/Strings.kt:959
+-	val	char	-	0	val char = chars.single()	commonMain/kotlin/text/Strings.kt:961
+-	val	charAtIndex	-	0	val charAtIndex = get(index)	commonMain/kotlin/text/Strings.kt:966
+-	fun	lastIndexOfAny	CharSequence	2	public fun CharSequence.lastIndexOfAny(chars: CharArray, startIndex: Int = lastIndex, ignoreCase: Boolean = false): Int {	commonMain/kotlin/text/Strings.kt:982
+-	val	char	-	0	val char = chars.single()	commonMain/kotlin/text/Strings.kt:984
+-	val	charAtIndex	-	0	val charAtIndex = get(index)	commonMain/kotlin/text/Strings.kt:990
+-	fun	indexOf	CharSequence	4	private fun CharSequence.indexOf(other: CharSequence, startIndex: Int, endIndex: Int, ignoreCase: Boolean, last: Boolean = false): Int {	commonMain/kotlin/text/Strings.kt:999
+-	val	indices	-	0	val indices = if (!last)	commonMain/kotlin/text/Strings.kt:1000
+-	fun	findAnyOf	CharSequence	4	private fun CharSequence.findAnyOf(strings: Collection<String>, startIndex: Int, ignoreCase: Boolean, last: Boolean): Pair<Int, String>? {	commonMain/kotlin/text/Strings.kt:1019
+-	val	string	-	0	val string = strings.single()	commonMain/kotlin/text/Strings.kt:1021
+-	val	index	-	2	val index = if (!last) indexOf(string, startIndex) else lastIndexOf(string, startIndex)	commonMain/kotlin/text/Strings.kt:1022
+-	val	indices	-	0	val indices = if (!last) startIndex.coerceAtLeast(0)..length else startIndex.coerceAtMost(lastIndex) downTo 0	commonMain/kotlin/text/Strings.kt:1026
+-	val	matchingString	-	4	val matchingString = strings.firstOrNull { it.regionMatches(0, this, index, it.length, ignoreCase) }	commonMain/kotlin/text/Strings.kt:1030
+-	val	matchingString	-	4	val matchingString = strings.firstOrNull { it.regionMatchesImpl(0, this, index, it.length, ignoreCase) }	commonMain/kotlin/text/Strings.kt:1036
+-	fun	findAnyOf	CharSequence	3	public fun CharSequence.findAnyOf(strings: Collection<String>, startIndex: Int = 0, ignoreCase: Boolean = false): Pair<Int, String>? =	commonMain/kotlin/text/Strings.kt:1057
+-	fun	findLastAnyOf	CharSequence	3	public fun CharSequence.findLastAnyOf(strings: Collection<String>, startIndex: Int = lastIndex, ignoreCase: Boolean = false): Pair<Int, String>? =	commonMain/kotlin/text/Strings.kt:1072
+-	fun	indexOfAny	CharSequence	2	public fun CharSequence.indexOfAny(strings: Collection<String>, startIndex: Int = 0, ignoreCase: Boolean = false): Int =	commonMain/kotlin/text/Strings.kt:1086
+-	fun	lastIndexOfAny	CharSequence	2	public fun CharSequence.lastIndexOfAny(strings: Collection<String>, startIndex: Int = lastIndex, ignoreCase: Boolean = false): Int =	commonMain/kotlin/text/Strings.kt:1101
+-	fun	indexOf	CharSequence	2	public fun CharSequence.indexOf(char: Char, startIndex: Int = 0, ignoreCase: Boolean = false): Int {	commonMain/kotlin/text/Strings.kt:1113
+-	fun	indexOf	CharSequence	2	public fun CharSequence.indexOf(string: String, startIndex: Int = 0, ignoreCase: Boolean = false): Int {	commonMain/kotlin/text/Strings.kt:1128
+-	fun	lastIndexOf	CharSequence	2	public fun CharSequence.lastIndexOf(char: Char, startIndex: Int = lastIndex, ignoreCase: Boolean = false): Int {	commonMain/kotlin/text/Strings.kt:1143
+-	fun	lastIndexOf	CharSequence	2	public fun CharSequence.lastIndexOf(string: String, startIndex: Int = lastIndex, ignoreCase: Boolean = false): Int {	commonMain/kotlin/text/Strings.kt:1159
+-	fun	contains	CharSequence	1	public operator fun CharSequence.contains(other: CharSequence, ignoreCase: Boolean = false): Boolean =	commonMain/kotlin/text/Strings.kt:1173
+-	fun	contains	CharSequence	1	public operator fun CharSequence.contains(char: Char, ignoreCase: Boolean = false): Boolean =	commonMain/kotlin/text/Strings.kt:1187
+-	fun	contains	CharSequence	0	public inline operator fun CharSequence.contains(regex: Regex): Boolean = regex.containsMatchIn(this)	commonMain/kotlin/text/Strings.kt:1194
+-	class	DelimitedRangesSequence	-	0	private class DelimitedRangesSequence(	commonMain/kotlin/text/Strings.kt:1200
+-	val	CharSequence	-	1	private val input: CharSequence,	commonMain/kotlin/text/Strings.kt:1201
+-	val	Int	-	1	private val startIndex: Int,	commonMain/kotlin/text/Strings.kt:1202
+-	val	Int	-	1	private val limit: Int,	commonMain/kotlin/text/Strings.kt:1203
+-	var	Int	-	0	var nextState: Int = -1	commonMain/kotlin/text/Strings.kt:1208
+-	var	Int	-	1	var currentStartIndex: Int = startIndex.coerceIn(0, input.length)	commonMain/kotlin/text/Strings.kt:1209
+-	var	Int	-	0	var nextSearchIndex: Int = currentStartIndex	commonMain/kotlin/text/Strings.kt:1210
+-	var	IntRange	-	0	var nextItem: IntRange? = null	commonMain/kotlin/text/Strings.kt:1211
+-	var	Int	-	0	var counter: Int = 0	commonMain/kotlin/text/Strings.kt:1212
+-	fun	calcNext	-	0	private fun calcNext() {	commonMain/kotlin/text/Strings.kt:1214
+-	val	match	-	0	val match = input.getNextMatch(nextSearchIndex)	commonMain/kotlin/text/Strings.kt:1223
+-	val	length	-	1	val (index, length) = match	commonMain/kotlin/text/Strings.kt:1228
+-	val	result	-	0	val result = nextItem as IntRange	commonMain/kotlin/text/Strings.kt:1243
+-	class	LinesIterator	-	0	private class LinesIterator(private val string: CharSequence) : Iterator<String> {	commonMain/kotlin/text/Strings.kt:1262
+-	object	State	-	0	private companion object State {	commonMain/kotlin/text/Strings.kt:1263
+-	val	UNKNOWN	-	0	const val UNKNOWN = 0	commonMain/kotlin/text/Strings.kt:1264
+-	val	HAS_NEXT	-	0	const val HAS_NEXT = 1	commonMain/kotlin/text/Strings.kt:1265
+-	val	EXHAUSTED	-	0	const val EXHAUSTED = 2	commonMain/kotlin/text/Strings.kt:1266
+-	var	Int	-	0	private var state: Int = UNKNOWN	commonMain/kotlin/text/Strings.kt:1269
+-	var	Int	-	0	private var tokenStartIndex: Int = 0	commonMain/kotlin/text/Strings.kt:1270
+-	var	Int	-	0	private var delimiterStartIndex: Int = 0	commonMain/kotlin/text/Strings.kt:1271
+-	var	Int	-	0	private var delimiterLength: Int = 0	commonMain/kotlin/text/Strings.kt:1272
+-	var	_delimiterLength	-	0	var _delimiterLength = -1	commonMain/kotlin/text/Strings.kt:1284
+-	var	_delimiterStartIndex	-	0	var _delimiterStartIndex = string.length	commonMain/kotlin/text/Strings.kt:1285
+-	val	c	-	0	val c = string[idx]	commonMain/kotlin/text/Strings.kt:1288
+-	val	lastIndex	-	0	val lastIndex = delimiterStartIndex	commonMain/kotlin/text/Strings.kt:1312
+-	val	firstIndex	-	0	val firstIndex = tokenStartIndex	commonMain/kotlin/text/Strings.kt:1313
+-	fun	rangesDelimitedBy	CharSequence	3	private fun CharSequence.rangesDelimitedBy(delimiters: CharArray, startIndex: Int = 0, ignoreCase: Boolean = false, limit: Int = 0): Sequence<IntRange> {	commonMain/kotlin/text/Strings.kt:1329
+-	fun	rangesDelimitedBy	CharSequence	3	private fun CharSequence.rangesDelimitedBy(delimiters: Array<out String>, startIndex: Int = 0, ignoreCase: Boolean = false, limit: Int = 0): Sequence<IntRange> {	commonMain/kotlin/text/Strings.kt:1352
+-	val	delimitersList	-	0	val delimitersList = delimiters.asList()	commonMain/kotlin/text/Strings.kt:1354
+-	fun	requireNonNegativeLimit	-	0	internal fun requireNonNegativeLimit(limit: Int) =	commonMain/kotlin/text/Strings.kt:1360
+-	fun	splitToSequence	CharSequence	2	public fun CharSequence.splitToSequence(vararg delimiters: String, ignoreCase: Boolean = false, limit: Int = 0): Sequence<String> =	commonMain/kotlin/text/Strings.kt:1377
+-	fun	split	CharSequence	2	public fun CharSequence.split(vararg delimiters: String, ignoreCase: Boolean = false, limit: Int = 0): List<String> {	commonMain/kotlin/text/Strings.kt:1393
+-	val	delimiter	-	0	val delimiter = delimiters[0]	commonMain/kotlin/text/Strings.kt:1395
+-	fun	splitToSequence	CharSequence	2	public fun CharSequence.splitToSequence(vararg delimiters: Char, ignoreCase: Boolean = false, limit: Int = 0): Sequence<String> =	commonMain/kotlin/text/Strings.kt:1411
+-	fun	split	CharSequence	2	public fun CharSequence.split(vararg delimiters: Char, ignoreCase: Boolean = false, limit: Int = 0): List<String> {	commonMain/kotlin/text/Strings.kt:1422
+-	fun	split	CharSequence	2	private fun CharSequence.split(delimiter: String, ignoreCase: Boolean, limit: Int): List<String> {	commonMain/kotlin/text/Strings.kt:1438
+-	var	currentOffset	-	0	var currentOffset = 0	commonMain/kotlin/text/Strings.kt:1441
+-	var	nextIndex	-	2	var nextIndex = indexOf(delimiter, currentOffset, ignoreCase)	commonMain/kotlin/text/Strings.kt:1442
+-	val	isLimited	-	0	val isLimited = limit > 0	commonMain/kotlin/text/Strings.kt:1447
+-	val	result	-	0	val result = ArrayList<String>(if (isLimited) limit.coerceAtMost(10) else 10)	commonMain/kotlin/text/Strings.kt:1448
+-	fun	split	CharSequence	2	public inline fun CharSequence.split(regex: Regex, limit: Int = 0): List<String> = regex.split(this, limit)	commonMain/kotlin/text/Strings.kt:1469
+1.6	fun	splitToSequence	CharSequence	2	public inline fun CharSequence.splitToSequence(regex: Regex, limit: Int = 0): Sequence<String> = regex.splitToSequence(this, limit)	commonMain/kotlin/text/Strings.kt:1480
+-	fun	lineSequence	CharSequence	0	public fun CharSequence.lineSequence(): Sequence<String> = Sequence { LinesIterator(this) }	commonMain/kotlin/text/Strings.kt:1487
+-	fun	lines	CharSequence	0	public fun CharSequence.lines(): List<String> = lineSequence().toList()	commonMain/kotlin/text/Strings.kt:1494
+1.5	fun	contentEquals	CharSequence	0	public expect infix fun CharSequence?.contentEquals(other: CharSequence?): Boolean	commonMain/kotlin/text/Strings.kt:1503
+1.5	fun	contentEquals	CharSequence	1	public expect fun CharSequence?.contentEquals(other: CharSequence?, ignoreCase: Boolean): Boolean	commonMain/kotlin/text/Strings.kt:1513
+-	fun	contentEqualsIgnoreCaseImpl	CharSequence	0	internal fun CharSequence?.contentEqualsIgnoreCaseImpl(other: CharSequence?): Boolean {	commonMain/kotlin/text/Strings.kt:1515
+-	fun	contentEqualsImpl	CharSequence	0	internal fun CharSequence?.contentEqualsImpl(other: CharSequence?): Boolean {	commonMain/kotlin/text/Strings.kt:1532
+1.5	fun	toBooleanStrict	String	0	public fun String.toBooleanStrict(): Boolean = when (this) {	commonMain/kotlin/text/Strings.kt:1559
+1.5	fun	toBooleanStrictOrNull	String	0	public fun String.toBooleanStrictOrNull(): Boolean? = when (this) {	commonMain/kotlin/text/Strings.kt:1575
+-	object	Typography	-	0	public object Typography {	commonMain/kotlin/text/Typography.kt:11
+-	val	Char	-	0	public const val quote: Char = '\u0022'	commonMain/kotlin/text/Typography.kt:13
+-	val	Char	-	0	public const val dollar: Char = '\u0024'	commonMain/kotlin/text/Typography.kt:15
+-	val	Char	-	0	public const val amp: Char = '\u0026'	commonMain/kotlin/text/Typography.kt:17
+-	val	Char	-	0	public const val less: Char = '\u003C'	commonMain/kotlin/text/Typography.kt:19
+-	val	Char	-	0	public const val greater: Char = '\u003E'	commonMain/kotlin/text/Typography.kt:21
+-	val	Char	-	0	public const val nbsp: Char = '\u00A0'	commonMain/kotlin/text/Typography.kt:23
+-	val	Char	-	0	public const val times: Char = '\u00D7'	commonMain/kotlin/text/Typography.kt:25
+-	val	Char	-	0	public const val cent: Char = '\u00A2'	commonMain/kotlin/text/Typography.kt:27
+-	val	Char	-	0	public const val pound: Char = '\u00A3'	commonMain/kotlin/text/Typography.kt:29
+-	val	Char	-	0	public const val section: Char = '\u00A7'	commonMain/kotlin/text/Typography.kt:31
+-	val	Char	-	0	public const val copyright: Char = '\u00A9'	commonMain/kotlin/text/Typography.kt:33
+1.6	val	Char	-	0	public const val leftGuillemet: Char = '\u00AB'	commonMain/kotlin/text/Typography.kt:36
+1.6	val	Char	-	0	public const val rightGuillemet: Char = '\u00BB'	commonMain/kotlin/text/Typography.kt:39
+-	val	Char	-	0	public const val registered: Char = '\u00AE'	commonMain/kotlin/text/Typography.kt:41
+-	val	Char	-	0	public const val degree: Char = '\u00B0'	commonMain/kotlin/text/Typography.kt:43
+-	val	Char	-	0	public const val plusMinus: Char = '\u00B1'	commonMain/kotlin/text/Typography.kt:45
+-	val	Char	-	0	public const val paragraph: Char = '\u00B6'	commonMain/kotlin/text/Typography.kt:47
+-	val	Char	-	0	public const val middleDot: Char = '\u00B7'	commonMain/kotlin/text/Typography.kt:49
+-	val	Char	-	0	public const val half: Char = '\u00BD'	commonMain/kotlin/text/Typography.kt:51
+-	val	Char	-	0	public const val ndash: Char = '\u2013'	commonMain/kotlin/text/Typography.kt:53
+-	val	Char	-	0	public const val mdash: Char = '\u2014'	commonMain/kotlin/text/Typography.kt:55
+-	val	Char	-	0	public const val leftSingleQuote: Char = '\u2018'	commonMain/kotlin/text/Typography.kt:57
+-	val	Char	-	0	public const val rightSingleQuote: Char = '\u2019'	commonMain/kotlin/text/Typography.kt:59
+-	val	Char	-	0	public const val lowSingleQuote: Char = '\u201A'	commonMain/kotlin/text/Typography.kt:61
+-	val	Char	-	0	public const val leftDoubleQuote: Char = '\u201C'	commonMain/kotlin/text/Typography.kt:63
+-	val	Char	-	0	public const val rightDoubleQuote: Char = '\u201D'	commonMain/kotlin/text/Typography.kt:65
+-	val	Char	-	0	public const val lowDoubleQuote: Char = '\u201E'	commonMain/kotlin/text/Typography.kt:67
+-	val	Char	-	0	public const val dagger: Char = '\u2020'	commonMain/kotlin/text/Typography.kt:69
+-	val	Char	-	0	public const val doubleDagger: Char = '\u2021'	commonMain/kotlin/text/Typography.kt:71
+-	val	Char	-	0	public const val bullet: Char = '\u2022'	commonMain/kotlin/text/Typography.kt:73
+-	val	Char	-	0	public const val ellipsis: Char = '\u2026'	commonMain/kotlin/text/Typography.kt:75
+-	val	Char	-	0	public const val prime: Char = '\u2032'	commonMain/kotlin/text/Typography.kt:77
+-	val	Char	-	0	public const val doublePrime: Char = '\u2033'	commonMain/kotlin/text/Typography.kt:79
+-	val	Char	-	0	public const val euro: Char = '\u20AC'	commonMain/kotlin/text/Typography.kt:81
+-	val	Char	-	0	public const val tm: Char = '\u2122'	commonMain/kotlin/text/Typography.kt:83
+-	val	Char	-	0	public const val almostEqual: Char = '\u2248'	commonMain/kotlin/text/Typography.kt:85
+-	val	Char	-	0	public const val notEqual: Char = '\u2260'	commonMain/kotlin/text/Typography.kt:87
+-	val	Char	-	0	public const val lessOrEqual: Char = '\u2264'	commonMain/kotlin/text/Typography.kt:89
+-	val	Char	-	0	public const val greaterOrEqual: Char = '\u2265'	commonMain/kotlin/text/Typography.kt:91
+-	val	Char	-	0	public const val leftGuillemete: Char = '\u00AB'	commonMain/kotlin/text/Typography.kt:96
+-	val	Char	-	0	public const val rightGuillemete: Char = '\u00BB'	commonMain/kotlin/text/Typography.kt:101
+2.2	fun	toHexString	UByteArray	0	public inline fun UByteArray.toHexString(format: HexFormat = HexFormat.Default): String = storage.toHexString(format)	commonMain/kotlin/text/UHexExtensions.kt:37
+2.2	fun	toHexString	UByteArray	0	public inline fun UByteArray.toHexString(	commonMain/kotlin/text/UHexExtensions.kt:68
+2.2	fun	hexToUByteArray	String	0	public inline fun String.hexToUByteArray(format: HexFormat = HexFormat.Default): UByteArray =	commonMain/kotlin/text/UHexExtensions.kt:97
+2.2	fun	toHexString	UByte	0	public inline fun UByte.toHexString(format: HexFormat = HexFormat.Default): String = data.toHexString(format)	commonMain/kotlin/text/UHexExtensions.kt:125
+2.2	fun	hexToUByte	String	0	public inline fun String.hexToUByte(format: HexFormat = HexFormat.Default): UByte = hexToByte(format).toUByte()	commonMain/kotlin/text/UHexExtensions.kt:152
+2.2	fun	toHexString	UShort	0	public inline fun UShort.toHexString(format: HexFormat = HexFormat.Default): String = data.toHexString(format)	commonMain/kotlin/text/UHexExtensions.kt:179
+2.2	fun	hexToUShort	String	0	public inline fun String.hexToUShort(format: HexFormat = HexFormat.Default): UShort = hexToShort(format).toUShort()	commonMain/kotlin/text/UHexExtensions.kt:206
+2.2	fun	toHexString	UInt	0	public inline fun UInt.toHexString(format: HexFormat = HexFormat.Default): String = data.toHexString(format)	commonMain/kotlin/text/UHexExtensions.kt:233
+2.2	fun	hexToUInt	String	0	public inline fun String.hexToUInt(format: HexFormat = HexFormat.Default): UInt = hexToInt(format).toUInt()	commonMain/kotlin/text/UHexExtensions.kt:260
+2.2	fun	toHexString	ULong	0	public inline fun ULong.toHexString(format: HexFormat = HexFormat.Default): String = data.toHexString(format)	commonMain/kotlin/text/UHexExtensions.kt:287
+2.2	fun	hexToULong	String	0	public inline fun String.hexToULong(format: HexFormat = HexFormat.Default): ULong = hexToLong(format).toULong()	commonMain/kotlin/text/UHexExtensions.kt:314
+-	class	Regex	-	0	public expect class Regex {	commonMain/kotlin/TextH.kt:15
+-	val	String	-	0	public val pattern: String	commonMain/kotlin/TextH.kt:26
+-	val	Set	-	0	public val options: Set<RegexOption>	commonMain/kotlin/TextH.kt:29
+-	fun	matchEntire	-	0	public fun matchEntire(input: CharSequence): MatchResult?	commonMain/kotlin/TextH.kt:36
+-	fun	matches	-	0	public infix fun matches(input: CharSequence): Boolean	commonMain/kotlin/TextH.kt:39
+1.7	fun	matchAt	-	1	public fun matchAt(input: CharSequence, index: Int): MatchResult?	commonMain/kotlin/TextH.kt:52
+1.7	fun	matchesAt	-	1	public fun matchesAt(input: CharSequence, index: Int): Boolean	commonMain/kotlin/TextH.kt:65
+-	fun	containsMatchIn	-	0	public fun containsMatchIn(input: CharSequence): Boolean	commonMain/kotlin/TextH.kt:68
+-	fun	replace	-	1	public fun replace(input: CharSequence, replacement: String): String	commonMain/kotlin/TextH.kt:91
+-	fun	replace	-	1	public fun replace(input: CharSequence, transform: (MatchResult) -> CharSequence): String	commonMain/kotlin/TextH.kt:98
+-	fun	replaceFirst	-	1	public fun replaceFirst(input: CharSequence, replacement: String): String	commonMain/kotlin/TextH.kt:121
+-	fun	find	-	1	public fun find(input: CharSequence, startIndex: Int = 0): MatchResult?	commonMain/kotlin/TextH.kt:131
+-	fun	findAll	-	1	public fun findAll(input: CharSequence, startIndex: Int = 0): Sequence<MatchResult>	commonMain/kotlin/TextH.kt:140
+-	fun	split	-	1	public fun split(input: CharSequence, limit: Int = 0): List<String>	commonMain/kotlin/TextH.kt:148
+1.6	fun	splitToSequence	-	1	public fun splitToSequence(input: CharSequence, limit: Int = 0): Sequence<String>	commonMain/kotlin/TextH.kt:158
+-	fun	fromLiteral	-	0	public fun fromLiteral(literal: String): Regex	commonMain/kotlin/TextH.kt:165
+-	fun	escape	-	0	public fun escape(literal: String): String	commonMain/kotlin/TextH.kt:171
+-	fun	escapeReplacement	-	0	public fun escapeReplacement(literal: String): String	commonMain/kotlin/TextH.kt:177
+-	class	MatchGroup	-	0	public expect class MatchGroup {	commonMain/kotlin/TextH.kt:190
+-	val	String	-	0	public val value: String	commonMain/kotlin/TextH.kt:191
+-	class	RegexOption	-	0	public expect enum class RegexOption {	commonMain/kotlin/TextH.kt:202
+-	fun	isHighSurrogate	Char	0	public expect fun Char.isHighSurrogate(): Boolean	commonMain/kotlin/TextH.kt:219
+-	fun	isLowSurrogate	Char	0	public expect fun Char.isLowSurrogate(): Boolean	commonMain/kotlin/TextH.kt:224
+1.2	fun	String	-	0	public expect fun String(chars: CharArray): String	commonMain/kotlin/TextH.kt:235
+1.2	fun	String	-	2	public expect fun String(chars: CharArray, offset: Int, length: Int): String	commonMain/kotlin/TextH.kt:246
+1.4	fun	concatToString	CharArray	0	public expect fun CharArray.concatToString(): String	commonMain/kotlin/TextH.kt:252
+1.4	fun	concatToString	CharArray	1	public expect fun CharArray.concatToString(startIndex: Int = 0, endIndex: Int = this.size): String	commonMain/kotlin/TextH.kt:264
+1.4	fun	toCharArray	String	0	public expect fun String.toCharArray(): CharArray	commonMain/kotlin/TextH.kt:270
+1.4	fun	toCharArray	String	1	public expect fun String.toCharArray(startIndex: Int = 0, endIndex: Int = this.length): CharArray	commonMain/kotlin/TextH.kt:282
+2.0	fun	toCharArray	String	0	public expect fun String.toCharArray(	commonMain/kotlin/TextH.kt:297
+1.4	fun	decodeToString	ByteArray	0	public expect fun ByteArray.decodeToString(): String	commonMain/kotlin/TextH.kt:310
+1.4	fun	decodeToString	ByteArray	0	public expect fun ByteArray.decodeToString(	commonMain/kotlin/TextH.kt:324
+1.4	fun	encodeToByteArray	String	0	public expect fun String.encodeToByteArray(): ByteArray	commonMain/kotlin/TextH.kt:336
+1.4	fun	encodeToByteArray	String	0	public expect fun String.encodeToByteArray(	commonMain/kotlin/TextH.kt:350
+-	fun	nativeIndexOf	String	1	internal expect fun String.nativeIndexOf(str: String, fromIndex: Int): Int	commonMain/kotlin/TextH.kt:357
+-	fun	nativeLastIndexOf	String	1	internal expect fun String.nativeLastIndexOf(str: String, fromIndex: Int): Int	commonMain/kotlin/TextH.kt:358
+-	fun	substring	String	0	public expect fun String.substring(startIndex: Int): String	commonMain/kotlin/TextH.kt:361
+-	fun	substring	String	1	public expect fun String.substring(startIndex: Int, endIndex: Int): String	commonMain/kotlin/TextH.kt:362
+-	fun	repeat	CharSequence	0	public expect fun CharSequence.repeat(n: Int): String	commonMain/kotlin/TextH.kt:369
+-	fun	replace	String	2	public expect fun String.replace(oldChar: Char, newChar: Char, ignoreCase: Boolean = false): String	commonMain/kotlin/TextH.kt:377
+-	fun	replace	String	2	public expect fun String.replace(oldValue: String, newValue: String, ignoreCase: Boolean = false): String	commonMain/kotlin/TextH.kt:385
+-	fun	replaceFirst	String	2	public expect fun String.replaceFirst(oldChar: Char, newChar: Char, ignoreCase: Boolean = false): String	commonMain/kotlin/TextH.kt:390
+-	fun	replaceFirst	String	2	public expect fun String.replaceFirst(oldValue: String, newValue: String, ignoreCase: Boolean = false): String	commonMain/kotlin/TextH.kt:396
+-	fun	equals	String	1	public expect fun String?.equals(other: String?, ignoreCase: Boolean = false): Boolean	commonMain/kotlin/TextH.kt:406
+1.2	fun	compareTo	String	1	public expect fun String.compareTo(other: String, ignoreCase: Boolean = false): Int	commonMain/kotlin/TextH.kt:414
+-	fun	startsWith	String	1	public expect fun String.startsWith(prefix: String, ignoreCase: Boolean = false): Boolean	commonMain/kotlin/TextH.kt:417
+-	fun	startsWith	String	2	public expect fun String.startsWith(prefix: String, startIndex: Int, ignoreCase: Boolean = false): Boolean	commonMain/kotlin/TextH.kt:418
+-	fun	endsWith	String	1	public expect fun String.endsWith(suffix: String, ignoreCase: Boolean = false): Boolean	commonMain/kotlin/TextH.kt:419
+-	fun	nativeIndexOf	String	1	internal expect fun String.nativeIndexOf(ch: Char, fromIndex: Int): Int	commonMain/kotlin/TextH.kt:423
+-	fun	nativeLastIndexOf	String	1	internal expect fun String.nativeLastIndexOf(ch: Char, fromIndex: Int): Int	commonMain/kotlin/TextH.kt:424
+-	fun	regionMatches	CharSequence	0	public expect fun CharSequence.regionMatches(	commonMain/kotlin/TextH.kt:433
+1.9	fun	regionMatches	String	0	public expect fun String.regionMatches(	commonMain/kotlin/TextH.kt:449
+1.2	val	Comparator	-	0	public expect val String.Companion.CASE_INSENSITIVE_ORDER: Comparator<String>	commonMain/kotlin/TextH.kt:465
+1.4	fun	toBoolean	String	0	public expect fun String?.toBoolean(): Boolean	commonMain/kotlin/TextH.kt:473
+-	fun	toByte	String	0	public expect fun String.toByte(): Byte	commonMain/kotlin/TextH.kt:485
+-	fun	toByte	String	0	public expect fun String.toByte(radix: Int): Byte	commonMain/kotlin/TextH.kt:492
+-	fun	toShort	String	0	public expect fun String.toShort(): Short	commonMain/kotlin/TextH.kt:504
+-	fun	toShort	String	0	public expect fun String.toShort(radix: Int): Short	commonMain/kotlin/TextH.kt:511
+-	fun	toInt	String	0	public expect fun String.toInt(): Int	commonMain/kotlin/TextH.kt:523
+-	fun	toInt	String	0	public expect fun String.toInt(radix: Int): Int	commonMain/kotlin/TextH.kt:530
+-	fun	toLong	String	0	public expect fun String.toLong(): Long	commonMain/kotlin/TextH.kt:542
+-	fun	toLong	String	0	public expect fun String.toLong(radix: Int): Long	commonMain/kotlin/TextH.kt:549
+-	fun	toDouble	String	0	public expect fun String.toDouble(): Double	commonMain/kotlin/TextH.kt:555
+-	fun	toFloat	String	0	public expect fun String.toFloat(): Float	commonMain/kotlin/TextH.kt:561
+-	fun	toDoubleOrNull	String	0	public expect fun String.toDoubleOrNull(): Double?	commonMain/kotlin/TextH.kt:567
+-	fun	toFloatOrNull	String	0	public expect fun String.toFloatOrNull(): Float?	commonMain/kotlin/TextH.kt:573
+1.2	fun	toString	Byte	0	public expect fun Byte.toString(radix: Int): String	commonMain/kotlin/TextH.kt:581
+1.2	fun	toString	Short	0	public expect fun Short.toString(radix: Int): String	commonMain/kotlin/TextH.kt:589
+1.2	fun	toString	Int	0	public expect fun Int.toString(radix: Int): String	commonMain/kotlin/TextH.kt:597
+1.2	fun	toString	Long	0	public expect fun Long.toString(radix: Int): String	commonMain/kotlin/TextH.kt:605
+-	fun	checkRadix	-	0	internal expect fun checkRadix(radix: Int): Int	commonMain/kotlin/TextH.kt:608
+-	fun	digitOf	-	1	internal expect fun digitOf(char: Char, radix: Int): Int	commonMain/kotlin/TextH.kt:610
+1.5	fun	toString	ULong	1	public fun ULong.toString(radix: Int): String = ulongToString(this.toLong(), checkRadix(radix))	commonMain/kotlin/UStrings.kt:44
+1.5	fun	toUByte	String	0	public fun String.toUByte(): UByte = toUByteOrNull() ?: numberFormatError(this)	commonMain/kotlin/UStrings.kt:52
+1.5	fun	toUByte	String	0	public fun String.toUByte(radix: Int): UByte = toUByteOrNull(radix) ?: numberFormatError(this)	commonMain/kotlin/UStrings.kt:60
+1.5	fun	toUShort	String	0	public fun String.toUShort(): UShort = toUShortOrNull() ?: numberFormatError(this)	commonMain/kotlin/UStrings.kt:68
+1.5	fun	toUShort	String	0	public fun String.toUShort(radix: Int): UShort = toUShortOrNull(radix) ?: numberFormatError(this)	commonMain/kotlin/UStrings.kt:76
+1.5	fun	toUInt	String	0	public fun String.toUInt(): UInt = toUIntOrNull() ?: numberFormatError(this)	commonMain/kotlin/UStrings.kt:83
+1.5	fun	toUInt	String	0	public fun String.toUInt(radix: Int): UInt = toUIntOrNull(radix) ?: numberFormatError(this)	commonMain/kotlin/UStrings.kt:91
+1.5	fun	toULong	String	0	public fun String.toULong(): ULong = toULongOrNull() ?: numberFormatError(this)	commonMain/kotlin/UStrings.kt:98
+1.5	fun	toULong	String	0	public fun String.toULong(radix: Int): ULong = toULongOrNull(radix) ?: numberFormatError(this)	commonMain/kotlin/UStrings.kt:106
+1.5	fun	toUByteOrNull	String	0	public fun String.toUByteOrNull(): UByte? = toUByteOrNull(radix = 10)	commonMain/kotlin/UStrings.kt:117
+1.5	fun	toUByteOrNull	String	0	public fun String.toUByteOrNull(radix: Int): UByte? {	commonMain/kotlin/UStrings.kt:126
+-	val	int	-	0	val int = this.toUIntOrNull(radix) ?: return null	commonMain/kotlin/UStrings.kt:127
+1.5	fun	toUShortOrNull	String	0	public fun String.toUShortOrNull(): UShort? = toUShortOrNull(radix = 10)	commonMain/kotlin/UStrings.kt:137
+1.5	fun	toUShortOrNull	String	0	public fun String.toUShortOrNull(radix: Int): UShort? {	commonMain/kotlin/UStrings.kt:146
+-	val	int	-	0	val int = this.toUIntOrNull(radix) ?: return null	commonMain/kotlin/UStrings.kt:147
+1.5	fun	toUIntOrNull	String	0	public fun String.toUIntOrNull(): UInt? = toUIntOrNull(radix = 10)	commonMain/kotlin/UStrings.kt:157
+1.5	fun	toUIntOrNull	String	0	public fun String.toUIntOrNull(radix: Int): UInt? {	commonMain/kotlin/UStrings.kt:166
+-	val	length	-	0	val length = this.length	commonMain/kotlin/UStrings.kt:169
+-	val	UInt	-	0	val limit: UInt = UInt.MAX_VALUE	commonMain/kotlin/UStrings.kt:172
+-	val	Int	-	0	val start: Int	commonMain/kotlin/UStrings.kt:173
+-	val	firstChar	-	0	val firstChar = this[0]	commonMain/kotlin/UStrings.kt:175
+-	val	limitForMaxRadix	-	0	val limitForMaxRadix = 119304647u	commonMain/kotlin/UStrings.kt:183
+-	var	limitBeforeMul	-	0	var limitBeforeMul = limitForMaxRadix	commonMain/kotlin/UStrings.kt:185
+-	val	uradix	-	0	val uradix = radix.toUInt()	commonMain/kotlin/UStrings.kt:186
+-	var	result	-	0	var result = 0u	commonMain/kotlin/UStrings.kt:187
+-	val	digit	-	1	val digit = digitOf(this[i], radix)	commonMain/kotlin/UStrings.kt:189
+-	val	beforeAdding	-	0	val beforeAdding = result	commonMain/kotlin/UStrings.kt:206
+1.5	fun	toULongOrNull	String	0	public fun String.toULongOrNull(): ULong? = toULongOrNull(radix = 10)	commonMain/kotlin/UStrings.kt:219
+1.5	fun	toULongOrNull	String	0	public fun String.toULongOrNull(radix: Int): ULong? {	commonMain/kotlin/UStrings.kt:228
+-	val	length	-	0	val length = this.length	commonMain/kotlin/UStrings.kt:231
+-	val	ULong	-	0	val limit: ULong = ULong.MAX_VALUE	commonMain/kotlin/UStrings.kt:234
+-	val	Int	-	0	val start: Int	commonMain/kotlin/UStrings.kt:235
+-	val	firstChar	-	0	val firstChar = this[0]	commonMain/kotlin/UStrings.kt:237
+-	val	limitForMaxRadix	-	0	val limitForMaxRadix = 512409557603043100uL	commonMain/kotlin/UStrings.kt:246
+-	var	limitBeforeMul	-	0	var limitBeforeMul = limitForMaxRadix	commonMain/kotlin/UStrings.kt:248
+-	val	uradix	-	0	val uradix = radix.toULong()	commonMain/kotlin/UStrings.kt:249
+-	var	result	-	0	var result = 0uL	commonMain/kotlin/UStrings.kt:250
+-	val	digit	-	1	val digit = digitOf(this[i], radix)	commonMain/kotlin/UStrings.kt:252
+-	val	beforeAdding	-	0	val beforeAdding = result	commonMain/kotlin/UStrings.kt:269
+-	fun	elementAt	CharSequence	0	public actual inline fun CharSequence.elementAt(index: Int): Char {	jvmMain/generated/_StringsJvm.kt:23
+-	fun	toSortedSet	CharSequence	0	public fun CharSequence.toSortedSet(): java.util.SortedSet<Char> {	jvmMain/generated/_StringsJvm.kt:30
+-	fun	max	CharSequence	0	public fun CharSequence.max(): Char? {	jvmMain/generated/_StringsJvm.kt:37
+-	fun	maxBy	CharSequence	0	public inline fun <R : Comparable<R>> CharSequence.maxBy(selector: (Char) -> R): Char? {	jvmMain/generated/_StringsJvm.kt:44
+-	fun	maxWith	CharSequence	0	public fun CharSequence.maxWith(comparator: Comparator<in Char>): Char? {	jvmMain/generated/_StringsJvm.kt:51
+-	fun	min	CharSequence	0	public fun CharSequence.min(): Char? {	jvmMain/generated/_StringsJvm.kt:58
+-	fun	minBy	CharSequence	0	public inline fun <R : Comparable<R>> CharSequence.minBy(selector: (Char) -> R): Char? {	jvmMain/generated/_StringsJvm.kt:65
+-	fun	minWith	CharSequence	0	public fun CharSequence.minWith(comparator: Comparator<in Char>): Char? {	jvmMain/generated/_StringsJvm.kt:72
+1.4	fun	sumOf	CharSequence	0	public inline fun CharSequence.sumOf(selector: (Char) -> java.math.BigDecimal): java.math.BigDecimal {	jvmMain/generated/_StringsJvm.kt:84
+-	var	BigDecimal	java.math	0	var sum: java.math.BigDecimal = 0.toBigDecimal()	jvmMain/generated/_StringsJvm.kt:85
+1.4	fun	sumOf	CharSequence	0	public inline fun CharSequence.sumOf(selector: (Char) -> java.math.BigInteger): java.math.BigInteger {	jvmMain/generated/_StringsJvm.kt:100
+-	var	BigInteger	java.math	0	var sum: java.math.BigInteger = 0.toBigInteger()	jvmMain/generated/_StringsJvm.kt:101
+-	class	CharCategory	-	1	public actual enum class CharCategory(public val value: Int, public actual val code: String) {	jvmMain/kotlin/text/CharCategoryJVM.kt:8
+-	fun	contains	-	0	public actual operator fun contains(char: Char): Boolean = Character.getType(char) == this.value	jvmMain/kotlin/text/CharCategoryJVM.kt:162
+-	fun	valueOf	-	0	public fun valueOf(category: Int): CharCategory =	jvmMain/kotlin/text/CharCategoryJVM.kt:170
+-	class	CharDirectionality	-	0	public enum class CharDirectionality(public val value: Int) {	jvmMain/kotlin/text/CharDirectionality.kt:13
+-	val	lazy	-	0	private val directionalityMap by lazy { entries.associateBy { it.value } }	jvmMain/kotlin/text/CharDirectionality.kt:118
+-	fun	valueOf	-	0	public fun valueOf(directionality: Int): CharDirectionality =	jvmMain/kotlin/text/CharDirectionality.kt:120
+-	val	CharCategory	-	0	public actual val Char.category: CharCategory	jvmMain/kotlin/text/CharJVM.kt:16
+-	fun	isDefined	Char	0	public actual inline fun Char.isDefined(): Boolean = Character.isDefined(this)	jvmMain/kotlin/text/CharJVM.kt:25
+-	fun	isLetter	Char	0	public actual inline fun Char.isLetter(): Boolean = Character.isLetter(this)	jvmMain/kotlin/text/CharJVM.kt:36
+-	fun	isLetterOrDigit	Char	0	public actual inline fun Char.isLetterOrDigit(): Boolean = Character.isLetterOrDigit(this)	jvmMain/kotlin/text/CharJVM.kt:47
+-	fun	isDigit	Char	0	public actual inline fun Char.isDigit(): Boolean = Character.isDigit(this)	jvmMain/kotlin/text/CharJVM.kt:57
+-	fun	isIdentifierIgnorable	Char	0	public inline fun Char.isIdentifierIgnorable(): Boolean = Character.isIdentifierIgnorable(this)	jvmMain/kotlin/text/CharJVM.kt:65
+-	fun	isISOControl	Char	0	public actual inline fun Char.isISOControl(): Boolean = Character.isISOControl(this)	jvmMain/kotlin/text/CharJVM.kt:76
+-	fun	isJavaIdentifierPart	Char	0	public inline fun Char.isJavaIdentifierPart(): Boolean = Character.isJavaIdentifierPart(this)	jvmMain/kotlin/text/CharJVM.kt:83
+-	fun	isJavaIdentifierStart	Char	0	public inline fun Char.isJavaIdentifierStart(): Boolean = Character.isJavaIdentifierStart(this)	jvmMain/kotlin/text/CharJVM.kt:90
+-	fun	isWhitespace	Char	0	public actual fun Char.isWhitespace(): Boolean = Character.isWhitespace(this) || Character.isSpaceChar(this)	jvmMain/kotlin/text/CharJVM.kt:103
+-	fun	isUpperCase	Char	0	public actual inline fun Char.isUpperCase(): Boolean = Character.isUpperCase(this)	jvmMain/kotlin/text/CharJVM.kt:114
+-	fun	isLowerCase	Char	0	public actual inline fun Char.isLowerCase(): Boolean = Character.isLowerCase(this)	jvmMain/kotlin/text/CharJVM.kt:125
+-	fun	toUpperCase	Char	0	public actual inline fun Char.toUpperCase(): Char = uppercaseChar()	jvmMain/kotlin/text/CharJVM.kt:133
+1.5	fun	uppercaseChar	Char	0	public actual inline fun Char.uppercaseChar(): Char = Character.toUpperCase(this)	jvmMain/kotlin/text/CharJVM.kt:146
+1.5	fun	uppercase	Char	0	public actual inline fun Char.uppercase(): String = toString().uppercase()	jvmMain/kotlin/text/CharJVM.kt:160
+1.5	fun	uppercase	Char	0	public fun Char.uppercase(locale: Locale): String = toString().uppercase(locale)	jvmMain/kotlin/text/CharJVM.kt:173
+-	fun	toLowerCase	Char	0	public actual inline fun Char.toLowerCase(): Char = lowercaseChar()	jvmMain/kotlin/text/CharJVM.kt:181
+1.5	fun	lowercaseChar	Char	0	public actual inline fun Char.lowercaseChar(): Char = Character.toLowerCase(this)	jvmMain/kotlin/text/CharJVM.kt:194
+1.5	fun	lowercase	Char	0	public actual inline fun Char.lowercase(): String = toString().lowercase()	jvmMain/kotlin/text/CharJVM.kt:208
+1.5	fun	lowercase	Char	0	public fun Char.lowercase(locale: Locale): String = toString().lowercase(locale)	jvmMain/kotlin/text/CharJVM.kt:221
+-	fun	isTitleCase	Char	0	public actual inline fun Char.isTitleCase(): Boolean = Character.isTitleCase(this)	jvmMain/kotlin/text/CharJVM.kt:231
+-	fun	toTitleCase	Char	0	public inline fun Char.toTitleCase(): Char = titlecaseChar()	jvmMain/kotlin/text/CharJVM.kt:241
+1.5	fun	titlecaseChar	Char	0	public actual inline fun Char.titlecaseChar(): Char = Character.toTitleCase(this)	jvmMain/kotlin/text/CharJVM.kt:254
+1.5	fun	titlecase	Char	0	public fun Char.titlecase(locale: Locale): String {	jvmMain/kotlin/text/CharJVM.kt:267
+-	val	localizedUppercase	-	0	val localizedUppercase = uppercase(locale)	jvmMain/kotlin/text/CharJVM.kt:268
+-	val	get	-	0	public val Char.directionality: CharDirectionality get() = CharDirectionality.valueOf(Character.getDirectionality(this).toInt())	jvmMain/kotlin/text/CharJVM.kt:281
+-	fun	isHighSurrogate	Char	0	public actual inline fun Char.isHighSurrogate(): Boolean = Character.isHighSurrogate(this)	jvmMain/kotlin/text/CharJVM.kt:287
+-	fun	isLowSurrogate	Char	0	public actual inline fun Char.isLowSurrogate(): Boolean = Character.isLowSurrogate(this)	jvmMain/kotlin/text/CharJVM.kt:293
+-	fun	digitOf	-	2	internal actual fun digitOf(char: Char, radix: Int): Int = Character.digit(char.code, radix)	jvmMain/kotlin/text/CharJVM.kt:303
+-	fun	checkRadix	-	0	internal actual fun checkRadix(radix: Int): Int {	jvmMain/kotlin/text/CharJVM.kt:309
+-	fun	charset	-	0	public inline fun charset(charsetName: String): Charset = Charset.forName(charsetName)	jvmMain/kotlin/text/Charsets.kt:17
+-	object	Charsets	-	0	public object Charsets {	jvmMain/kotlin/text/Charsets.kt:24
+-	val	Charset	-	0	public val UTF_8: Charset = Charset.forName("UTF-8")	jvmMain/kotlin/text/Charsets.kt:29
+-	val	Charset	-	0	public val UTF_16: Charset = Charset.forName("UTF-16")	jvmMain/kotlin/text/Charsets.kt:36
+-	val	Charset	-	0	public val UTF_16BE: Charset = Charset.forName("UTF-16BE")	jvmMain/kotlin/text/Charsets.kt:42
+-	val	Charset	-	0	public val UTF_16LE: Charset = Charset.forName("UTF-16LE")	jvmMain/kotlin/text/Charsets.kt:48
+-	val	Charset	-	0	public val US_ASCII: Charset = Charset.forName("US-ASCII")	jvmMain/kotlin/text/Charsets.kt:55
+-	val	Charset	-	0	public val ISO_8859_1: Charset = Charset.forName("ISO-8859-1")	jvmMain/kotlin/text/Charsets.kt:61
+-	val	Charset	-	0	public val UTF_32: Charset	jvmMain/kotlin/text/Charsets.kt:66
+-	val	Charset	-	0	val charset: Charset = Charset.forName("UTF-32")	jvmMain/kotlin/text/Charsets.kt:69
+-	var	Charset	-	0	private var utf_32: Charset? = null	jvmMain/kotlin/text/Charsets.kt:75
+-	val	Charset	-	0	public val UTF_32LE: Charset	jvmMain/kotlin/text/Charsets.kt:80
+-	val	Charset	-	0	val charset: Charset = Charset.forName("UTF-32LE")	jvmMain/kotlin/text/Charsets.kt:83
+-	var	Charset	-	0	private var utf_32le: Charset? = null	jvmMain/kotlin/text/Charsets.kt:89
+-	val	Charset	-	0	public val UTF_32BE: Charset	jvmMain/kotlin/text/Charsets.kt:94
+-	val	Charset	-	0	val charset: Charset = Charset.forName("UTF-32BE")	jvmMain/kotlin/text/Charsets.kt:97
+-	var	Charset	-	0	private var utf_32be: Charset? = null	jvmMain/kotlin/text/Charsets.kt:103
+-	interface	FlagEnum	-	0	private interface FlagEnum {	jvmMain/kotlin/text/regex/Regex.kt:15
+-	val	Int	-	0	public val value: Int	jvmMain/kotlin/text/regex/Regex.kt:16
+-	val	Int	-	0	public val mask: Int	jvmMain/kotlin/text/regex/Regex.kt:17
+-	fun	toInt	-	0	private fun Iterable<FlagEnum>.toInt(): Int =	jvmMain/kotlin/text/regex/Regex.kt:20
+-	fun	fromInt	-	1	private inline fun <reified T> fromInt(value: Int): Set<T> where T : FlagEnum, T : Enum<T> =	jvmMain/kotlin/text/regex/Regex.kt:23
+-	class	RegexOption	-	1	public actual enum class RegexOption(override val value: Int, override val mask: Int = value) : FlagEnum {	jvmMain/kotlin/text/regex/Regex.kt:31
+-	class	MatchGroup	-	1	public actual data class MatchGroup(public actual val value: String, public val range: IntRange)	jvmMain/kotlin/text/regex/Regex.kt:75
+-	class	Regex	-	0	public actual class Regex	jvmMain/kotlin/text/regex/Regex.kt:84
+-	val	String	-	0	public actual val pattern: String	jvmMain/kotlin/text/regex/Regex.kt:100
+-	val	get	-	0	public actual val options: Set<RegexOption> get() = _options ?: fromInt<RegexOption>(nativePattern.flags()).also { _options = it }	jvmMain/kotlin/text/regex/Regex.kt:105
+-	fun	matches	-	0	public actual infix fun matches(input: CharSequence): Boolean = nativePattern.matcher(input).matches()	jvmMain/kotlin/text/regex/Regex.kt:108
+-	fun	containsMatchIn	-	0	public actual fun containsMatchIn(input: CharSequence): Boolean = nativePattern.matcher(input).find()	jvmMain/kotlin/text/regex/Regex.kt:111
+-	fun	find	-	1	public actual fun find(input: CharSequence, startIndex: Int = 0): MatchResult? =	jvmMain/kotlin/text/regex/Regex.kt:122
+-	fun	findAll	-	1	public actual fun findAll(input: CharSequence, startIndex: Int = 0): Sequence<MatchResult> {	jvmMain/kotlin/text/regex/Regex.kt:133
+-	fun	matchEntire	-	0	public actual fun matchEntire(input: CharSequence): MatchResult? = nativePattern.matcher(input).matchEntire(input)	jvmMain/kotlin/text/regex/Regex.kt:145
+1.7	fun	matchAt	-	1	public actual fun matchAt(input: CharSequence, index: Int): MatchResult? =	jvmMain/kotlin/text/regex/Regex.kt:149
+1.7	fun	matchesAt	-	1	public actual fun matchesAt(input: CharSequence, index: Int): Boolean =	jvmMain/kotlin/text/regex/Regex.kt:156
+-	fun	replace	-	1	public actual fun replace(input: CharSequence, replacement: String): String = nativePattern.matcher(input).replaceAll(replacement)	jvmMain/kotlin/text/regex/Regex.kt:182
+-	fun	replace	-	1	public actual fun replace(input: CharSequence, transform: (MatchResult) -> CharSequence): String {	jvmMain/kotlin/text/regex/Regex.kt:189
+-	var	MatchResult	-	0	var match: MatchResult? = find(input) ?: return input.toString()	jvmMain/kotlin/text/regex/Regex.kt:190
+-	var	lastStart	-	0	var lastStart = 0	jvmMain/kotlin/text/regex/Regex.kt:192
+-	val	length	-	0	val length = input.length	jvmMain/kotlin/text/regex/Regex.kt:193
+-	val	sb	-	0	val sb = StringBuilder(length)	jvmMain/kotlin/text/regex/Regex.kt:194
+-	val	foundMatch	-	0	val foundMatch = match!!	jvmMain/kotlin/text/regex/Regex.kt:196
+-	fun	replaceFirst	-	1	public actual fun replaceFirst(input: CharSequence, replacement: String): String =	jvmMain/kotlin/text/regex/Regex.kt:233
+-	fun	split	-	1	public actual fun split(input: CharSequence, limit: Int = 0): List<String> {	jvmMain/kotlin/text/regex/Regex.kt:244
+-	val	matcher	-	0	val matcher = nativePattern.matcher(input)	jvmMain/kotlin/text/regex/Regex.kt:247
+-	val	result	-	0	val result = ArrayList<String>(if (limit > 0) limit.coerceAtMost(10) else 10)	jvmMain/kotlin/text/regex/Regex.kt:250
+-	var	lastStart	-	0	var lastStart = 0	jvmMain/kotlin/text/regex/Regex.kt:251
+-	val	lastSplit	-	0	val lastSplit = limit - 1	jvmMain/kotlin/text/regex/Regex.kt:252
+1.6	fun	splitToSequence	-	1	public actual fun splitToSequence(input: CharSequence, limit: Int = 0): Sequence<String> {	jvmMain/kotlin/text/regex/Regex.kt:274
+-	val	matcher	-	0	val matcher = nativePattern.matcher(input)	jvmMain/kotlin/text/regex/Regex.kt:278
+-	var	nextStart	-	0	var nextStart = 0	jvmMain/kotlin/text/regex/Regex.kt:284
+-	var	splitCount	-	0	var splitCount = 0	jvmMain/kotlin/text/regex/Regex.kt:285
+-	fun	toPattern	-	0	public fun toPattern(): Pattern = nativePattern	jvmMain/kotlin/text/regex/Regex.kt:309
+-	fun	writeReplace	-	1	private fun writeReplace(): Any = Serialized(nativePattern.pattern(), nativePattern.flags())	jvmMain/kotlin/text/regex/Regex.kt:311
+-	fun	readObject	-	0	private fun readObject(input: ObjectInputStream): Unit = throwReadObjectNotSupported()	jvmMain/kotlin/text/regex/Regex.kt:313
+-	class	Serialized	-	1	private class Serialized(val pattern: String, val flags: Int) : Serializable {	jvmMain/kotlin/text/regex/Regex.kt:315
+-	val	Long	-	0	private const val serialVersionUID: Long = 0L	jvmMain/kotlin/text/regex/Regex.kt:317
+-	fun	readResolve	-	1	private fun readResolve(): Any = Regex(Pattern.compile(pattern, flags))	jvmMain/kotlin/text/regex/Regex.kt:320
+-	fun	fromLiteral	-	0	public actual fun fromLiteral(literal: String): Regex = literal.toRegex(RegexOption.LITERAL)	jvmMain/kotlin/text/regex/Regex.kt:328
+-	fun	escape	-	0	public actual fun escape(literal: String): String = Pattern.quote(literal)	jvmMain/kotlin/text/regex/Regex.kt:334
+-	fun	escapeReplacement	-	0	public actual fun escapeReplacement(literal: String): String = Matcher.quoteReplacement(literal)	jvmMain/kotlin/text/regex/Regex.kt:340
+-	fun	ensureUnicodeCase	-	0	private fun ensureUnicodeCase(flags: Int) = if (flags and Pattern.CASE_INSENSITIVE != 0) flags or Pattern.UNICODE_CASE else flags	jvmMain/kotlin/text/regex/Regex.kt:342
+-	fun	findNext	Matcher	1	private fun Matcher.findNext(from: Int, input: CharSequence): MatchResult? {	jvmMain/kotlin/text/regex/Regex.kt:349
+-	fun	matchEntire	Matcher	0	private fun Matcher.matchEntire(input: CharSequence): MatchResult? {	jvmMain/kotlin/text/regex/Regex.kt:353
+-	class	MatcherMatchResult	-	1	private class MatcherMatchResult(private val matcher: Matcher, private val input: CharSequence) : MatchResult {	jvmMain/kotlin/text/regex/Regex.kt:357
+-	val	get	-	0	private val matchResult: java.util.regex.MatchResult get() = matcher	jvmMain/kotlin/text/regex/Regex.kt:358
+-	val	range	-	0	val range = matchResult.range(index)	jvmMain/kotlin/text/regex/Regex.kt:370
+-	val	nextIndex	-	0	val nextIndex = matchResult.end() + if (matchResult.end() == matchResult.start()) 1 else 0	jvmMain/kotlin/text/regex/Regex.kt:396
+-	fun	range	java.util.regex.MatchResult	0	private fun java.util.regex.MatchResult.range(): IntRange = start() until end()	jvmMain/kotlin/text/regex/Regex.kt:402
+-	fun	range	java.util.regex.MatchResult	0	private fun java.util.regex.MatchResult.range(groupIndex: Int): IntRange = start(groupIndex) until end(groupIndex)	jvmMain/kotlin/text/regex/Regex.kt:403
+1.2	fun	get	MatchGroupCollection	0	public actual operator fun MatchGroupCollection.get(name: String): MatchGroup? {	jvmMain/kotlin/text/regex/RegexExtensions.kt:19
+-	val	namedGroups	-	0	val namedGroups = this as? MatchNamedGroupCollection	jvmMain/kotlin/text/regex/RegexExtensions.kt:20
+-	fun	toRegex	java.util.regex.Pattern	0	public inline fun java.util.regex.Pattern.toRegex(): Regex = Regex(this)	jvmMain/kotlin/text/regex/RegexExtensionsJVM.kt:18
+1.9	fun	append	StringBuilder	0	public actual inline fun StringBuilder.append(value: Byte): StringBuilder = this.append(value.toInt())	jvmMain/kotlin/text/StringBuilderJVM.kt:19
+1.9	fun	append	StringBuilder	0	public actual inline fun StringBuilder.append(value: Short): StringBuilder = this.append(value.toInt())	jvmMain/kotlin/text/StringBuilderJVM.kt:29
+1.9	fun	insert	StringBuilder	2	public actual inline fun StringBuilder.insert(index: Int, value: Byte): StringBuilder = this.insert(index, value.toInt())	jvmMain/kotlin/text/StringBuilderJVM.kt:41
+1.9	fun	insert	StringBuilder	2	public actual inline fun StringBuilder.insert(index: Int, value: Short): StringBuilder = this.insert(index, value.toInt())	jvmMain/kotlin/text/StringBuilderJVM.kt:53
+1.3	fun	clear	StringBuilder	0	public actual fun StringBuilder.clear(): StringBuilder = apply { setLength(0) }	jvmMain/kotlin/text/StringBuilderJVM.kt:61
+-	fun	set	StringBuilder	2	public actual inline operator fun StringBuilder.set(index: Int, value: Char): Unit = this.setCharAt(index, value)	jvmMain/kotlin/text/StringBuilderJVM.kt:69
+1.4	fun	setRange	StringBuilder	2	public actual inline fun StringBuilder.setRange(startIndex: Int, endIndex: Int, value: String): StringBuilder =	jvmMain/kotlin/text/StringBuilderJVM.kt:82
+1.4	fun	deleteAt	StringBuilder	0	public actual inline fun StringBuilder.deleteAt(index: Int): StringBuilder = this.deleteCharAt(index)	jvmMain/kotlin/text/StringBuilderJVM.kt:96
+1.4	fun	deleteRange	StringBuilder	2	public actual inline fun StringBuilder.deleteRange(startIndex: Int, endIndex: Int): StringBuilder = this.delete(startIndex, endIndex)	jvmMain/kotlin/text/StringBuilderJVM.kt:108
+1.4	fun	toCharArray	StringBuilder	3	public actual inline fun StringBuilder.toCharArray(destination: CharArray, destinationOffset: Int = 0, startIndex: Int = 0, endIndex: Int = this.length): Unit =	jvmMain/kotlin/text/StringBuilderJVM.kt:125
+1.4	fun	appendRange	StringBuilder	2	public actual inline fun StringBuilder.appendRange(value: CharArray, startIndex: Int, endIndex: Int): StringBuilder =	jvmMain/kotlin/text/StringBuilderJVM.kt:141
+1.4	fun	appendRange	StringBuilder	2	public actual inline fun StringBuilder.appendRange(value: CharSequence, startIndex: Int, endIndex: Int): StringBuilder =	jvmMain/kotlin/text/StringBuilderJVM.kt:155
+1.4	fun	insertRange	StringBuilder	3	public actual inline fun StringBuilder.insertRange(index: Int, value: CharArray, startIndex: Int, endIndex: Int): StringBuilder =	jvmMain/kotlin/text/StringBuilderJVM.kt:173
+1.4	fun	insertRange	StringBuilder	3	public actual inline fun StringBuilder.insertRange(index: Int, value: CharSequence, startIndex: Int, endIndex: Int): StringBuilder =	jvmMain/kotlin/text/StringBuilderJVM.kt:191
+1.4	fun	appendLine	StringBuilder	0	public inline fun StringBuilder.appendLine(value: StringBuffer?): StringBuilder = append(value).appendLine()	jvmMain/kotlin/text/StringBuilderJVM.kt:198
+1.4	fun	appendLine	StringBuilder	0	public inline fun StringBuilder.appendLine(value: StringBuilder?): StringBuilder = append(value).appendLine()	jvmMain/kotlin/text/StringBuilderJVM.kt:203
+1.4	fun	appendLine	StringBuilder	0	public actual inline fun StringBuilder.appendLine(value: Int): StringBuilder = append(value).appendLine()	jvmMain/kotlin/text/StringBuilderJVM.kt:208
+1.4	fun	appendLine	StringBuilder	0	public actual inline fun StringBuilder.appendLine(value: Short): StringBuilder = append(value.toInt()).appendLine()	jvmMain/kotlin/text/StringBuilderJVM.kt:213
+1.4	fun	appendLine	StringBuilder	0	public actual inline fun StringBuilder.appendLine(value: Byte): StringBuilder = append(value.toInt()).appendLine()	jvmMain/kotlin/text/StringBuilderJVM.kt:218
+1.4	fun	appendLine	StringBuilder	0	public actual inline fun StringBuilder.appendLine(value: Long): StringBuilder = append(value).appendLine()	jvmMain/kotlin/text/StringBuilderJVM.kt:223
+1.4	fun	appendLine	StringBuilder	0	public actual inline fun StringBuilder.appendLine(value: Float): StringBuilder = append(value).appendLine()	jvmMain/kotlin/text/StringBuilderJVM.kt:228
+1.4	fun	appendLine	StringBuilder	0	public actual inline fun StringBuilder.appendLine(value: Double): StringBuilder = append(value).appendLine()	jvmMain/kotlin/text/StringBuilderJVM.kt:233
+-	object	SystemProperties	-	0	private object SystemProperties {	jvmMain/kotlin/text/StringBuilderJVM.kt:236
+-	val	LINE_SEPARATOR	-	0	val LINE_SEPARATOR = System.getProperty("line.separator")!!	jvmMain/kotlin/text/StringBuilderJVM.kt:239
+-	fun	appendln	Appendable	0	public fun Appendable.appendln(): Appendable = append(SystemProperties.LINE_SEPARATOR)	jvmMain/kotlin/text/StringBuilderJVM.kt:248
+-	fun	appendln	Appendable	0	public inline fun Appendable.appendln(value: CharSequence?): Appendable = append(value).appendln()	jvmMain/kotlin/text/StringBuilderJVM.kt:258
+-	fun	appendln	Appendable	0	public inline fun Appendable.appendln(value: Char): Appendable = append(value).appendln()	jvmMain/kotlin/text/StringBuilderJVM.kt:268
+-	fun	appendln	StringBuilder	0	public fun StringBuilder.appendln(): StringBuilder = append(SystemProperties.LINE_SEPARATOR)	jvmMain/kotlin/text/StringBuilderJVM.kt:276
+-	fun	appendln	StringBuilder	0	public inline fun StringBuilder.appendln(value: StringBuffer?): StringBuilder = append(value).appendln()	jvmMain/kotlin/text/StringBuilderJVM.kt:286
+-	fun	appendln	StringBuilder	0	public inline fun StringBuilder.appendln(value: CharSequence?): StringBuilder = append(value).appendln()	jvmMain/kotlin/text/StringBuilderJVM.kt:296
+-	fun	appendln	StringBuilder	0	public inline fun StringBuilder.appendln(value: String?): StringBuilder = append(value).appendln()	jvmMain/kotlin/text/StringBuilderJVM.kt:306
+-	fun	appendln	StringBuilder	0	public inline fun StringBuilder.appendln(value: Any?): StringBuilder = append(value).appendln()	jvmMain/kotlin/text/StringBuilderJVM.kt:316
+-	fun	appendln	StringBuilder	0	public inline fun StringBuilder.appendln(value: StringBuilder?): StringBuilder = append(value).appendln()	jvmMain/kotlin/text/StringBuilderJVM.kt:326
+-	fun	appendln	StringBuilder	0	public inline fun StringBuilder.appendln(value: CharArray): StringBuilder = append(value).appendln()	jvmMain/kotlin/text/StringBuilderJVM.kt:336
+-	fun	appendln	StringBuilder	0	public inline fun StringBuilder.appendln(value: Char): StringBuilder = append(value).appendln()	jvmMain/kotlin/text/StringBuilderJVM.kt:346
+-	fun	appendln	StringBuilder	0	public inline fun StringBuilder.appendln(value: Boolean): StringBuilder = append(value).appendln()	jvmMain/kotlin/text/StringBuilderJVM.kt:356
+-	fun	appendln	StringBuilder	0	public inline fun StringBuilder.appendln(value: Int): StringBuilder = append(value).appendln()	jvmMain/kotlin/text/StringBuilderJVM.kt:366
+-	fun	appendln	StringBuilder	0	public inline fun StringBuilder.appendln(value: Short): StringBuilder = append(value.toInt()).appendln()	jvmMain/kotlin/text/StringBuilderJVM.kt:376
+-	fun	appendln	StringBuilder	0	public inline fun StringBuilder.appendln(value: Byte): StringBuilder = append(value.toInt()).appendln()	jvmMain/kotlin/text/StringBuilderJVM.kt:386
+-	fun	appendln	StringBuilder	0	public inline fun StringBuilder.appendln(value: Long): StringBuilder = append(value).appendln()	jvmMain/kotlin/text/StringBuilderJVM.kt:396
+-	fun	appendln	StringBuilder	0	public inline fun StringBuilder.appendln(value: Float): StringBuilder = append(value).appendln()	jvmMain/kotlin/text/StringBuilderJVM.kt:406
+-	fun	appendln	StringBuilder	0	public inline fun StringBuilder.appendln(value: Double): StringBuilder = append(value).appendln()	jvmMain/kotlin/text/StringBuilderJVM.kt:416
+1.1	fun	toString	Byte	0	public actual inline fun Byte.toString(radix: Int): String = this.toInt().toString(radix)	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:19
+1.1	fun	toString	Short	0	public actual inline fun Short.toString(radix: Int): String = this.toInt().toString(radix)	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:28
+1.1	fun	toString	Int	1	public actual inline fun Int.toString(radix: Int): String = java.lang.Integer.toString(this, checkRadix(radix))	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:37
+1.1	fun	toString	Long	1	public actual inline fun Long.toString(radix: Int): String = java.lang.Long.toString(this, checkRadix(radix))	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:46
+1.4	fun	toBoolean	String	0	public actual inline fun String?.toBoolean(): Boolean = java.lang.Boolean.parseBoolean(this)	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:55
+-	fun	toByte	String	0	public actual inline fun String.toByte(): Byte = java.lang.Byte.parseByte(this)	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:68
+1.1	fun	toByte	String	1	public actual inline fun String.toByte(radix: Int): Byte = java.lang.Byte.parseByte(this, checkRadix(radix))	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:77
+-	fun	toShort	String	0	public actual inline fun String.toShort(): Short = java.lang.Short.parseShort(this)	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:91
+1.1	fun	toShort	String	1	public actual inline fun String.toShort(radix: Int): Short = java.lang.Short.parseShort(this, checkRadix(radix))	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:100
+-	fun	toInt	String	0	public actual inline fun String.toInt(): Int = java.lang.Integer.parseInt(this)	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:113
+1.1	fun	toInt	String	1	public actual inline fun String.toInt(radix: Int): Int = java.lang.Integer.parseInt(this, checkRadix(radix))	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:122
+-	fun	toLong	String	0	public actual inline fun String.toLong(): Long = java.lang.Long.parseLong(this)	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:135
+1.1	fun	toLong	String	1	public actual inline fun String.toLong(radix: Int): Long = java.lang.Long.parseLong(this, checkRadix(radix))	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:144
+-	fun	toFloat	String	0	public actual inline fun String.toFloat(): Float = java.lang.Float.parseFloat(this)	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:151
+-	fun	toDouble	String	0	public actual inline fun String.toDouble(): Double = java.lang.Double.parseDouble(this)	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:158
+1.1	fun	toFloatOrNull	String	1	public actual fun String.toFloatOrNull(): Float? = screenFloatValue(this, java.lang.Float::parseFloat)	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:166
+1.1	fun	toDoubleOrNull	String	1	public actual fun String.toDoubleOrNull(): Double? = screenFloatValue(this, java.lang.Double::parseDouble)	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:173
+1.2	fun	toBigInteger	String	0	public inline fun String.toBigInteger(): java.math.BigInteger =	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:181
+1.2	fun	toBigInteger	String	0	public inline fun String.toBigInteger(radix: Int): java.math.BigInteger =	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:191
+1.2	fun	toBigIntegerOrNull	String	0	public fun String.toBigIntegerOrNull(): java.math.BigInteger? = toBigIntegerOrNull(10)	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:199
+1.2	fun	toBigIntegerOrNull	String	0	public fun String.toBigIntegerOrNull(radix: Int): java.math.BigInteger? {	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:208
+-	val	length	-	0	val length = this.length	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:210
+-	val	start	-	0	val start = if (this[0] == '-') 1 else 0	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:215
+1.2	fun	toBigDecimal	String	0	public inline fun String.toBigDecimal(): java.math.BigDecimal =	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:232
+1.2	fun	toBigDecimal	String	0	public inline fun String.toBigDecimal(mathContext: java.math.MathContext): java.math.BigDecimal =	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:244
+1.2	fun	toBigDecimalOrNull	String	0	public fun String.toBigDecimalOrNull(): java.math.BigDecimal? =	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:252
+1.2	fun	toBigDecimalOrNull	String	0	public fun String.toBigDecimalOrNull(mathContext: java.math.MathContext): java.math.BigDecimal? =	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:263
+-	fun	screenFloatValue	-	1	private inline fun <T> screenFloatValue(str: String, parse: (String) -> T): T? {	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:266
+-	fun	isValidFloat	-	0	private fun isValidFloat(s: String): Boolean {	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:277
+-	var	start	-	0	var start = 0	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:309
+-	var	endInclusive	-	0	var endInclusive = s.length - 1	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:310
+-	var	isHex	-	0	var isHex = false	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:326
+-	var	l	-	0	var l = s[start++].asciiLetterToLowerCaseCode()	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:366
+-	fun	guessNamedFloatConstant	-	1	private inline fun guessNamedFloatConstant(start: Int, endInclusive: Int): String? = when (endInclusive) {	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:409
+-	fun	isAsciiDigit	Char	0	private inline fun Char.isAsciiDigit(): Boolean {	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:423
+-	fun	isHexLetter	Char	0	private inline fun Char.isHexLetter(): Boolean {	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:429
+-	fun	asciiLetterToLowerCaseCode	Char	0	private inline fun Char.asciiLetterToLowerCaseCode(): Int = this.code or 0x20	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:448
+-	fun	advanceWhile	String	2	private inline fun String.advanceWhile(start: Int, endInclusive: Int, predicate: (Char) -> Boolean): Int {	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:451
+-	var	start	-	0	var start = start	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:452
+-	fun	backtrackWhile	String	2	private inline fun String.backtrackWhile(start: Int, endInclusive: Int, predicate: (Char) -> Boolean): Int {	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:458
+-	var	endInclusive	-	0	var endInclusive = endInclusive	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:459
+-	fun	advanceAndValidateMantissa	String	3	private inline fun String.advanceAndValidateMantissa(start: Int, endInclusive: Int, hexFormat: Boolean, predicate: (Char) -> Boolean): Int {	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:470
+-	var	start	-	0	var start = start	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:471
+-	var	checkpoint	-	0	var checkpoint = start	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:474
+-	val	hasIntegerPart	-	0	val hasIntegerPart = checkpoint != start	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:478
+-	var	hasFractionalPart	-	0	var hasFractionalPart = false	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:484
+-	val	constant	-	1	val constant = guessNamedFloatConstant(start, endInclusive)	jvmMain/kotlin/text/StringNumberConversionsJVM.kt:502
+-	fun	nativeIndexOf	String	2	internal actual inline fun String.nativeIndexOf(ch: Char, fromIndex: Int): Int = (this as java.lang.String).indexOf(ch.code, fromIndex)	jvmMain/kotlin/text/StringsJVM.kt:24
+-	fun	nativeIndexOf	String	2	internal actual inline fun String.nativeIndexOf(str: String, fromIndex: Int): Int = (this as java.lang.String).indexOf(str, fromIndex)	jvmMain/kotlin/text/StringsJVM.kt:30
+-	fun	nativeLastIndexOf	String	2	internal actual inline fun String.nativeLastIndexOf(ch: Char, fromIndex: Int): Int = (this as java.lang.String).lastIndexOf(ch.code, fromIndex)	jvmMain/kotlin/text/StringsJVM.kt:36
+-	fun	nativeLastIndexOf	String	2	internal actual inline fun String.nativeLastIndexOf(str: String, fromIndex: Int): Int = (this as java.lang.String).lastIndexOf(str, fromIndex)	jvmMain/kotlin/text/StringsJVM.kt:42
+-	fun	equals	String	1	public actual fun String?.equals(other: String?, ignoreCase: Boolean = false): Boolean {	jvmMain/kotlin/text/StringsJVM.kt:53
+-	fun	replace	String	2	public actual fun String.replace(oldChar: Char, newChar: Char, ignoreCase: Boolean = false): String {	jvmMain/kotlin/text/StringsJVM.kt:68
+-	fun	replace	String	2	public actual fun String.replace(oldValue: String, newValue: String, ignoreCase: Boolean = false): String {	jvmMain/kotlin/text/StringsJVM.kt:86
+-	var	Int	-	2	var occurrenceIndex: Int = indexOf(oldValue, 0, ignoreCase)	jvmMain/kotlin/text/StringsJVM.kt:88
+-	val	oldValueLength	-	0	val oldValueLength = oldValue.length	jvmMain/kotlin/text/StringsJVM.kt:92
+-	val	searchStep	-	0	val searchStep = oldValueLength.coerceAtLeast(1)	jvmMain/kotlin/text/StringsJVM.kt:93
+-	val	newLengthHint	-	0	val newLengthHint = length - oldValueLength + newValue.length	jvmMain/kotlin/text/StringsJVM.kt:94
+-	val	stringBuilder	-	0	val stringBuilder = StringBuilder(newLengthHint)	jvmMain/kotlin/text/StringsJVM.kt:96
+-	var	i	-	0	var i = 0	jvmMain/kotlin/text/StringsJVM.kt:98
+-	fun	replaceFirst	String	2	public actual fun String.replaceFirst(oldChar: Char, newChar: Char, ignoreCase: Boolean = false): String {	jvmMain/kotlin/text/StringsJVM.kt:113
+-	val	index	-	1	val index = indexOf(oldChar, ignoreCase = ignoreCase)	jvmMain/kotlin/text/StringsJVM.kt:114
+-	fun	replaceFirst	String	2	public actual fun String.replaceFirst(oldValue: String, newValue: String, ignoreCase: Boolean = false): String {	jvmMain/kotlin/text/StringsJVM.kt:123
+-	val	index	-	1	val index = indexOf(oldValue, ignoreCase = ignoreCase)	jvmMain/kotlin/text/StringsJVM.kt:124
+-	fun	toUpperCase	String	0	public actual inline fun String.toUpperCase(): String = (this as java.lang.String).toUpperCase()	jvmMain/kotlin/text/StringsJVM.kt:134
+1.5	fun	uppercase	String	0	public actual inline fun String.uppercase(): String = (this as java.lang.String).toUpperCase(Locale.ROOT)	jvmMain/kotlin/text/StringsJVM.kt:146
+-	fun	toLowerCase	String	0	public actual inline fun String.toLowerCase(): String = (this as java.lang.String).toLowerCase()	jvmMain/kotlin/text/StringsJVM.kt:154
+1.5	fun	lowercase	String	0	public actual inline fun String.lowercase(): String = (this as java.lang.String).toLowerCase(Locale.ROOT)	jvmMain/kotlin/text/StringsJVM.kt:166
+1.4	fun	concatToString	CharArray	0	public actual fun CharArray.concatToString(): String {	jvmMain/kotlin/text/StringsJVM.kt:172
+1.4	fun	concatToString	CharArray	1	public actual fun CharArray.concatToString(startIndex: Int = 0, endIndex: Int = this.size): String {	jvmMain/kotlin/text/StringsJVM.kt:187
+1.4	fun	toCharArray	String	1	public actual fun String.toCharArray(startIndex: Int = 0, endIndex: Int = this.length): CharArray {	jvmMain/kotlin/text/StringsJVM.kt:203
+1.4	fun	decodeToString	ByteArray	0	public actual fun ByteArray.decodeToString(): String {	jvmMain/kotlin/text/StringsJVM.kt:214
+1.4	fun	decodeToString	ByteArray	0	public actual fun ByteArray.decodeToString(	jvmMain/kotlin/text/StringsJVM.kt:231
+-	val	decoder	-	0	val decoder = Charsets.UTF_8.newDecoder()	jvmMain/kotlin/text/StringsJVM.kt:242
+1.4	fun	encodeToByteArray	String	0	public actual fun String.encodeToByteArray(): ByteArray {	jvmMain/kotlin/text/StringsJVM.kt:255
+1.4	fun	encodeToByteArray	String	0	public actual fun String.encodeToByteArray(	jvmMain/kotlin/text/StringsJVM.kt:272
+-	val	encoder	-	0	val encoder = Charsets.UTF_8.newEncoder()	jvmMain/kotlin/text/StringsJVM.kt:283
+-	val	byteBuffer	-	2	val byteBuffer = encoder.encode(CharBuffer.wrap(this, startIndex, endIndex))	jvmMain/kotlin/text/StringsJVM.kt:287
+-	fun	toCharArray	String	0	public actual inline fun String.toCharArray(): CharArray = (this as java.lang.String).toCharArray()	jvmMain/kotlin/text/StringsJVM.kt:299
+-	fun	toCharArray	String	0	public actual inline fun String.toCharArray(	jvmMain/kotlin/text/StringsJVM.kt:315
+-	fun	format	String	1	public inline fun String.format(vararg args: Any?): String = java.lang.String.format(this, *args)	jvmMain/kotlin/text/StringsJVM.kt:336
+-	fun	format	String.Companion	2	public inline fun String.Companion.format(format: String, vararg args: Any?): String = java.lang.String.format(format, *args)	jvmMain/kotlin/text/StringsJVM.kt:349
+1.4	fun	format	String	3	public inline fun String.format(locale: Locale?, vararg args: Any?): String = java.lang.String.format(locale, this, *args)	jvmMain/kotlin/text/StringsJVM.kt:363
+1.4	fun	format	String.Companion	2	public inline fun String.Companion.format(locale: Locale?, format: String, vararg args: Any?): String =	jvmMain/kotlin/text/StringsJVM.kt:377
+-	fun	split	CharSequence	1	public fun CharSequence.split(regex: Pattern, limit: Int = 0): List<String> {	jvmMain/kotlin/text/StringsJVM.kt:392
+-	fun	substring	String	0	public actual inline fun String.substring(startIndex: Int): String = (this as java.lang.String).substring(startIndex)	jvmMain/kotlin/text/StringsJVM.kt:401
+-	fun	substring	String	2	public actual inline fun String.substring(startIndex: Int, endIndex: Int): String = (this as java.lang.String).substring(startIndex, endIndex)	jvmMain/kotlin/text/StringsJVM.kt:410
+-	fun	startsWith	String	1	public actual fun String.startsWith(prefix: String, ignoreCase: Boolean = false): Boolean {	jvmMain/kotlin/text/StringsJVM.kt:416
+-	fun	startsWith	String	2	public actual fun String.startsWith(prefix: String, startIndex: Int, ignoreCase: Boolean = false): Boolean {	jvmMain/kotlin/text/StringsJVM.kt:427
+-	fun	endsWith	String	1	public actual fun String.endsWith(suffix: String, ignoreCase: Boolean = false): Boolean {	jvmMain/kotlin/text/StringsJVM.kt:438
+-	fun	String	-	3	public inline fun String(bytes: ByteArray, offset: Int, length: Int, charset: Charset): String =	jvmMain/kotlin/text/StringsJVM.kt:457
+-	fun	String	-	2	public inline fun String(bytes: ByteArray, charset: Charset): String = java.lang.String(bytes, charset) as String	jvmMain/kotlin/text/StringsJVM.kt:465
+-	fun	String	-	2	public inline fun String(bytes: ByteArray, offset: Int, length: Int): String =	jvmMain/kotlin/text/StringsJVM.kt:476
+-	fun	String	-	0	public inline fun String(bytes: ByteArray): String =	jvmMain/kotlin/text/StringsJVM.kt:484
+-	fun	String	-	0	public actual inline fun String(chars: CharArray): String =	jvmMain/kotlin/text/StringsJVM.kt:491
+-	fun	String	-	2	public actual inline fun String(chars: CharArray, offset: Int, length: Int): String =	jvmMain/kotlin/text/StringsJVM.kt:501
+-	fun	String	-	2	public inline fun String(codePoints: IntArray, offset: Int, length: Int): String =	jvmMain/kotlin/text/StringsJVM.kt:508
+-	fun	String	-	0	public inline fun String(stringBuffer: java.lang.StringBuffer): String =	jvmMain/kotlin/text/StringsJVM.kt:515
+-	fun	String	-	0	public inline fun String(stringBuilder: java.lang.StringBuilder): String =	jvmMain/kotlin/text/StringsJVM.kt:522
+-	fun	codePointAt	String	0	public inline fun String.codePointAt(index: Int): Int = (this as java.lang.String).codePointAt(index)	jvmMain/kotlin/text/StringsJVM.kt:529
+-	fun	codePointBefore	String	0	public inline fun String.codePointBefore(index: Int): Int = (this as java.lang.String).codePointBefore(index)	jvmMain/kotlin/text/StringsJVM.kt:535
+-	fun	codePointCount	String	1	public inline fun String.codePointCount(beginIndex: Int, endIndex: Int): Int =	jvmMain/kotlin/text/StringsJVM.kt:541
+-	fun	compareTo	String	1	public actual fun String.compareTo(other: String, ignoreCase: Boolean = false): Int {	jvmMain/kotlin/text/StringsJVM.kt:550
+-	fun	contentEquals	String	0	public inline fun String.contentEquals(charSequence: CharSequence): Boolean = (this as java.lang.String).contentEquals(charSequence)	jvmMain/kotlin/text/StringsJVM.kt:564
+-	fun	contentEquals	String	0	public inline fun String.contentEquals(stringBuilder: StringBuffer): Boolean = (this as java.lang.String).contentEquals(stringBuilder)	jvmMain/kotlin/text/StringsJVM.kt:573
+1.5	fun	contentEquals	CharSequence	0	public actual infix fun CharSequence?.contentEquals(other: CharSequence?): Boolean {	jvmMain/kotlin/text/StringsJVM.kt:585
+1.5	fun	contentEquals	CharSequence	1	public actual fun CharSequence?.contentEquals(other: CharSequence?, ignoreCase: Boolean): Boolean {	jvmMain/kotlin/text/StringsJVM.kt:603
+-	fun	intern	String	0	public inline fun String.intern(): String = (this as java.lang.String).intern()	jvmMain/kotlin/text/StringsJVM.kt:614
+-	fun	offsetByCodePoints	String	1	public inline fun String.offsetByCodePoints(index: Int, codePointOffset: Int): Int =	jvmMain/kotlin/text/StringsJVM.kt:620
+-	fun	regionMatches	CharSequence	4	public actual fun CharSequence.regionMatches(thisOffset: Int, other: CharSequence, otherOffset: Int, length: Int, ignoreCase: Boolean = false): Boolean {	jvmMain/kotlin/text/StringsJVM.kt:631
+-	fun	regionMatches	String	4	public actual fun String.regionMatches(thisOffset: Int, other: String, otherOffset: Int, length: Int, ignoreCase: Boolean = false): Boolean =	jvmMain/kotlin/text/StringsJVM.kt:646
+-	fun	toLowerCase	String	0	public inline fun String.toLowerCase(locale: java.util.Locale): String = lowercase(locale)	jvmMain/kotlin/text/StringsJVM.kt:658
+1.5	fun	lowercase	String	0	public inline fun String.lowercase(locale: Locale): String = (this as java.lang.String).toLowerCase(locale)	jvmMain/kotlin/text/StringsJVM.kt:670
+-	fun	toUpperCase	String	0	public inline fun String.toUpperCase(locale: java.util.Locale): String = uppercase(locale)	jvmMain/kotlin/text/StringsJVM.kt:678
+1.5	fun	uppercase	String	0	public inline fun String.uppercase(locale: Locale): String = (this as java.lang.String).toUpperCase(locale)	jvmMain/kotlin/text/StringsJVM.kt:690
+-	fun	toByteArray	String	0	public inline fun String.toByteArray(charset: Charset = Charsets.UTF_8): ByteArray = (this as java.lang.String).getBytes(charset)	jvmMain/kotlin/text/StringsJVM.kt:697
+-	fun	toPattern	String	0	public inline fun String.toPattern(flags: Int = 0): java.util.regex.Pattern {	jvmMain/kotlin/text/StringsJVM.kt:705
+-	fun	capitalize	String	0	public actual fun String.capitalize(): String {	jvmMain/kotlin/text/StringsJVM.kt:720
+1.4	fun	capitalize	String	0	public fun String.capitalize(locale: Locale): String {	jvmMain/kotlin/text/StringsJVM.kt:736
+-	val	firstChar	-	0	val firstChar = this[0]	jvmMain/kotlin/text/StringsJVM.kt:738
+-	val	titleChar	-	0	val titleChar = firstChar.titlecaseChar()	jvmMain/kotlin/text/StringsJVM.kt:741
+-	fun	decapitalize	String	0	public actual fun String.decapitalize(): String {	jvmMain/kotlin/text/StringsJVM.kt:762
+1.4	fun	decapitalize	String	0	public fun String.decapitalize(locale: Locale): String {	jvmMain/kotlin/text/StringsJVM.kt:774
+-	fun	repeat	CharSequence	0	public actual fun CharSequence.repeat(n: Int): String {	jvmMain/kotlin/text/StringsJVM.kt:783
+-	val	sb	-	0	val sb = StringBuilder(n * length)	jvmMain/kotlin/text/StringsJVM.kt:794
+-	val	Comparator	-	0	public actual val String.Companion.CASE_INSENSITIVE_ORDER: Comparator<String>	jvmMain/kotlin/text/StringsJVM.kt:812
+1.1	typealias	Appendable	-	0	@SinceKotlin("1.1") public actual typealias Appendable = java.lang.Appendable	jvmMain/kotlin/text/TypeAliases.kt:10
+1.1	typealias	StringBuilder	-	0	@SinceKotlin("1.1") public actual typealias StringBuilder = java.lang.StringBuilder	jvmMain/kotlin/text/TypeAliases.kt:13
+1.4	typealias	CharacterCodingException	-	0	public actual typealias CharacterCodingException = java.nio.charset.CharacterCodingException	jvmMain/kotlin/text/TypeAliases.kt:19

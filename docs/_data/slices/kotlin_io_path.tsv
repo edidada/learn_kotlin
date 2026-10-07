@@ -1,0 +1,204 @@
+since	kind	name	receiver	arity	sig	loc
+1.8	interface	CopyActionContext	-	0	public interface CopyActionContext {	jvmMain/jdk7/kotlin/io/path/CopyActionContext.kt:15
+-	fun	copyToIgnoringExistingDirectory	Path	1	public fun Path.copyToIgnoringExistingDirectory(target: Path, followLinks: Boolean): CopyActionResult	jvmMain/jdk7/kotlin/io/path/CopyActionContext.kt:29
+1.8	class	CopyActionResult	-	0	public enum class CopyActionResult {	jvmMain/jdk7/kotlin/io/path/CopyActionResult.kt:15
+1.4	class	ExperimentalPathApi	-	0	public annotation class ExperimentalPathApi	jvmMain/jdk7/kotlin/io/path/ExperimentalPathApi.kt:37
+2.1	interface	FileVisitorBuilder	-	0	public sealed interface FileVisitorBuilder {	jvmMain/jdk7/kotlin/io/path/FileVisitorBuilder.kt:47
+-	fun	onPreVisitDirectory	-	1	public fun onPreVisitDirectory(function: (directory: Path, attributes: BasicFileAttributes) -> FileVisitResult): Unit	jvmMain/jdk7/kotlin/io/path/FileVisitorBuilder.kt:65
+-	fun	onVisitFile	-	1	public fun onVisitFile(function: (file: Path, attributes: BasicFileAttributes) -> FileVisitResult): Unit	jvmMain/jdk7/kotlin/io/path/FileVisitorBuilder.kt:81
+-	fun	onVisitFileFailed	-	1	public fun onVisitFileFailed(function: (file: Path, exception: IOException) -> FileVisitResult): Unit	jvmMain/jdk7/kotlin/io/path/FileVisitorBuilder.kt:99
+-	fun	onPostVisitDirectory	-	1	public fun onPostVisitDirectory(function: (directory: Path, exception: IOException?) -> FileVisitResult): Unit	jvmMain/jdk7/kotlin/io/path/FileVisitorBuilder.kt:121
+-	class	FileVisitorBuilderImpl	-	0	internal class FileVisitorBuilderImpl : FileVisitorBuilder {	jvmMain/jdk7/kotlin/io/path/FileVisitorBuilder.kt:125
+-	var	Boolean	-	0	private var isBuilt: Boolean = false	jvmMain/jdk7/kotlin/io/path/FileVisitorBuilder.kt:130
+-	fun	build	-	0	fun build(): FileVisitor<Path> {	jvmMain/jdk7/kotlin/io/path/FileVisitorBuilder.kt:156
+-	fun	checkIsNotBuilt	-	0	private fun checkIsNotBuilt() {	jvmMain/jdk7/kotlin/io/path/FileVisitorBuilder.kt:162
+-	fun	checkNotDefined	-	1	private fun checkNotDefined(function: Any?, name: String) {	jvmMain/jdk7/kotlin/io/path/FileVisitorBuilder.kt:166
+-	class	FileVisitorImpl	-	0	private class FileVisitorImpl(	jvmMain/jdk7/kotlin/io/path/FileVisitorBuilder.kt:172
+1.8	class	OnErrorResult	-	0	public enum class OnErrorResult {	jvmMain/jdk7/kotlin/io/path/OnErrorResult.kt:15
+1.5	fun	reader	Path	1	public inline fun Path.reader(charset: Charset = Charsets.UTF_8, vararg options: OpenOption): InputStreamReader {	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:31
+1.5	fun	bufferedReader	Path	0	public inline fun Path.bufferedReader(	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:45
+1.5	fun	writer	Path	1	public inline fun Path.writer(charset: Charset = Charsets.UTF_8, vararg options: OpenOption): OutputStreamWriter {	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:67
+1.5	fun	bufferedWriter	Path	0	public inline fun Path.bufferedWriter(	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:81
+1.5	fun	readBytes	Path	0	public inline fun Path.readBytes(): ByteArray {	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:105
+1.5	fun	writeBytes	Path	1	public inline fun Path.writeBytes(array: ByteArray, vararg options: OpenOption): Unit {	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:121
+1.5	fun	appendBytes	Path	0	public inline fun Path.appendBytes(array: ByteArray) {	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:133
+1.5	fun	readText	Path	0	public fun Path.readText(charset: Charset = Charsets.UTF_8): String =	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:148
+1.5	fun	writeText	Path	2	public fun Path.writeText(text: CharSequence, charset: Charset = Charsets.UTF_8, vararg options: OpenOption) {	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:163
+-	val	encoder	-	0	val encoder = charset.newReplaceEncoder()	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:170
+-	val	charBuffer	-	0	val charBuffer = if (text is CharBuffer) text.asReadOnlyBuffer() else CharBuffer.wrap(text)	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:171
+-	val	byteBuffer	-	2	val byteBuffer = byteBufferForEncoding(chunkSize = minOf(text.length, DEFAULT_BUFFER_SIZE), encoder)	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:172
+1.5	fun	appendText	Path	1	public fun Path.appendText(text: CharSequence, charset: Charset = Charsets.UTF_8) {	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:190
+1.5	fun	forEachLine	Path	1	public inline fun Path.forEachLine(charset: Charset = Charsets.UTF_8, action: (line: String) -> Unit): Unit {	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:206
+1.5	fun	inputStream	Path	0	public inline fun Path.inputStream(vararg options: OpenOption): InputStream {	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:220
+1.5	fun	outputStream	Path	0	public inline fun Path.outputStream(vararg options: OpenOption): OutputStream {	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:235
+1.5	fun	readLines	Path	0	public inline fun Path.readLines(charset: Charset = Charsets.UTF_8): List<String> {	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:251
+1.5	fun	useLines	Path	1	public inline fun <T> Path.useLines(charset: Charset = Charsets.UTF_8, block: (Sequence<String>) -> T): T {	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:265
+1.5	fun	writeLines	Path	2	public inline fun Path.writeLines(lines: Iterable<CharSequence>, charset: Charset = Charsets.UTF_8, vararg options: OpenOption): Path {	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:283
+1.5	fun	writeLines	Path	2	public inline fun Path.writeLines(lines: Sequence<CharSequence>, charset: Charset = Charsets.UTF_8, vararg options: OpenOption): Path {	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:298
+1.5	fun	appendLines	Path	1	public inline fun Path.appendLines(lines: Iterable<CharSequence>, charset: Charset = Charsets.UTF_8): Path {	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:310
+1.5	fun	appendLines	Path	1	public inline fun Path.appendLines(lines: Sequence<CharSequence>, charset: Charset = Charsets.UTF_8): Path {	jvmMain/jdk7/kotlin/io/path/PathReadWrite.kt:322
+1.8	fun	copyToRecursively	Path	0	public fun Path.copyToRecursively(	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:74
+-	val	options	-	0	val options = LinkFollowing.toLinkOptions(followLinks)	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:82
+-	val	dstIsDirectory	-	0	val dstIsDirectory = dst.isDirectory(LinkOption.NOFOLLOW_LINKS)	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:83
+-	val	srcIsDirectory	-	0	val srcIsDirectory = src.isDirectory(*options)	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:84
+1.8	fun	copyToRecursively	Path	0	public fun Path.copyToRecursively(	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:159
+-	val	targetExistsAndNotSymlink	-	0	val targetExistsAndNotSymlink = target.exists() && !target.isSymbolicLink()	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:176
+-	val	isSubdirectory	-	0	val isSubdirectory = when {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:182
+-	val	normalizedTarget	-	0	val normalizedTarget = target.normalize()	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:199
+-	fun	destination	-	0	fun destination(source: Path): Path {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:201
+-	val	relativePath	-	0	val relativePath = source.relativeTo(this@copyToRecursively)	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:202
+-	val	destination	-	0	val destination = target.resolve(relativePath.pathString)	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:203
+-	fun	error	-	1	fun error(source: Path, exception: Exception): FileVisitResult {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:214
+-	val	stack	-	0	val stack = arrayListOf<Path>()	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:218
+-	fun	copy	-	1	fun copy(source: Path, attributes: BasicFileAttributes): FileVisitResult {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:221
+-	object	DefaultCopyActionContext	-	0	private object DefaultCopyActionContext : CopyActionContext {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:257
+-	val	options	-	0	val options = LinkFollowing.toLinkOptions(followLinks)	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:259
+-	fun	toFileVisitResult	CopyActionResult	0	private fun CopyActionResult.toFileVisitResult() = when (this) {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:271
+-	fun	toFileVisitResult	OnErrorResult	0	private fun OnErrorResult.toFileVisitResult() = when (this) {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:278
+1.8	fun	deleteRecursively	Path	0	public fun Path.deleteRecursively(): Unit {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:309
+-	val	suppressedExceptions	-	0	val suppressedExceptions = this.deleteRecursivelyImpl()	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:310
+-	class	ExceptionsCollector	-	0	private class ExceptionsCollector(private val limit: Int = 64) {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:319
+-	var	Int	-	0	var totalExceptions: Int = 0	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:320
+-	val	collectedExceptions	-	0	val collectedExceptions = mutableListOf<Exception>()	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:323
+-	var	Path	-	0	var path: Path? = null	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:325
+-	fun	enterEntry	-	0	fun enterEntry(name: Path) {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:327
+-	fun	exitEntry	-	0	fun exitEntry(name: Path) {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:331
+-	fun	collect	-	0	fun collect(exception: Exception) {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:336
+-	val	shouldCollect	-	0	val shouldCollect = collectedExceptions.size < limit	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:338
+-	val	restoredException	-	0	val restoredException = if (path != null) {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:340
+-	fun	deleteRecursivelyImpl	Path	0	private fun Path.deleteRecursivelyImpl(): List<Exception> {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:352
+-	val	collector	-	0	val collector = ExceptionsCollector()	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:353
+-	var	useInsecure	-	0	var useInsecure = true	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:354
+-	val	parent	-	0	val parent = this.parent	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:358
+-	val	directoryStream	-	0	val directoryStream = try { Files.newDirectoryStream(parent) } catch (_: Throwable) { null }	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:360
+-	fun	collectIfThrows	-	1	private inline fun collectIfThrows(collector: ExceptionsCollector, function: () -> Unit) {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:377
+-	fun	tryIgnoreNoSuchFileException	-	0	private inline fun <R> tryIgnoreNoSuchFileException(function: () -> R): R? {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:385
+-	fun	handleEntry	-	2	private fun SecureDirectoryStream<Path>.handleEntry(name: Path, parent: Path?, collector: ExceptionsCollector) {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:391
+-	val	entry	-	0	val entry = collector.path!!	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:397
+-	val	preEnterTotalExceptions	-	0	val preEnterTotalExceptions = collector.totalExceptions	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:402
+-	fun	enterDirectory	-	1	private fun SecureDirectoryStream<Path>.enterDirectory(name: Path, collector: ExceptionsCollector) {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:419
+-	fun	isDirectory	-	1	private fun SecureDirectoryStream<Path>.isDirectory(entryName: Path, vararg options: LinkOption): Boolean {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:431
+-	fun	insecureHandleEntry	-	2	private fun insecureHandleEntry(entry: Path, parent: Path?, collector: ExceptionsCollector) {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:439
+-	val	preEnterTotalExceptions	-	0	val preEnterTotalExceptions = collector.totalExceptions	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:447
+-	fun	insecureEnterDirectory	-	1	private fun insecureEnterDirectory(path: Path, collector: ExceptionsCollector) {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:462
+-	fun	checkFileName	Path	0	internal fun Path.checkFileName() {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:490
+-	val	fileName	-	0	val fileName = this.name	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:491
+-	fun	checkNotSameAs	Path	0	private fun Path.checkNotSameAs(parent: Path) {	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:515
+-	class	IllegalFileNameException	-	0	internal class IllegalFileNameException(	jvmMain/jdk7/kotlin/io/path/PathRecursiveFunctions.kt:525
+-	class	PathTreeWalk	-	0	internal class PathTreeWalk(	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:20
+-	val	Path	-	1	private val start: Path,	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:21
+-	val	Array	-	0	private val options: Array<out PathWalkOption>	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:22
+-	val	Boolean	-	0	private val followLinks: Boolean	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:25
+-	val	Array	-	0	private val linkOptions: Array<LinkOption>	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:28
+-	val	Boolean	-	0	private val includeDirectories: Boolean	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:31
+-	val	Boolean	-	0	private val isBFS: Boolean	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:34
+-	fun	yieldIfNeeded	-	0	private suspend inline fun SequenceScope<Path>.yieldIfNeeded(	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:39
+-	val	path	-	0	val path = node.path	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:44
+-	fun	dfsIterator	-	0	private fun dfsIterator() = iterator<Path> {	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:64
+-	val	stack	-	0	val stack = ArrayDeque<PathNode>()	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:66
+-	val	entriesReader	-	0	val entriesReader = DirectoryEntriesReader(followLinks)	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:67
+-	val	startNode	-	3	val startNode = PathNode(start, keyOf(start, linkOptions), null)	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:69
+-	val	topNode	-	0	val topNode = stack.last()	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:76
+-	val	topIterator	-	0	val topIterator = topNode.contentIterator!!	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:77
+-	val	pathNode	-	0	val pathNode = topIterator.next()	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:80
+-	fun	bfsIterator	-	0	private fun bfsIterator() = iterator<Path> {	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:92
+-	val	queue	-	0	val queue = ArrayDeque<PathNode>()	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:94
+-	val	entriesReader	-	0	val entriesReader = DirectoryEntriesReader(followLinks)	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:95
+-	val	pathNode	-	0	val pathNode = queue.removeFirst()	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:100
+-	fun	keyOf	-	1	private fun keyOf(path: Path, linkOptions: Array<LinkOption>): Any? {	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:109
+-	class	PathNode	-	2	private class PathNode(val path: Path, val key: Any?, val parent: PathNode?) {	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:118
+-	fun	createsCycle	PathNode	0	private fun PathNode.createsCycle(): Boolean {	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:122
+-	var	ancestor	-	0	var ancestor = parent	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:123
+-	object	LinkFollowing	-	0	internal object LinkFollowing {	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:143
+-	val	nofollowLinkOption	-	0	private val nofollowLinkOption = arrayOf(LinkOption.NOFOLLOW_LINKS)	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:144
+-	val	followLinkOption	-	0	private val followLinkOption = emptyArray<LinkOption>()	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:145
+-	val	nofollowVisitOption	-	0	private val nofollowVisitOption = emptySet<FileVisitOption>()	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:147
+-	val	followVisitOption	-	0	private val followVisitOption = setOf(FileVisitOption.FOLLOW_LINKS)	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:148
+-	fun	toLinkOptions	-	0	fun toLinkOptions(followLinks: Boolean): Array<LinkOption> =	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:150
+-	fun	toVisitOptions	-	0	fun toVisitOptions(followLinks: Boolean): Set<FileVisitOption> =	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:153
+-	class	DirectoryEntriesReader	-	0	private class DirectoryEntriesReader(val followLinks: Boolean) : SimpleFileVisitor<Path>() {	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:158
+-	var	PathNode	-	0	private var directoryNode: PathNode? = null	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:159
+-	var	entries	-	0	private var entries = ArrayDeque<PathNode>()	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:160
+-	fun	readEntries	-	0	fun readEntries(directoryNode: PathNode): List<PathNode> {	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:162
+-	val	directoryEntry	-	2	val directoryEntry = PathNode(dir, attrs.fileKey(), directoryNode)	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:170
+-	val	fileEntry	-	2	val fileEntry = PathNode(file, null, directoryNode)	jvmMain/jdk7/kotlin/io/path/PathTreeWalk.kt:176
+1.5	val	String	-	0	public val Path.name: String	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:27
+1.5	val	String	-	0	public val Path.nameWithoutExtension: String	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:35
+1.5	val	String	-	0	public val Path.extension: String	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:43
+1.5	val	String	-	0	public inline val Path.pathString: String	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:56
+1.5	val	String	-	0	public val Path.invariantSeparatorsPathString: String	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:64
+-	val	separator	-	0	val separator = fileSystem.separator	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:66
+1.4	val	String	-	0	public inline val Path.invariantSeparatorsPath: String	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:75
+1.5	fun	absolute	Path	0	public inline fun Path.absolute(): Path = toAbsolutePath()	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:90
+1.5	fun	absolutePathString	Path	0	public inline fun Path.absolutePathString(): String = toAbsolutePath().toString()	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:103
+1.5	fun	relativeTo	Path	0	public fun Path.relativeTo(base: Path): Path = try {	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:116
+1.5	fun	relativeToOrSelf	Path	0	public fun Path.relativeToOrSelf(base: Path): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:131
+1.5	fun	relativeToOrNull	Path	0	public fun Path.relativeToOrNull(base: Path): Path? = try {	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:143
+-	object	PathRelativizer	-	0	private object PathRelativizer {	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:149
+-	val	emptyPath	-	0	private val emptyPath = Paths.get("")	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:150
+-	val	parentPath	-	0	private val parentPath = Paths.get("..")	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:151
+-	fun	tryRelativeTo	-	1	fun tryRelativeTo(path: Path, base: Path): Path {	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:154
+-	val	bn	-	0	val bn = base.normalize()	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:155
+-	val	pn	-	0	val pn = path.normalize()	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:156
+-	val	rn	-	0	val rn = bn.relativize(pn)	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:157
+-	val	r	-	0	val r = if (pn != bn && bn == emptyPath) {	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:164
+-	val	rnString	-	0	val rnString = rn.toString()	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:167
+1.5	fun	copyTo	Path	1	public inline fun Path.copyTo(target: Path, overwrite: Boolean = false): Path {	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:209
+-	val	options	-	0	val options = if (overwrite) arrayOf<CopyOption>(StandardCopyOption.REPLACE_EXISTING) else emptyArray()	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:210
+1.5	fun	copyTo	Path	1	public inline fun Path.copyTo(target: Path, vararg options: CopyOption): Path {	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:248
+1.5	fun	exists	Path	1	public inline fun Path.exists(vararg options: LinkOption): Boolean = Files.exists(this, *options)	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:264
+1.5	fun	notExists	Path	1	public inline fun Path.notExists(vararg options: LinkOption): Boolean = Files.notExists(this, *options)	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:278
+1.5	fun	isRegularFile	Path	1	public inline fun Path.isRegularFile(vararg options: LinkOption): Boolean = Files.isRegularFile(this, *options)	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:289
+1.5	fun	isDirectory	Path	1	public inline fun Path.isDirectory(vararg options: LinkOption): Boolean = Files.isDirectory(this, *options)	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:302
+1.5	fun	isSymbolicLink	Path	0	public inline fun Path.isSymbolicLink(): Boolean = Files.isSymbolicLink(this)	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:311
+1.5	fun	isExecutable	Path	0	public inline fun Path.isExecutable(): Boolean = Files.isExecutable(this)	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:320
+1.5	fun	isHidden	Path	0	public inline fun Path.isHidden(): Boolean = Files.isHidden(this)	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:333
+1.5	fun	isReadable	Path	0	public inline fun Path.isReadable(): Boolean = Files.isReadable(this)	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:342
+1.5	fun	isWritable	Path	0	public inline fun Path.isWritable(): Boolean = Files.isWritable(this)	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:351
+1.5	fun	isSameFileAs	Path	1	public inline fun Path.isSameFileAs(other: Path): Boolean = Files.isSameFile(this, other)	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:361
+1.5	fun	listDirectoryEntries	Path	0	public fun Path.listDirectoryEntries(glob: String = "*"): List<Path> {	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:376
+1.5	fun	useDirectoryEntries	Path	1	public inline fun <T> Path.useDirectoryEntries(glob: String = "*", block: (Sequence<Path>) -> T): T {	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:396
+1.5	fun	forEachDirectoryEntry	Path	1	public inline fun Path.forEachDirectoryEntry(glob: String = "*", action: (Path) -> Unit) {	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:414
+1.5	fun	fileSize	Path	0	public inline fun Path.fileSize(): Long =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:427
+1.5	fun	deleteExisting	Path	0	public inline fun Path.deleteExisting() {	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:441
+1.5	fun	deleteIfExists	Path	0	public inline fun Path.deleteIfExists(): Boolean =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:457
+1.5	fun	createDirectory	Path	0	public inline fun Path.createDirectory(vararg attributes: FileAttribute<*>): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:481
+1.5	fun	createDirectories	Path	0	public inline fun Path.createDirectories(vararg attributes: FileAttribute<*>): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:507
+1.9	fun	createParentDirectories	Path	0	public fun Path.createParentDirectories(vararg attributes: FileAttribute<*>): Path = also {	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:535
+-	val	parent	-	0	val parent = it.parent	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:536
+1.5	fun	moveTo	Path	1	public inline fun Path.moveTo(target: Path, vararg options: CopyOption): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:563
+1.5	fun	moveTo	Path	1	public inline fun Path.moveTo(target: Path, overwrite: Boolean = false): Path {	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:583
+-	val	options	-	0	val options = if (overwrite) arrayOf<CopyOption>(StandardCopyOption.REPLACE_EXISTING) else emptyArray()	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:584
+1.5	fun	fileStore	Path	0	public inline fun Path.fileStore(): FileStore =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:596
+1.5	fun	getAttribute	Path	1	public inline fun Path.getAttribute(attribute: String, vararg options: LinkOption): Any? =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:615
+1.5	fun	setAttribute	Path	2	public inline fun Path.setAttribute(attribute: String, value: Any?, vararg options: LinkOption): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:636
+1.5	fun	fileAttributesViewOrNull	Path	0	public inline fun <reified V : FileAttributeView> Path.fileAttributesViewOrNull(vararg options: LinkOption): V? =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:651
+1.5	fun	fileAttributesView	Path	0	public inline fun <reified V : FileAttributeView> Path.fileAttributesView(vararg options: LinkOption): V =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:666
+-	fun	fileAttributeViewNotAvailable	-	1	internal fun fileAttributeViewNotAvailable(path: Path, attributeViewClass: Class<*>): Nothing =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:670
+1.5	fun	readAttributes	Path	0	public inline fun <reified A : BasicFileAttributes> Path.readAttributes(vararg options: LinkOption): A =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:684
+1.5	fun	readAttributes	Path	2	public inline fun Path.readAttributes(attributes: String, vararg options: LinkOption): Map<String, Any?> =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:705
+1.5	fun	getLastModifiedTime	Path	0	public inline fun Path.getLastModifiedTime(vararg options: LinkOption): FileTime =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:718
+1.5	fun	setLastModifiedTime	Path	0	public inline fun Path.setLastModifiedTime(value: FileTime): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:731
+1.5	fun	getOwner	Path	0	public inline fun Path.getOwner(vararg options: LinkOption): UserPrincipal? =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:744
+1.5	fun	setOwner	Path	0	public inline fun Path.setOwner(value: UserPrincipal): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:757
+1.5	fun	getPosixFilePermissions	Path	0	public inline fun Path.getPosixFilePermissions(vararg options: LinkOption): Set<PosixFilePermission> =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:770
+1.5	fun	setPosixFilePermissions	Path	0	public inline fun Path.setPosixFilePermissions(value: Set<PosixFilePermission>): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:783
+1.5	fun	createLinkPointingTo	Path	0	public inline fun Path.createLinkPointingTo(target: Path): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:801
+1.5	fun	createSymbolicLinkPointingTo	Path	1	public inline fun Path.createSymbolicLinkPointingTo(target: Path, vararg attributes: FileAttribute<*>): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:820
+1.5	fun	readSymbolicLink	Path	0	public inline fun Path.readSymbolicLink(): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:835
+1.5	fun	createFile	Path	0	public inline fun Path.createFile(vararg attributes: FileAttribute<*>): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:853
+1.5	fun	createTempFile	-	2	public inline fun createTempFile(prefix: String? = null, suffix: String? = null, vararg attributes: FileAttribute<*>): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:871
+1.5	fun	createTempFile	-	3	public fun createTempFile(directory: Path?, prefix: String? = null, suffix: String? = null, vararg attributes: FileAttribute<*>): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:890
+1.5	fun	createTempDirectory	-	1	public inline fun createTempDirectory(prefix: String? = null, vararg attributes: FileAttribute<*>): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:910
+1.5	fun	createTempDirectory	-	2	public fun createTempDirectory(directory: Path?, prefix: String? = null, vararg attributes: FileAttribute<*>): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:928
+1.5	fun	div	Path	0	public inline operator fun Path.div(other: Path): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:941
+1.5	fun	div	Path	0	public inline operator fun Path.div(other: String): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:951
+1.5	fun	Path	-	0	public inline fun Path(path: String): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:962
+1.5	fun	Path	-	1	public inline fun Path(base: String, vararg subpaths: String): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:973
+1.5	fun	toPath	URI	0	public inline fun URI.toPath(): Path =	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:983
+2.1	fun	walk	Path	1	public fun Path.walk(vararg options: PathWalkOption): Sequence<Path> = PathTreeWalk(this, options)	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:1042
+2.1	fun	visitFileTree	Path	2	public fun Path.visitFileTree(visitor: FileVisitor<Path>, maxDepth: Int = Int.MAX_VALUE, followLinks: Boolean = false): Unit {	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:1087
+-	val	options	-	0	val options = if (followLinks) setOf(FileVisitOption.FOLLOW_LINKS) else setOf()	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:1088
+2.1	fun	visitFileTree	Path	0	public fun Path.visitFileTree(	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:1137
+2.1	fun	fileVisitor	-	0	public fun fileVisitor(builderAction: FileVisitorBuilder.() -> Unit): FileVisitor<Path> {	jvmMain/jdk7/kotlin/io/path/PathUtils.kt:1191
+2.1	class	PathWalkOption	-	0	public enum class PathWalkOption {	jvmMain/jdk7/kotlin/io/path/PathWalkOption.kt:50

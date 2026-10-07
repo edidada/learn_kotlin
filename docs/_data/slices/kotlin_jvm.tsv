@@ -1,0 +1,53 @@
+since	kind	name	receiver	arity	sig	loc
+-	class	JvmOverloads	-	0	public expect annotation class JvmOverloads()	commonMain/kotlin/JvmAnnotationsH.kt:19
+-	class	JvmStatic	-	0	public expect annotation class JvmStatic()	commonMain/kotlin/JvmAnnotationsH.kt:31
+-	class	JvmName	-	0	public expect annotation class JvmName(val name: String)	commonMain/kotlin/JvmAnnotationsH.kt:43
+-	class	JvmMultifileClass	-	0	public expect annotation class JvmMultifileClass()	commonMain/kotlin/JvmAnnotationsH.kt:52
+1.9	class	ImplicitlyActualizedByJvmDeclaration	-	0	public expect annotation class ImplicitlyActualizedByJvmDeclaration()	commonMain/kotlin/JvmAnnotationsH.kt:77
+-	class	JvmField	-	0	public expect annotation class JvmField()	commonMain/kotlin/JvmAnnotationsH.kt:88
+-	class	JvmSynthetic	-	0	public expect annotation class JvmSynthetic()	commonMain/kotlin/JvmAnnotationsH.kt:101
+-	class	JvmSuppressWildcards	-	0	public expect annotation class JvmSuppressWildcards(val suppress: Boolean = true)	commonMain/kotlin/JvmAnnotationsH.kt:115
+-	class	JvmWildcard	-	0	public expect annotation class JvmWildcard()	commonMain/kotlin/JvmAnnotationsH.kt:125
+1.5	class	JvmInline	-	0	public expect annotation class JvmInline()	commonMain/kotlin/JvmAnnotationsH.kt:137
+1.5	class	JvmRecord	-	0	public expect annotation class JvmRecord()	commonMain/kotlin/JvmAnnotationsH.kt:146
+-	class	Volatile	-	0	public expect annotation class Volatile()	commonMain/kotlin/JvmAnnotationsH.kt:165
+-	class	Transient	-	0	public expect annotation class Transient()	commonMain/kotlin/JvmAnnotationsH.kt:180
+-	class	Strictfp	-	0	public expect annotation class Strictfp()	commonMain/kotlin/JvmAnnotationsH.kt:190
+-	class	Synchronized	-	0	public expect annotation class Synchronized()	commonMain/kotlin/JvmAnnotationsH.kt:205
+1.2	class	JvmPackageName	-	0	internal expect annotation class JvmPackageName(val name: String)	commonMain/kotlin/JvmAnnotationsH.kt:213
+1.8	class	JvmSerializableLambda	-	0	public expect annotation class JvmSerializableLambda()	commonMain/kotlin/JvmAnnotationsH.kt:224
+-	class	JvmExposeBoxed	-	0	public expect annotation class JvmExposeBoxed(val jvmName: String = "")	commonMain/kotlin/JvmAnnotationsH.kt:258
+1.6	typealias	JvmRepeatable	-	0	public typealias JvmRepeatable = java.lang.annotation.Repeatable	jvmMain/jdk8/kotlin/annotations/JvmRepeatable.kt:18
+-	class	Volatile	-	0	public actual annotation class Volatile	jvmMain/kotlin/jvm/annotations/JvmFlagAnnotations.kt:22
+-	class	Transient	-	0	public actual annotation class Transient	jvmMain/kotlin/jvm/annotations/JvmFlagAnnotations.kt:37
+-	class	Strictfp	-	0	public actual annotation class Strictfp	jvmMain/kotlin/jvm/annotations/JvmFlagAnnotations.kt:47
+-	class	Synchronized	-	0	public actual annotation class Synchronized	jvmMain/kotlin/jvm/annotations/JvmFlagAnnotations.kt:61
+1.8	class	JvmSerializableLambda	-	0	public actual annotation class JvmSerializableLambda	jvmMain/kotlin/jvm/annotations/JvmFlagAnnotations.kt:70
+-	class	JvmOverloads	-	0	public actual annotation class JvmOverloads	jvmMain/kotlin/jvm/annotations/JvmPlatformAnnotations.kt:19
+-	class	JvmStatic	-	0	public actual annotation class JvmStatic	jvmMain/kotlin/jvm/annotations/JvmPlatformAnnotations.kt:31
+-	class	JvmName	-	0	public actual annotation class JvmName(actual val name: String)	jvmMain/kotlin/jvm/annotations/JvmPlatformAnnotations.kt:43
+-	class	JvmMultifileClass	-	0	public actual annotation class JvmMultifileClass	jvmMain/kotlin/jvm/annotations/JvmPlatformAnnotations.kt:52
+1.2	class	JvmPackageName	-	0	internal actual annotation class JvmPackageName(actual val name: String)	jvmMain/kotlin/jvm/annotations/JvmPlatformAnnotations.kt:64
+-	class	JvmSynthetic	-	0	public actual annotation class JvmSynthetic	jvmMain/kotlin/jvm/annotations/JvmPlatformAnnotations.kt:77
+-	class	Throws	-	0	public annotation class Throws(vararg val exceptionClasses: KClass<out Throwable>)	jvmMain/kotlin/jvm/annotations/JvmPlatformAnnotations.kt:99
+-	class	ImplicitlyActualizedByJvmDeclaration	-	0	public actual annotation class ImplicitlyActualizedByJvmDeclaration	jvmMain/kotlin/jvm/annotations/JvmPlatformAnnotations.kt:131
+-	class	JvmField	-	0	public actual annotation class JvmField	jvmMain/kotlin/jvm/annotations/JvmPlatformAnnotations.kt:142
+-	class	JvmSuppressWildcards	-	0	public actual annotation class JvmSuppressWildcards(actual val suppress: Boolean = true)	jvmMain/kotlin/jvm/annotations/JvmPlatformAnnotations.kt:160
+-	class	JvmWildcard	-	0	public actual annotation class JvmWildcard	jvmMain/kotlin/jvm/annotations/JvmPlatformAnnotations.kt:173
+1.5	class	JvmInline	-	0	public actual annotation class JvmInline	jvmMain/kotlin/jvm/annotations/JvmPlatformAnnotations.kt:185
+1.5	class	JvmRecord	-	0	public actual annotation class JvmRecord	jvmMain/kotlin/jvm/annotations/JvmPlatformAnnotations.kt:194
+-	class	JvmExposeBoxed	-	0	public actual annotation class JvmExposeBoxed(actual val jvmName: String)	jvmMain/kotlin/jvm/annotations/JvmPlatformAnnotations.kt:227
+-	val	Class	-	0	public val <T> KClass<T>.java: Class<T>	jvmMain/kotlin/jvm/JvmClassMapping.kt:27
+-	val	thisJClass	-	0	val thisJClass = (this as ClassBasedDeclarationContainer).jClass	jvmMain/kotlin/jvm/JvmClassMapping.kt:36
+-	val	Class	-	0	public val <T : Any> KClass<T>.javaObjectType: Class<T>	jvmMain/kotlin/jvm/JvmClassMapping.kt:57
+-	val	thisJClass	-	0	val thisJClass = (this as ClassBasedDeclarationContainer).jClass	jvmMain/kotlin/jvm/JvmClassMapping.kt:59
+-	val	KClass	-	0	public val <T : Any> Class<T>.kotlin: KClass<T>	jvmMain/kotlin/jvm/JvmClassMapping.kt:79
+-	val	Class	-	0	public inline val <T : Any> T.javaClass: Class<T>	jvmMain/kotlin/jvm/JvmClassMapping.kt:87
+-	fun	isArrayOf	-	0	public fun <reified T : Any> Array<*>.isArrayOf(): Boolean =	jvmMain/kotlin/jvm/JvmClassMapping.kt:101
+-	val	KClass	-	0	public val <T : Annotation> T.annotationClass: KClass<out T>	jvmMain/kotlin/jvm/JvmClassMapping.kt:107
+1.7	val	Class	-	0	public inline val <E : Enum<E>> Enum<E>.declaringJavaClass: Class<E>	jvmMain/kotlin/jvm/JvmClassMapping.kt:117
+1.2	class	JvmDefault	-	0	public annotation class JvmDefault	jvmMain/kotlin/jvm/JvmDefault.kt:18
+1.4	class	JvmDefaultWithoutCompatibility	-	0	public annotation class JvmDefaultWithoutCompatibility	jvmMain/kotlin/jvm/JvmDefault.kt:34
+1.6	class	JvmDefaultWithCompatibility	-	0	public annotation class JvmDefaultWithCompatibility	jvmMain/kotlin/jvm/JvmDefault.kt:49
+-	class	KotlinReflectionNotSupportedError	-	0	public open class KotlinReflectionNotSupportedError : Error {	jvmMain/kotlin/jvm/KotlinReflectionNotSupportedError.kt:10
+-	class	PurelyImplements	-	0	public annotation class PurelyImplements(val value: String)	jvmMain/kotlin/jvm/PurelyImplements.kt:39

@@ -1,0 +1,10 @@
+since	kind	name	receiver	arity	sig	loc
+-	interface	KMappedMarker	-	0	public interface KMappedMarker	jvmMain/kotlin/jvm/internal/markers/KMarkers.kt:8
+-	interface	KMutableIterable	-	0	public interface KMutableIterable : KMappedMarker	jvmMain/kotlin/jvm/internal/markers/KMarkers.kt:10
+-	interface	KMutableCollection	-	0	public interface KMutableCollection : KMutableIterable	jvmMain/kotlin/jvm/internal/markers/KMarkers.kt:12
+-	interface	KMutableList	-	0	public interface KMutableList : KMutableCollection	jvmMain/kotlin/jvm/internal/markers/KMarkers.kt:14
+-	interface	KMutableIterator	-	0	public interface KMutableIterator : KMappedMarker	jvmMain/kotlin/jvm/internal/markers/KMarkers.kt:16
+-	interface	KMutableListIterator	-	0	public interface KMutableListIterator : KMutableIterator	jvmMain/kotlin/jvm/internal/markers/KMarkers.kt:18
+-	interface	KMutableMap	-	0	public interface KMutableMap : KMappedMarker {	jvmMain/kotlin/jvm/internal/markers/KMarkers.kt:20
+-	interface	Entry	-	0	public interface Entry : KMappedMarker	jvmMain/kotlin/jvm/internal/markers/KMarkers.kt:21
+-	interface	KMutableSet	-	0	public interface KMutableSet : KMutableCollection	jvmMain/kotlin/jvm/internal/markers/KMarkers.kt:24

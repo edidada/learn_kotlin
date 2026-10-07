@@ -1,0 +1,242 @@
+since	kind	name	receiver	arity	sig	loc
+-	class	ListBuilder	-	3	internal class ListBuilder<E>(initialCapacity: Int = 10) : MutableList<E>, RandomAccess, AbstractMutableList<E>(), Serializable {	jvmMain/kotlin/collections/builders/ListBuilder.kt:14
+-	var	backing	-	0	private var backing = arrayOfUninitializedElements<E>(initialCapacity)	jvmMain/kotlin/collections/builders/ListBuilder.kt:15
+-	var	length	-	0	private var length = 0	jvmMain/kotlin/collections/builders/ListBuilder.kt:16
+-	var	isReadOnly	-	0	private var isReadOnly = false	jvmMain/kotlin/collections/builders/ListBuilder.kt:17
+-	val	Empty	-	0	private val Empty = ListBuilder<Nothing>(0).also { it.isReadOnly = true }	jvmMain/kotlin/collections/builders/ListBuilder.kt:20
+-	fun	build	-	0	fun build(): List<E> {	jvmMain/kotlin/collections/builders/ListBuilder.kt:23
+-	fun	writeReplace	-	0	private fun writeReplace(): Any =	jvmMain/kotlin/collections/builders/ListBuilder.kt:29
+-	val	old	-	0	val old = backing[index]	jvmMain/kotlin/collections/builders/ListBuilder.kt:48
+-	var	i	-	0	var i = 0	jvmMain/kotlin/collections/builders/ListBuilder.kt:54
+-	var	i	-	0	var i = length - 1	jvmMain/kotlin/collections/builders/ListBuilder.kt:63
+-	val	n	-	0	val n = elements.size	jvmMain/kotlin/collections/builders/ListBuilder.kt:93
+-	val	n	-	0	val n = elements.size	jvmMain/kotlin/collections/builders/ListBuilder.kt:101
+-	val	i	-	0	val i = indexOf(element)	jvmMain/kotlin/collections/builders/ListBuilder.kt:119
+-	fun	registerModification	-	0	private fun registerModification() {	jvmMain/kotlin/collections/builders/ListBuilder.kt:170
+-	fun	checkIsMutable	-	0	private fun checkIsMutable() {	jvmMain/kotlin/collections/builders/ListBuilder.kt:174
+-	fun	ensureExtraCapacity	-	0	private fun ensureExtraCapacity(n: Int) {	jvmMain/kotlin/collections/builders/ListBuilder.kt:178
+-	fun	ensureCapacityInternal	-	0	private fun ensureCapacityInternal(minCapacity: Int) {	jvmMain/kotlin/collections/builders/ListBuilder.kt:182
+-	val	newSize	-	1	val newSize = AbstractList.newCapacity(backing.size, minCapacity)	jvmMain/kotlin/collections/builders/ListBuilder.kt:185
+-	fun	contentEquals	-	0	private fun contentEquals(other: List<*>): Boolean {	jvmMain/kotlin/collections/builders/ListBuilder.kt:190
+-	fun	insertAtInternal	-	1	private fun insertAtInternal(i: Int, n: Int) {	jvmMain/kotlin/collections/builders/ListBuilder.kt:194
+-	fun	addAtInternal	-	1	private fun addAtInternal(i: Int, element: E) {	jvmMain/kotlin/collections/builders/ListBuilder.kt:200
+-	fun	addAllInternal	-	2	private fun addAllInternal(i: Int, elements: Collection<E>, n: Int) {	jvmMain/kotlin/collections/builders/ListBuilder.kt:206
+-	var	j	-	0	var j = 0	jvmMain/kotlin/collections/builders/ListBuilder.kt:209
+-	val	it	-	0	val it = elements.iterator()	jvmMain/kotlin/collections/builders/ListBuilder.kt:210
+-	fun	removeAtInternal	-	0	private fun removeAtInternal(i: Int): E {	jvmMain/kotlin/collections/builders/ListBuilder.kt:217
+-	val	old	-	0	val old = backing[i]	jvmMain/kotlin/collections/builders/ListBuilder.kt:219
+-	fun	removeRangeInternal	-	1	private fun removeRangeInternal(rangeOffset: Int, rangeLength: Int) {	jvmMain/kotlin/collections/builders/ListBuilder.kt:226
+-	fun	retainOrRemoveAllInternal	-	3	private fun retainOrRemoveAllInternal(rangeOffset: Int, rangeLength: Int, elements: Collection<E>, retain: Boolean): Int {	jvmMain/kotlin/collections/builders/ListBuilder.kt:234
+-	var	i	-	0	var i = 0	jvmMain/kotlin/collections/builders/ListBuilder.kt:235
+-	var	j	-	0	var j = 0	jvmMain/kotlin/collections/builders/ListBuilder.kt:236
+-	val	removed	-	0	val removed = rangeLength - j	jvmMain/kotlin/collections/builders/ListBuilder.kt:244
+-	class	Itr	-	0	private class Itr<E>(	jvmMain/kotlin/collections/builders/ListBuilder.kt:252
+-	var	Int	-	0	private var index: Int	jvmMain/kotlin/collections/builders/ListBuilder.kt:254
+-	var	lastIndex	-	0	private var lastIndex = -1	jvmMain/kotlin/collections/builders/ListBuilder.kt:256
+-	var	expectedModCount	-	0	private var expectedModCount = list.modCount	jvmMain/kotlin/collections/builders/ListBuilder.kt:257
+-	fun	checkForComodification	-	0	private fun checkForComodification() {	jvmMain/kotlin/collections/builders/ListBuilder.kt:301
+-	class	BuilderSubList	-	0	class BuilderSubList<E>(	jvmMain/kotlin/collections/builders/ListBuilder.kt:307
+-	val	Int	-	1	private val offset: Int,	jvmMain/kotlin/collections/builders/ListBuilder.kt:309
+-	var	Int	-	1	private var length: Int,	jvmMain/kotlin/collections/builders/ListBuilder.kt:310
+-	val	ListBuilder	-	0	private val root: ListBuilder<E>	jvmMain/kotlin/collections/builders/ListBuilder.kt:312
+-	fun	writeReplace	-	0	private fun writeReplace(): Any =	jvmMain/kotlin/collections/builders/ListBuilder.kt:318
+-	fun	readObject	-	0	private fun readObject(input: ObjectInputStream): Unit = throwReadObjectNotSupported()	jvmMain/kotlin/collections/builders/ListBuilder.kt:324
+-	val	old	-	0	val old = backing[offset + index]	jvmMain/kotlin/collections/builders/ListBuilder.kt:347
+-	var	i	-	0	var i = 0	jvmMain/kotlin/collections/builders/ListBuilder.kt:354
+-	var	i	-	0	var i = length - 1	jvmMain/kotlin/collections/builders/ListBuilder.kt:364
+-	val	n	-	0	val n = elements.size	jvmMain/kotlin/collections/builders/ListBuilder.kt:398
+-	val	n	-	0	val n = elements.size	jvmMain/kotlin/collections/builders/ListBuilder.kt:407
+-	val	i	-	0	val i = indexOf(element)	jvmMain/kotlin/collections/builders/ListBuilder.kt:428
+-	fun	registerModification	-	0	private fun registerModification() {	jvmMain/kotlin/collections/builders/ListBuilder.kt:486
+-	fun	checkForComodification	-	0	private fun checkForComodification() {	jvmMain/kotlin/collections/builders/ListBuilder.kt:490
+-	fun	checkIsMutable	-	0	private fun checkIsMutable() {	jvmMain/kotlin/collections/builders/ListBuilder.kt:495
+-	val	Boolean	-	0	private val isReadOnly: Boolean	jvmMain/kotlin/collections/builders/ListBuilder.kt:499
+-	fun	contentEquals	-	0	private fun contentEquals(other: List<*>): Boolean {	jvmMain/kotlin/collections/builders/ListBuilder.kt:502
+-	fun	addAtInternal	-	1	private fun addAtInternal(i: Int, element: E) {	jvmMain/kotlin/collections/builders/ListBuilder.kt:506
+-	fun	addAllInternal	-	2	private fun addAllInternal(i: Int, elements: Collection<E>, n: Int) {	jvmMain/kotlin/collections/builders/ListBuilder.kt:517
+-	fun	removeAtInternal	-	0	private fun removeAtInternal(i: Int): E {	jvmMain/kotlin/collections/builders/ListBuilder.kt:528
+-	val	old	-	0	val old = if (parent != null) {	jvmMain/kotlin/collections/builders/ListBuilder.kt:530
+-	fun	removeRangeInternal	-	1	private fun removeRangeInternal(rangeOffset: Int, rangeLength: Int) {	jvmMain/kotlin/collections/builders/ListBuilder.kt:539
+-	fun	retainOrRemoveAllInternal	-	3	private fun retainOrRemoveAllInternal(rangeOffset: Int, rangeLength: Int, elements: Collection<E>, retain: Boolean): Int {	jvmMain/kotlin/collections/builders/ListBuilder.kt:550
+-	val	removed	-	0	val removed =	jvmMain/kotlin/collections/builders/ListBuilder.kt:551
+-	class	Itr	-	0	private class Itr<E>(	jvmMain/kotlin/collections/builders/ListBuilder.kt:562
+-	var	Int	-	0	private var index: Int	jvmMain/kotlin/collections/builders/ListBuilder.kt:564
+-	var	lastIndex	-	0	private var lastIndex = -1	jvmMain/kotlin/collections/builders/ListBuilder.kt:566
+-	var	expectedModCount	-	0	private var expectedModCount = list.modCount	jvmMain/kotlin/collections/builders/ListBuilder.kt:567
+-	fun	checkForComodification	-	0	private fun checkForComodification() {	jvmMain/kotlin/collections/builders/ListBuilder.kt:611
+-	fun	arrayOfUninitializedElements	-	0	internal fun <E> arrayOfUninitializedElements(size: Int): Array<E> {	jvmMain/kotlin/collections/builders/ListBuilder.kt:619
+-	fun	subarrayContentToString	-	2	private fun <T> Array<out T>.subarrayContentToString(offset: Int, length: Int, thisCollection: Collection<T>): String {	jvmMain/kotlin/collections/builders/ListBuilder.kt:625
+-	val	sb	-	0	val sb = StringBuilder(2 + length * 3)	jvmMain/kotlin/collections/builders/ListBuilder.kt:626
+-	var	i	-	0	var i = 0	jvmMain/kotlin/collections/builders/ListBuilder.kt:628
+-	val	nextElement	-	0	val nextElement = this[offset + i]	jvmMain/kotlin/collections/builders/ListBuilder.kt:631
+-	fun	subarrayContentHashCode	-	1	private fun <T> Array<T>.subarrayContentHashCode(offset: Int, length: Int): Int {	jvmMain/kotlin/collections/builders/ListBuilder.kt:643
+-	var	result	-	0	var result = 1	jvmMain/kotlin/collections/builders/ListBuilder.kt:644
+-	var	i	-	0	var i = 0	jvmMain/kotlin/collections/builders/ListBuilder.kt:645
+-	val	nextElement	-	0	val nextElement = this[offset + i]	jvmMain/kotlin/collections/builders/ListBuilder.kt:647
+-	fun	subarrayContentEquals	-	2	private fun <T> Array<T>.subarrayContentEquals(offset: Int, length: Int, other: List<*>): Boolean {	jvmMain/kotlin/collections/builders/ListBuilder.kt:654
+-	var	i	-	0	var i = 0	jvmMain/kotlin/collections/builders/ListBuilder.kt:656
+-	fun	copyOfUninitializedElements	-	0	internal fun <T> Array<T>.copyOfUninitializedElements(newSize: Int): Array<T> {	jvmMain/kotlin/collections/builders/ListBuilder.kt:664
+-	fun	resetAt	-	0	internal fun <E> Array<E>.resetAt(index: Int) {	jvmMain/kotlin/collections/builders/ListBuilder.kt:669
+-	fun	resetRange	-	1	internal fun <E> Array<E>.resetRange(fromIndex: Int, toIndex: Int) {	jvmMain/kotlin/collections/builders/ListBuilder.kt:674
+-	class	SerializedCollection	-	0	internal class SerializedCollection(	jvmMain/kotlin/collections/builders/ListBuilder.kt:678
+-	val	Int	-	0	private val tag: Int	jvmMain/kotlin/collections/builders/ListBuilder.kt:680
+-	val	flags	-	0	val flags = input.readByte().toInt()	jvmMain/kotlin/collections/builders/ListBuilder.kt:694
+-	val	tag	-	0	val tag = flags and 1	jvmMain/kotlin/collections/builders/ListBuilder.kt:695
+-	val	other	-	0	val other = flags and 1.inv()	jvmMain/kotlin/collections/builders/ListBuilder.kt:696
+-	val	size	-	0	val size = input.readInt()	jvmMain/kotlin/collections/builders/ListBuilder.kt:700
+-	fun	readResolve	-	0	private fun readResolve(): Any = collection	jvmMain/kotlin/collections/builders/ListBuilder.kt:714
+-	val	Long	-	0	private const val serialVersionUID: Long = 0L	jvmMain/kotlin/collections/builders/ListBuilder.kt:717
+-	val	Int	-	0	const val tagList: Int = 0	jvmMain/kotlin/collections/builders/ListBuilder.kt:718
+-	val	Int	-	0	const val tagSet: Int = 1	jvmMain/kotlin/collections/builders/ListBuilder.kt:719
+-	class	MapBuilder	-	1	internal class MapBuilder<K, V> private constructor(	jvmMain/kotlin/collections/builders/MapBuilder.kt:14
+-	var	IntArray	-	1	private var presenceArray: IntArray,	jvmMain/kotlin/collections/builders/MapBuilder.kt:20
+-	var	IntArray	-	1	private var hashArray: IntArray,	jvmMain/kotlin/collections/builders/MapBuilder.kt:22
+-	var	Int	-	1	private var maxProbeDistance: Int,	jvmMain/kotlin/collections/builders/MapBuilder.kt:24
+-	var	Int	-	0	private var length: Int	jvmMain/kotlin/collections/builders/MapBuilder.kt:26
+-	var	Int	-	0	private var hashShift: Int = computeShift(hashSize)	jvmMain/kotlin/collections/builders/MapBuilder.kt:28
+-	var	Int	-	0	private var modCount: Int = 0	jvmMain/kotlin/collections/builders/MapBuilder.kt:40
+-	var	Boolean	-	0	internal var isReadOnly: Boolean = false	jvmMain/kotlin/collections/builders/MapBuilder.kt:49
+-	fun	build	-	1	fun build(): Map<K, V> {	jvmMain/kotlin/collections/builders/MapBuilder.kt:64
+-	fun	writeReplace	-	0	private fun writeReplace(): Any =	jvmMain/kotlin/collections/builders/MapBuilder.kt:71
+-	fun	readObject	-	0	private fun readObject(input: ObjectInputStream): Unit = throwReadObjectNotSupported()	jvmMain/kotlin/collections/builders/MapBuilder.kt:77
+-	val	index	-	0	val index = findKey(key)	jvmMain/kotlin/collections/builders/MapBuilder.kt:84
+-	val	index	-	0	val index = addKey(key)	jvmMain/kotlin/collections/builders/MapBuilder.kt:91
+-	val	valuesArray	-	0	val valuesArray = allocateValuesArray()	jvmMain/kotlin/collections/builders/MapBuilder.kt:92
+-	val	oldValue	-	0	val oldValue = valuesArray[-index - 1]	jvmMain/kotlin/collections/builders/MapBuilder.kt:94
+-	val	index	-	0	val index = findKey(key)	jvmMain/kotlin/collections/builders/MapBuilder.kt:110
+-	val	oldValue	-	0	val oldValue = valuesArray!![index]	jvmMain/kotlin/collections/builders/MapBuilder.kt:112
+-	val	hash	-	0	val hash = presenceArray[i]	jvmMain/kotlin/collections/builders/MapBuilder.kt:121
+-	val	cur	-	0	val cur = keysView	jvmMain/kotlin/collections/builders/MapBuilder.kt:135
+-	val	new	-	0	val new = MapBuilderKeys(this)	jvmMain/kotlin/collections/builders/MapBuilder.kt:137
+-	val	cur	-	0	val cur = valuesView	jvmMain/kotlin/collections/builders/MapBuilder.kt:144
+-	val	new	-	0	val new = MapBuilderValues(this)	jvmMain/kotlin/collections/builders/MapBuilder.kt:146
+-	val	cur	-	0	val cur = entriesView	jvmMain/kotlin/collections/builders/MapBuilder.kt:153
+-	val	new	-	0	val new = MapBuilderEntries(this)	jvmMain/kotlin/collections/builders/MapBuilder.kt:155
+-	var	result	-	0	var result = 0	jvmMain/kotlin/collections/builders/MapBuilder.kt:168
+-	val	it	-	0	val it = entriesIterator()	jvmMain/kotlin/collections/builders/MapBuilder.kt:169
+-	val	sb	-	0	val sb = StringBuilder(2 + size * 3)	jvmMain/kotlin/collections/builders/MapBuilder.kt:177
+-	var	i	-	0	var i = 0	jvmMain/kotlin/collections/builders/MapBuilder.kt:179
+-	val	it	-	0	val it = entriesIterator()	jvmMain/kotlin/collections/builders/MapBuilder.kt:180
+-	val	get	-	0	internal val capacity: Int get() = keysArray.size	jvmMain/kotlin/collections/builders/MapBuilder.kt:193
+-	val	get	-	0	private val hashSize: Int get() = hashArray.size	jvmMain/kotlin/collections/builders/MapBuilder.kt:194
+-	fun	registerModification	-	0	private fun registerModification() {	jvmMain/kotlin/collections/builders/MapBuilder.kt:196
+-	fun	checkIsMutable	-	0	internal fun checkIsMutable() {	jvmMain/kotlin/collections/builders/MapBuilder.kt:200
+-	fun	ensureExtraCapacity	-	0	private fun ensureExtraCapacity(n: Int) {	jvmMain/kotlin/collections/builders/MapBuilder.kt:204
+-	fun	shouldCompact	-	0	private fun shouldCompact(extraCapacity: Int): Boolean {	jvmMain/kotlin/collections/builders/MapBuilder.kt:212
+-	val	spareCapacity	-	0	val spareCapacity = this.capacity - length	jvmMain/kotlin/collections/builders/MapBuilder.kt:213
+-	val	gaps	-	0	val gaps = length - size	jvmMain/kotlin/collections/builders/MapBuilder.kt:214
+-	fun	ensureCapacity	-	0	private fun ensureCapacity(minCapacity: Int) {	jvmMain/kotlin/collections/builders/MapBuilder.kt:220
+-	val	newSize	-	1	val newSize = AbstractList.newCapacity(this.capacity, minCapacity)	jvmMain/kotlin/collections/builders/MapBuilder.kt:223
+-	val	newHashSize	-	0	val newHashSize = computeHashSize(newSize)	jvmMain/kotlin/collections/builders/MapBuilder.kt:227
+-	fun	allocateValuesArray	-	0	private fun allocateValuesArray(): Array<V> {	jvmMain/kotlin/collections/builders/MapBuilder.kt:232
+-	val	curValuesArray	-	0	val curValuesArray = valuesArray	jvmMain/kotlin/collections/builders/MapBuilder.kt:233
+-	val	newValuesArray	-	0	val newValuesArray = arrayOfUninitializedElements<V>(capacity)	jvmMain/kotlin/collections/builders/MapBuilder.kt:235
+-	fun	hash	-	0	private fun hash(key: K) = (key.hashCode() * MAGIC) ushr hashShift	jvmMain/kotlin/collections/builders/MapBuilder.kt:240
+-	fun	compact	-	0	private fun compact(updateHashArray: Boolean) {	jvmMain/kotlin/collections/builders/MapBuilder.kt:242
+-	var	i	-	0	var i = 0	jvmMain/kotlin/collections/builders/MapBuilder.kt:243
+-	var	j	-	0	var j = 0	jvmMain/kotlin/collections/builders/MapBuilder.kt:244
+-	val	valuesArray	-	0	val valuesArray = valuesArray	jvmMain/kotlin/collections/builders/MapBuilder.kt:245
+-	val	hash	-	0	val hash = presenceArray[i]	jvmMain/kotlin/collections/builders/MapBuilder.kt:247
+-	fun	rehash	-	0	private fun rehash(newHashSize: Int) {	jvmMain/kotlin/collections/builders/MapBuilder.kt:265
+-	var	i	-	0	var i = 0	jvmMain/kotlin/collections/builders/MapBuilder.kt:273
+-	fun	putRehash	-	0	private fun putRehash(i: Int): Boolean {	jvmMain/kotlin/collections/builders/MapBuilder.kt:283
+-	var	hash	-	0	var hash = hash(keysArray[i])	jvmMain/kotlin/collections/builders/MapBuilder.kt:284
+-	var	probesLeft	-	0	var probesLeft = maxProbeDistance	jvmMain/kotlin/collections/builders/MapBuilder.kt:285
+-	val	index	-	0	val index = hashArray[hash]	jvmMain/kotlin/collections/builders/MapBuilder.kt:287
+-	fun	findKey	-	0	private fun findKey(key: K): Int {	jvmMain/kotlin/collections/builders/MapBuilder.kt:298
+-	var	hash	-	0	var hash = hash(key)	jvmMain/kotlin/collections/builders/MapBuilder.kt:299
+-	var	probesLeft	-	0	var probesLeft = maxProbeDistance	jvmMain/kotlin/collections/builders/MapBuilder.kt:300
+-	val	index	-	0	val index = hashArray[hash]	jvmMain/kotlin/collections/builders/MapBuilder.kt:302
+-	fun	findValue	-	0	private fun findValue(value: V): Int {	jvmMain/kotlin/collections/builders/MapBuilder.kt:310
+-	var	i	-	0	var i = length	jvmMain/kotlin/collections/builders/MapBuilder.kt:311
+-	fun	addKey	-	0	internal fun addKey(key: K): Int {	jvmMain/kotlin/collections/builders/MapBuilder.kt:319
+-	var	hash	-	0	var hash = hash(key)	jvmMain/kotlin/collections/builders/MapBuilder.kt:322
+-	val	tentativeMaxProbeDistance	-	0	val tentativeMaxProbeDistance = (maxProbeDistance * 2).coerceAtMost(hashSize / 2)	jvmMain/kotlin/collections/builders/MapBuilder.kt:324
+-	var	probeDistance	-	0	var probeDistance = 0	jvmMain/kotlin/collections/builders/MapBuilder.kt:325
+-	val	index	-	0	val index = hashArray[hash]	jvmMain/kotlin/collections/builders/MapBuilder.kt:327
+-	val	putIndex	-	0	val putIndex = length++	jvmMain/kotlin/collections/builders/MapBuilder.kt:333
+-	fun	removeKey	-	0	internal fun removeKey(key: K): Boolean {	jvmMain/kotlin/collections/builders/MapBuilder.kt:354
+-	val	index	-	0	val index = findKey(key)	jvmMain/kotlin/collections/builders/MapBuilder.kt:356
+-	fun	removeEntryAt	-	0	private fun removeEntryAt(index: Int) {	jvmMain/kotlin/collections/builders/MapBuilder.kt:362
+-	fun	removeHashAt	-	0	private fun removeHashAt(removedHash: Int) {	jvmMain/kotlin/collections/builders/MapBuilder.kt:371
+-	var	hash	-	0	var hash = removedHash	jvmMain/kotlin/collections/builders/MapBuilder.kt:372
+-	var	hole	-	0	var hole = removedHash	jvmMain/kotlin/collections/builders/MapBuilder.kt:373
+-	var	probeDistance	-	0	var probeDistance = 0	jvmMain/kotlin/collections/builders/MapBuilder.kt:374
+-	var	patchAttemptsLeft	-	0	var patchAttemptsLeft = (maxProbeDistance * 2).coerceAtMost(hashSize / 2)	jvmMain/kotlin/collections/builders/MapBuilder.kt:375
+-	val	index	-	0	val index = hashArray[hash]	jvmMain/kotlin/collections/builders/MapBuilder.kt:383
+-	val	otherHash	-	0	val otherHash = hash(keysArray[index - 1])	jvmMain/kotlin/collections/builders/MapBuilder.kt:399
+-	fun	containsEntry	-	1	internal fun containsEntry(entry: Map.Entry<K, V>): Boolean {	jvmMain/kotlin/collections/builders/MapBuilder.kt:421
+-	val	index	-	0	val index = findKey(entry.key)	jvmMain/kotlin/collections/builders/MapBuilder.kt:422
+-	fun	contentEquals	-	1	private fun contentEquals(other: Map<*, *>): Boolean = size == other.size && containsAllEntries(other.entries)	jvmMain/kotlin/collections/builders/MapBuilder.kt:427
+-	fun	containsAllEntries	-	0	internal fun containsAllEntries(m: Collection<*>): Boolean {	jvmMain/kotlin/collections/builders/MapBuilder.kt:429
+-	val	it	-	0	val it = m.iterator()	jvmMain/kotlin/collections/builders/MapBuilder.kt:430
+-	val	entry	-	0	val entry = it.next()	jvmMain/kotlin/collections/builders/MapBuilder.kt:432
+-	fun	putEntry	-	1	private fun putEntry(entry: Map.Entry<K, V>): Boolean {	jvmMain/kotlin/collections/builders/MapBuilder.kt:444
+-	val	index	-	0	val index = addKey(entry.key)	jvmMain/kotlin/collections/builders/MapBuilder.kt:445
+-	val	valuesArray	-	0	val valuesArray = allocateValuesArray()	jvmMain/kotlin/collections/builders/MapBuilder.kt:446
+-	val	oldValue	-	0	val oldValue = valuesArray[-index - 1]	jvmMain/kotlin/collections/builders/MapBuilder.kt:451
+-	fun	putAllEntries	-	1	private fun putAllEntries(from: Collection<Map.Entry<K, V>>): Boolean {	jvmMain/kotlin/collections/builders/MapBuilder.kt:459
+-	val	it	-	0	val it = from.iterator()	jvmMain/kotlin/collections/builders/MapBuilder.kt:462
+-	var	updated	-	0	var updated = false	jvmMain/kotlin/collections/builders/MapBuilder.kt:463
+-	fun	removeEntry	-	1	internal fun removeEntry(entry: Map.Entry<K, V>): Boolean {	jvmMain/kotlin/collections/builders/MapBuilder.kt:471
+-	val	index	-	0	val index = findKey(entry.key)	jvmMain/kotlin/collections/builders/MapBuilder.kt:473
+-	fun	removeValue	-	0	internal fun removeValue(element: V): Boolean {	jvmMain/kotlin/collections/builders/MapBuilder.kt:480
+-	val	index	-	0	val index = findValue(element)	jvmMain/kotlin/collections/builders/MapBuilder.kt:482
+-	fun	keysIterator	-	0	internal fun keysIterator() = KeysItr(this)	jvmMain/kotlin/collections/builders/MapBuilder.kt:488
+-	fun	valuesIterator	-	0	internal fun valuesIterator() = ValuesItr(this)	jvmMain/kotlin/collections/builders/MapBuilder.kt:489
+-	fun	entriesIterator	-	0	internal fun entriesIterator() = EntriesItr(this)	jvmMain/kotlin/collections/builders/MapBuilder.kt:490
+-	val	MAGIC	-	0	private const val MAGIC = -1640531527	jvmMain/kotlin/collections/builders/MapBuilder.kt:493
+-	val	INITIAL_CAPACITY	-	0	private const val INITIAL_CAPACITY = 8	jvmMain/kotlin/collections/builders/MapBuilder.kt:494
+-	val	INITIAL_MAX_PROBE_DISTANCE	-	0	private const val INITIAL_MAX_PROBE_DISTANCE = 2	jvmMain/kotlin/collections/builders/MapBuilder.kt:495
+-	val	TOMBSTONE	-	0	private const val TOMBSTONE = -1	jvmMain/kotlin/collections/builders/MapBuilder.kt:496
+-	val	Empty	-	1	internal val Empty = MapBuilder<Nothing, Nothing>(0).also { it.isReadOnly = true }	jvmMain/kotlin/collections/builders/MapBuilder.kt:498
+-	fun	computeHashSize	-	0	private fun computeHashSize(capacity: Int): Int = (capacity.coerceAtLeast(1) * 3).takeHighestOneBit()	jvmMain/kotlin/collections/builders/MapBuilder.kt:500
+-	fun	computeShift	-	0	private fun computeShift(hashSize: Int): Int = hashSize.countLeadingZeroBits() + 1	jvmMain/kotlin/collections/builders/MapBuilder.kt:502
+-	class	Itr	-	1	internal open class Itr<K, V>(	jvmMain/kotlin/collections/builders/MapBuilder.kt:505
+-	val	MapBuilder	-	1	internal val map: MapBuilder<K, V>	jvmMain/kotlin/collections/builders/MapBuilder.kt:506
+-	var	index	-	0	internal var index = 0	jvmMain/kotlin/collections/builders/MapBuilder.kt:508
+-	var	Int	-	0	internal var lastIndex: Int = -1	jvmMain/kotlin/collections/builders/MapBuilder.kt:509
+-	var	Int	-	0	private var expectedModCount: Int = map.modCount	jvmMain/kotlin/collections/builders/MapBuilder.kt:510
+-	fun	initNext	-	0	internal fun initNext() {	jvmMain/kotlin/collections/builders/MapBuilder.kt:516
+-	fun	hasNext	-	0	fun hasNext(): Boolean = index < map.length	jvmMain/kotlin/collections/builders/MapBuilder.kt:521
+-	fun	remove	-	0	fun remove() {	jvmMain/kotlin/collections/builders/MapBuilder.kt:523
+-	fun	checkForComodification	-	0	internal fun checkForComodification() {	jvmMain/kotlin/collections/builders/MapBuilder.kt:532
+-	class	KeysItr	-	4	internal class KeysItr<K, V>(map: MapBuilder<K, V>) : Itr<K, V>(map), MutableIterator<K> {	jvmMain/kotlin/collections/builders/MapBuilder.kt:538
+-	val	result	-	0	val result = map.keysArray[lastIndex]	jvmMain/kotlin/collections/builders/MapBuilder.kt:543
+-	class	ValuesItr	-	4	internal class ValuesItr<K, V>(map: MapBuilder<K, V>) : Itr<K, V>(map), MutableIterator<V> {	jvmMain/kotlin/collections/builders/MapBuilder.kt:550
+-	val	result	-	0	val result = map.valuesArray!![lastIndex]	jvmMain/kotlin/collections/builders/MapBuilder.kt:555
+-	class	EntriesItr	-	4	internal class EntriesItr<K, V>(map: MapBuilder<K, V>) : Itr<K, V>(map),	jvmMain/kotlin/collections/builders/MapBuilder.kt:561
+-	val	result	-	1	val result = EntryRef(map, lastIndex)	jvmMain/kotlin/collections/builders/MapBuilder.kt:567
+-	fun	nextHashCode	-	0	internal fun nextHashCode(): Int {	jvmMain/kotlin/collections/builders/MapBuilder.kt:572
+-	val	result	-	0	val result = map.keysArray[lastIndex].hashCode() xor map.valuesArray!![lastIndex].hashCode()	jvmMain/kotlin/collections/builders/MapBuilder.kt:575
+-	fun	nextAppendString	-	0	fun nextAppendString(sb: StringBuilder) {	jvmMain/kotlin/collections/builders/MapBuilder.kt:580
+-	val	key	-	0	val key = map.keysArray[lastIndex]	jvmMain/kotlin/collections/builders/MapBuilder.kt:583
+-	val	value	-	0	val value = map.valuesArray!![lastIndex]	jvmMain/kotlin/collections/builders/MapBuilder.kt:586
+-	class	EntryRef	-	1	internal class EntryRef<K, V>(	jvmMain/kotlin/collections/builders/MapBuilder.kt:592
+-	val	Int	-	0	private val index: Int	jvmMain/kotlin/collections/builders/MapBuilder.kt:594
+-	val	expectedModCount	-	0	private val expectedModCount = map.modCount	jvmMain/kotlin/collections/builders/MapBuilder.kt:596
+-	val	valuesArray	-	0	val valuesArray = map.allocateValuesArray()	jvmMain/kotlin/collections/builders/MapBuilder.kt:613
+-	val	oldValue	-	0	val oldValue = valuesArray[index]	jvmMain/kotlin/collections/builders/MapBuilder.kt:614
+-	fun	checkForComodification	-	0	private fun checkForComodification() {	jvmMain/kotlin/collections/builders/MapBuilder.kt:628
+-	class	MapBuilderKeys	-	0	internal class MapBuilderKeys<E> internal constructor(	jvmMain/kotlin/collections/builders/MapBuilder.kt:635
+-	val	MapBuilder	-	1	private val backing: MapBuilder<E, *>	jvmMain/kotlin/collections/builders/MapBuilder.kt:636
+-	class	MapBuilderValues	-	0	internal class MapBuilderValues<V> internal constructor(	jvmMain/kotlin/collections/builders/MapBuilder.kt:659
+-	val	MapBuilder	-	1	val backing: MapBuilder<*, V>	jvmMain/kotlin/collections/builders/MapBuilder.kt:660
+-	class	AbstractMapBuilderEntrySet	-	3	internal abstract class AbstractMapBuilderEntrySet<E : Map.Entry<K, V>, K, V> : AbstractMutableSet<E>() {	jvmMain/kotlin/collections/builders/MapBuilder.kt:684
+-	fun	containsEntry	-	1	abstract fun containsEntry(element: Map.Entry<K, V>): Boolean	jvmMain/kotlin/collections/builders/MapBuilder.kt:686
+-	class	MapBuilderEntries	-	1	internal class MapBuilderEntries<K, V> internal constructor(	jvmMain/kotlin/collections/builders/MapBuilder.kt:689
+-	val	MapBuilder	-	1	val backing: MapBuilder<K, V>	jvmMain/kotlin/collections/builders/MapBuilder.kt:690
+-	class	SerializedMap	-	0	private class SerializedMap(	jvmMain/kotlin/collections/builders/MapBuilder.kt:714
+-	var	Map	-	1	private var map: Map<*, *>	jvmMain/kotlin/collections/builders/MapBuilder.kt:715
+-	val	flags	-	0	val flags = input.readByte().toInt()	jvmMain/kotlin/collections/builders/MapBuilder.kt:730
+-	val	size	-	0	val size = input.readInt()	jvmMain/kotlin/collections/builders/MapBuilder.kt:734
+-	val	key	-	0	val key = input.readObject()	jvmMain/kotlin/collections/builders/MapBuilder.kt:738
+-	val	value	-	0	val value = input.readObject()	jvmMain/kotlin/collections/builders/MapBuilder.kt:739
+-	fun	readResolve	-	0	private fun readResolve(): Any = map	jvmMain/kotlin/collections/builders/MapBuilder.kt:745
+-	val	Long	-	0	private const val serialVersionUID: Long = 0L	jvmMain/kotlin/collections/builders/MapBuilder.kt:748
+-	class	SetBuilder	-	0	internal class SetBuilder<E> internal constructor(	jvmMain/kotlin/collections/builders/SetBuilder.kt:12
+-	val	MapBuilder	-	1	private val backing: MapBuilder<E, *>	jvmMain/kotlin/collections/builders/SetBuilder.kt:13
+-	val	Empty	-	0	private val Empty = SetBuilder(MapBuilder.Empty)	jvmMain/kotlin/collections/builders/SetBuilder.kt:16
+-	fun	build	-	0	fun build(): Set<E> {	jvmMain/kotlin/collections/builders/SetBuilder.kt:23
+-	fun	writeReplace	-	0	private fun writeReplace(): Any =	jvmMain/kotlin/collections/builders/SetBuilder.kt:28
+-	fun	readObject	-	0	private fun readObject(input: ObjectInputStream): Unit = throwReadObjectNotSupported()	jvmMain/kotlin/collections/builders/SetBuilder.kt:34

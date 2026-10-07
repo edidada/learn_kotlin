@@ -9,6 +9,7 @@
 | 文件 | 内容 | 什么时候看 |
 |---|---|---|
 | [kotlin-versioning.md](kotlin-versioning.md) | **Kotlin 按什么来的**：语言版本 / 工具版本 / bugfix 版三段式，2.x.0 → 2.x.20 的半年节奏，`@SinceKotlin`、opt-in 注解家族、语言版本 vs API 版本 vs progressive mode、K1→K2 时间线；附 C++ 与 Java 的对照表 | 想建立"Kotlin 的版本心智模型" |
+| [git-branch-strategy.md](git-branch-strategy.md) | 用串行 `version/*` 分支把 Git 历史变成 Kotlin 1.0→2.4 演进时间轴：已建好的 10 档分支骨架、6 条操作规则、低版本补漏的逐级 merge、以及**用 `@SinceKotlin` 实测核对过的版本归属表**（纠正了 `Duration` 归 1.3、unsigned 标量归 1.3、`builder-inference` 重复等错档） | 开始按版本学习之前先读这页 |
 | [kotlin-stdlib/00-overview.md](kotlin-stdlib/00-overview.md) | 库的结构地图：42 个包的大小（声明数 / 去重 API 数 / 带戳数）、jar 与 sources jar 的实测条目、jdk7/jdk8 artifact 合并史、抽取脚本要点与已知盲区 | 先看这页建立全景 |
 | [kotlin-stdlib/01-core-types.md](kotlin-stdlib/01-core-types.md) | `kotlin` 包：内置类型、作用域函数（`apply`/`let`/`run`/`with`/`also`/`takeIf`/`takeUnless`）、`require`/`check`/`error`、`Result`/`runCatching`、数组工厂、`lazy`/委托、`toXxx` 转换族、异常与 `typealias`、枚举 API、`kotlin.math` | 每天写代码都要用的那层 |
 | [kotlin-stdlib/02-collections.md](kotlin-stdlib/02-collections.md) | `kotlin.collections`：工厂、List/Set/Map 本体、增删改查/分组/聚合/排序扩展、无符号集合、builders | 集合操作 |

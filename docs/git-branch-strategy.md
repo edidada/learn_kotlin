@@ -48,14 +48,35 @@ HEAD@{7}  checkout: moving from version/1.3 to version/1.4-1.6
 
 ```bash
 $ git branch --format='%(refname:short) -> %(objectname:short)'
-main                       -> f0bf5cd
-version/1.0-foundation     -> f0bf5cd
-version/1.1-1.2            -> f0bf5cd
-...
-version/2.4                -> f0bf5cd
+main                       -> 13d54e1
+version/1.0-foundation     -> 7da68f9
+version/1.1-1.2            -> d97f198
+version/1.3                -> 874f96f
+version/1.4-1.6            -> a89ed81
+version/1.7-1.9            -> f6d6476
+version/2.0-k2             -> c040229
+version/2.1                -> 9be05fb
+version/2.2                -> a8a1495
+version/2.3                -> a3de7cd
+version/2.4                -> d218348
 ```
 
-所有 ref 现在都指向同一个 commit，这是**故意的**：分支是"学习轨道"，内容靠后续 commit 填。
+刚建链时 11 个 ref 是同指一个 commit 的——那时分支只是空轨道。第 10 节的目录脚手架按档提交之后，各档才有了自己的 commit，前驱关系也从此 reflog 显形进了提交图。验证"高版本天然继承低版本全部学习内容"这条设计是否真的成立，不用信任何人的话，直接看每档的树：
+
+```bash
+$ git ls-tree --name-only version/1.3:src | paste -sd' '
+kotlin-1.0 kotlin-1.1-1.2 kotlin-1.3 main          # 只到 1.3
+$ git ls-tree --name-only version/1.7-1.9:src | paste -sd' '
+kotlin-1.0 kotlin-1.1-1.2 kotlin-1.3 kotlin-1.4-1.6 kotlin-1.7-1.9 main
+$ git ls-tree --name-only version/2.4:src | grep -c '^kotlin-'
+10                                                  # 十档全在
+$ git ls-tree --name-only main:src | paste -sd' '
+main                                                # main 只有初始工程
+$ git rev-list --merges --count main..version/2.4
+0                                                   # 11 个 commit 全线性，无 merge 节点
+```
+
+顺手也验证了构建接线在各档都成立：`git switch version/1.3` 后 `./gradlew compileKotlin` 通过，且 `build/classes/kotlin/main/learn/` 下只产出 `kotlin10/basic/HelloKt.class`——因为 `rangeUntil.kt` 属于 1.7–1.9 档，在这个分支上根本不存在。这正是"版本知识只在对应 branch 首次加入"想要的效果。
 
 这里有一次真实的传播要记录：链是在 `39e49ed` 上切出来的，而策略文档本身（`b557bfd`）和随后两处口径修订（`9588781`、`f0bf5cd`）落在 `main`，所以刚建好链时 `version/*` 全档都看不到本文。修法是第 6 节规则三的一次标准应用——低版本向后快进，且因为链上还没有任何分叉内容，每一跳都是 pure fast-forward，零 merge commit：
 
@@ -181,21 +202,23 @@ git diff version/1.3..version/1.7-1.9       # 比较两档
 git diff --name-status version/1.7-1.9..version/2.0-k2   # 只看文件增删
 ```
 
-## 8. 当前待推清单（尚未 push）
+## 8. 待推清单（用命令现算，别抄这里的数字）
 
-远端是 `origin git@github.com:edidada/learn_kotlin.git`。`main` 领先 `origin/main` **4 个 commit**，且 10 个 `version/*` 分支只存在于本地：
-
-```text
-f0bf5cd docs: distinguish dedup and raw slice scopes for kotlin package counts
-9588781 docs: repoint io-path-encoding evidence at in-repo slices
-b557bfd docs: add version-branch strategy and verified feature-to-version table
-39e49ed add docs
-```
+远端是 `origin git@github.com:edidada/learn_kotlin.git`。这份清单每次提交都会变，所以只留算法：
 
 ```bash
-git push origin main                                  # 上面 4 个 commit
-git push origin --tags                                # git tag --list 实测为 0，暂无 tag 可推
-git push origin 'refs/heads/version/*:refs/heads/version/*'   # 10 个分支骨架，当前全指向 f0bf5cd
+git log --oneline origin/main..main                 # main 上待推的 commit
+git rev-list --count origin/main..main              # 条数
+git for-each-ref --format='%(refname:short) %(objectname:short)' 'refs/heads/version/*'   # 只在本地的分支
+git tag --list                                      # tag（骨架阶段为空）
 ```
 
-因为骨架阶段 10 条分支与 `main` 同指一个 commit，推上去只是 10 个 ref 指针，不产生新对象；等各档提交了自己的学习内容，分支才在远端真正分叉。按你的习惯，push 等你单独下指令再执行。
+本节写下时的实际状态：`origin/main` 已经推进到 `ea676a2`（那 4 个 docs commit 是你自己 push 的），`main` 领先 1 个（`13d54e1`），10 条 `version/*` 分支全在本地——它们现在各带自己的脚手架 commit，所以推上去不再是"只动指针"，会真的传对象。
+
+```bash
+git push origin main
+git push origin 'refs/heads/version/*:refs/heads/version/*'
+git push origin --tags                              # 目前有 tag 之后再执行
+```
+
+按你的习惯，push 等你单独下指令再执行。

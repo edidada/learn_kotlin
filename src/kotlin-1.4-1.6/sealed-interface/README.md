@@ -30,13 +30,16 @@
 
 ### 追加：默认 LV(2.1 / K2) 编译这段时会打三条告警
 
-`./gradlew compileKotlin` 的原始输出（本机，未经任何过滤）：
+`./gradlew compileKotlin --rerun-tasks` 的原始输出（本机，未经任何过滤）：
 
 ```
-w: src/kotlin-1.4-1.6/sealed-interface/sealedInterface.kt:45:9 Check for instance is always 'true'.
-w: src/kotlin-1.4-1.6/sealed-interface/sealedInterface.kt:46:9 Check for instance is always 'false'.
-w: src/kotlin-1.4-1.6/sealed-interface/sealedInterface.kt:47:9 Check for instance is always 'false'.
+w: src/kotlin-1.4-1.6/sealed-interface/sealedInterface.kt:47:9 Check for instance is always 'true'.
+w: src/kotlin-1.4-1.6/sealed-interface/sealedInterface.kt:48:9 Check for instance is always 'false'.
+w: src/kotlin-1.4-1.6/sealed-interface/sealedInterface.kt:49:9 Check for instance is always 'false'.
 ```
+
+- 必须带 `--rerun-tasks`：只 `touch` 源文件不改内容时，Gradle 按输入哈希判 up-to-date，直接跳过编译，`w:` 一条都不会出现——
+  这不是"没有告警"，是"没编译"。（本机实测踩过，第一次量就是空输出。）
 
 - 对应的是 `is Expr.Num` / `is Expr.Neg` / `is Expr.Add` 三行；`Expr.Skip ->` 那行不报（对象相等比较，不是 `is` 检查）。
 - 也就是说 K2 并不是"干净通过"，而是**接受这种写法但提醒 subject 已被收窄**：

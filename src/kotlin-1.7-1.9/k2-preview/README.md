@@ -27,7 +27,7 @@
 
   | 代码 | `-Plv=1.9`（K1） | 默认（K2） |
   |---|---|---|
-  | `when (val n = Expr.Num(7)) { is Expr.Num -> …; is Expr.Neg -> …; … }` 作用于 sealed 层级 | `e: 'when' expression must be exhaustive, add necessary 'else' branch` + 每个分支 `e: Incompatible types: Expr.Neg and Expr.Num`（`Expr.Add`、`Expr.Skip` 同）| 编得过、跑得出正确值，**也没有告警** |
+  | `when (val n = Expr.Num(7)) { is Expr.Num -> …; is Expr.Neg -> …; … }` 作用于 sealed 层级 | `e: 'when' expression must be exhaustive, add necessary 'else' branch` + 每个分支 `e: Incompatible types: Expr.Neg and Expr.Num`（`Expr.Add`、`Expr.Skip` 同）| 编得过、跑得出正确值，但另打三条 `w: Check for instance is always 'true'/'false'.`（逐字输出见 `src/kotlin-1.4-1.6/sealed-interface/README.md`）|
   | `State.Loading != State.Done`（两个不同类型的数据对象） | `e: Operator '!=' cannot be applied to 'State.Loading' and 'State.Done'` | 编得过（见 `data-object` 篇） |
   | `data object Loading : State` 在 `-Plv=1.6` | `e: The feature "data objects" is only available since language version 1.9` | — |
   | `T & Any` 在 `-Plv=1.6` | `e: The feature "definitely non nullable types" is only available since language version 1.7` | — |
@@ -35,3 +35,5 @@
 
   第一行是这条线最有信息量的一条：K1 会把 `when (val x = 具体子类型)` 的主体类型**固定**成那个子类型，于是既判"不穷尽"，又逐分支报"类型不兼容"；K2 按主体实际类型做穷尽与智能转换。写跨版本样本时这一处最容易踩。
 - 归属注脚：`-Xuse-k2` 是 1.7.0 alpha 引入的预览开关，1.9.20 进 beta，2.0.0 起默认；K2 的编译器子专题在 `src/kotlin-2.0-k2/`（分支 `version/2.0-k2`）继续。
+- 量这类"K2 只是告警"的差异时有个方法坑：`./gradlew compileKotlin` 在输入没变化时是 up-to-date，直接跳过编译，
+  于是 `w:` 一行都不输出 —— 看着像"没有告警"，其实根本没编译。要加 `--rerun-tasks`（本机实测：加之前空输出，加之后三条告警都在）。

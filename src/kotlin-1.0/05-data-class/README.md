@@ -8,3 +8,10 @@
 写法约定：`.kt` 放本目录，包名统一 `learn.kotlin10.*`（目录名里的 `-` 和 `.` 不能当包段，所以包名去掉它们）；一个知识点一个 `fun main()`，先猜输出再跑。
 
 跑法：`./gradlew run -PmainClass=learn.kotlin10.<文件>KT`（`src/kotlin-*` 已注册进 Gradle 的 main source set，`gradlew build` 会一并编译）。不要手拼 `java -cp`：只挂 kotlin-stdlib 会漏掉 `org.jetbrains:annotations`，报成 `kotlin/ranges/RangesKt` 的 NoClassDefFoundError，看着像 stdlib 缺类，其实是 classpath 不全（本机实测踩过）。
+
+## 实测结论（本机 Kotlin 2.1.10，跑 `dataClass.kt` 得到）
+
+- `toString` 只印主构造参数：`User(id=1, name=ada)`，类体里的 `loginCount` 改到 42 也不出现。
+- 于是 `u.loginCount = 42` 之后 `u == same` **仍然为 true**——equals 只认主构造，这是 data class 最常被误用的一处。
+- `copy()` 不会带上你后来改过的普通属性：原对象 `loginCount=42`，`u.copy().loginCount` 实测仍是 0。
+- `u !== same` 为 true，`u == same` 为 true：结构相等与引用相等必须分开记。

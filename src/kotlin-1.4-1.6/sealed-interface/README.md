@@ -27,3 +27,30 @@
 - 反过来说明上一节那四条报错的根因不是"穷尽检查变严了"，而是 **subject 的类型推断**：
   不标类型时 K1 把 `val n = Expr.Num(7)` 推成 `Expr.Num`，父层级信息在 `when` 的穷尽判定里就丢了；标上 `: Expr` 后两个前端拿到的是同一个起点。
 - 样本本身保留不标类型的写法（默认 LV 通过），只在注释里记下通吃写法，这样这个坑不会因为"修好"而从代码里消失。
+
+### 追加：默认 LV(2.1 / K2) 编译这段时会打三条告警
+
+`./gradlew compileKotlin --rerun-tasks` 的原始输出（本机，未经任何过滤）：
+
+```
+w: src/kotlin-1.4-1.6/sealed-interface/sealedInterface.kt:47:9 Check for instance is always 'true'.
+w: src/kotlin-1.4-1.6/sealed-interface/sealedInterface.kt:48:9 Check for instance is always 'false'.
+w: src/kotlin-1.4-1.6/sealed-interface/sealedInterface.kt:49:9 Check for instance is always 'false'.
+```
+
+- 必须带 `--rerun-tasks`：只 `touch` 源文件不改内容时，Gradle 按输入哈希判 up-to-date，直接跳过编译，`w:` 一条都不会出现——
+  这不是"没有告警"，是"没编译"。（本机实测踩过，第一次量就是空输出。）
+
+- 对应的是 `is Expr.Num` / `is Expr.Neg` / `is Expr.Add` 三行；`Expr.Skip ->` 那行不报（对象相等比较，不是 `is` 检查）。
+- 也就是说 K2 并不是"干净通过"，而是**接受这种写法但提醒 subject 已被收窄**：
+  K1 在这里是 error（四分支全报 Incompatible types + 不穷尽），K2 降成 warning 并让代码继续编。
+  上一节的"通吃写法"`when (val n: Expr = Expr.Num(7))` 只解决 K1 的 error，**不解决这三条告警**：
+  探针实测（`--rerun-tasks`）标了类型仍然报
+  `w: Check for instance is always 'true'.`（K2 是按初始化器收窄，声明类型不影响这一步）。
+  真正能把告警一起消掉的是把 subject 拆成独立变量：
+  ```kotlin
+  val w: W = W.N(2)
+  val b = when (w) { is W.N -> …; W.S -> … }   // 实测无任何 w: 行
+  ```
+- 之前"默认 LV 通过且没有任何告警"的说法是错的，成因是把 Gradle 输出用 grep 过滤时漏了 `w:` 前缀行；
+  教训：过滤编译输出必须同时留 `e:` 和 `w:`，否则等于没测。

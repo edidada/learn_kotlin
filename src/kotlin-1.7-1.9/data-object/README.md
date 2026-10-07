@@ -28,3 +28,16 @@
   `e: Operator '!=' cannot be applied to 'State.Loading' and 'State.Done'`；默认 K2 编得过、`check` 也成立。
   原因是 K1 把两个不同类型的数据对象当成"不可能相等的操作数"直接拒绝，K2 走普通的 `Any?.equals` 规则。
 - 结论：`data object` 的**语法**门槛是 LV 1.9，但"能用得舒服"（跨类型 `!=`/`==`）实际要 K2，即 2.0 起。
+
+### 追加：`when (val s: State = State.Prog(7))` 会让第一个分支告警
+
+本机 `./gradlew compileKotlin --rerun-tasks` 的原话：
+
+```
+w: src/kotlin-1.7-1.9/data-object/dataObject.kt:42:9 Check for instance is always 'true'.
+```
+
+也就是说 K2 虽然接受 `when (val x = 具体子类型)` 这种写法（K1 直接 error，见上一节），但仍按初始化器把 subject 收窄，
+于是第一个 `is State.Prog` 被判"恒真"、后续分支恒假。想在样本里避免这条告警，就把值显式 widen：
+`val s: State = State.Prog(7)` 再 `when (s)`；这里保留原写法，因为"K1 error / K2 warning"正是这一档 Front-end 差异的样本。
+（量的时候记得 `--rerun-tasks`：输入没变化时 Gradle 跳过编译，`w:` 一行都不会出。）

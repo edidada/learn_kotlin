@@ -32,3 +32,7 @@
 ## 建议阅读顺序
 
 先 `kotlin-versioning.md` 建立版本心智模型 → `00-overview.md` 看全景 → 按需查具体分册 → 日常开发把 `99-cheatsheet.md` 开着当小抄 → 遇到"我这版本能不能用"再回 `08-versioned-api.md`。
+
+## 代码骨架（不在 docs/ 里，但由这套文档生成）
+
+`src/kotlin-<版本档>/<主题>/README.md` 共 83 个主题目录，和 `version/*` 分支一一对应：每档的目录只在自己的分支上首次提交，再向后快进传播，所以 `git log --graph --all` 看到的就是 Kotlin 语言演进本身。主题归属全部按本页的实测数据标注（`[实]` = stdlib 源码里有 `@SinceKotlin` 戳，`[文]` = 语言/编译器特性），每份 README 末尾带一条可直接跑的复核 awk。分支操作规则、编译器可钉的 `languageVersion` 下界实测、以及 `-Plv` / `-PmainClass` 两个 Gradle 开关，都记在 [git-branch-strategy.md](git-branch-strategy.md) 第 9、10 节。

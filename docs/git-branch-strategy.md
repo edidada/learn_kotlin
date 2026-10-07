@@ -199,3 +199,63 @@ git push origin 'refs/heads/version/*:refs/heads/version/*'   # 10 个分支骨�
 ```
 
 因为骨架阶段 10 条分支与 `main` 同指一个 commit，推上去只是 10 个 ref 指针，不产生新对象；等各档提交了自己的学习内容，分支才在远端真正分叉。按你的习惯，push 等你单独下指令再执行。
+
+## 9. 版本边界实验：编译器到底能钉到多低（本机实测）
+
+原方案的亮点之一是"用 `languageVersion` / `apiVersion` 给每一档画能力边界"。这个想法成立，但**有下界**，而且下界比想象的晚得多。为它专门在 `build.gradle` 里加了两个属性开关（`-Plv` / `-Pav`，走 `kotlinOptions.languageVersion` / `apiVersion`），于是钉版本不用改构建文件：
+
+```bash
+./gradlew compileKotlin -Plv=1.9 -Pav=1.9
+```
+
+拿 `src/kotlin-1.7-1.9/range-until/rangeUntil.kt`（用了 1.9 的 `..<`）和 `src/kotlin-1.0/01-basic-syntax/hello.kt`（纯 1.0 语法）各跑一遍，Kotlin 插件 2.1.10 的真实结果：
+
+| `-Plv` / `-Pav` | 结果（原文照抄） |
+|---|---|
+| `1.0` / — | `e: Language version 1.0 is no longer supported; please, use version 1.6 or greater.` |
+| `1.3` / — | 同上，换成 `1.3` |
+| `1.6` / `1.6` | `hello.kt` 通过；`rangeUntil.kt` 报 `Unresolved reference: ..<`（×3），另有 `warning: language version 1.6 is deprecated and its support will be removed in a future version of Kotlin` |
+| `1.9` / `1.9` | 全部通过，无告警 |
+| `2.1` / `1.6` | `rangeUntil.kt` 报 `This declaration needs opt-in. Its usage must be marked with '@kotlin.ExperimentalStdlibApi'`（×3） |
+| `2.2` / — | `warning: language version 2.2 is experimental, there are no backwards compatibility guarantees for new language and library features` |
+
+三条直接可用的结论：
+
+1. **下界是 1.6**，所以 `version/1.0-foundation`、`version/1.1-1.2`、`version/1.3` 这三档**没法用编译器隔离**，只能靠"自觉不用后出的 API"+ 各主题 README 里的 `@SinceKotlin` 复核命令自查。而且 1.6 本身已经在报 deprecated，这条路以后只会更窄。
+2. `2.1 / 1.6` 那一行是 `kotlin-versioning.md` 里"语言能力与库 API 是两条轨"最硬的证据：语言版本够高时 `..<` 不再是 `Unresolved reference`，而是降级成 **opt-in 报错**——同一件事，两种失败方式，分别归语言层和 API 层管。
+3. 1.6 已 deprecated、2.2 还是 experimental，所以日常学习的合理档位是 `-Plv=1.9 -Pav=1.9` 到 `-Plv=2.1 -Pav=2.1`。
+
+## 10. 学习目录骨架（已建，非空壳）
+
+每个 `version/*` 档对应一个 `src/kotlin-<档>/`，内部按知识点分主题目录，共 **83 个主题目录 + 10 个阶段索引 = 93 份 README.md**，另附 2 个已实跑过的样例：
+
+| 分支 | 目录 | 主题数 | 可钉的 `-Plv` |
+|---|---|---|---|
+| `version/1.0-foundation` | `src/kotlin-1.0/` | 14 | ✗（低于编译器下界） |
+| `version/1.1-1.2` | `src/kotlin-1.1-1.2/` | 11 | ✗ |
+| `version/1.3` | `src/kotlin-1.3/` | 7 | ✗ |
+| `version/1.4-1.6` | `src/kotlin-1.4-1.6/` | 12 | `1.6` |
+| `version/1.7-1.9` | `src/kotlin-1.7-1.9/` | 10 | `1.9` |
+| `version/2.0-k2` | `src/kotlin-2.0/` | 14（含 `compiler/*`、`stdlib/*` 嵌套） | `2.0` |
+| `version/2.1` | `src/kotlin-2.1/` | 5 | `2.1` |
+| `version/2.2` | `src/kotlin-2.2/` | 6 | `2.2`（experimental） |
+| `version/2.3` | `src/kotlin-2.3/` | 2 | 待升级工具链 |
+| `version/2.4` | `src/kotlin-2.4/` | 2 | 待升级工具链 |
+
+目录内容不是占位符：每份主题 README 带 `归属` 标记（`[实]` = stdlib 里有 `@SinceKotlin` 戳，`[文]` = 语言/编译器特性，本机无法实测）、要覆盖的具体 API 名单，以及一条**能直接在仓库里跑的复核命令**（数据来自 `docs/_data/`）。原方案的目录清单我按第 4 节的核对结果做了增删：`duration` 从 1.3 挪到 1.4–1.6，`multiplatform-intro` 从 1.1–1.2 挪到 1.3，`builder-inference` 去掉重复只留 1.4–1.6，另外按实测补了 `deep-recursive`、`min-max-batch`、`volatile`、`io-path`、`math-batch`、`atomics`、`instant-clock`、`path-walk`、`hex-format`、`base64-stable` 等原方案没提但确实属于那一档的主题。2.3/2.4 两档故意只放"如何升级工具链 + 如何重抽数据"，因为本机 stdlib 数据止于 2.2.10，硬写清单就是编。
+
+构建接线（已本地验证）：
+
+```groovy
+def stageDirs = file('src').listFiles().findAll { it.isDirectory() && it.name.startsWith('kotlin-') }
+def kotlinMain = kotlin.sourceSets.getByName('main')
+kotlinMain.kotlin.srcDirs = kotlinMain.kotlin.srcDirs + stageDirs
+```
+
+用 glob 而不是硬写 10 个目录，是因为早期档分支上只存在它自己那一档的目录——`git switch version/1.0-foundation` 之后 glob 自然只匹配 `src/kotlin-1.0`，构建文件不必为每一档改一次。`application` 插件配了 `-PmainClass`，跑任意知识点：
+
+```bash
+./gradlew run -PmainClass=learn.kotlin1719.range.RangeUntilKt   # 实测输出 5 行，见该目录 README
+```
+
+一个踩过的坑：**别手拼 `java -cp build/classes/kotlin/main;<kotlin-stdlib.jar>`**。只挂 stdlib 会漏掉 `org.jetbrains:annotations`，报成 `java.lang.NoClassDefFoundError: kotlin/ranges/RangesKt`——看着像 stdlib 缺类，实际是 `RangesKt` 的父类 `RangesKt___RangesKt` 链接失败。用 `gradlew run` 就没这问题（Gradle 给全 classpath）。

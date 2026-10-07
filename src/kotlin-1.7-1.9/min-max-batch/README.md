@@ -25,3 +25,13 @@ awk -F'\t' '$3=="max" || $3=="min" || $3=="maxBy" || $3=="minWith"{print $1"|"$2
 - `Sequence` 版有：`sequenceOf(1,5,3).max() == 5`；`Map` 上的 `maxBy` 选择器作用在 `Map.Entry` 上，`map.maxBy { it.value }.key == "b"`。
 - 对照项：双/多元 `maxOf/minOf` 是 1.1 就在的，**不属于**本档新增，样本里放在一起只为区分 `max()`（集合）与 `maxOf()`（变长参数）。
 - NaN 行为（实测）：`listOf(1.0, Double.NaN, 3.0).max()` 返回 NaN，`maxOrNull()` 同样返回 NaN —— 非空版没有帮你过滤 NaN。
+
+### 追加：无符号数组那两行仍然要 opt-in
+
+`uintArrayOf(1u, 8u).max()` 在本机（2.1.10）会报：
+
+```
+w: This declaration needs opt-in. Its usage should be marked with '@kotlin.ExperimentalUnsignedTypes' or '@OptIn(kotlin.ExperimentalUnsignedTypes::class)'
+```
+
+所以样本文件头加了 `@file:OptIn(ExperimentalUnsignedTypes::class)`。顺带记一句边界：无符号**标量**（`UInt` 等）1.5 就转正了，但无符号**数组**这条线到 2.1 仍然挂着实验标记，两者不是一回事。

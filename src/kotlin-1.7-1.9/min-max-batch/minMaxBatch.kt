@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalUnsignedTypes::class)
+
 package learn.kotlin1719.minmax
 
 // 1.7 把 min/max 一族补齐成"非空返回 + 空集合抛异常"的形态（切片复核：

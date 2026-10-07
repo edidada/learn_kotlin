@@ -48,14 +48,33 @@ HEAD@{7}  checkout: moving from version/1.3 to version/1.4-1.6
 
 ```bash
 $ git branch --format='%(refname:short) -> %(objectname:short)'
-main                       -> 39e49ed
-version/1.0-foundation     -> 39e49ed
-version/1.1-1.2            -> 39e49ed
+main                       -> f0bf5cd
+version/1.0-foundation     -> f0bf5cd
+version/1.1-1.2            -> f0bf5cd
 ...
-version/2.4                -> 39e49ed
+version/2.4                -> f0bf5cd
 ```
 
-所有 ref 现在都指向同一个 commit（`39e49ed add docs`），这是**故意的**：分支是"学习轨道"，内容靠后续 commit 填。开始学习时第一步：
+所有 ref 现在都指向同一个 commit，这是**故意的**：分支是"学习轨道"，内容靠后续 commit 填。
+
+这里有一次真实的传播要记录：链是在 `39e49ed` 上切出来的，而策略文档本身（`b557bfd`）和随后两处口径修订（`9588781`、`f0bf5cd`）落在 `main`，所以刚建好链时 `version/*` 全档都看不到本文。修法是第 6 节规则三的一次标准应用——低版本向后快进，且因为链上还没有任何分叉内容，每一跳都是 pure fast-forward，零 merge commit：
+
+```bash
+git switch version/1.0-foundation && git merge --ff-only main
+git switch version/1.1-1.2        && git merge --ff-only version/1.0-foundation
+# …逐档传到 version/2.4
+```
+
+用 `--ff-only` 而不是裸 `merge` 是有意为之：它能传播文档，又绝不在本该线性的骨架上悄悄生成 merge 节点；一旦哪一跳不能快进，说明分叉已经产生，那时才该停下来看拓扑。复查传播结果：
+
+```bash
+$ git rev-list --merges --count main..version/2.4
+0                                                  # 没有引入任何 merge commit
+$ git merge-base --is-ancestor version/2.3 version/2.4 && echo YES
+YES                                                # 前驱确实被后继包含，逐档同理
+```
+
+开始学习时第一步：
 
 ```bash
 git switch version/1.0-foundation
@@ -164,12 +183,19 @@ git diff --name-status version/1.7-1.9..version/2.0-k2   # 只看文件增删
 
 ## 8. 当前待推清单（尚未 push）
 
-`main` 领先 `origin/main` 1 个 commit，且 10 个 `version/*` 分支只存在于本地：
+远端是 `origin git@github.com:edidada/learn_kotlin.git`。`main` 领先 `origin/main` **4 个 commit**，且 10 个 `version/*` 分支只存在于本地：
 
-```bash
-git push origin main                                  # 内容：39e49ed add docs
-git push origin --tags                                # 目前还没有 tag
-git push origin 'refs/heads/version/*:refs/heads/version/*'   # 10 个分支骨架
+```text
+f0bf5cd docs: distinguish dedup and raw slice scopes for kotlin package counts
+9588781 docs: repoint io-path-encoding evidence at in-repo slices
+b557bfd docs: add version-branch strategy and verified feature-to-version table
+39e49ed add docs
 ```
 
-按你的习惯，push 等你单独下指令再执行。
+```bash
+git push origin main                                  # 上面 4 个 commit
+git push origin --tags                                # git tag --list 实测为 0，暂无 tag 可推
+git push origin 'refs/heads/version/*:refs/heads/version/*'   # 10 个分支骨架，当前全指向 f0bf5cd
+```
+
+因为骨架阶段 10 条分支与 `main` 同指一个 commit，推上去只是 10 个 ref 指针，不产生新对象；等各档提交了自己的学习内容，分支才在远端真正分叉。按你的习惯，push 等你单独下指令再执行。

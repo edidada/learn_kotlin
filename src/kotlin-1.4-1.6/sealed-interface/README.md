@@ -19,3 +19,11 @@
   - 默认 LV(2.1)：`'when' expression must be exhaustive. Add the 'Skip' branch or an 'else' branch.` —— 点名缺哪个分支。
   - `-Plv=1.9`：`'when' expression must be exhaustive, add necessary 'else' branch` —— 只会让你补 else。
 - 一个真踩到的 K1/K2 差异：`when (val n = Expr.Num(7)) { ... }` 这种 subject 是"变量声明 + 具体表达式"的写法，`-Plv=1.6/1.9` 编不过（除了上面那条不穷尽，还有 `Incompatible types: Expr.Neg and Expr.Num` 等逐分支报错）——老 Inference 把 subject 类型收窄成了 `Expr.Num`；默认 LV(2.1) 按声明的密封层级判定，四分支穷尽通过。写教程里"当表达式用不需要 else"的例子时，这条在老语言版本上要另加说明。
+
+### 追加：这条差异的"两前端通吃"写法（同一 `-Plv` 窗口复核）
+
+- 把 subject 的类型显式标出来即可：`when (val n: Expr = Expr.Num(7)) { … }`。
+  本机对照探针（同一个 sealed 层级、同样的四分支）实测：`-Plv=1.9`（K1）**无报错**，默认 LV(2.1) 也通过并打印正确值。
+- 反过来说明上一节那四条报错的根因不是"穷尽检查变严了"，而是 **subject 的类型推断**：
+  不标类型时 K1 把 `val n = Expr.Num(7)` 推成 `Expr.Num`，父层级信息在 `when` 的穷尽判定里就丢了；标上 `: Expr` 后两个前端拿到的是同一个起点。
+- 样本本身保留不标类型的写法（默认 LV 通过），只在注释里记下通吃写法，这样这个坑不会因为"修好"而从代码里消失。

@@ -1,20 +1,32 @@
 # Kotlin 标准库 API 大全 05：IO、Path 与编码（kotlin.io / kotlin.io.path / kotlin.io.encoding）
 
-本文只依据本地抽取的真实数据编写：从 `kotlin-stdlib-2.2.10-sources.jar` 解出的源码 + 按包切分的 TSV
-（列依次为 `since / kind / name / arity / sig / loc`，`since` 为 `-` 表示该声明上方没有 `@SinceKotlin` 标注）。
+本文只依据本地抽取的真实数据编写：从 `kotlin-stdlib-2.2.10-sources.jar` 解出的源码 + 按包切分的 TSV。
+切片文件在仓库内可直接打开：`docs/_data/slices/kotlin_io.tsv`、`docs/_data/slices/kotlin_io_path.tsv`、
+`docs/_data/slices/kotlin_io_encoding.tsv`（列依次为 `since / kind / name / receiver / arity / sig / loc`，共 7 列；
+`since` 为 `-` 表示该声明上方没有 `@SinceKotlin` 标注；首行是表头，故"行数 = 条目数 + 1"）。
 所有签名都直接摘自 TSV 的 `sig` 列或对应源文件，未做任何推测性补写。
 
 ## 1. 三个包的分工与数据分布
 
-| 包 | 定位 | 主要源文件（抽取路径） | slice 行数 |
+| 包 | 定位 | 主要源文件（抽取路径） | slice 行数（实测 `wc -l`） |
 |---|---|---|---|
-| `kotlin.io` | 以 `java.io.File` / `InputStream` / `Reader` 为中心的老 IO 扩展，JVM 专属实现为主 | `jvmMain/kotlin/io/{FileReadWrite,IOStreams,ReadWrite,Console,Constants,Exceptions,Closeable,Serializable}.kt`、`jvmMain/kotlin/io/files/{Utils,FileTreeWalk,FilePathComponents}.kt`、`commonMain/kotlin/ioH.kt` | `kotlin_io.tsv` 248 行 |
-| `kotlin.io.path` | 对 `java.nio.file.Path` 的扩展，`since` 以 1.4/1.5/1.8 为主，目录遍历类 API 在 2.1 转正 | `jvmMain/jdk7/kotlin/io/path/{PathUtils,PathReadWrite,PathRecursiveFunctions,PathTreeWalk,FileVisitorBuilder,CopyActionContext,CopyActionResult,OnErrorResult,PathWalkOption,ExperimentalPathApi}.kt` | `kotlin_io_path.tsv` 209 行 |
-| `kotlin.io.encoding` | Base64 编解码（含 `PaddingOption`），JVM 额外提供编解码流 | `commonMain/kotlin/io/encoding/{Base64,ExperimentalEncodingApi}.kt`、`jvmMain/kotlin/io/encoding/{Base64IOStream,Base64JVM}.kt` | `kotlin_io_encoding.tsv` 156 行 |
+| `kotlin.io` | 以 `java.io.File` / `InputStream` / `Reader` 为中心的老 IO 扩展，JVM 专属实现为主 | `jvmMain/kotlin/io/{FileReadWrite,IOStreams,ReadWrite,Console,Constants,Exceptions,Closeable,Serializable}.kt`、`jvmMain/kotlin/io/files/{Utils,FileTreeWalk,FilePathComponents}.kt`、`commonMain/kotlin/ioH.kt` | `docs/_data/slices/kotlin_io.tsv` 245 行（244 条） |
+| `kotlin.io.path` | 对 `java.nio.file.Path` 的扩展，`since` 以 1.4/1.5/1.8 为主，目录遍历类 API 在 2.1 转正 | `jvmMain/jdk7/kotlin/io/path/{PathUtils,PathReadWrite,PathRecursiveFunctions,PathTreeWalk,FileVisitorBuilder,CopyActionContext,CopyActionResult,OnErrorResult,PathWalkOption,ExperimentalPathApi}.kt` | `docs/_data/slices/kotlin_io_path.tsv` 204 行（203 条） |
+| `kotlin.io.encoding` | Base64 编解码（含 `PaddingOption`），JVM 额外提供编解码流 | `commonMain/kotlin/io/encoding/{Base64,ExperimentalEncodingApi}.kt`、`jvmMain/kotlin/io/encoding/{Base64IOStream,Base64JVM}.kt` | `docs/_data/slices/kotlin_io_encoding.tsv` 159 行（158 条） |
+
+三个切片的实测分布（口径：`awk -F'\t' 'NR>1{c[$2]++}END{...}'`，即跳过表头按第 2 列 `kind`、第 1 列 `since` 计数）：
+
+- `kotlin_io.tsv`：kind — `fun=120 / val=82 / var=25 / class=14 / interface=1 / object=1 / typealias=1`；
+  since — `- =238 / 1.6=4 / 1.3=1 / 1.1=1`。
+- `kotlin_io_path.tsv`：kind — `fun=116 / val=64 / class=11 / var=7 / object=3 / interface=2`；
+  since — `- =111 / 1.5=77 / 1.8=6 / 2.1=6 / 1.4=2 / 1.9=1`。
+- `kotlin_io_encoding.tsv`：kind — `val=86 / fun=43 / var=23 / class=5 / object=1`；
+  since — `- =143 / 1.8=12 / 2.0=2 / 2.2=1`。
 
 `kotlin.io` 中的 `print/println/readln/readlnOrNull` 在 `commonMain/kotlin/ioH.kt` 声明为 `expect`，
 JVM actual 在 `jvmMain/kotlin/io/Console.kt`；`Serializable` 在 common 是 `internal expect interface`，
-JVM 侧是 `internal actual typealias Serializable = java.io.Serializable`（`kotlin_io.tsv` 末行）。
+JVM 侧是 `internal actual typealias Serializable = java.io.Serializable`（`docs/_data/slices/kotlin_io.tsv` 末行 = 第 245 行；
+同文件第 8 行是 common 的 `internal expect interface Serializable`，`ioH.kt:43`）。
 
 ## 2. kotlin.io：控制台读写、File 读写与流
 
@@ -70,7 +82,7 @@ JVM 侧是 `internal actual typealias Serializable = java.io.Serializable`（`ko
 |---|---|---|---|
 | `public val File.extension: String` | `-` | 否 | `Utils.kt:91`；`File.nameWithoutExtension`（:104） |
 | `public val File.invariantSeparatorsPath: String` | `-` | 否 | `:98`，用 `/` 作为分隔符的路径字符串 |
-| `public val File.isRooted: Boolean` | `-` | 否 | `FilePathComponents.kt:84` |
+| `public val File.isRooted: Boolean` | `-`（无戳） | 否 | `FilePathComponents.kt:84`；切片收录于 `kotlin_io.tsv:115`，但主解析器把 `name` 列记成了返回类型 `Boolean`，按名字查请用 `docs/_data/ext_props.tsv`（`kotlin.io / val / isRooted / File / -`） |
 | `public fun File.toRelativeString(base: File): String` | `-` | 否 | `Utils.kt:116` |
 | `public fun File.relativeTo(base: File): File` | `-` | 否 | `:128`；`relativeToOrSelf(base)`（:137）失败时返回自身，`relativeToOrNull(base): File?`（:147）失败时返回 null |
 | `public fun File.normalize(): File` | `-` | 否 | `:472`，消除 `.` 与 `..`（只做词法处理，不访问文件系统） |
@@ -79,6 +91,11 @@ JVM 侧是 `internal actual typealias Serializable = java.io.Serializable`（`ko
 | `public fun createTempDir(prefix: String = "tmp", suffix: String? = null, directory: File? = null): File` | `-` | 否 | `Utils.kt:44`；`createTempFile(prefix, suffix, directory): File`（:84） |
 
 `FilePathComponents`（internal `data class`）暴露 `rootName`、`isRooted`、`size`、`subPath(beginIndex, endIndex): File`，是上面这些相对路径函数的内部基础。
+
+> 切片口径提示：主解析器对 `public val File.extension: String` 这类**带显式类型的接收者属性**会把 `name` 列写成返回类型
+> （`kotlin_io.tsv:158/159/160` 三行的 `name` 都是 `String`，对应 `extension` / `invariantSeparatorsPath` / `nameWithoutExtension`）。
+> 按属性名检索时要用 `sig` 列，或直接查 `docs/_data/ext_props.tsv`（列序 `since / pkg / kind / name / receiver / sig / loc / flags`，
+> `kotlin.io` 段共 4 条：`isRooted`、`extension`、`invariantSeparatorsPath`、`nameWithoutExtension`，均无 `@SinceKotlin`）。
 
 ### 3.2 遍历与批量操作
 
@@ -158,14 +175,15 @@ fun main() {
 |---|---|---|---|
 | `public inline fun Path(path: String): Path` | 1.5 | 否 | `PathUtils.kt:962`；`public inline fun Path(base: String, vararg subpaths: String): Path`（:973） |
 | `public inline operator fun Path.div(other: Path): Path` / `Path.div(other: String)` | 1.5 | 否 | `:941` / `:951`，即 `dir / "sub" / "file.txt"` |
-| `public inline val Path.pathString: String` | 1.5 | 否 | `:56`；`Path.name`（:27）、`Path.nameWithoutExtension`（:35）、`Path.extension`（:43） |
+| `public inline val Path.pathString: String` | 1.5 | 否 | `:56`；`Path.name`（:27）、`Path.nameWithoutExtension`（:35）、`Path.extension`（:43）。四者都在 `kotlin_io_path.tsv:125-128`（`name` 列同样记成 `String`，属性名见 `sig` 列或 `docs/_data/ext_props.tsv` 的 `kotlin.io.path` 段） |
 | `public val Path.invariantSeparatorsPathString: String` | 1.5 | 否 | `:64`；旧属性 `Path.invariantSeparatorsPath`（:75）标 `@SinceKotlin("1.4")` + `@ExperimentalPathApi` + `@Deprecated(level = DeprecationLevel.ERROR)` |
 | `public inline fun URI.toPath(): Path` | 1.5 | 否 | `:983`，从 `java.net.URI` 得到 `Path` |
 | `public inline fun Path.absolute(): Path` / `absolutePathString(): String` | 1.5 | 否 | `:90`（`= toAbsolutePath()`）/ `:103` |
 | `public fun Path.relativeTo(base: Path)` / `relativeToOrSelf(base)` / `relativeToOrNull(base): Path?` | 1.5 | 否 | `:116` / `:131` / `:143` |
 
-> 核对结论：`kotlin_io_path.tsv` 中**没有** `Path.toFile()` 与 `File.toPath()` 这两个条目（仅 `URI.toPath()`）。
-> 它们是 `java.nio.file.Path` / `java.io.File` 自身的 JDK 方法，不是 Kotlin 扩展，因此本文不将其列为标准库 API。
+> 核对结论：`docs/_data/slices/kotlin_io_path.tsv` 中**没有** `Path.toFile()` 与 `File.toPath()` 这两个条目（仅 `URI.toPath()`，第 198 行）。
+> 它们是 `java.nio.file.Path` / `java.io.File` 自身的 JDK 方法，不是 Kotlin 扩展，因此本文不将其列为标准库 API；
+> 反向复核：`grep -P "\t(toFile|toPath)\t" docs/_data/ext_props.tsv` 无输出，字节码 `kotlin/io/path/PathsKt__PathUtilsKt` 里也只有 `toPath(java.net.URI)`。
 
 ### 4.2 读写（`PathReadWrite.kt`，全部 `@SinceKotlin("1.5")`）
 

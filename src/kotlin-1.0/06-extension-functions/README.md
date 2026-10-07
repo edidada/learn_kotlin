@@ -8,3 +8,9 @@
 写法约定：`.kt` 放本目录，包名统一 `learn.kotlin10.*`（目录名里的 `-` 和 `.` 不能当包段，所以包名去掉它们）；一个知识点一个 `fun main()`，先猜输出再跑。
 
 跑法：`./gradlew run -PmainClass=learn.kotlin10.<文件>KT`（`src/kotlin-*` 已注册进 Gradle 的 main source set，`gradlew build` 会一并编译）。不要手拼 `java -cp`：只挂 kotlin-stdlib 会漏掉 `org.jetbrains:annotations`，报成 `kotlin/ranges/RangesKt` 的 NoClassDefFoundError，看着像 stdlib 缺类，其实是 classpath 不全（本机实测踩过）。
+
+## 实测结论（本机 Kotlin 2.1.10，跑 `extensionDispatch.kt` 得到）
+
+- `val s: Shape = Circle()` 调 `s.describe()` 得到的是 **`Shape 的扩展方法`**，而 `val c: Circle = Circle()` 得到 `Circle 的扩展方法`：扩展按声明类型静态解析，不参与多态。
+- 同名成员与扩展并存时成员赢：`with(sh){ callMember() }` 与 `sh.callMember()` 都打印 `成员方法被调用`。
+- 可空接收者扩展可用：`null.orPlaceholder()` 得 `<null>`（成员做不到这点）。

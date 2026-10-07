@@ -1,0 +1,159 @@
+name: Learn samples
+
+# Runs every per-stage `main` class in the repository (each topic ships a
+# runnable `*Kt.class` under the `learn` package) and reports how many
+# of them exited non-zero. On branches without stage sources (e.g. main)
+# the detection step marks the job as skipped instead of failing.
+
+on:
+  push:
+    branches: [ main, 'version/**', 'topic/**' ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+concurrency:
+  group: learn-samples-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  samples:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: false
+
+      - name: Detect stage sources
+        id: stages
+        run: |
+          found=$(find src -mindepth 1 -maxdepth 1 -type d -name 'kotlin-*' | sort)
+          if [ -z "$found" ]; then
+            echo "has-stages=false" >> "$GITHUB_OUTPUT"
+            echo "No src/kotlin-* stage directories on this branch; samples job will be skipped."
+            exit 0
+          fi
+          echo "$found" | sed 's/^/  - /'
+          echo "has-stages=true" >> "$GITHUB_OUTPUT"
+
+      - name: Build installable distribution
+        if: steps.stages.outputs.has-stages == 'true'
+        run: ./gradlew --no-daemon --stacktrace installDist
+
+      - name: Run every stage sample
+        if: steps.stages.outputs.has-stages == 'true'
+        run: |
+          set -u
+          LIB=$(find build/install -mindepth 1 -maxdepth 2 -type d -name lib | head -1)
+          if [ -z "$LIB" ]; then
+            echo "::error::installDist did not produce a lib directory"
+            exit 1
+          fi
+          cd "$LIB"
+          APPJAR=""
+          for j in *.jar; do
+            if unzip -Z1 "$j" 2>/dev/null | grep -q '^learn/.*Kt\.class$'; then
+              APPJAR="$j"
+              break
+            fi
+          done
+          if [ -z "$APPJAR" ]; then
+            echo "::error::no jar contains learn/**/*Kt.class samples"
+            exit 1
+          fi
+          echo "APPJAR=$APPJAR"
+          total=0
+          failed=0
+          : > "$GITHUB_WORKSPACE/samples.log"
+          for cls in $(unzip -Z1 "$APPJAR" | grep -E '^learn/.*Kt\.class$' | sed 's|/|.|g; s|\.class$||' | sort); do
+            total=$((total + 1))
+            if out=$(java -cp "*" "$cls" 2>&1); then
+              echo "PASS $cls :: $(echo "$out" | head -1)" >> "$GITHUB_WORKSPACE/samples.log"
+            else
+              failed=$((failed + 1))
+              echo "FAIL $cls :: $(echo "$out" | head -20)" >> "$GITHUB_WORKSPACE/samples.log"
+            fi
+          done
+          echo "TOTAL=$total FAILED=$failed"
+          echo "total=$total" >> "$GITHUB_OUTPUT"
+          echo "failed=$failed" >> "$GITHUB_OUTPUT"
+          cat "$GITHUB_WORKSPACE/samples.log"
+          if [ "$total" -eq 0 ]; then
+            echo "::error::no samples were discovered"
+            exit 1
+          fi
+          if [ "$failed" -ne 0 ]; then
+            echo "::error::$failed sample(s) exited with a non-zero status"
+            exit 1
+          fi
+        id: run-samples
+
+      - name: Upload sample log
+        if: always() && steps.stages.outputs.has-stages == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: samples-log
+          path: samples.log
+          if-no-files-found: warn
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Learn samples"
+            echo ""
+            echo "- stage sources: \`${{ steps.stages.outputs.has-stages }}\`"
+            echo "- mains executed: \`${{ steps.run-samples.outputs.total }}\`"
+            echo "- failures: \`${{ steps.run-samples.outputs.failed }}\`"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  language-version-window:
+    runs-on: ubuntu-latest
+    # Only meaningful once build.gradle wires the -Plv / -Pav knobs.
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check the build supports -Plv
+        id: lv
+        run: |
+          if grep -q 'languageVersion' build.gradle build.gradle.kts 2>/dev/null; then
+            echo "supported=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "supported=false" >> "$GITHUB_OUTPUT"
+            echo "build.gradle has no languageVersion plumbing on this branch; skipping the LV window."
+          fi
+
+      - name: Set up JDK 17
+        if: steps.lv.outputs.supported == 'true'
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Gradle
+        if: steps.lv.outputs.supported == 'true'
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: false
+
+      - name: Compile at the lowest supported language version
+        if: steps.lv.outputs.supported == 'true'
+        continue-on-error: true
+        run: ./gradlew --no-daemon compileKotlin -Plv=1.6 | tee /tmp/lv16.log
+
+      - name: Report
+        if: steps.lv.outputs.supported == 'true'
+        run: |
+          echo "errors=$(grep -c '^e: ' /tmp/lv16.log || true)"
+          echo "LV-1.6 compile is diagnostic-only; the job never fails on it."

@@ -12,10 +12,16 @@ val deepCount = DeepRecursiveFunction<Int, Int> { n ->
 }
 
 // 嵌套结构也能改写：深嵌套 List 求和
+// 这里的 `as List<Any>` 是 JVM 层擦除后必然成立的转换（外层已经保证元素是 List<*>），
+// 但编译器不知道，会给 `Unchecked cast of 'kotlin.collections.List<*>' to 'kotlin.collections.List<kotlin.Any>'`，
+// 所以单独收进一个带 @Suppress 的辅助函数，把抑制范围压到最小一行。
+@Suppress("UNCHECKED_CAST")
+private fun asAnyList(list: List<*>): List<Any> = list as List<Any>
+
 val deepSum = DeepRecursiveFunction<List<Any>, Int> { list ->
     var acc = 0
     for (item in list) {
-        acc += if (item is List<*>) callRecursive(item as List<Any>) else item as Int
+        acc += if (item is List<*>) callRecursive(asAnyList(item)) else item as Int
     }
     acc
 }

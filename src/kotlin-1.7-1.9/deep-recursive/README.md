@@ -23,3 +23,14 @@ awk -F'\t' '$3=="DeepRecursiveFunction" || $3=="DeepRecursiveScope" || $3=="call
 - 深嵌套 `List` 求和同样能改写：`callRecursive(item as List<Any>)`。**必须显式转换** —— `item is List<*>` 智能转换后仍是 `List<*>`，直接传给要 `List<Any>` 的 `callRecursive` 编译不过。实测 `nested(50_000)`（5 万层嵌套）返回 1。
 - 分支返回两个 `callRecursive` 也可以（fib 写法），`withStack(20) == 6765` 对上标准值。
 - 代价侧的直觉：`callRecursive` 是函数调用+堆栈对象分配，浅递归用它只会更慢，它只在"会爆栈"的深度上划算。
+
+### 追加：`callRecursive` 传嵌套集合时的 unchecked cast
+
+原来直接写 `callRecursive(item as List<Any>)`，编译器给：
+
+```
+w: Unchecked cast of 'kotlin.collections.List<*>' to 'kotlin.collections.List<kotlin.Any>'.
+```
+
+处理方式是把它收进一个单独的 `@Suppress("UNCHECKED_CAST")` 辅助函数（`asAnyList`），让抑制范围只覆盖那一行转换，
+而不是给整个 `deepSum` 或整个文件加抑制 —— 这个转换在擦除后确实成立（元素本来就是 `List<*>`），但类型系统给不出这个证明。

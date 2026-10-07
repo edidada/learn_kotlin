@@ -1,5 +1,6 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '2.1.10'
+    id 'application'
 }
 
 group = 'org.example.test'
@@ -18,4 +19,31 @@ test {
 }
 kotlin {
     jvmToolchain(17)
+}
+
+// 学习用版本档目录 src/kotlin-<版本>/** 一并纳入 main source set。
+// 目录名里带 '-' 和 '.'，不能直接当包段，所以包名在文件里自己写（约定 learn.kotlinXX.YY）。
+def stageDirs = file('src').listFiles().findAll { it.isDirectory() && it.name.startsWith('kotlin-') }
+def kotlinMain = kotlin.sourceSets.getByName('main')
+kotlinMain.kotlin.srcDirs = kotlinMain.kotlin.srcDirs + stageDirs
+
+// 跑任意一个知识点：./gradlew run -PmainClass=learn.kotlin1719.range.RangeUntilKt
+application {
+    mainClass = providers.gradleProperty('mainClass').orElse('org.example.test.MainKt')
+}
+
+// 版本边界实验：-Plv / -Pav 直接钉 languageVersion 与 apiVersion，不用改这个文件。
+//   ./gradlew compileKotlin -Plv=1.9 -Pav=1.9     通过
+//   ./gradlew compileKotlin -Plv=1.6 -Pav=1.6     rangeUntil.kt 报 error: unresolved reference: ..<
+//   ./gradlew compileKotlin -Plv=2.1 -Pav=1.6     报 needs opt-in @kotlin.ExperimentalStdlibApi
+// 编译器能接受的下界是 1.6：更低的值直接 error: language version X is no longer supported。
+def lvProvider = providers.gradleProperty('lv')
+if (lvProvider.isPresent()) {
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+        kotlinOptions.languageVersion = lvProvider.get()
+        def avProvider = providers.gradleProperty('av')
+        if (avProvider.isPresent()) {
+            kotlinOptions.apiVersion = avProvider.get()
+        }
+    }
 }
